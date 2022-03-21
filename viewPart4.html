@@ -1,0 +1,101 @@
+<html>
+
+<head>
+
+<meta charset="utf-8"/>
+
+<script src="jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+$("#fo01").submit(function(event){
+
+    event.preventDefault();
+
+    var serializedData = $(this).serialize();
+
+	var $inputs = $(this).find("input, select, button, textarea");
+
+	$inputs.prop("disabled", true);
+
+	
+
+alert(serializedData);//permet de vérifier si tout est ordre au niveau du formulaire
+
+       
+
+	$.post( "modifPart4.php",serializedData, function() {alert( "fonction callback success" )},"text")
+
+	.done(function(data) {
+
+    alert( "success .done " );
+
+	alert(data.length);
+
+	
+
+	/*for(var r of data)  
+
+		{alert(r.NOM + " " + r.PRENOM) }*/
+
+		
+
+  })
+
+  .fail(function(error) {
+
+    alert( "error détectée:" + error.responseText);
+
+	$("#Div_error").html(error.responseText);
+
+  })
+
+  .always(function() {
+
+    alert( "finished"  ); 
+
+	// Reenable the inputs
+
+        $inputs.prop("disabled", false);
+
+  });
+
+ });
+
+})
+
+</script>
+
+</head>
+
+<body>
+
+<form id="fo01">
+
+Coordonnées du professeur à modifier:<br/>
+
+nom: <input type="text" name="nom"></input> <br/>
+
+prénom: <input type="text" name="prenom"></input> <br/>
+
+Vous pouvez modifier son statut "gestion":<br/>
+
+gestionnaire:<input type="checkbox" name="gestion"></input>
+
+<input type="submit" value="Valider"/>
+
+</form>
+
+<div id="Div_error"></div>
+
+
+
+</body>
+
+
+
+
+
+</html>
