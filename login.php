@@ -42,7 +42,12 @@ try {
 }
     
 catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-    echo $pwdhash['USERPSW'];
+    if(password_verify($pwd, $pwdhash['USERPSW'])){
+        echo $pwdhash['USERPSW'];
+   }
+    else{
+        echo "hash failed";
+
+    }
 }
 ?>
