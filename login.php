@@ -32,9 +32,10 @@ try {
          $_SESSION['login'] = $_POST['login'];
          $_SESSION['pwd'] = $_POST['pwd'];
  
-         // on redirige notre visiteur vers une page de notre section membre
-         header('location: index.php');
+        
     }
+    // on redirige notre visiteur vers la page d'accueil
+    header('location: index.php');
 }
     
 catch(PDOException $e) {
