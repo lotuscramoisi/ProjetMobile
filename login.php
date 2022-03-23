@@ -32,8 +32,8 @@ try {
          session_start();
 
          // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
-        //  $_SESSION['login'] = $_POST['login'];
-        //  $_SESSION['pwd'] = $_POST['pwd'];
+         $_SESSION['login'] = $_POST['login'];
+         $_SESSION['pwd'] = $_POST['pwd'];
  
     }
     // on redirige notre visiteur vers la page d'accueil
