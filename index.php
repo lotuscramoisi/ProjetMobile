@@ -41,7 +41,7 @@
                     <h5 class="modal-title">Sign In</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="POST">
+                <form method="POST" action="login.php">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" action="login.php" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
