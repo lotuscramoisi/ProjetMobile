@@ -3,13 +3,13 @@
 
 <head>
     <?php
-        // Inclusion des fichiers de fonctions
-        include 'functions.php'; 
-        include 'connexiondb.php'; 
-        // Connexion à la BDD en tant qu'admin
-        $conn=connectDBasAdmin();
-        // Démarrage de la session pour créer les variables $_SESSION
-        session_start ();
+    // Inclusion des fichiers de fonctions
+    include 'functions.php';
+    include 'connexiondb.php';
+    // Connexion à la BDD en tant qu'admin
+    $conn = connectDBasAdmin();
+    // Démarrage de la session pour créer les variables $_SESSION
+    session_start();
     ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -27,13 +27,28 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Whatsmyinfo</a>
         <form class="form-inline">
+            <?php
+            if (isset($_SESSION['login'])) {
+                echo '<button type="button" class="btn btn-outline-success" action="logout.php">';
+                echo 'Logout';
+                echo '</button>';
+            }
+            else{
+                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
+                echo 'Sign in';
+                echo '</button>';
+                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">';
+                echo 'Register';
+                echo '</button>';
+            }
+            ?>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">
-                Sign in
-            </button>
-            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">
-                Register
-            </button>
+            
+                
+            
+            
+                
+            
         </form>
     </nav>
 
@@ -113,9 +128,9 @@
         </div>
     </div>
     <?php
-     if(isset($_SESSION['login'])){
-         echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
-     }
+    if (isset($_SESSION['login'])) {
+        echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
+    }
     ?>
 </body>
 
