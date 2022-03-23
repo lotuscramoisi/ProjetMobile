@@ -92,8 +92,13 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <small id="emailHelp" class="form-text text-muted">
+                            Already registered ?
+                            <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal" data-target="#signIn">
+                                Login
+                            </button>
+                        </small>
                         <button type="submit" class="btn btn-primary">Submit</button>
-
                     </div>
                 </form>
             </div>
