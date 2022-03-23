@@ -11,6 +11,33 @@
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
     ?>
+    <script>
+        // Fonction pour vérifier que 2 mdp sont identiques
+        function checkPassword(form) {
+            password1 = form.password.value;
+            password2 = form.passwordverif.value;
+
+            // If password not entered
+            if (password1 == '')
+                alert("Please enter Password");
+
+            // If confirm password not entered
+            else if (password2 == '')
+                alert("Please enter confirm password");
+
+            // If Not same return False.    
+            else if (password1 != password2) {
+                alert("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            else {
+                alert("Password Match: Welcome to GeeksforGeeks!")
+                return true;
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -33,8 +60,7 @@
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
-            }
-            else{
+            } else {
                 echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
                 echo 'Sign in';
                 echo '</button>';
@@ -88,7 +114,7 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="register.php">
+                <form method="POST" action="register.php" onSubmit = "return checkPassword(this)">
                     <div class="modal-body">
 
                         <div class="form-group">
