@@ -11,7 +11,7 @@
         $pswverif=test_input($_POST["passwordverif"]);
     
         // Requête sql
-        $sql = "INSERT INTO stage(USERNAME, USERPSW, USERMAIL, SIGNUPDATE, ISADMIN) VALUES (:username, :psw, :email, now(), false)";
+        $sql = "INSERT INTO USER(USERNAME, USERPSW, USERMAIL, SIGNUPDATE, ISADMIN) VALUES (:username, :psw, :email, now(), false)";
         
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
