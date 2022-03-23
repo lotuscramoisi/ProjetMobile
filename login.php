@@ -43,5 +43,6 @@ try {
     
 catch(PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
+    echo $pwdhash['USERPSW'];
 }
 ?>
