@@ -18,12 +18,16 @@
             password2 = form.passwordverif.value;
 
             // If password not entered
-            if (password1 == '')
+            if (password1 == ''){
                 $( "#alertMessage" ).append( "Please enter Password" );
-
+                return false;
+            }
+               
             // If confirm password not entered
-            else if (password2 == '')
+            else if (password2 == ''){
                 $( "#alertMessage" ).append( "Please enter confirm Password" );
+                return false;
+            }
 
             // If Not same return False.    
             else if (password1 != password2) {
