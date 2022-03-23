@@ -9,4 +9,5 @@ function connectDB($host, $bdname, $user, $pass){
 	}
 	return $bdd;
 }
+
 ?>

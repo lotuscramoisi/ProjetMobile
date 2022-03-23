@@ -4,7 +4,8 @@
 <head>
     <?php
         include 'functions.php'; 
-        // $conn=connectDB("localhost","stage2019", "root", "");
+        include 'connexiondb.php'; 
+        $conn=connectDBasAdmin();
     ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -31,7 +32,6 @@
             </button>
         </form>
     </nav>
-
 
     <!-- Modal Sign In -->
     <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -66,6 +66,7 @@
             </div>
         </div>
     </div>
+
     <!-- Modal Register -->
     <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -97,7 +98,7 @@
                     <div class="modal-footer">
                         <small id="emailHelp" class="form-text text-muted">
                             Already registered ?
-                            <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal" data-target="#signIn">
+                            <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#signIn">
                                 Login
                             </button>
                         </small>
