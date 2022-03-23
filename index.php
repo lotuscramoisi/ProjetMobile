@@ -12,7 +12,7 @@
 <body>
     Hello Worlds ! Test
     <?php
-    echo 'User IP - ' . $_SERVER['REMOTE_ADDR'];
+    echo 'User IP - ' . $_SERVER['REMOTE_ADDR'] . '<br/>';
     echo 'User IP - ' . $_SERVER['SERVER_ADDR'];
     ?>
 </body>
