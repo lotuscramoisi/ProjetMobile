@@ -30,14 +30,14 @@ try {
 
          // on démarre la session
          session_start();
-
+         echo $pwdhash['USERPSW'];
          // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
          $_SESSION['login'] = $login;
          $_SESSION['pwd'] = $pwdhash;
  
     }
     // on redirige notre visiteur vers la page d'accueil
-    header('location: index.php');
+    //header('location: index.php');
 }
     
 catch(PDOException $e) {
