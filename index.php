@@ -125,20 +125,20 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address/Username</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username" name="login">
-                            <small id="emailHelp" class="form-text text-muted">
-                                Not registered yet ?
-                                <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register" tabindex="-1">
-                                    Register
-                                </button>
-                            </small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
                         </div>
+                        <small id="alertMessageLogin" class="form-text text-muted"></small>
                     </div>
                     <div class="modal-footer">
-                        <small id="alertMessageLogin" class="form-text text-muted"></small>
+                        <small id="emailHelp" class="form-text text-muted">
+                            Not registered yet ?
+                            <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register" tabindex="-1">
+                                Register
+                            </button>
+                        </small>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
@@ -173,9 +173,9 @@
                             <label for="exampleInputPassword1">Password confirmation</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
                         </div>
+                        <small id="alertMessageRegister" class="form-text text-muted"></small>
                     </div>
                     <div class="modal-footer">
-                        <small id="alertMessageRegister" class="form-text text-muted"></small>
                         <small id="emailHelp" class="form-text text-muted">
                             Already registered ?
                             <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#signIn" tabindex="-1">
