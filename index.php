@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address/Username</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">Not suscribed yet ? <a href="">Register here<a></small>
+                            <small id="emailHelp" class="form-text text-muted">Not suscribed yet ? <a href="" data-target="#register">Register here<a></small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
