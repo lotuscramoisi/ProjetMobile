@@ -11,7 +11,7 @@ try {
     
 
     // Requête sql
-    $sql = "select * from USER where USERNAME like binary :login";
+    $sql = "select * from USER where USERNAME like binary :login or USERMAIL like binary :login";
     
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
@@ -23,16 +23,16 @@ try {
     $stmt->execute();
 
     //Récupération du mot de pass haché
-    $pwdhash = $stmt->fetch(PDO::FETCH_ASSOC);
+    $userinfos = $stmt->fetch(PDO::FETCH_ASSOC);
 
     //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
-    if(password_verify($pwd, $pwdhash['USERPSW'])){
+    if(password_verify($pwd, $userinfos['USERPSW'])){
         
          // on démarre la session
          session_start();
          
-         // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
-         $_SESSION['login'] = $login;
+         // on enregistre les paramètres de notre visiteur comme variables de session
+         $_SESSION['login'] = $userinfos['USERNAME'];
          $_SESSION['pwd'] = $pwdhash;
  
     }
