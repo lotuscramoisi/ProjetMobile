@@ -24,7 +24,7 @@ try {
 
     //Récupération du mot de pass haché
     $pwdhash = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo $pwdhash['USERPSW'];
+    //echo $pwdhash['USERPSW'];
     //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
     if(password_verify($pwd, $pwdhash['USERPSW'])){
 
@@ -32,10 +32,9 @@ try {
          session_start();
 
          // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
-         $_SESSION['login'] = $_POST['login'];
-         $_SESSION['pwd'] = $_POST['pwd'];
+        //  $_SESSION['login'] = $_POST['login'];
+        //  $_SESSION['pwd'] = $_POST['pwd'];
  
-        
     }
     // on redirige notre visiteur vers la page d'accueil
     //header('location: index.php');
