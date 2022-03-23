@@ -24,10 +24,10 @@ try {
 
     //Récupération du mot de pass haché
     $pwdhash = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+    echo "avant if : " . $pwdhash['USERPSW'];
     //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
     if(password_verify($pwd, $pwdhash['USERPSW'])){
-        echo $pwdhash['USERPSW'];
+        
          // on démarre la session
          session_start();
          
