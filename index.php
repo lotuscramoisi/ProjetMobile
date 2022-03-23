@@ -13,9 +13,23 @@
     ?>
     <script>
         // Fonction pour vérifier que 2 mdp sont identiques
-        function checkPassword(form) {
+        function checkForm(form) {
+            username = form.username.value;
+            email = form.email.value;
             password1 = form.password.value;
             password2 = form.passwordverif.value;
+
+            // If email not entered
+            if (email == ''){
+                $( "#alertMessage" ).append( "Please enter email" );
+                return false;
+            }
+
+             // If username not entered
+             if (username == ''){
+                $( "#alertMessage" ).append( "Please enter username" );
+                return false;
+            }
 
             // If password not entered
             if (password1 == ''){
@@ -113,7 +127,7 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="register.php" onSubmit = "return checkPassword(this)">
+                <form method="POST" action="register.php" onSubmit = "return checkForm(this)">
                     <div class="modal-body">
 
                         <div class="form-group">
