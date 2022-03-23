@@ -14,10 +14,14 @@
     <script>
         // Fonction pour vérifier que 2 mdp sont identiques
         function checkForm(form) {
+            //Récupération des données du formulaire
             username = form.username.value;
             email = form.email.value;
             password1 = form.password.value;
             password2 = form.passwordverif.value;
+
+            //On vide les messages d'alerte 
+            $( "#alertMessage" ).empty()
 
             // If email not entered
             if (email == ''){
