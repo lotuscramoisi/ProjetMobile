@@ -8,22 +8,25 @@ try {
     $login=test_input($_POST["login"]);
     $pwd=test_input($_POST["pwd"]);
 
+    
 
     // Requête sql
-    $sql = "select * from USER where USERNAME like binary :login and USERPSW like binary :pwd";
+    $sql = "select USERPSW from USER where USERNAME like binary :login";
     
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
 
     // Attribution des paramètres de la requête préparée
     $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
-    $stmt->bindParam(':pwd', $pwd, PDO::PARAM_STR, 25);
     
     // Exécution de la requête
     $stmt->execute();
 
+    //Récupération du mot de pass haché
+    $pwdhash = $stmt->fetch(PDO::FETCH_ASSOC);
+
     //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
-    if($stmt->fetchColumn()){
+    if(password_verify($pwd, $pwdhash['USERPSW'])){
 
          // on démarre la session
          session_start();

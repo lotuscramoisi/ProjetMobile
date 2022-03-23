@@ -9,6 +9,8 @@
         $username=test_input($_POST["username"]);
         $psw=test_input($_POST["password"]);
         $pswverif=test_input($_POST["passwordverif"]);
+        // Hachage du mot de passe
+        $psw = password_hash($psw, PASSWORD_DEFAULT);
     
         // Requête sql
         $sql = "INSERT INTO USER(USERNAME, USERPSW, USERMAIL, SIGNUPDATE, ISADMIN) VALUES (:username, :psw, :email, now(), false)";
