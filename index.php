@@ -28,7 +28,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Sign In</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true" title="Close">&times;</span> <span class="sr-only">Close</span></button>
                 </div>
                 <form>
                     <div class="modal-body">
