@@ -27,7 +27,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Sign In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" class="form-text text-muted"><a href="">Register<a></small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
