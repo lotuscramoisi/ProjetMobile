@@ -127,7 +127,6 @@
     if (isset($_SESSION['login'])) {
         echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
     }
-    echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
     ?>
 </body>
 
