@@ -16,7 +16,8 @@
 
 <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Whatsmyinfo</a>
         <form class="form-inline">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">
