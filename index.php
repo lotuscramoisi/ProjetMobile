@@ -19,11 +19,11 @@
 
             // If password not entered
             if (password1 == '')
-                alert("Please enter Password");
+                $( "#alertMessage" ).append( "Please enter Password" );
 
             // If confirm password not entered
             else if (password2 == '')
-                alert("Please enter confirm password");
+                $( "#alertMessage" ).append( "Please enter confirm Password" );
 
             // If Not same return False.    
             else if (password1 != password2) {
