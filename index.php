@@ -24,10 +24,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">
                     Sign in
                 </button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">
                     Register
                 </button>
             </div>
