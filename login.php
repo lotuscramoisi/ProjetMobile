@@ -24,7 +24,7 @@ try {
 
     //Récupération du mot de pass haché
     $pwdhash = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    echo $pwdhash['USERPSW'];
     //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
     if(password_verify($pwd, $pwdhash['USERPSW'])){
 
@@ -38,7 +38,7 @@ try {
         
     }
     // on redirige notre visiteur vers la page d'accueil
-    header('location: index.php');
+    //header('location: index.php');
 }
     
 catch(PDOException $e) {
