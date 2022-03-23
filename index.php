@@ -27,6 +27,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Whatsmyinfo</a>
         <form class="form-inline">
+            <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
@@ -42,13 +43,6 @@
                 echo '</button>';
             }
             ?>
-            <!-- Button trigger modal -->
-            
-                
-            
-            
-                
-            
         </form>
     </nav>
 
@@ -94,24 +88,24 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form>
+                <form method="POST" action="register.php">
                     <div class="modal-body">
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="username">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password confirmation</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
                         </div>
                     </div>
                     <div class="modal-footer">

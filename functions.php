@@ -9,5 +9,11 @@ function connectDB($host, $bdname, $user, $pass){
 	}
 	return $bdd;
 }
-
+// Fonction de test d'intégrité des données
+function test_input($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
