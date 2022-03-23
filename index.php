@@ -12,8 +12,30 @@
     session_start();
     ?>
     <script>
-        // Fonction pour vérifier que 2 mdp sont identiques
-        function checkForm(form) {
+        // Fonction pour vérifier les données du formulaire de login
+        function checkLoginForm(form) {
+            //Récupération des données du formulaire
+            login = form.login.value;
+            pwd = form.pwd.value;
+
+            //On vide les messages d'alerte 
+            $("#alertMessageLogin").empty()
+
+            // If email not entered
+            if (login == '') {
+                $("#alertMessageLogin").append("Please enter login or email");
+                return false;
+            }
+
+            // If username not entered
+            if (pwd == '') {
+                $("#alertMessageLogin").append("Please enter password");
+                return false;
+            }
+
+        }
+        // Fonction pour vérifier les données du formulaire d'enregistrement
+        function checkRegisterForm(form) {
             //Récupération des données du formulaire
             username = form.username.value;
             email = form.email.value;
@@ -21,35 +43,35 @@
             password2 = form.passwordverif.value;
 
             //On vide les messages d'alerte 
-            $( "#alertMessage" ).empty()
+            $("#alertMessageRegister").empty()
 
             // If email not entered
-            if (email == ''){
-                $( "#alertMessage" ).append( "Please enter email" );
+            if (email == '') {
+                $("#alertMessageRegister").append("Please enter email");
                 return false;
             }
 
-             // If username not entered
-             if (username == ''){
-                $( "#alertMessage" ).append( "Please enter username" );
+            // If username not entered
+            if (username == '') {
+                $("#alertMessageRegister").append("Please enter username");
                 return false;
             }
 
             // If password not entered
-            if (password1 == ''){
-                $( "#alertMessage" ).append( "Please enter Password" );
+            if (password1 == '') {
+                $("#alertMessageRegister").append("Please enter Password");
                 return false;
             }
-               
+
             // If confirm password not entered
-            else if (password2 == ''){
-                $( "#alertMessage" ).append( "Please enter confirm Password" );
+            else if (password2 == '') {
+                $("#alertMessageRegister").append("Please enter confirm Password");
                 return false;
             }
 
             // If Not same return False.    
             else if (password1 != password2) {
-                $( "#alertMessage" ).append( "Passwords not matching" );
+                $("#alertMessageRegister").append("Passwords not matching");
                 return false;
             }
         }
@@ -97,7 +119,7 @@
                     <h5 class="modal-title">Sign In</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="login.php">
+                <form method="POST" action="login.php" onSubmit="return checkLoginForm(this)">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -116,6 +138,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <small id="alertMessageLogin" class="form-text text-muted"></small>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
@@ -131,7 +154,7 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="register.php" onSubmit = "return checkForm(this)">
+                <form method="POST" action="register.php" onSubmit="return checkRegisterForm(this)">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -150,10 +173,9 @@
                             <label for="exampleInputPassword1">Password confirmation</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
                         </div>
-                        <small id="alertMessage" class="form-text text-muted">
-                        </small>
                     </div>
                     <div class="modal-footer">
+                        <small id="alertMessageRegister" class="form-text text-muted"></small>
                         <small id="emailHelp" class="form-text text-muted">
                             Already registered ?
                             <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#signIn" tabindex="-1">
