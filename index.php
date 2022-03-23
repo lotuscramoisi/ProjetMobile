@@ -46,7 +46,7 @@
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">
                                 Not suscribed yet ?
-                                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-dismiss="modal" data-target="#register">
+                                <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal" data-target="#register">
                                     Register
                                 </button>
                             </small>
