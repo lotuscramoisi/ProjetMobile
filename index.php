@@ -41,12 +41,12 @@
                     <h5 class="modal-title">Sign In</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form>
+                <form action="POST">
                     <div class="modal-body">
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address/Username</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="login">
                             <small id="emailHelp" class="form-text text-muted">
                                 Not registered yet ?
                                 <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register">
@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
                         </div>
                     </div>
                     <div class="modal-footer">
