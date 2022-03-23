@@ -37,7 +37,7 @@ try {
  
     }
     // on redirige notre visiteur vers la page d'accueil
-    //header('location: index.php');
+    header('location: index.php');
 }
     
 catch(PDOException $e) {
