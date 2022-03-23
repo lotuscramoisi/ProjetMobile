@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" action="login.php" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
@@ -108,6 +108,11 @@
             </div>
         </div>
     </div>
+    <?php
+     if(isset($_SESSION['login'])){
+         echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
+     }
+    ?>
 </body>
 
 </html>
