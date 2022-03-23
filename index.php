@@ -16,24 +16,17 @@
 
 <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Whatsmyinfo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">
-                    Sign in
-                </button>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">
-                    Register
-                </button>
-            </div>
-        </div>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">
+                Sign in
+            </button>
+            <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">
+                Register
+            </button>
+        </form>
     </nav>
-    
 
 
     <!-- Modal Sign In -->
