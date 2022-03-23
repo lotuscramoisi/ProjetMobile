@@ -11,7 +11,7 @@ try {
     
 
     // Requête sql
-    $sql = "select USERPSW from USER where USERNAME like binary :login";
+    $sql = "select * from USER where USERNAME like binary :login";
     
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
