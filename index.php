@@ -29,9 +29,9 @@
         <form class="form-inline">
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<button type="button" class="btn btn-outline-success" action="logout.php">';
+                echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
-                echo '</button>';
+                echo '</button></a>';
             }
             else{
                 echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
