@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-
+    <?php
+        include 'functions.php'; 
+        $conn=connectDB("localhost","stage2019", "root", "");
+    ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -45,8 +48,8 @@
                             <label for="exampleInputEmail1">Email address/Username</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">
-                                Not suscribed yet ?
-                                <button type="button" class="btn btn-link" data-toggle="modal" data-dismiss="modal" data-target="#register">
+                                Not registered yet ?
+                                <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register">
                                     Register
                                 </button>
                             </small>
