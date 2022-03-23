@@ -27,7 +27,7 @@
 
             // If Not same return False.    
             else if (password1 != password2) {
-                alert("\nPassword did not match: Please try again...")
+                $( "#alertMessage" ).append( "Passwords not matching" );
                 return false;
             }
         }
@@ -128,7 +128,7 @@
                             <label for="exampleInputPassword1">Password confirmation</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
                         </div>
-                        <small id="passwordnotsame" class="form-text text-muted">
+                        <small id="alertMessage" class="form-text text-muted">
                         </small>
                     </div>
                     <div class="modal-footer">
