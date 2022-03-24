@@ -48,7 +48,7 @@
 
             // If email not entered
             if (isMailUsed(email)) {
-                $("#alertMessageRegister").append("Email Already used");
+                $("#alertMessageRegister").append("Email already used");
                 return false;
             }
 
