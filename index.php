@@ -45,7 +45,6 @@
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
-<<<<<<< HEAD
 
             // If email not entered
             // if (isMailUsed(email)) {
@@ -53,8 +52,6 @@
             //     return false;
             // }
 
-=======
->>>>>>> parent of 9de2ac9 (email already used)
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
