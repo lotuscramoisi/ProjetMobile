@@ -46,10 +46,10 @@
             $("#alertMessageRegister").empty()
 
             // If email already used
-            if (isMailUsed(email)) {
-                $("#alertMessageRegister").append("Email already used");
-                return false;
-            }
+            // if (isMailUsed(email)) {
+            //     $("#alertMessageRegister").append("Email already used");
+            //     return false;
+            // }
 
             // If email not entered
             if (email == '') {
