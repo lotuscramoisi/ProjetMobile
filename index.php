@@ -45,6 +45,13 @@
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
+
+            // If email not entered
+            if (isMailUsed(email)) {
+                $("#alertMessageRegister").append("Email Already used");
+                return false;
+            }
+
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
