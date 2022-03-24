@@ -48,10 +48,10 @@
 <<<<<<< HEAD
 
             // If email not entered
-            // if (isMailUsed(email)) {
-            //     $("#alertMessageRegister").append("Email already used");
-            //     return false;
-            // }
+            if (isMailUsed(email)) {
+                $("#alertMessageRegister").append("Email already used");
+                return false;
+            }
 
 =======
 >>>>>>> parent of 9de2ac9 (email already used)
