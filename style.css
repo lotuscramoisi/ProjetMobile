@@ -1,7 +1,7 @@
 #left-list{
     width : 50%;
 }
-.list-group{
+#left-list .list-group{
     background-color: blue;
     margin : 0 auto;
 }
