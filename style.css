@@ -1,13 +1,6 @@
 #left-list{
-    display : flex;
-    width : 50%;
-}
-#right-list{
-    
     width : 50%;
 }
 .list-group{
-    display : flex;
-    flex-direction: row;
     background-color: blue;
 }
