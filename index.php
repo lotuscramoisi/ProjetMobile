@@ -200,18 +200,11 @@
     <!-- START Liste des informations -->
 
     <div class="row">
-        <div class="col-md-8">
-            Adresse IP
-        </div>
-        <div class="col-md-4">
-            192.168.1.1
-        </div>
-        <div class="col-md-8">
-            Navigateur
-        </div>
-        <div class="col-md-4">
-            Google Chrome
-        </div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="w-100"></div>
+        <div class="col">col</div>
+        <div class="col">col</div>
     </div>
 
     <!-- END Liste des informations -->
