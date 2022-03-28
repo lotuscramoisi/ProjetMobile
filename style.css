@@ -1,8 +1,9 @@
 #left-list{
-    width : 50%;
+    width : 100%;
     margin : 0 auto;
+    background-color: blue;
 }
 #left-list .list-group{
-    background-color: blue;
+    width : 50%;
     margin : 0 auto;
 }
