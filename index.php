@@ -200,6 +200,22 @@
         echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
     }
     ?>
+    <!-- START Liste des informations -->
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Adresse IP
+            <span class="badge badge-primary badge-pill">192.168.1.1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Navigateur
+            <span class="badge badge-primary badge-pill">Google Chrome</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Appareil
+            <span class="badge badge-primary badge-pill">Samsung Galaxy S11</span>
+        </li>
+    </ul>
+    <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
