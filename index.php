@@ -103,7 +103,7 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<span color="white">vous êtes maintenant connecté en tant que : ' . $_SESSION['login'] . '</span';
+                echo '<FONT COLOR=white>vous êtes maintenant connecté en tant que : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
