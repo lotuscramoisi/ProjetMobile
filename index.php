@@ -103,6 +103,7 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
@@ -195,11 +196,6 @@
             </div>
         </div>
     </div>
-    <?php
-    if (isset($_SESSION['login'])) {
-        echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
-    }
-    ?>
     <!-- START Liste des informations -->
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
