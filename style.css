@@ -1,8 +1,3 @@
-#left-list{
-    width : 100%;
-    margin : 0 auto;
-    background-color: blue;
-}
-#left-list .list-group{
-    margin : 0 auto;
+.container{
+    background-color: rebeccapurple;
 }
