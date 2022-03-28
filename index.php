@@ -103,7 +103,7 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<FONT COLOR=white>vous êtes maintenant connecté en tant que : ' . $_SESSION['login'] . '</font>';
+                echo '<FONT COLOR=white>Utilisateur : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
@@ -198,18 +198,20 @@
     </div>
     <!-- START Liste des informations -->
     <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Adresse IP
-            <span class="badge badge-primary badge-pill">192.168.1.1</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Navigateur
-            <span class="badge badge-primary badge-pill">Google Chrome</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Appareil
-            <span class="badge badge-primary badge-pill">Samsung Galaxy S11</span>
-        </li>
+        <div id="left-list">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+        </div>
+        <div id="right-list">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+        </div>
     </ul>
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
