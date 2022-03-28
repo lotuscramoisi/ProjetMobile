@@ -1,5 +1,5 @@
 #left-list{
-    
+    display : flex;
     width : 50%;
 }
 #right-list{
