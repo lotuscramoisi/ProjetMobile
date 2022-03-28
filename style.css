@@ -8,4 +8,6 @@
 }
 .list-group{
     display : flex;
+    flex-direction: row;
+    background-color: blue;
 }
