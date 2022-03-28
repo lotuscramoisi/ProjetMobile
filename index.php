@@ -199,12 +199,31 @@
     </div>
     <!-- START Liste des informations -->
 
-    <div class="row">
-        <div class="col">col</div>
-        <div class="col">col</div>
-        <div class="w-100"></div>
-        <div class="col">col</div>
-        <div class="col">col</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Adresse IP
+            </div>
+            <div class="col">
+                192.168.1.1
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Navigateur
+            </div>
+            <div class="col">
+                Google Chrome
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Appareil
+            </div>
+            <div class="col">
+                Samsung 11
+            </div>
+        </div>
     </div>
 
     <!-- END Liste des informations -->
