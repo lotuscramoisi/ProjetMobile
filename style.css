@@ -1,8 +1,11 @@
 #left-list{
-    display : left;
+    
     width : 50%;
 }
 #right-list{
-    display : right;
+    
     width : 50%;
+}
+.list-group{
+    display : flex;
 }
