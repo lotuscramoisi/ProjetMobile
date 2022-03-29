@@ -197,6 +197,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <!-- START Liste des informations -->
 
     <div class="container">
@@ -207,6 +208,13 @@
     </div>
 
     <!-- END Liste des informations -->
+=======
+    <?php
+    if (isset($_SESSION['login'])) {
+        echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
+    }
+    ?>
+>>>>>>> parent of c8e536d (ajout de la liste des informations)
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
