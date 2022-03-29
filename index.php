@@ -104,6 +104,7 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                echo 'Utilisateur : ' . $_SESSION['login'];
                 echo '<FONT COLOR=white>Utilisateur : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
@@ -199,7 +200,7 @@
     </div>
     <?php
     if (isset($_SESSION['login'])) {
-        echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
+        
     }
     ?>
     <!-- START Bootstrap-Cookie-Alert -->
