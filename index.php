@@ -203,7 +203,7 @@
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Adresse IP
-            <span class="badge badge-primary badge-pill"><?php echo ?></span>
+            <span class="badge badge-primary badge-pill"><?php echo 1 ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Navigateur
