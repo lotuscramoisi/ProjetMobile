@@ -1,3 +1,6 @@
 .container{
     background-color: rebeccapurple;
 }
+#alertMessageRegister{
+    color:red;
+}
