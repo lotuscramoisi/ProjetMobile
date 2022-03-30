@@ -201,8 +201,8 @@
     <?php 
         if($_GET["error"] == "existingmail"){
             echo '<font color=red>Email address already taken</font>';
-            echo "<script>$('#register').modal('show');</script>";
-            echo "$('#alertMessageRegister').append('Email address already taken');";
+            echo "<script>$('#register').modal('show');";
+            echo "$('#alertMessageRegister').append('Email address already taken');</script>";
         }
     ?>
     <!-- START Liste des informations -->
