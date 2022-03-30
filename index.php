@@ -213,7 +213,7 @@
         }
         //Si les mots de passe ne correspondent pas
         elseif ($errormsg == "pswnomatch") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don't match</font>');</script>";
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords dont match</font>');</script>";
         }
     }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
