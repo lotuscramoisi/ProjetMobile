@@ -203,11 +203,11 @@
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Adresse IP
-            <span class="badge badge-primary badge-pill"><?php getUserIP()?></span>
+            <span class="badge badge-primary badge-pill"><?php echo getUserIP()?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Navigateur
-            <span class="badge badge-primary badge-pill"><?php getBrowser() ?></span>
+            <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Appareil
