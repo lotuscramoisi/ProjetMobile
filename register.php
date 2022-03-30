@@ -44,6 +44,10 @@ try {
     if ($stmtsearchmail->fetchColumn()) {
         header('Location: index.php?error=existingmail');
     }
+    //Si l'adresse mail existe dans la DB on renvoie sur la page d'accueil
+    elseif ($stmtsearchusername->fetchColumn()) {
+        header('Location: index.php?error=existingusername');
+    }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
     else{
         // Requête sql d'insertion des données de l'inscription
