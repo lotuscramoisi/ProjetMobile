@@ -46,35 +46,26 @@
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
-            // If email already used
-            // if (isMailUsed(email)) {
-            //     $("#alertMessageRegister").append("Email already used");
-            //     return false;
-            // }
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
                 return false;
             }
-
             // If username not entered
             if (username == '') {
                 $("#alertMessageRegister").append("Please enter username");
                 return false;
             }
-
             // If password not entered
             if (password1 == '') {
                 $("#alertMessageRegister").append("Please enter Password");
                 return false;
             }
-
             // If confirm password not entered
             else if (password2 == '') {
                 $("#alertMessageRegister").append("Please enter confirm Password");
                 return false;
             }
-
             // If Not same return False.    
             else if (password1 != password2) {
                 $("#alertMessageRegister").append("Passwords not matching");
@@ -199,17 +190,29 @@
         </div>
     </div>
     <?php
+    //DEBUT : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
     if (isset($_GET["error"])) {
         $errormsg = $_GET["error"];
         echo "<script>$('#alertMessageRegister').empty();</script>";
         echo "<script>$('#register').modal('show');</script>";
+        //Si l'adresse mail existe dans la DB
         if($errormsg  == "existingmail"){
             echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
         }
+        //Si l'username existe dans la DB
         elseif($errormsg == "existingusername"){
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
         }
+        //Si l'adresse mail est vide
+        elseif($errormsg == "emptyemail"){
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Address mail is empty</font>');</script>";
+        }
+        //Si l'username est vide
+        elseif($errormsg == "emptyusername"){
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
+        }
     }
+    //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
     ?>
     <!-- START Liste des informations -->
     <ul class="list-group">

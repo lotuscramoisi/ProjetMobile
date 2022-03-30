@@ -48,6 +48,14 @@ try {
     elseif ($stmtsearchusername->fetchColumn()) {
         header('Location: index.php?error=existingusername');
     }
+    //Si l'adresse mail est vide on renvoie sur la page d'accueil
+    elseif ($email == ""){
+        header('Location: index.php?error=emptyemail');
+    }
+    //Si l'username est vide on renvoie sur la page d'accueil
+    elseif ($username == ""){
+        header('Location: index.php?error=emptyusername');
+    }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
     else{
         // Requête sql d'insertion des données de l'inscription
