@@ -206,7 +206,6 @@
         
     }
     ?>
-<<<<<<< HEAD
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
@@ -216,9 +215,7 @@
         </button>
     </div>
     <!-- END Bootstrap-Cookie-Alert -->
-    <!-- <script src="cookiealert.js"></script> -->
-=======
->>>>>>> parent of 1fba2cb (add cookie agreement)
+    <script src="cookiealert.js"></script>
 </body>
 
 </html>
