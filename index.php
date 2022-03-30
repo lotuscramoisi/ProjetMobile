@@ -203,7 +203,7 @@
             </div>
         </div>
     </div>
-    <button id="mybtn">Click me</button>
+    <button id="mybtn" onClick="$('#register').modal('show');">Click me</button>
     <?php
 
     if ($_GET["error"] == "existingmail") {
