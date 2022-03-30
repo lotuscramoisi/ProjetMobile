@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script src="jquery-3.6.0.js"> </script> 
 <head>
     <?php
     // Inclusion des fichiers de fonctions
