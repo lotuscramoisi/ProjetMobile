@@ -15,7 +15,7 @@
     <script>
         $(document).ready(function() {
             $("#mybtn").click(function() {
-                $("#register").modal('show');
+                $("#register").modal();
             });
         });
         // Fonction pour vérifier les données du formulaire de login
@@ -203,7 +203,7 @@
             </div>
         </div>
     </div>
-    <button id="mybtn" onClick="$('#register').modal('show');">Click me</button>
+    <button id="mybtn" onClick="$('#register').modal();">Click me</button>
     <?php
 
     if ($_GET["error"] == "existingmail") {
