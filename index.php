@@ -47,10 +47,10 @@
             $("#alertMessageRegister").empty()
 
             // If email not entered
-            if (email == '') {
-                $("#alertMessageRegister").append("Please enter email");
-                return false;
-            }
+            // if (email == '') {
+            //     $("#alertMessageRegister").append("Please enter email");
+            //     return false;
+            // }
             // If username not entered
             if (username == '') {
                 $("#alertMessageRegister").append("Please enter username");
