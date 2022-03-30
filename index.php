@@ -88,8 +88,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- Bootstrap 4.1.1 -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <!-- Bootstrap 4.1.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="cookiealert.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -198,15 +198,20 @@
             </div>
         </div>
     </div>
+    <?php 
+        if($_GET["error"] == "existingmail"){
+            echo '<font color=red>Email adress already taken</font>';
+        }
+    ?>
     <!-- START Liste des informations -->
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Adresse IP
-            <span class="badge badge-primary badge-pill"><?php echo getUserIP()?></span>
+            <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Navigateur
-            <span class="badge badge-primary badge-pill"><?php echo getBrowser()?></span>
+            <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Appareil
