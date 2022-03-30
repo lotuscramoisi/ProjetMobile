@@ -200,7 +200,6 @@
     </div>
     <?php
     if (isset($_SESSION['login'])) {
-        
     }
     ?>
     <!-- START Bootstrap-Cookie-Alert -->
