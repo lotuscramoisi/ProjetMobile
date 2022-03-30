@@ -25,7 +25,7 @@
             if (login == '') {
                 $("#alertMessageLogin").append("Please enter login or email");
                 return false;
-            }
+            } 
 
             // If username not entered
             if (pwd == '') {
