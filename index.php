@@ -198,7 +198,9 @@
             </div>
         </div>
     </div>
-    <button onclick="$('#register').modal('show')">Click me</button>
+    <button onclick="$('#register').modal({
+        show: 'true'
+    });">Click me</button>
     <?php 
 
         if($_GET["error"] == "existingmail"){
