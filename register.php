@@ -12,20 +12,40 @@ try {
     // Hachage du mot de passe
     $psw = password_hash($psw, PASSWORD_DEFAULT);
 
+    //DEBUT RECHERCHE DE L'ADRESSEMAIL
     // Requête sql de recherche de l'adresse mail dans la DB
-    $sqlrecherche = "select * from USER where USERMAIL like binary :email";
+    $sqlrechercheemail = "select * from USER where USERMAIL like binary :email";
 
     // Préparation de la requête
-    $stmtsearch = $conn->prepare($sqlrecherche);
+    $stmtsearchmail = $conn->prepare($sqlrechercheemail);
 
     // Attribution des paramètres de la requête préparée
-    $stmtsearch->bindParam(':email', $email, PDO::PARAM_STR, 50);
+    $stmtsearchmail->bindParam(':email', $email, PDO::PARAM_STR, 50);
 
     // Exécution de la requête
-    $stmtsearch->execute();
+    $stmtsearchmail->execute();
+    //FIN RECHERCHE DE L'ADRESSEMAIL
 
+    //DEBUT RECHERCHE DE L'USERNAME
+    // Requête sql de recherche de l'adresse mail dans la DB
+    $sqlrechercheusername = "select * from USER where USERNAME like binary :username";
+
+    // Préparation de la requête
+    $stmtsearchusername = $conn->prepare($sqlrechercheusername);
+
+    // Attribution des paramètres de la requête préparée
+    $stmtsearchusername->bindParam(':username', $username, PDO::PARAM_STR, 25);
+
+    // Exécution de la requête
+    $stmtsearchusername->execute();
+    //FIN RECHERCHE DE L'USERNAME
+
+    //Si l'adresse mail existe dans la DB on renvoie sur la page d'accueil
+    if ($stmtsearchmail->fetchColumn()) {
+        header('Location: index.php?error=existingmail');
+    }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
-    if (!$stmtsearch->fetchColumn()) {
+    else{
         // Requête sql d'insertion des données de l'inscription
         $sql = "INSERT INTO USER(USERNAME, USERPSW, USERMAIL, SIGNUPDATE, ISADMIN) VALUES (:username, :psw, :email, now(), false)";
 
@@ -41,9 +61,9 @@ try {
         $stmt->execute();
         header("Location: $_SERVER[HTTP_REFERER]");
     }
-    else{
-        header('Location: index.php?error=existingmail');
-    }
+
+    
+
 } catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
