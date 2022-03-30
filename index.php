@@ -84,7 +84,7 @@
     <?php
     if (isset($_GET["error"])) {
         $errormsg = $_GET["error"];
-        echo "$('#alertMessageRegister').empty();";
+        echo "<script>$('#alertMessageRegister').empty();</script>";
         echo "<script>$('#register').modal('show');</script>"; //Affichage du formulaire d'enregistrement
         //Si l'adresse email existe déjà dans notre DB
         if ($errormsg  == "existingmail") {
