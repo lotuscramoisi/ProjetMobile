@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php
     // Inclusion des fichiers de fonctions
@@ -12,7 +13,6 @@
     session_start();
     ?>
     <script>
-       
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
             //Récupération des données du formulaire
@@ -47,10 +47,10 @@
             $("#alertMessageRegister").empty()
 
             // If email not entered
-            // if (email == '') {
-            //     $("#alertMessageRegister").append("Please enter email");
-            //     return false;
-            // }
+            if (email == '') {
+                $("#alertMessageRegister").append("Please enter email");
+                return false;
+            }
             // If username not entered
             if (username == '') {
                 $("#alertMessageRegister").append("Please enter username");
@@ -67,10 +67,10 @@
                 return false;
             }
             // If Not same return False.    
-            else if (password1 != password2) {
-                $("#alertMessageRegister").append("Passwords not matching");
-                return false;
-            }
+            // else if (password1 != password2) {
+            //     $("#alertMessageRegister").append("Passwords not matching");
+            //     return false;
+            // }
         }
     </script>
 
@@ -196,20 +196,24 @@
         echo "<script>$('#alertMessageRegister').empty();</script>";
         echo "<script>$('#register').modal('show');</script>";
         //Si l'adresse mail existe dans la DB
-        if($errormsg  == "existingmail"){
+        if ($errormsg  == "existingmail") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
         }
         //Si l'username existe dans la DB
-        elseif($errormsg == "existingusername"){
+        elseif ($errormsg == "existingusername") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
         }
         //Si l'adresse mail est vide
-        elseif($errormsg == "emptyemail"){
+        elseif ($errormsg == "emptyemail") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Address mail is empty</font>');</script>";
         }
         //Si l'username est vide
-        elseif($errormsg == "emptyusername"){
+        elseif ($errormsg == "emptyusername") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
+        }
+        //Si l'username est vide
+        elseif ($errormsg == "pswnomatch") {
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don't match</font>');</script>";
         }
     }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
@@ -239,7 +243,7 @@
         </button>
     </div>
 
-    <?php aaa()?>
+    <?php aaa() ?>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
 </body>

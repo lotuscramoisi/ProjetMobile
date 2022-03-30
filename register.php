@@ -40,21 +40,26 @@ try {
     $stmtsearchusername->execute();
     //FIN RECHERCHE DE L'USERNAME
 
-    //Si l'adresse mail existe dans la DB on renvoie sur la page d'accueil
+    //VERIFICATION DE L'INTEGRITÉ DES DONNÉES
+    //Si l'adresse mail existe dans la DB
     if ($stmtsearchmail->fetchColumn()) {
         header('Location: index.php?error=existingmail');
     }
-    //Si l'adresse mail existe dans la DB on renvoie sur la page d'accueil
+    //Si l'adresse mail existe dans la DB
     elseif ($stmtsearchusername->fetchColumn()) {
         header('Location: index.php?error=existingusername');
     }
-    //Si l'adresse mail est vide on renvoie sur la page d'accueil
+    //Si l'adresse mail est vide
     elseif ($email == ""){
         header('Location: index.php?error=emptyemail');
     }
-    //Si l'username est vide on renvoie sur la page d'accueil
+    //Si l'username est vide
     elseif ($username == ""){
         header('Location: index.php?error=emptyusername');
+    }
+    //Si les mots de pass ne correspondent pas
+    elseif ($psw != $pswverif){
+        header('Location: index.php?error=pswnomatch');
     }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
     else{
