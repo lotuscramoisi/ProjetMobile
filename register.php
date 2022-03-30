@@ -76,7 +76,7 @@ try {
 
         // Exécution de la requête
         $stmt->execute();
-        header("Location: $_SERVER[HTTP_REFERER]");
+        header("Location: index.php?registration=success");
     }
 
     
