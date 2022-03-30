@@ -198,7 +198,9 @@
             </div>
         </div>
     </div>
+    <button onclick="$('#register').modal('show')">Click me</button>
     <?php 
+
         if($_GET["error"] == "existingmail"){
             echo '<font color=red>Email address already taken</font>';
             echo "<script>$('#register').modal('show');";
