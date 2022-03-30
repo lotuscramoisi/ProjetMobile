@@ -67,10 +67,10 @@
                 return false;
             }
             // If Not same return False.    
-            // else if (password1 != password2) {
-            //     $("#alertMessageRegister").append("Passwords not matching");
-            //     return false;
-            // }
+            else if (password1 != password2) {
+                $("#alertMessageRegister").append("Passwords not matching");
+                return false;
+            }
         }
     </script>
 
@@ -160,19 +160,19 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" maxlength="5">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="username" maxlength="25">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" maxlength="25">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password confirmation</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif" maxlength="25">
                         </div>
                         <small id="alertMessageRegister" class="form-text text-muted"></small>
                     </div>
