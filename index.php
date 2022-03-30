@@ -207,7 +207,7 @@
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Navigateur
-            <span class="badge badge-primary badge-pill">Google Chrome</span>
+            <span class="badge badge-primary badge-pill"><?php getBrowser() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Appareil

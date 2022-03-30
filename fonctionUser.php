@@ -19,7 +19,7 @@
     }
 
     function getBrowser(){
-        return getBrowser();
+        return "Safari";
     }
 
     function get_operating_system() {
