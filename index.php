@@ -14,9 +14,7 @@
     ?>
     <script>
         $(document).ready(function() {
-            $("#mybtn").click(function() {
-                $("#register").modal();
-            });
+           $("#register").modal();
         });
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
