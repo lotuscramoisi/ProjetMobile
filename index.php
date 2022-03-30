@@ -235,6 +235,17 @@
         }
     }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
+    //DEBUT : RENVOIS MESSAGE D'EVENEMENT
+    if (isset($_GET["event"])) {
+        $eventmsg = $_GET["event"];
+        echo "<script>$('#event').modal('show');</script>";
+        //Si l'inscription s'est bien déroulée
+        if ($eventmsg  == "registrationsuccess") {
+            echo "<script>$('#eventtitle').append('Registration completed');</script>";
+            echo "<script>$('#eventbody').append('Your registration was successfully completed');</script>";
+        }
+    }
+    //FIN : RENVOIS MESSAGE DE CONFIRMATION D'INSCRIPTION
     ?>
     <!-- START Liste des informations -->
     <ul class="list-group">

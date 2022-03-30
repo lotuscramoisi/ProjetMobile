@@ -76,7 +76,7 @@ try {
 
         // Exécution de la requête
         $stmt->execute();
-        header("Location: index.php?registration=success");
+        header("Location: index.php?event=registrationsuccess");
     }
 
     
