@@ -6,6 +6,7 @@
     // Inclusion des fichiers de fonctions
     include 'functions.php';
     include 'connexiondb.php';
+    include 'fonctionUser.php';
     // Connexion à la BDD en tant qu'admin
     $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
@@ -202,11 +203,11 @@
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Adresse IP
-            <span class="badge badge-primary badge-pill"></span>
+            <span class="badge badge-primary badge-pill"><?php echo getUserIP()?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Navigateur
-            <span class="badge badge-primary badge-pill">Google Chrome</span>
+            <span class="badge badge-primary badge-pill"><?php echo getBrowser()?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Appareil
