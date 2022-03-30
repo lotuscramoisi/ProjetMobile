@@ -125,11 +125,11 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address/Username</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username" name="login">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username" name="login" maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd" maxlength="25">
                         </div>
                         <small id="alertMessageLogin" class="form-text text-muted"></small>
                     </div>
@@ -160,7 +160,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" maxlength="5">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
