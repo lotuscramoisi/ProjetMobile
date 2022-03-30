@@ -202,9 +202,9 @@
     if (isset($_GET["error"])) {
         $errormsg = $_GET["error"];
         echo "<script>$('#alertMessageRegister').empty();</script>";
+        echo "<script>$('#register').modal('show');</script>";
         if($errormsg  == "existingmail"){
-            echo "<script>$('#register').modal('show');";
-            echo "$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
         }
     }
     ?>
