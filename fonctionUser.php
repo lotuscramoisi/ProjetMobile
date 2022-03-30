@@ -28,10 +28,5 @@
 
         return $operating_system;
     }
-    
-    echo '</br>User IP Address is'.getUserIP();
-    echo '</br>User Port:'.getUserPort();
-    echo '</br>User Port:'.getBrowser();
-    echo '</br>Navigateur par défaut:'.get_operating_system();
 ?>
 
