@@ -103,7 +103,7 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo 'Utilisateur : ' . $_SESSION['login'];
+                echo '<font color = white>Utilisateur : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
