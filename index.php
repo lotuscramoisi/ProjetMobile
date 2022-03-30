@@ -13,6 +13,11 @@
     session_start();
     ?>
     <script>
+        $(document).ready(function() {
+            $("#mybtn").click(function() {
+                $("#register").modal('show');
+            });
+        });
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
             //Récupération des données du formulaire
@@ -198,16 +203,14 @@
             </div>
         </div>
     </div>
-    <button onclick="$('#register').modal({
-        show: 'true'
-    });">Click me</button>
-    <?php 
+    <button id="mybtn">Click me</button>
+    <?php
 
-        if($_GET["error"] == "existingmail"){
-            echo '<font color=red>Email address already taken</font>';
-            echo "<script>$('#register').modal('show');";
-            echo "$('#alertMessageRegister').append('Email address already taken');</script>";
-        }
+    if ($_GET["error"] == "existingmail") {
+        echo '<font color=red>Email address already taken</font>';
+        echo "<script>$('#register').modal('show');";
+        echo "$('#alertMessageRegister').append('Email address already taken');</script>";
+    }
     ?>
     <!-- START Liste des informations -->
     <ul class="list-group">
