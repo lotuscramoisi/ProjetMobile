@@ -25,7 +25,7 @@
             if (login == '') {
                 $("#alertMessageLogin").append("Please enter login or email");
                 return false;
-            } 
+            }
 
             // If username not entered
             if (pwd == '') {
@@ -82,14 +82,13 @@
             }
         }
     </script>
-    <!-- Import -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="cookiealert.css">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,16 +103,14 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo 'Utilisateur : ' . $_SESSION['login'];
-                echo '<FONT COLOR=white>Utilisateur : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
             } else {
-                echo '<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-target="#signIn">';
+                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
                 echo 'Sign in';
                 echo '</button>';
-                echo '<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-target="#register">';
+                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">';
                 echo 'Register';
                 echo '</button>';
             }
@@ -135,20 +132,20 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address/Username</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or username" name="login">
-                            <small id="emailHelp" class="form-text text-muted">
-                                Not registered yet ?
-                                <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register" tabindex="-1">
-                                    Register
-                                </button>
-                            </small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd">
                         </div>
+                        <small id="alertMessageLogin" class="form-text text-muted"></small>
                     </div>
                     <div class="modal-footer">
-                        <small id="alertMessageLogin" class="form-text text-muted"></small>
+                        <small id="emailHelp" class="form-text text-muted">
+                            Not registered yet ?
+                            <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register" tabindex="-1">
+                                Register
+                            </button>
+                        </small>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
@@ -183,9 +180,9 @@
                             <label for="exampleInputPassword1">Password confirmation</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" name="passwordverif">
                         </div>
+                        <small id="alertMessageRegister" class="form-text text-muted"></small>
                     </div>
                     <div class="modal-footer">
-                        <small id="alertMessageRegister" class="form-text text-muted"></small>
                         <small id="emailHelp" class="form-text text-muted">
                             Already registered ?
                             <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#signIn" tabindex="-1">
@@ -198,6 +195,27 @@
             </div>
         </div>
     </div>
+    <?php
+    if (isset($_SESSION['login'])) {
+        echo 'vous êtes maintenant connecté en tant que : ' . $_SESSION['login'];
+    }
+    ?>
+    <!-- START Liste des informations -->
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Adresse IP
+            <span class="badge badge-primary badge-pill">192.168.1.1</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Navigateur
+            <span class="badge badge-primary badge-pill">Google Chrome</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Appareil
+            <span class="badge badge-primary badge-pill">Samsung Galaxy S11</span>
+        </li>
+    </ul>
+    <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
