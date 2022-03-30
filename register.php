@@ -40,6 +40,9 @@ try {
         // Exécution de la requête
         $stmt->execute();
     }
+    else{
+        header('Location: index.php?error=existingmail');
+    }
 } catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
