@@ -81,7 +81,7 @@
         // FIN : COTE Client
         // DEBUT : COTE Serveur
         <?php
-        if ($_GET["error"]) {
+        if (isset($_GET["error"])) {
             $errormsg = $_GET["error"];
             echo "$('#alertMessageRegister').empty()";
             echo "<script>$('#register').modal('show');"; //Affichage du formulaire d'enregistrement
