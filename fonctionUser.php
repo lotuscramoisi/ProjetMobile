@@ -11,7 +11,7 @@
         else{
             $address=$_SERVER['REMOTE_ADDR'];
         }
-        return $address;
+        return strval($address);
     }
 
     function getUserPort(){
