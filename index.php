@@ -211,7 +211,7 @@
         elseif ($errormsg == "emptyusername") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
         }
-        //Si l'username est vide
+        //Si les mots de passe ne correspondent pas
         elseif ($errormsg == "pswnomatch") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don't match</font>');</script>";
         }
