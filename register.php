@@ -39,6 +39,7 @@ try {
 
         // Exécution de la requête
         $stmt->execute();
+        header("Location: $_SERVER[HTTP_REFERER]");
     }
     else{
         header('Location: index.php?error=existingmail');
@@ -49,5 +50,5 @@ try {
 //fermer la connexion pour libérer les ressources du serveur
 $conn = null;
 
-header("Location: $_SERVER[HTTP_REFERER]");
+
 ?>
