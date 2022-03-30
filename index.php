@@ -110,10 +110,10 @@
                 echo 'Logout';
                 echo '</button></a>';
             } else {
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
+                echo '<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-target="#signIn">';
                 echo 'Sign in';
                 echo '</button>';
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">';
+                echo '<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-target="#register">';
                 echo 'Register';
                 echo '</button>';
             }
