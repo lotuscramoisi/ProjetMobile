@@ -206,6 +206,9 @@
         if($errormsg  == "existingmail"){
             echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
         }
+        elseif($errormsg == "existingusername"){
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
+        }
     }
     ?>
     <!-- START Liste des informations -->
