@@ -199,7 +199,7 @@
         </div>
     </div>
     <?php
-    if ($_GET["error"] == "existingmail") {
+    if (isset($_GET["error"])) {
         echo "<script>$('#register').modal('show');";
         echo "$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
     }
