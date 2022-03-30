@@ -212,7 +212,7 @@
         </button>
     </div>
     <!-- END Bootstrap-Cookie-Alert -->
-    <script src="cookiealert.js"></script>
+    <!-- <script src="cookiealert.js"></script> -->
 </body>
 
 </html>
