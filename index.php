@@ -51,11 +51,6 @@
             //     $("#alertMessageRegister").append("Email already used");
             //     return false;
             // }
-
-            if($_GET["error"]){
-                $("#alertMessageRegister").append("Email already taken");
-                return false;
-            }
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
