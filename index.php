@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <?php
     // Inclusion des fichiers de fonctions
@@ -13,6 +12,7 @@
     session_start();
     ?>
     <script>
+       
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
             //Récupération des données du formulaire
@@ -46,6 +46,11 @@
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
+            // If email already used
+            // if (isMailUsed(email)) {
+            //     $("#alertMessageRegister").append("Email already used");
+            //     return false;
+            // }
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
@@ -75,12 +80,6 @@
                 $("#alertMessageRegister").append("Passwords not matching");
                 return false;
             }
-            <?php
-            if ($_GET["error"] == "existingmail") {
-                echo "<script>$('#register').modal('show');";
-                echo "$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
-            }
-            ?>
         }
     </script>
 
@@ -199,6 +198,12 @@
             </div>
         </div>
     </div>
+    <?php
+    if ($_GET["error"] == "existingmail") {
+        echo "<script>$('#register').modal('show');";
+        echo "$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
+    }
+    ?>
     <!-- START Liste des informations -->
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -224,7 +229,7 @@
         </button>
     </div>
 
-    <?php aaa() ?>
+    <?php aaa()?>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
 </body>
