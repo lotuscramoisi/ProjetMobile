@@ -10,7 +10,7 @@ try {
     $psw = test_input($_POST["password"]);
     $pswverif = test_input($_POST["passwordverif"]);
     // Hachage du mot de passe
-    $psw = password_hash($psw, PASSWORD_DEFAULT);
+    $pswhash = password_hash($psw, PASSWORD_DEFAULT);
 
     //DEBUT RECHERCHE DE L'ADRESSEMAIL
     // Requête sql de recherche de l'adresse mail dans la DB
@@ -71,7 +71,7 @@ try {
 
         // Attribution des paramètres de la requête préparée
         $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
-        $stmt->bindParam(':psw', $psw, PDO::PARAM_STR, 100);
+        $stmt->bindParam(':psw', $pswhash, PDO::PARAM_STR, 100);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR, 25);
 
         // Exécution de la requête
