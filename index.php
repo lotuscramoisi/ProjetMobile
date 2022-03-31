@@ -233,6 +233,16 @@
         elseif ($errormsg == "pswnomatch") {
             echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don\'t match</font>');</script>";
         }
+        //Si les mots de passe ne correspondent pas
+        elseif ($errormsg == "incorrectpsw") {
+            echo "<script>$('#rsignIn').modal('show');</script>";
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords incorrect</font>');</script>";
+        }
+        //Si les mots de passe ne correspondent pas
+        elseif ($errormsg == "loginnotexisting") {
+            echo "<script>$('#rsignIn').modal('show');</script>";
+            echo "<script>$('#alertMessageRegister').append('<font color=red>Login not existing</font>');</script>";
+        }
     }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
     //DEBUT : RENVOIS MESSAGE D'EVENEMENT
