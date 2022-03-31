@@ -212,36 +212,41 @@
     if (isset($_GET["error"])) {
         $errormsg = $_GET["error"];
         echo "<script>$('#alertMessageRegister').empty();</script>";
-        echo "<script>$('#register').modal('show');</script>";
+        echo "<script>$('#alertMessageLogin').empty();</script>";
         //Si l'adresse mail existe dans la DB
         if ($errormsg  == "existingmail") {
+            echo "<script>$('#register').modal('show');</script>";
             echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
         }
         //Si l'username existe dans la DB
         elseif ($errormsg == "existingusername") {
+            echo "<script>$('#register').modal('show');</script>";
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
         }
         //Si l'adresse mail est vide
         elseif ($errormsg == "emptyemail") {
+            echo "<script>$('#register').modal('show');</script>";
             echo "<script>$('#alertMessageRegister').append('<font color=red>Address mail is empty</font>');</script>";
         }
         //Si l'username est vide
         elseif ($errormsg == "emptyusername") {
+            echo "<script>$('#register').modal('show');</script>";
             echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
         }
         //Si les mots de passe ne correspondent pas
         elseif ($errormsg == "pswnomatch") {
+            echo "<script>$('#register').modal('show');</script>";
             echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don\'t match</font>');</script>";
         }
         //Si les mots de passe ne correspondent pas
         elseif ($errormsg == "incorrectpsw") {
-            echo "<script>$('#rsignIn').modal('show');</script>";
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords incorrect</font>');</script>";
+            echo "<script>$('#signIn').modal('show');</script>";
+            echo "<script>$('#alertMessageLogin').append('<font color=red>Passwords incorrect</font>');</script>";
         }
         //Si les mots de passe ne correspondent pas
         elseif ($errormsg == "loginnotexisting") {
-            echo "<script>$('#rsignIn').modal('show');</script>";
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Login not existing</font>');</script>";
+            echo "<script>$('#signIn').modal('show');</script>";
+            echo "<script>$('#alertMessageLogin').append('<font color=red>Login not existing</font>');</script>";
         }
     }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
