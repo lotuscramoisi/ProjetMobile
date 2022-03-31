@@ -9,35 +9,59 @@ try {
     $pwd=test_input($_POST["pwd"]);
 
     
+    //DEBUT RECHERCHE DE L'ADRESSEMAIL
+    // Requête sql de recherche de l'adresse mail dans la DB
+    $sqlrechercheemail = "select * from USER where USERMAIL like binary :login or USERNAME like binary :login";
 
-    // Requête sql
-    $sql = "select * from USER where USERNAME like binary :login or USERMAIL like binary :login";
-    
     // Préparation de la requête
-    $stmt = $conn->prepare($sql);
+    $stmtsearchmail = $conn->prepare($sqlrechercheemail);
 
     // Attribution des paramètres de la requête préparée
-    $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
-    
+    $stmtsearchmail->bindParam(':login', $login, PDO::PARAM_STR, 50);
+
     // Exécution de la requête
-    $stmt->execute();
+    $stmtsearchmail->execute();
+    //FIN RECHERCHE DE L'ADRESSEMAIL
 
-    //Récupération du mot de pass haché
-    $userinfos = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
-    if(password_verify($pwd, $userinfos['USERPSW'])){
+    //SI L'ADRESSE MAIL EST ENREGISTREE ON RECHERCHE LE MDP
+    if($stmtsearchmail->fetchColumn()){
+        //DEBUT RECHERCHE DU MDP EN FONCTION DE L'ADRESSE MAIL
+        // Requête sql
+        $sql = "select * from USER where USERNAME like binary :login or USERMAIL like binary :login";
         
-         // on démarre la session
-         session_start();
-         
-         // on enregistre les paramètres de notre visiteur comme variables de session
-         $_SESSION['login'] = $userinfos['USERNAME'];
-         $_SESSION['pwd'] = $pwdhash;
- 
+        // Préparation de la requête
+        $stmt = $conn->prepare($sql);
+
+        // Attribution des paramètres de la requête préparée
+        $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
+        
+        // Exécution de la requête
+        $stmt->execute();
+
+        //Récupération du mot de pass haché
+        $userinfos = $stmt->fetch(PDO::FETCH_ASSOC);
+        //FIN RECHERCHE DU MDP EN FONCTION DE L'ADRESSE MAIL
+
+        //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
+        if(password_verify($pwd, $userinfos['USERPSW'])){
+            
+            // on démarre la session
+            session_start();
+            
+            // on enregistre les paramètres de notre visiteur comme variables de session
+            $_SESSION['login'] = $userinfos['USERNAME'];
+            $_SESSION['pwd'] = $pwdhash;
+            // on redirige notre visiteur vers la page d'accueil
+            header('location: index.php');
+        }
+        else{
+            header('Location: index.php?error=incorrectpsw');
+        }
     }
-    // on redirige notre visiteur vers la page d'accueil
-    header('location: index.php');
+    else{
+        header('Location: index.php?error=loginnotexisting');
+    }
+    
 }
     
 catch(PDOException $e) {
