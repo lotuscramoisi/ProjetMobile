@@ -13,6 +13,62 @@
     session_start();
     ?>
     <script>
+        // DEBUT AJAX FORMULAIRE REGISTER
+        $(document).ready(function() {
+            $("#registerform").submit(function(event) {
+                //Empêche le formulaire d'être envoyé de manière classique
+                event.preventDefault();
+
+                // Serialisation des données du formulaire
+                var serializedData = $(this).serialize();
+
+                // Désactiver tous les champs d'entrée pendant le traitement
+                var $inputs = $(this).find("input, select, button, textarea");
+                $inputs.prop("disabled", true);
+
+
+                //Affichage des données du formulaire
+                alert(serializedData);
+
+                //Appelle de la page php
+                $.get("register.php", serializedData, function() {
+                        alert("fonction callback success")
+                    }, "text")
+
+                    .done(function(data) {
+
+                        alert("success .done ");
+
+                        alert(data.length);
+
+                        $("#alertMessageRegister").append(data);
+
+                        // En pratique, on génére ici le html nécessaire à l'affichage
+
+                    })
+
+                    .fail(function(error) {
+
+                        alert("error détectée:" + error.responseText);
+
+                        $("#Div_error").append(error.responseText);
+
+                    })
+
+                    .always(function() {
+
+                        alert("finished");
+
+                        // Reenable the inputs
+
+                        $inputs.prop("disabled", false);
+
+                    });
+
+            });
+
+        })
+        // FIN AJAX FORMULAIRE REGISTER
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
             //Récupération des données du formulaire
@@ -73,15 +129,15 @@
             }
         }
     </script>
-
+    <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Bootstrap 4.1.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="cookiealert.css">
     <link rel="stylesheet" href="style.css">
+    <!-- FIN IMPORT -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,7 +211,7 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="register.php" onSubmit="return checkRegisterForm(this)">
+                <form method="POST" action="register.php" onSubmit="return checkRegisterForm(this)" id="registerform">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -200,7 +256,7 @@
                     </button>
                 </div>
                 <div class="modal-body" id="eventbody">
-                    
+
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -209,31 +265,31 @@
     </div>
     <?php
     //DEBUT : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
-    if (isset($_GET["error"])) {
-        $errormsg = $_GET["error"];
-        echo "<script>$('#alertMessageRegister').empty();</script>";
-        echo "<script>$('#register').modal('show');</script>";
-        //Si l'adresse mail existe dans la DB
-        if ($errormsg  == "existingmail") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
-        }
-        //Si l'username existe dans la DB
-        elseif ($errormsg == "existingusername") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
-        }
-        //Si l'adresse mail est vide
-        elseif ($errormsg == "emptyemail") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Address mail is empty</font>');</script>";
-        }
-        //Si l'username est vide
-        elseif ($errormsg == "emptyusername") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
-        }
-        //Si les mots de passe ne correspondent pas
-        elseif ($errormsg == "pswnomatch") {
-            echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don\'t match</font>');</script>";
-        }
-    }
+    // if (isset($_GET["error"])) {
+    //     $errormsg = $_GET["error"];
+    //     echo "<script>$('#alertMessageRegister').empty();</script>";
+    //     echo "<script>$('#register').modal('show');</script>";
+    //     //Si l'adresse mail existe dans la DB
+    //     if ($errormsg  == "existingmail") {
+    //         echo "<script>$('#alertMessageRegister').append('<font color=red>Email address already taken</font>');</script>";
+    //     }
+    //     //Si l'username existe dans la DB
+    //     elseif ($errormsg == "existingusername") {
+    //         echo "<script>$('#alertMessageRegister').append('<font color=red>Username already taken</font>');</script>";
+    //     }
+    //     //Si l'adresse mail est vide
+    //     elseif ($errormsg == "emptyemail") {
+    //         echo "<script>$('#alertMessageRegister').append('<font color=red>Address mail is empty</font>');</script>";
+    //     }
+    //     //Si l'username est vide
+    //     elseif ($errormsg == "emptyusername") {
+    //         echo "<script>$('#alertMessageRegister').append('<font color=red>Username is empty</font>');</script>";
+    //     }
+    //     //Si les mots de passe ne correspondent pas
+    //     elseif ($errormsg == "pswnomatch") {
+    //         echo "<script>$('#alertMessageRegister').append('<font color=red>Passwords don\'t match</font>');</script>";
+    //     }
+    // }
     //FIN : RENVOIS MESSAGE D'ERREUR VERIFICATION COTE CLIENT FORMULAIRE REGISTER
     //DEBUT : RENVOIS MESSAGE D'EVENEMENT
     if (isset($_GET["event"])) {

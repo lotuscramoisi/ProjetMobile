@@ -43,7 +43,7 @@ try {
     //VERIFICATION DE L'INTEGRITÉ DES DONNÉES
     //Si l'adresse mail existe dans la DB
     if ($stmtsearchmail->fetchColumn()) {
-        header('Location: index.php?error=existingmail');
+        echo 'AJAX : Le mail existe déjà';
     }
     //Si l'adresse mail existe dans la DB
     elseif ($stmtsearchusername->fetchColumn()) {
