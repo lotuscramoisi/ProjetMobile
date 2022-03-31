@@ -31,7 +31,7 @@
                 alert(serializedData);
 
                 //Appelle de la page php
-                $.get("register.php", serializedData, function() {
+                $.post("register.php", serializedData, function() {
                         alert("fonction callback success")
                     }, "text")
 
