@@ -40,7 +40,7 @@
                 alert(serializedData);
 
                 //Appelle de la page php
-                $.post("register.php", serializedData, function() {
+                $.get("register.php", serializedData, function() {
                         alert("fonction callback success")
                     }, "text")
 
