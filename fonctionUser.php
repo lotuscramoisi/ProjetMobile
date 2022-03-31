@@ -13,6 +13,22 @@
         }
         return strval($address);
     }
+	
+	function getUserIPFromProxy(){
+		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+			//IP from proxy
+			$address=$_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+		return strval($address)
+	}
+
+	function getUserIPFromInternet(){
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+            //IP from internet
+            $address=$_SERVER['HTTP_CLIENT_IP'];
+        }
+		return strval($address)
+	}
 
     function getUserPort(){
         return $_SERVER['REMOTE_PORT'];
