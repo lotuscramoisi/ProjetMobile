@@ -24,57 +24,62 @@
     <script>
         // DEBUT AJAX FORMULAIRE REGISTER
         $(document).ready(function() {
-            $("#registerform").submit(function(event) {
-                //Empêche le formulaire d'être envoyé de manière classique
-                event.preventDefault();
+        $("#registerform").submit(function(event) {
+            //Empêche le formulaire d'être envoyé de manière classique
+            event.preventDefault();
 
-                // Serialisation des données du formulaire
-                var serializedData = $(this).serialize();
+            // Serialisation des données du formulaire
+            var serializedData = $(this).serialize();
 
-                // Désactiver tous les champs d'entrée pendant le traitement
-                var $inputs = $(this).find("input, select, button, textarea");
-                $inputs.prop("disabled", true);
+            // Désactiver tous les champs d'entrée pendant le traitement
+            var $inputs = $(this).find("input, select, button, textarea");
+            $inputs.prop("disabled", true);
 
 
-                //Affichage des données du formulaire
-                alert(serializedData);
+            //Affichage des données du formulaire
+            alert(serializedData);
 
-                //Appelle de la page php
-                $.get("register.php", serializedData, function() {
-                        alert("fonction callback success")
-                    }, "text")
+            //Appelle de la page php
+            $.post('register.php', // url
+                {
+                    serializedData
+                }, // data to be submit
+                function(data, status, jqXHR) { // success callback
+                    $('#alertMessageRegister').append('status: ' + status + ', data: ' + data);
+                });
+        })
 
-                    .done(function(data) {
+        .done(function(data) {
 
-                        alert("success .done ");
+                alert("success .done ");
 
-                        alert(data.length);
+                alert(data.length);
 
-                        $("#alertMessageRegister").append(data);
+                $("#alertMessageRegister").append(data);
 
-                        // En pratique, on génére ici le html nécessaire à l'affichage
+                // En pratique, on génére ici le html nécessaire à l'affichage
 
-                    })
+            })
 
-                    .fail(function(error) {
+            .fail(function(error) {
 
-                        alert("error détectée:" + error.responseText);
+                alert("error détectée:" + error.responseText);
 
-                        $("#Div_error").append(error.responseText);
+                $("#Div_error").append(error.responseText);
 
-                    })
+            })
 
-                    .always(function() {
+            .always(function() {
 
-                        alert("finished");
+                alert("finished");
 
-                        // Reenable the inputs
+                // Reenable the inputs
 
-                        $inputs.prop("disabled", false);
-
-                    });
+                $inputs.prop("disabled", false);
 
             });
+
+        });
 
         })
         // FIN AJAX FORMULAIRE REGISTER
