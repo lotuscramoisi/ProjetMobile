@@ -81,7 +81,7 @@
 
         });
 
-        })
+        
         // FIN AJAX FORMULAIRE REGISTER
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
