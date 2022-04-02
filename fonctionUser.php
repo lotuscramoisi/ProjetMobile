@@ -44,4 +44,20 @@
 
         return $operating_system;
     }
+
+    function getOS(){
+        $OS = array("Windows"   =>   "/Windows/i",
+                    "Linux"     =>   "/Linux/i",
+                    "Unix"      =>   "/Unix/i",
+                    "Mac"       =>   "/Mac/i"
+                    );
+
+        foreach($OS as $key => $value){
+            if(preg_match($value, $this->agent)){
+                $this->info = array_merge($this->info,array("Operating System" => $key));
+                break;
+            }
+        }
+        return $this->info['Operating System'];
+    }
 ?>

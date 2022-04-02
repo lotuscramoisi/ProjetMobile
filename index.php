@@ -349,7 +349,7 @@
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
             Appareil
-            <span class="badge badge-primary badge-pill">Samsung Galaxy S11</span>
+            <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
         </li>
     </ul>
 
