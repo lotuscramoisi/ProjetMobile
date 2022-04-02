@@ -44,11 +44,4 @@
 
         return $operating_system;
     }
-
-    function aaa(){
-        // $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=YOUR_UNIQUE_API_KEY", function(data) {
-        //     console.log(data.ip_address);
-        //     console.log(data.country);
-        // })
-    }
 ?>

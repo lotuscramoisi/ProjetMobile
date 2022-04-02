@@ -24,40 +24,40 @@
     <script>
         // DEBUT AJAX FORMULAIRE REGISTER
         $(document).ready(function() {
-        $("#registerform").submit(function(event) {
-            //Empêche le formulaire d'être envoyé de manière classique
-            event.preventDefault();
+            $("#registerform").submit(function(event) {
+                //Empêche le formulaire d'être envoyé de manière classique
+                event.preventDefault();
 
-            // Serialisation des données du formulaire
-            var serializedData = $(this).serialize();
+                // Serialisation des données du formulaire
+                var serializedData = $(this).serialize();
 
-            // Désactiver tous les champs d'entrée pendant le traitement
-            var $inputs = $(this).find("input, select, button, textarea");
-            $inputs.prop("disabled", true);
+                // Désactiver tous les champs d'entrée pendant le traitement
+                var $inputs = $(this).find("input, select, button, textarea");
+                $inputs.prop("disabled", true);
 
 
-            //Affichage des données du formulaire
-            alert(serializedData);
+                //Affichage des données du formulaire
+                alert(serializedData);
 
-            //Appelle de la page php
-            $.post('register.php', // url
-                {
-                    serializedData
-                }, // data to be submit
-                function(data, status, jqXHR) { // success callback
-                    $('#alertMessageRegister').append('status: ' + status + ', data: ' + data);
-                });
-        })
+                //Appelle de la page php
+                $.post('register.php', // url
+                    {
+                        serializedData
+                    }, // data to be submit
+                    function(data, status, jqXHR) { // success callback
+                        $('#alertMessageRegister').append('status: ' + status + ', data: ' + data);
+                    });
+            })
 
-        .done(function(data) {
+            .done(function(data) {
 
-                alert("success .done ");
+                    alert("success .done ");
 
-                alert(data.length);
+                    alert(data.length);
 
-                $("#alertMessageRegister").append(data);
+                    $("#alertMessageRegister").append(data);
 
-                // En pratique, on génére ici le html nécessaire à l'affichage
+                    // En pratique, on génére ici le html nécessaire à l'affichage
 
             })
 
@@ -78,7 +78,6 @@
                 $inputs.prop("disabled", false);
 
             });
-
         });
 
         
@@ -142,6 +141,28 @@
                 return false;
             }
         }
+
+        //Fonction pour call les informations sur une adresse IP
+        function showIPInformations() {
+            // Creating the XMLHttpRequest object
+            var request = new XMLHttpRequest();
+
+            // Instantiating the request object
+            request.open("GET", "greet.php?fname=John&lname=Clark");
+
+            // Defining event listener for readystatechange event
+            request.onreadystatechange = function() {
+                // Check if the request is compete and was successful
+                if(this.readyState === 4 && this.status === 200) {
+                    // Inserting the response from server into an HTML element
+                    document.getElementById("result").innerHTML = this.responseText;
+                }
+        };
+
+    // Sending the request to the server
+    request.send();
+
+
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -331,6 +352,13 @@
             <span class="badge badge-primary badge-pill">Samsung Galaxy S11</span>
         </li>
     </ul>
+
+    <div id="result">
+        <p>Content of the result DIV box will be replaced by the server response</p>
+    </div>
+    <button type="button" onclick="displayFullName()">Display Full Name</button>
+
+
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
