@@ -36,14 +36,24 @@
     }
 
     function getBrowser(){
-        return $_SERVER['HTTP_USER_AGENT'];
-    }
-
-    function get_operating_system() {
-        $u_agent = $_SERVER['HTTP_USER_AGENT'];
-        $operating_system = 'Unknown Operating System';
-
-        return $operating_system;
+        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+        $browser = "N/A";
+        
+        $browsers = array(
+        '/msie/i' => 'Internet explorer',
+        '/firefox/i' => 'Firefox',
+        '/safari/i' => 'Safari',
+        '/chrome/i' => 'Chrome',
+        '/edge/i' => 'Edge',
+        '/opera/i' => 'Opera',
+        '/mobile/i' => 'Mobile browser'
+        );
+        
+        foreach ($browsers as $regex => $value) {
+        if (preg_match($regex, $user_agent)) { $browser = $value; }
+        }
+        
+        return $browser;
     }
 
     function getOS(){
