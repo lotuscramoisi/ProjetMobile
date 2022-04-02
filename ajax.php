@@ -1,6 +1,6 @@
 <?php  
 
-    $userIp = $_GET["userIp"];
+    $userIp = $_POST["userIp"];
 
 
     echo "Hi there! Welcome to our website.".$userIp;
