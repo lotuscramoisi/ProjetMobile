@@ -1,6 +1,6 @@
 <?php  
 
-
+    $userIp = $_GET["fname"];
 
 
     echo "Hi there! Welcome to our website.";
