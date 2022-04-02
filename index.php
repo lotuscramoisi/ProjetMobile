@@ -356,7 +356,7 @@
     <div id="result">
         <p>Content of the result DIV box will be replaced by the server response</p>
     </div>
-    <button type="button" onclick="displayFullName()">Display Full Name</button>
+    <button type="button" onclick="showIPInformations()">Display Full Name</button>
 
 
     <!-- END Liste des informations -->
