@@ -336,10 +336,6 @@
             <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            IPV4
-            <span class="badge badge-primary badge-pill"><?php echo getUserIPFromProxy() ?></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
             Proxy
             <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
         </li>
