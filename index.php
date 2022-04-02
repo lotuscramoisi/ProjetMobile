@@ -369,7 +369,6 @@
         </button>
     </div>
 
-    <?php aaa() ?>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
 </body>
