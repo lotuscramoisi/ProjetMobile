@@ -35,7 +35,7 @@
     }
 
     function getBrowser(){
-        return "Safari";
+        return $_SERVER['HTTP_USER_AGENT'];
     }
 
     function get_operating_system() {
