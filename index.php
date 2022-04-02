@@ -157,11 +157,11 @@
                     // Inserting the response from server into an HTML element
                     document.getElementById("result").innerHTML = this.responseText;
                 }
-        };
+            };
 
-    // Sending the request to the server
-    request.send();
-
+            // Sending the request to the server
+            request.send();
+        }
 
     </script>
     <meta charset="UTF-8">
