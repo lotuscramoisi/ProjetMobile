@@ -5,9 +5,8 @@
         include 'fonctionUser.php';
         include 'projet.env';
         $userIp = getUserIP(); 
-        $url = PRIVATE_KEY.$userIp;
+        $url = getenv('PRIVATE_KEY');
         console.log($url);
-        echo $url;
         // Initialize cURL.
         $ch = curl_init();
 
