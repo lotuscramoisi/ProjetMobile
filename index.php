@@ -151,7 +151,14 @@
             data: {registration: "success"},
             success:function(result){
                 var ecrit = JSON.parse(result);
-                alert(ecrit.region);
+                
+                for(var k in ecrit) {
+                    if(obj[k] instanceof Object) {
+                        printValues(obj[k]);
+                    } else {
+                        document.write(obj[k] + "<br>");
+                    };
+                }
             }
         });
     }
