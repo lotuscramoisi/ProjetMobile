@@ -2,7 +2,7 @@
 
     $userIp = $_POST["userIp"];
 
-    console.log($userIp);
+    console.log("suu".$userIp);
     echo "Hi there! Welcome to our website.".$userIp;
 
     // <script>
