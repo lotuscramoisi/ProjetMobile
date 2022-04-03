@@ -7,6 +7,7 @@
         $userIp = getUserIP(); 
         $url = PRIVATE_KEY.$userIp;
         console.log($url);
+        echo $url;
         // Initialize cURL.
         $ch = curl_init();
 
