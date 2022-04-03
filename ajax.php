@@ -25,7 +25,7 @@
         curl_close($ch);
 
         // Print the data out onto the page.
-        echo $data;
+        echo json_encode(array("abc"=>'successfuly registered'.$data));
     }
 
 ?>
