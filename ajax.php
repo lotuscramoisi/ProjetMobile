@@ -1,5 +1,4 @@
-<?php  
-    
+<?php
     $registration = $_POST['registration'];
 
     if ($registration == "success"){
