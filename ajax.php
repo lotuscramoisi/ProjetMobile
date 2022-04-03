@@ -6,7 +6,6 @@
         include 'projet.env';
         $userIp = getUserIP(); 
         $url = $_ENV['PRIVATE_KEY'];
-        console.log[$url];
         // Initialize cURL.
         $ch = curl_init();
 
