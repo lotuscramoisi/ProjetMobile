@@ -150,11 +150,8 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                for (var key in result){
-                    var value = result[key];
-                    document.write("<br> - " + key + ": " + value);
-                }
-                
+                var value = result[key];
+                document.write("<br> - " + key + ": " + value);
             }
         });
     }
