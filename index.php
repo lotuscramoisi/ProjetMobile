@@ -151,7 +151,7 @@
             data: {registration: "success"},
             success:function(result){
                 var ecrit = JSON.parse(result);
-                document.getElementById("Pays").innerHTML(ecrit.country);
+                document.getElementById("Pays").innerHTML = ecrit.country;
 
             }
         });
