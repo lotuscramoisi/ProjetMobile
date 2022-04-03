@@ -147,7 +147,7 @@
             // Creating the XMLHttpRequest object
             var request = new XMLHttpRequest();
 
-            // Instantiating the request object
+            // Instantiating the request object                                                                                                                                                                      
             request.open("POST", "ajax.php?userIp=getUserIP()");
 
             // Defining event listener for readystatechange event
@@ -349,10 +349,10 @@
         </li>
     </ul>
 
-    <!-- <div id="result">
+    <div id="result">
         <p>Content of the result DIV box will be replaced by the server response</p>
     </div>
-    <button type="button" onclick="showIPInformations()">Display Full Name</button> -->
+    <button type="button" onclick="showIPInformations()">Display Full Name</button>
 
 
     <!-- END Liste des informations -->
