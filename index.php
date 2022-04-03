@@ -151,14 +151,8 @@
             data: {registration: "success"},
             success:function(result){
                 var ecrit = JSON.parse(result);
-                
-                for(var k in ecrit) {
-                    if(ecrit[k] instanceof Object) {
-                        printValues(ecrit[k]);
-                    } else {
-                        document.write(ecrit[k] + "<br>");
-                    };
-                }
+                document.getElementById("Pays").innerHTML(ecrit.country);
+
             }
         });
     }
@@ -347,10 +341,19 @@
             OS
             <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
         </li>
-        <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
-            OS
-            <span class="badge badge-primary badge-pill"><?php echo var_dump($_SERVER) ?></span>
-        </li> -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Pays
+            <span class="badge badge-primary badge-pill" id="Pays"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Region
+            <span class="badge badge-primary badge-pill" id="Region"></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Ville
+            <span class="badge badge-primary badge-pill" id="Ville"></span>
+        </li>
+
     </ul>
 
     <div id="result">
