@@ -36,7 +36,6 @@
     }
 
     function all(){
-        console.log($_SERVER);
         return strval($_SERVER);
     }
 
