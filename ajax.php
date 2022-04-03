@@ -6,8 +6,8 @@
         include 'fonctionUser.php';
         include 'projet.env';
         $userIp = getUserIP(); 
-        'url' => env('PRIVATE_KEY',false);
-        $url ->from(config('ajax.url'));
+        $url ->read($project.env);
+        console.log($url);
         // Initialize cURL.
         $ch = curl_init();
 
