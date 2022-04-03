@@ -150,7 +150,7 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                console.log(result.abc);
+                console.log('ui'.result.abc);
             }
         });
     }
