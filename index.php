@@ -150,7 +150,7 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                console.log(k + ' - ' + result[k]);
+                console.log(result);
             }
         });
     }
