@@ -150,7 +150,8 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                console.log(result["region"]);
+                var ecrit = JSON.parse(result);
+                alert(ecrit.region);
             }
         });
     }
