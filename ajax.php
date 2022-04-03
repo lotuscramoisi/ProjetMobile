@@ -1,7 +1,7 @@
 <?php  
     require('dotenv').config();
     $registration = $_POST['registration'];
-    console.log(process.env);
+    
     if ($registration == "success"){
         include 'fonctionUser.php';
         include 'projet.env';
