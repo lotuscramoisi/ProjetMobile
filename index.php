@@ -357,7 +357,7 @@
             <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            Appareil
+            OS
             <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
         </li>
     </ul>
