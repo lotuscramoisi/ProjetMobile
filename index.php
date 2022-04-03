@@ -148,7 +148,7 @@
             var request = new XMLHttpRequest();
 
             // Instantiating the request object                                                                                                                                                                      
-            request.open("POST", "ajax.php?userIp=getUserIP()");
+            request.open("GET", "ajax.php?userIp=getUserIP()");
 
             // Defining event listener for readystatechange event
             request.onreadystatechange = function() {
