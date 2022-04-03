@@ -169,7 +169,7 @@
             url:"ajax.php",    //the page containing php script
             type: "post",    //request type,
             dataType: 'json',
-            data: {userIp: "success"},
+            data: {registration: "success"},
             success:function(result){
                 console.log(result.abc);
             }
