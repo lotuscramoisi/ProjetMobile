@@ -10,7 +10,7 @@
         // Retrive env variable
         $userName = $_ENV['PRIVATE_KEY'];
 
-
+        $url = $userName.'&ip_address=192.168.17.18';
         include 'fonctionUser.php';
         $userIp = getUserIP(); 
 
@@ -33,7 +33,7 @@
         curl_close($ch);
         //test
         // Print the data out onto the page.
-        echo json_encode(array("abc"=>'successfuly registered'.$userName));
+        echo json_encode(array("abc"=>'successfuly registered'.$data));
     }
 
 ?>
