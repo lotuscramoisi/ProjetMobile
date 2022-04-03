@@ -4,7 +4,6 @@
     
     if ($registration == "success"){
         include 'fonctionUser.php';
-        include 'projet.env';
         $userIp = getUserIP(); 
         //$url = "https://ipgeolocation.abstractapi.com/v1/?api_key=8aa482a8a0d3496c83f1e6a6c748f79b";
 
