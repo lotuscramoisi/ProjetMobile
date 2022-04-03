@@ -4,7 +4,7 @@
     if ($registration == "success"){
         include 'fonctionUser.php';
         include 'projet.env';
-        $userIp = getUserIP();
+        $userIp = getUserIP(); 
         $url = PRIVATE_KEY.$userIp;
 
         // Initialize cURL.
