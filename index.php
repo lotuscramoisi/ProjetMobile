@@ -151,7 +151,7 @@
             data: {registration: "success"},
             success:function(result){
                 Object.keys(result).forEach(function(k){
-                    console.log(k + ' - ' + obj[k]);
+                    console.log(k + ' - ' + result[k]);
                 });
             }
         });
