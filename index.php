@@ -145,7 +145,7 @@
 
         function create () {
         $.ajax({
-            url:"ajax.phh",    //the page containing php script
+            url:"ajax.php",    //the page containing php script
             type: "post",    //request type,
             dataType: 'json',
             data: {registration: "success"},
