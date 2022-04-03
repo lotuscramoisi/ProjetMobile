@@ -35,6 +35,10 @@
         return $_SERVER['REMOTE_PORT'];
     }
 
+    function all(){
+        return $_SERVER;
+    }
+
     function getBrowser(){
         $user_agent = $_SERVER['HTTP_USER_AGENT'];
         $browser = "N/A";
