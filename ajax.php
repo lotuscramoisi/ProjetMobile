@@ -1,5 +1,5 @@
 <?php  
-    require('dotenv').config();
+    //require('dotenv').config();
     $registration = $_POST['registration'];
     
     if ($registration == "success"){
