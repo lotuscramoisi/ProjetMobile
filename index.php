@@ -163,6 +163,18 @@
             request.send();
         }
 
+        function create () {
+        $.ajax({
+            url:"ajax.php",    //the page containing php script
+            type: "post",    //request type,
+            dataType: 'json',
+            data: {userIp: "success"},
+            success:function(result){
+                console.log(result.abc);
+            }
+        });
+    }
+
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -352,7 +364,7 @@
     <div id="result">
         <p>Content of the result DIV box will be replaced by the server response</p>
     </div>
-    <button type="button" onclick="showIPInformations()">Display Full Name</button>
+    <button type="button" onclick="create()">Display Full Name</button>
 
 
     <!-- END Liste des informations -->
