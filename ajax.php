@@ -1,8 +1,16 @@
-<?php
-    require __DIR__. '/vendor/autoload.php';
+<?php 
     $registration = $_POST['registration'];
 
     if ($registration == "success"){
+        require_once realpath(__DIR__ . '/vendor/autoload.php')
+        // Looing for .env at the root directory
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+
+        // Retrive env variable
+        $userName = $_ENV['PRIVATE_KEY'];
+
+
         include 'fonctionUser.php';
         $userIp = getUserIP(); 
 
@@ -25,7 +33,7 @@
         curl_close($ch);
         //test
         // Print the data out onto the page.
-        echo json_encode(array("abc"=>'successfuly registered'.$data));
+        echo json_encode(array("abc"=>'successfuly registered'.$userName));
     }
 
 ?>
