@@ -3,8 +3,10 @@
 
     if ($registration == "success"){
         include 'fonctionUser.php';
+        include 'projet.env';
         $userIp = getUserIP();
-        
+        $url = PRIVATE_KEY.$userIp;
+
         // Initialize cURL.
         $ch = curl_init();
 
