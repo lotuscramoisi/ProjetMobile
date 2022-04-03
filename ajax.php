@@ -1,11 +1,13 @@
 <?php  
+    use Config;
     $registration = $_POST['registration'];
 
     if ($registration == "success"){
         include 'fonctionUser.php';
         include 'projet.env';
         $userIp = getUserIP(); 
-        $url = env('PRIVATE_KEY',false);
+        'url' => env('PRIVATE_KEY',false);
+        $url ->from(config('ajax.url'));
         // Initialize cURL.
         $ch = curl_init();
 
