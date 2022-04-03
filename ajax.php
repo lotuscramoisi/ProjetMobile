@@ -11,7 +11,7 @@
         //          console.log(data.ip_address);
         //      })   
         // </script>
-        echo json_encode(array("abc"=>'successfuly registered'.$userIp));
+        echo json_encode(array("abc"=>'successfuly registered'.$json));
     }
 
 ?>
