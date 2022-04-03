@@ -33,7 +33,7 @@
         curl_close($ch);
         //test
         // Print the data out onto the page.
-        echo json_encode(array("abc"=>'successfuly registered'.$data));
+        echo json_encode($data);
     }
 
 ?>

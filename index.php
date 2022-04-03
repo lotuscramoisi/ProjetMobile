@@ -150,7 +150,14 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                console.log(result.abc);
+                for (var i = 0; i < result.length; i++){
+                    document.write("<br><br>array index: " + i);
+                    var obj = result[i];
+                    for (var key in obj){
+                        var value = obj[key];
+                        document.write("<br> - " + key + ": " + value);
+                    }
+                }
             }
         });
     }
@@ -346,9 +353,9 @@
     </ul>
 
     <div id="result">
-        <p>Content of the result DIV box will be replaced by the server response</p>
+        <p id="resultCallAPI">Content of the result DIV box will be replaced by the server response</p>
     </div>
-    <button type="button" onclick="create()">Display Full Name </button>
+    <button type="button" onclick="create()">Call API</button>
 
 
     <!-- END Liste des informations -->
