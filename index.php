@@ -150,9 +150,7 @@
             dataType: 'json',
             data: {registration: "success"},
             success:function(result){
-                Object.keys(result).forEach(function(k){
-                    console.log(k + ' - ' + result[k]);
-                });
+                console.log(k + ' - ' + result[k]);
             }
         });
     }
