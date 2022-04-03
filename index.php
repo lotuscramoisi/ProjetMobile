@@ -153,7 +153,11 @@
                 var ecrit = JSON.parse(result);
                 
                 for(var k in ecrit) {
-                    document.write(ecrit[k] + "<br>");
+                    if(ecrit[k] instanceof Object) {
+                        printValues(ecrit[k]);
+                    } else {
+                        document.write(ecrit[k] + "<br>");
+                    };
                 }
             }
         });
