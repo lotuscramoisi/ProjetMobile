@@ -160,6 +160,7 @@
 
         //géolocalisation
         var x = document.getElementById("location");
+
         function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -378,7 +379,7 @@
     </ul>
 
     <button type="button" onclick="create()">Call API</button>
-    <button type="button" onclick="getLocation()">getLocation</button>
+    <button type="button" onclick="getLocation()">Text</button>
 
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
