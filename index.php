@@ -14,8 +14,9 @@
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> 
-    <!-- Test --> <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- Test -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
@@ -26,62 +27,24 @@
         // DEBUT AJAX FORMULAIRE REGISTER
         $(document).ready(function() {
             $("#registerform").submit(function(event) {
-                //Empêche le formulaire d'être envoyé de manière classique
-                event.preventDefault();
-
                 // Serialisation des données du formulaire
                 var serializedData = $(this).serialize();
-
-                // Désactiver tous les champs d'entrée pendant le traitement
-                var $inputs = $(this).find("input, select, button, textarea");
-                $inputs.prop("disabled", true);
-
-
-                //Affichage des données du formulaire
-                alert(serializedData);
-
-                //Appelle de la page php
-                $.post('register.php', // url
-                    {
-                        serializedData
-                    }, // data to be submit
-                    function(data, status, jqXHR) { // success callback
-                        $('#alertMessageRegister').append('status: ' + status + ', data: ' + data);
-                    });
-            })
-
-            .done(function(data) {
-
-                    alert("success .done ");
-
-                    alert(data.length);
-
-                    $("#alertMessageRegister").append(data);
-
-                    // En pratique, on génére ici le html nécessaire à l'affichage
-
-            })
-
-            .fail(function(error) {
-
-                alert("error détectée:" + error.responseText);
-
-                $("#Div_error").append(error.responseText);
-
-            })
-
-            .always(function() {
-
-                alert("finished");
-
-                // Reenable the inputs
-
-                $inputs.prop("disabled", false);
-
+                $.post(
+                    'register.php', // Le fichier à appeler sur serveur.
+                    serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
+                    function() {
+                        alert("success");
+                    }, // Le nom de la fonction à appeler pour le callback
+                    'text' // Format des données retournées par le serveur.
+                ).done(function(data) {
+                    $('<span></span>').html(
+                        data + " <- résultat"
+                    ).appendTo('#alertMessageRegister');
+                });
             });
         });
         // FIN AJAX FORMULAIRE REGISTER
-        
+
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
             //Récupération des données du formulaire
@@ -142,24 +105,26 @@
             }
         }
 
-        function create () {
-        $.ajax({
-            url:"ajax.php",    //the page containing php script
-            type: "post",    //request type,
-            dataType: 'json',
-            data: {registration: "success"},
-            success:function(result){
-                var ecrit = JSON.parse(result);
-                document.getElementById("Pays").innerHTML = ecrit.country;
-                document.getElementById("Ville").innerHTML = ecrit.region;
-                document.getElementById("Region").innerHTML = ecrit.city;
-            }
+        function create() {
+            $.ajax({
+                url: "ajax.php", //the page containing php script
+                type: "post", //request type,
+                dataType: 'json',
+                data: {
+                    registration: "success"
+                },
+                success: function(result) {
+                    var ecrit = JSON.parse(result);
+                    document.getElementById("Pays").innerHTML = ecrit.country;
+                    document.getElementById("Ville").innerHTML = ecrit.region;
+                    document.getElementById("Region").innerHTML = ecrit.city;
+                }
             });
         }
 
 
         //géolocalisation
-       
+
 
         function getLocation() {
             var x = document.getElementById("location");
@@ -173,10 +138,8 @@
         function showPosition(position) {
             var x = document.getElementById("location");
             x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
+                "<br>Longitude: " + position.coords.longitude;
         }
-    
-
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
