@@ -36,14 +36,14 @@
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
-                        if (data = "Inscription validée") {
+                        if (data == "Inscription validée") {
 
-                        } else {
+                        } 
+                        else {
                             $('<font color="red"></font>').html(
                                 data
                             ).appendTo('#alertMessageRegister');
                         }
-
                     })
                     .fail(function(error) {
                         alert("error détectée:" + error.responseText);
