@@ -43,23 +43,23 @@ try {
     //VERIFICATION DE L'INTEGRITÉ DES DONNÉES
     //Si l'adresse mail existe dans la DB
     if ($stmtsearchmail->fetchColumn()) {
-        echo 'AJAX : Mail already registered';
+        echo 'Mail already registered';
     }
     //Si l'adresse mail existe dans la DB
     elseif ($stmtsearchusername->fetchColumn()) {
-        echo 'AJAX : Username already registered';
+        echo 'Username already registered';
     }
     //Si l'adresse mail est vide
     elseif ($email == ""){
-        echo 'AJAX : Email is empty';
+        echo 'Email is empty';
     }
     //Si l'username est vide
     elseif ($username == ""){
-        echo 'AJAX : Username is empty';
+        echo 'Username is empty';
     }
     //Si les mots de pass ne correspondent pas
     elseif ($psw != $pswverif){
-        echo 'AJAX : Passwords not matching';
+        echo 'Passwords not matching';
     }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
     else{
@@ -77,7 +77,7 @@ try {
         // Exécution de la requête
         $stmt->execute();
         //header("Location: index.php?event=registrationsuccess");
-        echo 'AJAX : Inscription validée';
+        echo 'Inscription validée';
     }
 
     

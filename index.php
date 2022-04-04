@@ -41,8 +41,8 @@
                     )
                     .done(function(data) {
                         $('#register').modal('show');
-                        $('<span></span>').html(
-                            data + " <- résultat"
+                        $('<font color="red"></font>').html(
+                            data
                         ).appendTo('#alertMessageRegister');
                         $('#register').modal('show');
                     })
