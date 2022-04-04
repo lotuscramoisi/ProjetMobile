@@ -55,11 +55,11 @@ try {
             header('location: index.php');
         }
         else{
-            header('Location: index.php?error=incorrectpsw');
+            echo "Password incorrect";
         }
     }
     else{
-        header('Location: index.php?error=loginnotexisting');
+        echo "Login not registered";
     }
     
 }

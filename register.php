@@ -80,8 +80,6 @@ try {
         echo 'Inscription validée';
     }
 
-    
-
 } catch (PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
 }
