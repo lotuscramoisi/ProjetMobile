@@ -160,7 +160,7 @@
 
 
         //géolocalisation
-        var x = document.getElementById("#location");
+        var x = document.getElementById("location");
 
         function getLocation() {
         if (navigator.geolocation) {
