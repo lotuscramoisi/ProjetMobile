@@ -76,7 +76,8 @@ try {
 
         // Exécution de la requête
         $stmt->execute();
-        header("Location: index.php?event=registrationsuccess");
+        //header("Location: index.php?event=registrationsuccess");
+        echo 'AJAX : Inscription validée';
     }
 
     
