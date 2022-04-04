@@ -99,14 +99,14 @@
             // If email not entered
             if (login == '') {
                 $("#alertMessageLogin").append("Please enter login or email");
+                return false;
             }
 
             // If username not entered
             if (pwd == '') {
                 $("#alertMessageLogin").append("Please enter password");
-            }
-            //Permet de ne pas recharger la page
-            return false;
+                return false;
+            }            
         }
         // Fonction pour vérifier les données du formulaire d'enregistrement
         function checkRegisterForm(form) {
