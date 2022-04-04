@@ -32,19 +32,37 @@
                 //Affichage des données du formulaire
                 alert(serializedData);
                 $.post(
-                    'retour.php', // Le fichier à appeler sur serveur.
-                    serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
-                    function() {
-                        alert("success");
-                    }, // Le nom de la fonction à appeler pour le callback
-                    'text' // Format des données retournées par le serveur.
-                ).done(function(data) {
-                    $('#register').modal('show');
-                    $('<span></span>').html(
-                        data + " <- résultat"
-                    ).appendTo('#alertMessageRegister');
-                    $('#register').modal('show');
-                });
+                        'retour.php', // Le fichier à appeler sur serveur.
+                        serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
+                        function() {
+                            alert("success");
+                        }, // Le nom de la fonction à appeler pour le callback
+                        'text' // Format des données retournées par le serveur.
+                    )
+                    .done(function(data) {
+                        $('#register').modal('show');
+                        $('<span></span>').html(
+                            data + " <- résultat"
+                        ).appendTo('#alertMessageRegister');
+                        $('#register').modal('show');
+                    })
+                    .fail(function(error) {
+
+                        alert("error détectée:" + error.responseText);
+
+                        $("#Div_error").append(error.responseText);
+
+                    })
+
+                    .always(function() {
+
+                        alert("finished");
+
+                        // Reenable the inputs
+
+                        $inputs.prop("disabled", false);
+
+                    });
             });
         });
         // FIN AJAX FORMULAIRE REGISTER
