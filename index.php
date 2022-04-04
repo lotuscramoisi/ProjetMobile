@@ -32,7 +32,7 @@
                 //Affichage des données du formulaire
                 alert(serializedData);
                 $.post(
-                    'register.php', // Le fichier à appeler sur serveur.
+                    'retour.php', // Le fichier à appeler sur serveur.
                     serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
                     function() {
                         alert("success");
