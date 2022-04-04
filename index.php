@@ -33,7 +33,7 @@
                 alert(serializedData);
                 $.post(
                         'register.php', // Le fichier à appeler sur serveur.
-                        serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
+                        serializedData, // Paramètre envoyé à la méthode post
                         function() {
                             alert("success");
                         }, // Le nom de la fonction à appeler pour le callback
@@ -43,7 +43,7 @@
                         $('#register').modal('show');
                         $('<span></span>').html(
                             data + " <- résultat"
-                        ).appendTo('#alertMessageRegister');
+                        ).appendTo('#infotest');
                         $('#register').modal('show');
                     })
                     .fail(function(error) {
@@ -192,7 +192,7 @@
             ?>
         </form>
     </nav>
-
+    <div id="infotest"></div>
     <!-- Modal Sign In -->
     <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
