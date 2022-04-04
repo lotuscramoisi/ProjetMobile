@@ -125,6 +125,9 @@
                 $("#alertMessageRegister").append("Passwords not matching");
                 return false;
             }
+            else{
+                return false;
+            }
         }
 
         function create() {
