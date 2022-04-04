@@ -1,3 +1,3 @@
 <?php
-echo 'ceci est le retour test';
+echo 'ceci est le retour test + email : ' . $_POST["email"];
 ?>

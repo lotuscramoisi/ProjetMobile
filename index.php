@@ -32,13 +32,14 @@
                 //Affichage des données du formulaire
                 alert(serializedData);
                 $.post(
-                    'register.php', // Le fichier à appeler sur serveur.
+                    'retour.php', // Le fichier à appeler sur serveur.
                     serializedData, // Spécifier à la méthode qu'aucun paramètre n'est envoyé
                     function() {
                         alert("success");
                     }, // Le nom de la fonction à appeler pour le callback
                     'text' // Format des données retournées par le serveur.
                 ).done(function(data) {
+                    $('#register').modal('show');
                     $('<span></span>').html(
                         data + " <- résultat"
                     ).appendTo('#alertMessageRegister');
