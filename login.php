@@ -51,8 +51,6 @@ try {
             // on enregistre les paramètres de notre visiteur comme variables de session
             $_SESSION['login'] = $userinfos['USERNAME'];
             $_SESSION['pwd'] = $pwdhash;
-            // on redirige notre visiteur vers la page d'accueil
-            header('location: index.php');
         }
         else{
             echo "Password incorrect";
