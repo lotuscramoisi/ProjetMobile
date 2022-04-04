@@ -377,6 +377,10 @@
             Ville
             <span class="badge badge-primary badge-pill" id="Ville"></span>
         </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Ville
+            <span class="badge badge-primary badge-pill" id="location"></span>
+        </li>
 
     </ul>
 
