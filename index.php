@@ -26,11 +26,16 @@
         // DEBUT AJAX FORMULAIRE REGISTER
         $(document).ready(function() {
             //Géolocalisation
-            if(navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(showLocation);
-            }else{ 
-                $('#location').html('Geolocation is not supported by this browser.');
-            }
+            navigator.geolocation.getCurrentPosition(
+                function(success) {
+                    navigator.geolocation.getCurrentPosition(showLocation);
+                },
+                function(failure) {
+                    if(failure.message.indexOf("Only secure origins are allowed") == 0) {
+                        alert('Only secure origins are allowed by your browser.');
+                    }
+                })
+            });
             $("#registerform").submit(function(event) {
                 //Empêche le formulaire d'être envoyé de manière classique
                 event.preventDefault();
