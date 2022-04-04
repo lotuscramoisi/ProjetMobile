@@ -43,6 +43,7 @@
                     $('<span></span>').html(
                         data + " <- résultat"
                     ).appendTo('#alertMessageRegister');
+                    $('#register').modal('show');
                 });
             });
         });
