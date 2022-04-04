@@ -357,9 +357,6 @@
 
     </ul>
 
-    <div id="result">
-        <p id="resultCallAPI">Content of the result DIV box will be replaced by the server response</p>
-    </div>
     <button type="button" onclick="create()">Call API</button>
 
 
