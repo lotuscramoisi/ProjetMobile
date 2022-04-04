@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
-        
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
             $("#btnregister").click(function(event) {
@@ -37,9 +36,14 @@
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
-                        $('<font color="red"></font>').html(
-                            data
-                        ).appendTo('#alertMessageRegister');
+                        if (data = "Inscription validée") {
+
+                        } else {
+                            $('<font color="red"></font>').html(
+                                data
+                            ).appendTo('#alertMessageRegister');
+                        }
+
                     })
                     .fail(function(error) {
                         alert("error détectée:" + error.responseText);
@@ -77,7 +81,7 @@
             });
             // FIN AJAX FORMULAIRE LOGIN
         });
-        
+
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
