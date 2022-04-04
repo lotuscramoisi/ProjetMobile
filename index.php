@@ -155,7 +155,8 @@
                 document.getElementById("Ville").innerHTML = ecrit.region;
                 document.getElementById("Region").innerHTML = ecrit.city;
             }
-        });
+            });
+        }
 
 
         //géolocalisation
@@ -173,7 +174,7 @@
         x.innerHTML = "Latitude: " + position.coords.latitude +
         "<br>Longitude: " + position.coords.longitude;
         }
-    }
+    
 
     </script>
     <meta charset="UTF-8">
