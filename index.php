@@ -26,7 +26,7 @@
     <script>
         // DEBUT AJAX FORMULAIRE REGISTER
         $(document).ready(function() {
-            $("#registerform").submit(function(event) {
+            $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $(this).serialize();
                 //Affichage des données du formulaire
@@ -237,7 +237,7 @@
                     <h5 class="modal-title">Register</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" id="registerform">
+                <form method="POST" onSubmit="return checkRegisterForm(this)" id="registerform">
                     <div class="modal-body">
 
                         <div class="form-group">
@@ -265,7 +265,7 @@
                                 Login
                             </button>
                         </small>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button id="btnregister" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
