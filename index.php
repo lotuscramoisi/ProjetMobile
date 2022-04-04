@@ -37,7 +37,9 @@
                     )
                     .done(function(data) {
                         if (data == "Inscription validée") {
-
+                            $('#event').modal('show');
+                            $('#eventtitle').append('Registration completed');
+                            $('#eventbody').append('Your registration was successfully completed');
                         } 
                         else {
                             $('<font color="red"></font>').html(
