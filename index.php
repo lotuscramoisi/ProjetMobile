@@ -41,8 +41,8 @@
                             $('#event').modal('show');
                             $('#eventtitle').append('Registration completed');
                             $('#eventbody').append('Your registration was successfully completed');
-                        } 
-                        else {
+                        } else {
+                            $('#alertMessageRegister').empty();
                             $('<font color="red"></font>').html(
                                 data
                             ).appendTo('#alertMessageRegister');
@@ -69,6 +69,7 @@
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
+                        $('#alertMessageLogin').empty();
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
@@ -303,19 +304,6 @@
             </div>
         </div>
     </div>
-    <?php
-    //DEBUT : RENVOIS MESSAGE D'EVENEMENT
-    if (isset($_GET["event"])) {
-        $eventmsg = $_GET["event"];
-        echo "<script>$('#event').modal('show');</script>";
-        //Si l'inscription s'est bien déroulée
-        if ($eventmsg  == "registrationsuccess") {
-            echo "<script>$('#eventtitle').append('Registration completed');</script>";
-            echo "<script>$('#eventbody').append('Your registration was successfully completed');</script>";
-        }
-    }
-    //FIN : RENVOIS MESSAGE DE CONFIRMATION D'INSCRIPTION
-    ?>
     <!-- START Liste des informations -->
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
