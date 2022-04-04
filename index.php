@@ -45,7 +45,6 @@
                             data + " <- résultat"
                         ).appendTo('#infotest');
                         $('#register').modal('show');
-                        return false;
                     })
                     .fail(function(error) {
 
