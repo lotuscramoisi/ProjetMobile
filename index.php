@@ -29,8 +29,6 @@
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
-                //Affichage des données du formulaire
-                alert(serializedData);
                 $.post(
                         'register.php', // Le fichier à appeler sur serveur.
                         serializedData, // Paramètre envoyé à la méthode post
