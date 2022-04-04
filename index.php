@@ -36,12 +36,15 @@
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
+                        //Si l'inscription est validée on fait apparaître un pop up
                         if (data == "Inscription validée") {
                             $('#register').modal('hide');
                             $('#event').modal('show');
                             $('#eventtitle').append('Registration completed');
                             $('#eventbody').append('Your registration was successfully completed');
-                        } else {
+                        } 
+                        //Si l'inscription a échouée on affiche un message d'erreur
+                        else {
                             $('#alertMessageRegister').empty();
                             $('<font color="red"></font>').html(
                                 data
