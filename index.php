@@ -103,31 +103,24 @@
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
-                return false;
             }
             // If username not entered
             if (username == '') {
                 $("#alertMessageRegister").append("Please enter username");
-                return false;
             }
             // If password not entered
             if (password1 == '') {
                 $("#alertMessageRegister").append("Please enter Password");
-                return false;
             }
             // If confirm password not entered
             else if (password2 == '') {
                 $("#alertMessageRegister").append("Please enter confirm Password");
-                return false;
             }
             // If Not same return False.    
             else if (password1 != password2) {
                 $("#alertMessageRegister").append("Passwords not matching");
-                return false;
             }
-            else{
-                return false;
-            }
+            return false;
         }
 
         function create() {
