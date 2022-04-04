@@ -43,7 +43,7 @@
                         $('#register').modal('show');
                         $('<span></span>').html(
                             data + " <- résultat"
-                        ).appendTo('#infotest');
+                        ).appendTo('#alertMessageRegister');
                         $('#register').modal('show');
                     })
                     .fail(function(error) {
