@@ -34,34 +34,21 @@
                 $.post(
                         'register.php', // Le fichier à appeler sur serveur.
                         serializedData, // Paramètre envoyé à la méthode post
-                        function() {
-                            alert("success");
-                        }, // Le nom de la fonction à appeler pour le callback
+                        function() {}, // Le nom de la fonction à appeler pour le callback
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
-                        $('#register').modal('show');
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageRegister');
-                        $('#register').modal('show');
                     })
                     .fail(function(error) {
-
                         alert("error détectée:" + error.responseText);
-
                         $("#Div_error").append(error.responseText);
-
                     })
-
                     .always(function() {
-
-                        alert("finished");
-
                         // Reenable the inputs
-
                         $inputs.prop("disabled", false);
-
                     });
             });
         });
