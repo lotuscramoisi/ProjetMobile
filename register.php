@@ -43,23 +43,23 @@ try {
     //VERIFICATION DE L'INTEGRITÉ DES DONNÉES
     //Si l'adresse mail existe dans la DB
     if ($stmtsearchmail->fetchColumn()) {
-        echo 'AJAX : Le mail existe déjà';
+        echo 'AJAX : Mail already registered';
     }
     //Si l'adresse mail existe dans la DB
     elseif ($stmtsearchusername->fetchColumn()) {
-        header('Location: index.php?error=existingusername');
+        echo 'AJAX : Username already registered';
     }
     //Si l'adresse mail est vide
     elseif ($email == ""){
-        header('Location: index.php?error=emptyemail');
+        echo 'AJAX : Email is empty';
     }
     //Si l'username est vide
     elseif ($username == ""){
-        header('Location: index.php?error=emptyusername');
+        echo 'AJAX : Username is empty';
     }
     //Si les mots de pass ne correspondent pas
     elseif ($psw != $pswverif){
-        header('Location: index.php?error=pswnomatch');
+        echo 'AJAX : Passwords not matching';
     }
     //Si l'adresse mail n'existe pas dans la DB on valide l'inscription
     else{
