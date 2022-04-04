@@ -28,7 +28,7 @@
         $(document).ready(function() {
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
-                var serializedData = $(this).serialize();
+                var serializedData = $("#registerform").serialize();
                 //Affichage des données du formulaire
                 alert(serializedData);
                 $.post(
