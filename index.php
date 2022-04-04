@@ -157,21 +157,20 @@
             }
         });
 
-        function showLocation(position){
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            $.ajax({
-                type:'POST',
-                url:'getLocation.php',
-                data:'latitude='+latitude+'&longitude='+longitude,
-                success:function(msg){
-                    if(msg){
-                    $("#location").html(msg);
-                    }else{
-                        $("#location").html('Not Available');
-                    }
-                }
-            });
+
+        //géolocalisation
+        var x = document.getElementById("location");
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+        function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
         }
     }
 
@@ -379,7 +378,7 @@
     </ul>
 
     <button type="button" onclick="create()">Call API</button>
-
+    <button type="button" onclick="getLocation()">getLocation</button>
 
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
