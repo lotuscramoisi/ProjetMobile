@@ -190,7 +190,7 @@
                     latitude : position.coords.latitude
                 },
                 success: function(result) {
-                    x.innerHTML = "Vide"+result;
+                    x.innerHTML = "Vide";
                 }
             });
         }
