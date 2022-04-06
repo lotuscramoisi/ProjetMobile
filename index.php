@@ -11,8 +11,8 @@
         $conn = connectDBasAdmin();
         // Démarrage de la session pour créer les variables $_SESSION
         session_start();
-        
-        include 'fonctionUser.php';
+
+        require_once realpath(__DIR__ . '/vendor/autoload.php');
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
