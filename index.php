@@ -365,6 +365,8 @@
     </ul>
     <div>
         <iframe
+            width="600"
+            height="450"
             style="border:0"
             loading="lazy"
             allowfullscreen
