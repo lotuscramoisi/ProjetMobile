@@ -180,6 +180,20 @@
             var x = document.getElementById("location");
             x.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
+
+            $.ajax({
+                url: "getLocation.php", //the page containing php script
+                type: "post", //request type,
+                dataType: 'json',
+                data: {
+                    longitude : position.coords.longitude,
+                    latitude : position.coords.latitude
+                },
+                success: function(result) {
+                    var ecrit = JSON.parse(result);
+                    console.log(ecrit);
+                }
+            });
         }
     </script>
     <meta charset="UTF-8">
