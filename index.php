@@ -13,16 +13,6 @@
         session_start();
 
         include 'fonctionUser.php';
-
-        // //Pour lire le .env
-        // require_once realpath(__DIR__ . '/vendor/autoload.php');
-        // // Looing for .env at the root directory
-        // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-        // $dotenv->load();
-
-        // // Retrive env variable
-        // $idGO = $_ENV['GOOGLE_KEY'];
-        // console.log($idGO);
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -371,16 +361,6 @@
         </li>
 
     </ul>
-
-    <!-- <iframe
-        width="600"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=&q=Space+Needle,Seattle+WA">
-    </iframe> -->
 
     <button type="button" onclick="create()">Call API</button>
     <button type="button" onclick="getLocation()">Geolocalisation</button>
