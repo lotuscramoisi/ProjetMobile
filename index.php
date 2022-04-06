@@ -379,7 +379,7 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=<?php echo $idGO?>&q=Space+Needle,Seattle+WA">
+        >
     </iframe>
 
     <button type="button" onclick="create()">Call API</button>
