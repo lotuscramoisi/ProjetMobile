@@ -190,7 +190,7 @@
                     latitude : position.coords.latitude
                 },
                 success: function(result) {
-                    x.innerHTML = "Vide";
+                    x.innerHTML = result;
                 },
                 error: function(xhr, textStatus, errorThrown){
                     alert('request failed->'+textStatus);
