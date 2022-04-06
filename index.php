@@ -371,7 +371,7 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+        src="https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>
             &q=Space+Needle,Seattle+WA">
     </iframe>
 
