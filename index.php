@@ -365,8 +365,6 @@
     </ul>
     <div class="ratio ratio-4x3">
         <iframe
-            width="600"
-            height="450"
             style="border:0"
             loading="lazy"
             allowfullscreen
