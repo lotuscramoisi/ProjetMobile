@@ -184,25 +184,25 @@
         function showPosition(position) {
             var x = document.getElementById("location");
 
-            x.setAttribute("src","https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q="position.coords.latitude"");
+            x.setAttribute("src","https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q="position.coords.latitude);
             // x.innerHTML = "Latitude: " + position.coords.latitude +
             //     "<br>Longitude: " + position.coords.longitude;
 
-            $.ajax({
-                url: "getLocation.php", //the page containing php script
-                type: "post", //request type,
-                dataType: 'json',
-                data: {
-                    longitude : position.coords.longitude,
-                    latitude : position.coords.latitude
-                },
-                success: function(result) {
-                    x.innerHTML = result;
-                },
-                error: function(xhr, textStatus, errorThrown){
-                    alert('request failed->'+textStatus);
-                }   
-            });
+            // $.ajax({
+            //     url: "getLocation.php", //the page containing php script
+            //     type: "post", //request type,
+            //     dataType: 'json',
+            //     data: {
+            //         longitude : position.coords.longitude,
+            //         latitude : position.coords.latitude
+            //     },
+            //     success: function(result) {
+            //         x.innerHTML = result;
+            //     },
+            //     error: function(xhr, textStatus, errorThrown){
+            //         alert('request failed->'+textStatus);
+            //     }   
+            // });
         }
     </script>
     <meta charset="UTF-8">
