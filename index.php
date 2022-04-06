@@ -182,9 +182,9 @@
         function showPosition(position) {
             var x = document.getElementById("location");
 
-            //x.setAttribute("src","https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q="position.coords.latitude);
-            x.innerHTML = "Latitude: " + position.coords.latitude +
-                 "<br>Longitude: " + position.coords.longitude;
+            x.src = "";
+            //x.innerHTML = "Latitude: " + position.coords.latitude +
+            //     "<br>Longitude: " + position.coords.longitude;
 
             // $.ajax({
             //     url: "getLocation.php", //the page containing php script
