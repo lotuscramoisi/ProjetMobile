@@ -190,8 +190,7 @@
                     latitude : position.coords.latitude
                 },
                 success: function(result) {
-                    var ecrit = JSON.parse(result);
-                    console.log(ecrit);
+                    x.innerHTML = "Vide"+result;
                 }
             });
         }
