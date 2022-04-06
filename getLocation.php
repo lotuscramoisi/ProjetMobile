@@ -16,7 +16,7 @@ if(!empty($_POST['latitude']) && !empty($_POST['longitude'])){
     }
     
     //return address to ajax 
-    echo $location;
+    echo $location+" oi";
 }
 else{
     echo "vide";
