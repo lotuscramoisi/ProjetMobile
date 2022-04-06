@@ -191,7 +191,10 @@
                 },
                 success: function(result) {
                     x.innerHTML = "Vide";
-                }
+                },
+                error: function(xhr, textStatus, errorThrown){
+                    alert('request failed->'+textStatus);
+                }   
             });
         }
     </script>
