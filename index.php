@@ -363,7 +363,7 @@
             <span class="badge badge-primary badge-pill" id="location"></span>
         </li>
     </ul>
-    <div class="ratio ratio-16x9">
+    <div class="ratio ratio-4x3">
         <iframe
             width="600"
             height="450"
