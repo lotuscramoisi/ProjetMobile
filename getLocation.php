@@ -9,13 +9,10 @@ if(!empty($_POST['latitude']) && !empty($_POST['longitude'])){
     
     //if request status is successful
     if($status == "OK"){
-        //get address from json data
-        $location = $data->results[0]->formatted_address;
+        //return Json to ajax
+        echo $location;
     }else{
         $location =  'status not ok';
     }
-    
-    //return address to ajax 
-    echo $location;
 }
 ?>
