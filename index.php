@@ -15,7 +15,7 @@
         require_once realpath(__DIR__ . '/vendor/autoload.php');
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
         $dotenv->load();
-        $userName = $_ENV['PRIVATE_KEY'];
+        $userName = $_ENV['GOOGLE_KEY'];
         echo $userName;
     ?>
     <!-- DEBUT IMPORT -->
