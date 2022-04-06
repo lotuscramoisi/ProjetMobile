@@ -178,8 +178,8 @@
 
         function showPosition(position) {
             var x = document.getElementById("location");
-            x.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
+            // x.innerHTML = "Latitude: " + position.coords.latitude +
+            //     "<br>Longitude: " + position.coords.longitude;
 
             $.ajax({
                 url: "getLocation.php", //the page containing php script
