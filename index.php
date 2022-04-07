@@ -168,40 +168,15 @@
             });
         }
 
-
         //géolocalisation
         function getLocation() {
-            var x = document.getElementById("location");
+            var x = document.getElementById("frame");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
-                console.log("appel");
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+                x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q=nivelles";
             }
         }
 
-        function showPosition(position) {
-            var x = document.getElementById("frame");
-            x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q=nivelles";
-            //x.innerHTML = "Latitude: " + position.coords.latitude +
-            //     "<br>Longitude: " + position.coords.longitude;
-
-            // $.ajax({
-            //     url: "getLocation.php", //the page containing php script
-            //     type: "post", //request type,
-            //     dataType: 'json',
-            //     data: {
-            //         longitude : position.coords.longitude,
-            //         latitude : position.coords.latitude
-            //     },
-            //     success: function(result) {
-            //         x.innerHTML = result;
-            //     },
-            //     error: function(xhr, textStatus, errorThrown){
-            //         alert('request failed->'+textStatus);
-            //     }   
-            // });
-        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
