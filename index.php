@@ -181,8 +181,9 @@
             var x = document.getElementById("frame");
             let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
             str+="&q=";
-            str+="Lillois";
-            console.log(position.coords.latitude);
+            str+=position.coords.latitude;
+            str+="+";
+            str+=position.coords.longitude;
             x.src = str;
         }
 
