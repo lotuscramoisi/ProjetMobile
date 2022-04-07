@@ -94,7 +94,7 @@
             // FIN AJAX FORMULAIRE LOGIN
 
 
-            $('#Pays').one('click', function(e) {
+            $('#CallApi').one('click', function(e) {
                 $.ajax({
                     url: "ajax.php", //the page containing php script
                     type: "post", //request type,
@@ -361,7 +361,7 @@
             >
         </iframe>
     </div>
-    <!-- <button type="button" onclick="create()">Call API</button> -->
+    <button type="button" onclick="create()">Call API</button>
     <button type="button" onclick="getLocation()">Geolocalisation</button>
 
     <!-- END Liste des informations -->
