@@ -94,22 +94,22 @@
             // FIN AJAX FORMULAIRE LOGIN
 
             //Chargement du pays, ville et région à chaque chargement
-            
-            $.ajax({
-                url: "ajax.php", //the page containing php script
-                type: "post", //request type,
-                dataType: 'json',
-                data: {
-                    registration: "success"
-                },
-                success: function(result) {
-                    var ecrit = JSON.parse(result);
-                    document.getElementById("Pays").innerHTML = ecrit.country;
-                    document.getElementById("Ville").innerHTML = ecrit.region;
-                    document.getElementById("Region").innerHTML = ecrit.city;
-                    }   
-                });
-            
+            if(document.getElementById("Pays").innerHTML ==""){
+                $.ajax({
+                    url: "ajax.php", //the page containing php script
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        registration: "success"
+                    },
+                    success: function(result) {
+                        var ecrit = JSON.parse(result);
+                        document.getElementById("Pays").innerHTML = ecrit.country;
+                        document.getElementById("Ville").innerHTML = ecrit.region;
+                        document.getElementById("Region").innerHTML = ecrit.city;
+                        }   
+                    });
+            }
         });
 
 
