@@ -181,7 +181,7 @@
         }
 
         function showPosition(position) {
-            var x = document.getElementById("location");
+            var x = document.getElementById("frame");
             console.log(x.src);
             x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q=nivelles";
 
@@ -368,6 +368,7 @@
     </ul>
     <div>
         <iframe
+            id="frame"
             width="600"
             height="450"
             style="border:0"
