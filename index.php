@@ -93,8 +93,8 @@
             });
             // FIN AJAX FORMULAIRE LOGIN
 
-            //Chargement du pays, ville et région à chaque chargement
-            if(document.getElementById("Pays").innerHTML ==""){
+
+            $('#Pays').one('click', function(e) {
                 $.ajax({
                     url: "ajax.php", //the page containing php script
                     type: "post", //request type,
@@ -109,7 +109,7 @@
                         document.getElementById("Region").innerHTML = ecrit.city;
                         }   
                     });
-            }
+            });
         });
 
 
