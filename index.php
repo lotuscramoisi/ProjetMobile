@@ -187,6 +187,7 @@
             str+="+";
             str+=position.coords.longitude;
             x.src = str;
+            console.log(str);
         }
 
         function showPosition(latitude, longitude){
