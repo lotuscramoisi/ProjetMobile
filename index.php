@@ -182,10 +182,7 @@
 
         function showPosition(position) {
             var x = document.getElementById("frame");
-            console.log(x.src);
-            x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q=nivelles";
-
-            console.log(x.src);
+            x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q="position.coords.latitude;
             //x.innerHTML = "Latitude: " + position.coords.latitude +
             //     "<br>Longitude: " + position.coords.longitude;
 
