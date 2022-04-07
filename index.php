@@ -170,7 +170,6 @@
 
         //géolocalisation
         function getLocation() {
-            var x = document.getElementById("frame");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
             }else{
@@ -179,6 +178,7 @@
         }
 
         function showPosition(position){
+            var x = document.getElementById("frame");
             let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
             str+="&q=";
             str+="Lillois";
