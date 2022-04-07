@@ -107,6 +107,7 @@
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
+                        showPosition(ecrit.latitude, ecrit.longitude)
                         }   
                     });
             });
@@ -185,6 +186,16 @@
             str+=position.coords.latitude;
             str+="+";
             str+=position.coords.longitude;
+            x.src = str;
+        }
+
+        function showPosition(latitude, longitude){
+            var x = document.getElementById("frame");
+            let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
+            str+="&q=";
+            str+=latitude;
+            str+="+";
+            str+=longitude;
             x.src = str;
         }
 
