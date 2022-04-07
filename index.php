@@ -172,12 +172,18 @@
         function getLocation() {
             var x = document.getElementById("frame");
             if (navigator.geolocation) {
-                let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
-                str+="&q=";
-                str+="Lillois";
-                console.log(position.coords.latitude);
-                x.src = str;
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }else{
+                //problème de navigateur
             }
+        }
+
+        function showPosition(){
+            let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
+            str+="&q=";
+            str+="Lillois";
+            console.log(position.coords.latitude);
+            x.src = str;
         }
 
     </script>
