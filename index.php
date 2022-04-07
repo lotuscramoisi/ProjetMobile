@@ -94,7 +94,7 @@
             // FIN AJAX FORMULAIRE LOGIN
 
             //Chargement du pays, ville et région à chaque chargement
-            function create() {
+            
             $.ajax({
                 url: "ajax.php", //the page containing php script
                 type: "post", //request type,
@@ -107,9 +107,9 @@
                     document.getElementById("Pays").innerHTML = ecrit.country;
                     document.getElementById("Ville").innerHTML = ecrit.region;
                     document.getElementById("Region").innerHTML = ecrit.city;
-                }
-            });
-        }
+                    }   
+                });
+            
         });
 
 
