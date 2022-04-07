@@ -361,7 +361,7 @@
             >
         </iframe>
     </div>
-    <button type="button" onclick="create()">Call API</button>
+    <!-- <button type="button" onclick="create()">Call API</button> -->
     <button type="button" onclick="getLocation()">Geolocalisation</button>
 
     <!-- END Liste des informations -->
