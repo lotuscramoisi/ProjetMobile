@@ -173,7 +173,10 @@
             var x = document.getElementById("frame");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
-                x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>&q=nivelles";
+                const str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
+                str+="&q=";
+                str+="Lillois";
+                x.src = str;
             }
         }
 
