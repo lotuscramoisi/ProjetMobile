@@ -174,6 +174,7 @@
             var x = document.getElementById("location");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
+                console.log("appel");
             } else {
                 x.innerHTML = "Geolocation is not supported by this browser.";
             }
@@ -184,6 +185,8 @@
 
             x.src = "https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>
                 &q=nivelles";
+
+            console.log(x.src);
             //x.innerHTML = "Latitude: " + position.coords.latitude +
             //     "<br>Longitude: " + position.coords.longitude;
 
