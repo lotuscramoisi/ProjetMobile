@@ -358,11 +358,9 @@
                     Ville
                     <span class="badge badge-primary badge-pill" id="Ville"></span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <button type="button" onclick="getLocation()">Geolocalisation</button>
-                    <button type="button" id="CallApi">Call API</button>
-                </li>
             </ul>
+            <button type="button" onclick="getLocation()">Geolocalisation</button>
+            <button type="button" id="CallApi">Call API</button>
         </div>
         <div class="col">
             <div class="ratio" style="--bs-aspect-ratio: 50%;">
