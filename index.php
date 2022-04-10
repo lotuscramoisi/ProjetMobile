@@ -326,6 +326,7 @@
         </div>
     </div>
     <!-- START Liste des informations -->
+    <div class="container">
     <div class="row align-items-center">
     <div class="col">
         <ul class="list-group">
@@ -373,7 +374,7 @@
     </div>
     <button type="button" id="CallApi">Call API</button>
     <button type="button" onclick="getLocation()">Geolocalisation</button>
-
+    </div>
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
