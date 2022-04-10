@@ -360,7 +360,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col">
+        <div class="ratio" style="--bs-aspect-ratio: 50%;">
             <iframe
                 id="frame"
                 width="600"
