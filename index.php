@@ -358,6 +358,10 @@
                     Ville
                     <span class="badge badge-primary badge-pill" id="Ville"></span>
                 </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <button type="button" onclick="getLocation()">Geolocalisation</button>
+                    <button type="button" id="CallApi">Call API</button>
+                </li>
             </ul>
         </div>
         <div class="col">
@@ -374,8 +378,7 @@
             </iframe>
             </div>
         </div>
-        <button type="button" id="CallApi">Call API</button>
-        <button type="button" onclick="getLocation()">Geolocalisation</button>
+
     </div>
     <!-- END Liste des informations -->
     <!-- START Bootstrap-Cookie-Alert -->
