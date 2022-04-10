@@ -326,7 +326,7 @@
         </div>
     </div>
     <!-- START Liste des informations -->
-    <div class="container-xl">
+    <div class="container-xxl">
         <div class="row align-items-center">
         <div class="col">
             <ul class="list-group">
