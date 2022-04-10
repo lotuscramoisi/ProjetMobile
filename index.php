@@ -360,7 +360,8 @@
                 </li>
             </ul>
         </div>
-        <div class="col;ratio" style="--bs-aspect-ratio: 50%;">
+        <div class="col">
+            <div class="ratio" style="--bs-aspect-ratio: 50%;">
             <iframe
                 id="frame"
                 width="600"
@@ -371,6 +372,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
                 >
             </iframe>
+            </div>
         </div>
         <button type="button" id="CallApi">Call API</button>
         <button type="button" onclick="getLocation()">Geolocalisation</button>
