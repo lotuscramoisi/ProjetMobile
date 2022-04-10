@@ -369,6 +369,17 @@
             >
         </iframe>
     </div>
+    <div class="row align-items-center">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    </div>
     <button type="button" id="CallApi">Call API</button>
     <button type="button" onclick="getLocation()">Geolocalisation</button>
 
