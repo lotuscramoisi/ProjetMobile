@@ -327,37 +327,40 @@
         </div>
     </div>
     <!-- START Liste des informations -->
-    <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Adresse IP
-            <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Proxy
-            <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Navigateur
-            <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            OS
-            <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Pays
-            <span class="badge badge-primary badge-pill" id="Pays"></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Region
-            <span class="badge badge-primary badge-pill" id="Region"></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            Ville
-            <span class="badge badge-primary badge-pill" id="Ville"></span>
-        </li>
-    </ul>
-    <div>
+    <div class="row align-items-center">
+    <div class="col">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Adresse IP
+                <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Proxy
+                <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Navigateur
+                <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                OS
+                <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Pays
+                <span class="badge badge-primary badge-pill" id="Pays"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Region
+                <span class="badge badge-primary badge-pill" id="Region"></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Ville
+                <span class="badge badge-primary badge-pill" id="Ville"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="col">
         <iframe
             id="frame"
             width="600"
@@ -368,17 +371,6 @@
             referrerpolicy="no-referrer-when-downgrade"
             >
         </iframe>
-    </div>
-    <div class="row align-items-center">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
     </div>
     <button type="button" id="CallApi">Call API</button>
     <button type="button" onclick="getLocation()">Geolocalisation</button>
