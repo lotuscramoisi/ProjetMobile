@@ -138,7 +138,7 @@
                     type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        username: $_SESSION['login']
+                        username: <?php $_SESSION['login']?>
                     },
                     success: function(result) {
                         
