@@ -50,19 +50,19 @@ try {
             $_SESSION['login'] = $userinfos['USERNAME'];
             $_SESSION['pwd'] = $pwdhash;
             //header ("Location: $_SERVER[HTTP_REFERER]");
-            echo "Connexion réussie";
+            echo "Connexion réussie PHP";
         }
         else{
-            echo "Password incorrect";
+            echo "Password incorrect PHP";
         }
     }
     else{
-        echo "Login not registered";
+        echo "Login not registered PHP";
     }
     
 }
     
 catch(PDOException $e) {
-   echo "Connection failed";
+   echo "Connection failed PHP";
 }
 ?>
