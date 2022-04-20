@@ -104,6 +104,7 @@
                     },
                     success: function(result) {
                         var ecrit = JSON.parse(result);
+						document.getElementById("Continent").innerHTML = ecrit.continent;
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
