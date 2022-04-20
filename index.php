@@ -108,7 +108,7 @@
 						document.getElementById("Continent").innerHTML = ecrit.continent;
                         document.getElementById("Pays").innerHTML = ecrit.country;
 						var flag = ecrit.flag.png;
-						//document.getElementById("Drapeau").innerHTML = "<img src=".flag.">";
+						document.getElementById("Drapeau").innerHTML = ecrit.flag.png;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
 						document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
