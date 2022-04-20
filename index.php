@@ -371,7 +371,7 @@
                 </li>
 				<li class="list-group-item d-flex justify-content-between align-items-center">
 					Drapeau
-                    <span class="badge badge-primary badge-pill" id="Drapeau"></span>
+                    <span id="Drapeau"></span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Region
