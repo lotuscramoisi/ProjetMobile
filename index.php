@@ -138,8 +138,8 @@
                     type: \"post\", //request type,
                     dataType: 'json',
                     data: {
-                        username:  ".$_SESSION['login'].
-                    "},
+                        username:  \"".$_SESSION['login'].
+                    "\"},
                     success: function(result) {
                         
                         }   
