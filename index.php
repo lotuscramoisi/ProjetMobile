@@ -34,6 +34,10 @@
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
+                //Récupération de tous les inputs du formulaire
+                var $inputs = $("#registerform").find("input, select, button, textarea");
+                //désactivation des inputs
+                $inputs.prop("disabled", true);
                 $.post(
                         'register.php', // Le fichier à appeler sur serveur.
                         serializedData, // Paramètre envoyé à la méthode post
