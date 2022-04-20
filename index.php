@@ -222,7 +222,7 @@
                 type: "post", //request type,
                 dataType: "text",
                 data: {
-                    username: "lotus"
+                    username: "lotuscramoisi"
                 },
                 success: function(result) {
                     console.log(result);
