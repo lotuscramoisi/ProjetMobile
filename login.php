@@ -11,7 +11,7 @@ try {
     
     //DEBUT RECHERCHE DE L'ADRESSEMAIL
     // Requête sql de recherche de l'adresse mail dans la DB
-    $sqlrechercheemail = "select * from USER where USERMAIL like binary :login or USERNAME like :login";
+    $sqlrechercheemail = "select * from USER where USERMAIL like :login or USERNAME like :login";
 
     // Préparation de la requête
     $stmtsearchmail = $conn->prepare($sqlrechercheemail);
@@ -25,27 +25,12 @@ try {
 
     //SI L'ADRESSE MAIL EST ENREGISTREE ON RECHERCHE LE MDP
     if($stmtsearchmail->fetchColumn()){
-        //DEBUT RECHERCHE DU MDP EN FONCTION DE L'ADRESSE MAIL
-        // Requête sql
-        $sql = "select * from USER where USERNAME like binary :login or USERMAIL like :login";
-        
-        // Préparation de la requête
-        $stmt = $conn->prepare($sql);
-
-        // Attribution des paramètres de la requête préparée
-        $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
-        
-        // Exécution de la requête
-        $stmt->execute();
-
         //Récupération du mot de pass haché
-        $userinfos = $stmt->fetch(PDO::FETCH_ASSOC);
+        $userinfos = $stmtsearchmail->fetch(PDO::FETCH_ASSOC);
         //FIN RECHERCHE DU MDP EN FONCTION DE L'ADRESSE MAIL
 
         //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
         if(password_verify($pwd, $userinfos['USERPSW'])){
-            
-            var_dump($pwd);
             // on démarre la session
             session_start();
             
