@@ -220,9 +220,9 @@
             $.ajax({
                 url: "save.php", //the page containing php script
                 type: "post", //request type,
-                dataType: 'text',
+                dataType: "text",
                 data: {
-                    registration: "success"
+                    username: "lotus"
                 },
                 success: function(result) {
                     console.log(result);
