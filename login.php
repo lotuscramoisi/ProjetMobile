@@ -49,7 +49,7 @@ try {
             // on enregistre les paramètres de notre visiteur comme variables de session
             $_SESSION['login'] = $userinfos['USERNAME'];
             $_SESSION['pwd'] = $pwdhash;
-            header ("Location: $_SERVER[HTTP_REFERER]");
+            //header ("Location: $_SERVER[HTTP_REFERER]");
             echo "Connexion réussie";
         }
         else{
