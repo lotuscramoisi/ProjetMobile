@@ -77,6 +77,7 @@
                         'text' // Format des données retournées par le serveur.
                     )
                     .done(function(data) {
+                        $('#signIn').modal('show');
                         $('#alertMessageLogin').empty();
                         $('<font color="red"></font>').html(
                             data
