@@ -104,6 +104,7 @@
                     },
                     success: function(result) {
                         var ecrit = JSON.parse(result);
+						document.getElementById("Continent").innerHTML = ecrit.continent;
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
@@ -345,6 +346,10 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     OS
                     <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					Continent
+                    <span class="badge badge-primary badge-pill" id="Continent"></span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Pays
