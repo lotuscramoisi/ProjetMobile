@@ -91,6 +91,7 @@
                             data
                         ).appendTo('#alertMessageLogin');
                         location.reload();
+                        savePersonalData();
                     })
                     .fail(function(error) {
                         alert("error détectée:" + error.responseText);
@@ -103,7 +104,7 @@
             });
             // FIN AJAX FORMULAIRE LOGIN
 
-
+            //Appelle l'API pour obtenir les informations à partir d'une IPV4
             $('#CallApi').one('click', function(e) {
                 $.ajax({
                     url: "ajax.php", //the page containing php script
@@ -127,6 +128,7 @@
                     });
             });
         });
+        //Fin du document ready
 
 
         // Fonction pour vérifier les données du formulaire de login
@@ -212,6 +214,20 @@
             str+="+";
             str+=longitude;
             x.src = str;
+        }
+
+        function savePersonalData(){
+            console.log("ici");
+            $.ajax({
+                url: "save.php", //the page containing php script
+                type: "post", //request type,
+                dataType: 'json',
+                data: {
+                    registration: "success"
+                },
+                success: function(result) {
+                }   
+            });
         }
 
     </script>
