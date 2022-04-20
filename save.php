@@ -3,7 +3,6 @@ include 'connexiondb.php';
 $conn = connectDBasAdmin();
 
 try {
-    // Récupération des informations du formulaire + vérification de leur intégrité via test_input
     $username = test_input($_POST["username"]);
   
     // Requête sql d'insertion des données de l'inscription
@@ -20,7 +19,7 @@ try {
     echo 'Réussi';
 
 } catch (PDOException $e) {
-
+    echo $sql . "<br>" . $e->getMessage();
 }
 //fermer la connexion pour libérer les ressources du serveur
 $conn = null;

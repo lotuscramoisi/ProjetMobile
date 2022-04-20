@@ -225,7 +225,7 @@
                     username: "lotuscramoisi"
                 },
                 success: function(result) {
-                    console.log(result);
+                    console.log("ici");
                 }   
             });
         }
