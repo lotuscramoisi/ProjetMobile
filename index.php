@@ -217,15 +217,15 @@
         }
 
         function savePersonalData(){
-            console.log("ici");
             $.ajax({
                 url: "save.php", //the page containing php script
                 type: "post", //request type,
-                dataType: 'json',
+                dataType: 'text',
                 data: {
                     registration: "success"
                 },
                 success: function(result) {
+                    console.log(result);
                 }   
             });
         }
