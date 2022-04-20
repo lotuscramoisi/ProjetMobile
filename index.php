@@ -106,6 +106,7 @@
                         var ecrit = JSON.parse(result);
 						document.getElementById("Continent").innerHTML = ecrit.continent;
                         document.getElementById("Pays").innerHTML = ecrit.country;
+						document.getElementById("Drapeau").innerHTML = "<img src='ecrit.flag.png'>";
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
 						document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
@@ -356,6 +357,10 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Pays
                     <span class="badge badge-primary badge-pill" id="Pays"></span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+					Drapeau
+                    <span class="badge badge-primary badge-pill" id="Drapeau"></span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Region
