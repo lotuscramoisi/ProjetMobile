@@ -132,19 +132,19 @@
             //Si l'utilisateur est connecté
             <?php
             if (isset($_SESSION['login'])) {
-                ?>
-               $.ajax({
-                    url: "saveinfo.php", //the page containing php script
-                    type: "post", //request type,
+                
+               echo "$.ajax({
+                    url: \"saveinfo.php\", //the page containing php script
+                    type: \"post\", //request type,
                     dataType: 'json',
                     data: {
-                        username: <?php $_SESSION['login']?>
-                    },
+                        username:  ".$_SESSION['login'].
+                    "},
                     success: function(result) {
                         
                         }   
-                    });
-            <?php
+                    });";
+            
             }
             ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
