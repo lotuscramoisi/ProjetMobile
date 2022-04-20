@@ -11,7 +11,7 @@ try {
     
     //DEBUT RECHERCHE DE L'ADRESSEMAIL
     // Requête sql de recherche de l'adresse mail dans la DB
-    $sqlrechercheemail = "select * from USER where USERMAIL like binary :login or USERNAME like binary :login";
+    $sqlrechercheemail = "select * from USER where USERMAIL like binary :login or USERNAME like :login";
 
     // Préparation de la requête
     $stmtsearchmail = $conn->prepare($sqlrechercheemail);
@@ -27,7 +27,7 @@ try {
     if($stmtsearchmail->fetchColumn()){
         //DEBUT RECHERCHE DU MDP EN FONCTION DE L'ADRESSE MAIL
         // Requête sql
-        $sql = "select * from USER where USERNAME like binary :login or USERMAIL like binary :login";
+        $sql = "select * from USER where USERNAME like binary :login or USERMAIL like :login";
         
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
