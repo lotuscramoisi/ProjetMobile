@@ -148,22 +148,22 @@
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            <?php
-            if (isset($_SESSION['login'])) {
+            // <?php
+            // if (isset($_SESSION['login'])) {
 
-                echo "$.ajax({
-                    url: \"saveinfo.php\", //the page containing php script
-                    type: \"post\", //request type,
-                    dataType: 'json',
-                    data: {
-                        username:  \"" . $_SESSION['login'] .
-                    "\"},
-                    success: function(result) {
+            //     echo "$.ajax({
+            //         url: \"saveinfo.php\", //the page containing php script
+            //         type: \"post\", //request type,
+            //         dataType: 'json',
+            //         data: {
+            //             username:  \"" . $_SESSION['login'] .
+            //         "\"},
+            //         success: function(result) {
                         
-                        }   
-                    });";
-            }
-            ?>
+            //             }   
+            //         });";
+            // }
+            // ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
 
         });
