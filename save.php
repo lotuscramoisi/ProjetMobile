@@ -5,7 +5,6 @@ $conn = connectDBasAdmin();
 try {
     // Récupération des informations du formulaire + vérification de leur intégrité via test_input
     $username = test_input($_POST["username"]);
-    $date = ;
   
     // Requête sql d'insertion des données de l'inscription
     $sql = "INSERT INTO USER(USERNAME,SIGNUPDATE) VALUES (:username, date('Y-m-d h:i:s'))";
