@@ -108,6 +108,7 @@
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
+						document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                         }   
                     });
@@ -362,6 +363,10 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Ville
                     <span class="badge badge-primary badge-pill" id="Ville"></span>
+                </li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+                    Devise
+                    <span class="badge badge-primary badge-pill" id="Devise"></span>
                 </li>
             </ul>
             <button type="button" onclick="getLocation()">Geolocalisation</button>
