@@ -3,19 +3,19 @@
 
 <head>
     <?php
-        // Inclusion des fichiers de fonctions
-        include 'functions.php';
-        include 'connexiondb.php';
-        include 'fonctionUser.php';
-        // Connexion à la BDD en tant qu'admin
-        $conn = connectDBasAdmin();
-        // Démarrage de la session pour créer les variables $_SESSION
-        session_start();
+    // Inclusion des fichiers de fonctions
+    include 'functions.php';
+    include 'connexiondb.php';
+    include 'fonctionUser.php';
+    // Connexion à la BDD en tant qu'admin
+    $conn = connectDBasAdmin();
+    // Démarrage de la session pour créer les variables $_SESSION
+    session_start();
 
-        require_once realpath(__DIR__ . '/vendor/autoload.php');
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-        $dotenv->load();
-        $APIGOO = $_ENV['GOOGLE_KEY'];
+    require_once realpath(__DIR__ . '/vendor/autoload.php');
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    $APIGOO = $_ENV['GOOGLE_KEY'];
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -51,7 +51,7 @@
                             $('#event').modal('show');
                             $('#eventtitle').append('Registration completed');
                             $('#eventbody').append('Your registration was successfully completed');
-                        } 
+                        }
                         //Si l'inscription a échouée on affiche un message d'erreur
                         else {
                             $('#alertMessageRegister').empty();
@@ -115,40 +115,57 @@
                     },
                     success: function(result) {
                         var ecrit = JSON.parse(result);
-						document.getElementById("Continent").innerHTML = ecrit.continent;
+                        document.getElementById("Continent").innerHTML = ecrit.continent;
                         document.getElementById("Pays").innerHTML = ecrit.country;
-						var flag = ecrit.flag.png;
-						document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src="+flag+">";
+                        var flag = ecrit.flag.png;
+                        document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
-						document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-						document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+                        document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                        document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
-                        }   
-                    });
+                    }
+                });
             });
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             <?php
             if (isset($_SESSION['login'])) {
-                
-               echo "$.ajax({
+
+                echo "$.ajax({";
+                echo  "url: \"saveinfo.php\", //the page containing php script";
+                echo  "type: \"post\", //request type,";
+                echo  "dataType: 'json',";
+                echo  "data: {";
+                echo  "username:  \"" . $_SESSION['login'] ."\"";
+                echo  "},";
+                echo  "success: function(result) {}";
+                echo  "});";          
+            }
+            ?>
+            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+
+            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            //Si l'utilisateur est connecté
+            <?php
+            if (isset($_SESSION['login'])) {
+
+                echo "$.ajax({
                     url: \"saveinfo.php\", //the page containing php script
                     type: \"post\", //request type,
                     dataType: 'json',
                     data: {
-                        username:  \"".$_SESSION['login'].
+                        username:  \"" . $_SESSION['login'] .
                     "\"},
                     success: function(result) {
                         
                         }   
                     });";
-            
             }
             ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-            
+
         });
         //Fin du document ready
 
@@ -172,7 +189,7 @@
             if (pwd == '') {
                 $("#alertMessageLogin").append("Please enter password");
                 return false;
-            }            
+            }
         }
         // Fonction pour vérifier les données du formulaire d'enregistrement
         function checkRegisterForm(form) {
@@ -213,32 +230,32 @@
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
-            }else{
+            } else {
                 //problème de navigateur
             }
         }
 
-        function showPosition(position){
+        function showPosition(position) {
             var x = document.getElementById("frame");
-            let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
-            str+="&q=";
-            str+=position.coords.latitude;
-            str+="+";
-            str+=position.coords.longitude;
+            let str = 'https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO ?>';
+            str += "&q=";
+            str += position.coords.latitude;
+            str += "+";
+            str += position.coords.longitude;
             x.src = str;
         }
 
-        function showPositionLL(latitude, longitude){
+        function showPositionLL(latitude, longitude) {
             var x = document.getElementById("frame");
-            let str='https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO?>';
-            str+="&q=";
-            str+=latitude;
-            str+="+";
-            str+=longitude;
+            let str = 'https://www.google.com/maps/embed/v1/place?key=<?php echo $APIGOO ?>';
+            str += "&q=";
+            str += latitude;
+            str += "+";
+            str += longitude;
             x.src = str;
         }
 
-        function savePersonalData(){
+        function savePersonalData() {
             $.ajax({
                 url: "save.php", //the page containing php script
                 type: "post", //request type,
@@ -248,10 +265,9 @@
                 },
                 success: function(result) {
                     console.log("ici");
-                }   
+                }
             });
         }
-
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -381,84 +397,76 @@
     <!-- START Liste des informations -->
     <div class="container-fluid">
         <div class="row align-items-center">
-        <div class="col">
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Adresse IP
-                    <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Proxy
-                    <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Navigateur
-                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    OS
-                    <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
-                </li>
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-					Continent
-                    <span class="badge badge-primary badge-pill" id="Continent"></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Pays
-                    <span class="badge badge-primary badge-pill" id="Pays"></span>
-                </li>
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-					Drapeau
-                    <span id="Drapeau"></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Region
-                    <span class="badge badge-primary badge-pill" id="Region"></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Ville
-                    <span class="badge badge-primary badge-pill" id="Ville"></span>
-                </li>
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-                    Code Postal
-                    <span class="badge badge-primary badge-pill" id="CodePostal"></span>
-                </li>
-				<li class="list-group-item d-flex justify-content-between align-items-center">
-                    Devise
-                    <span class="badge badge-primary badge-pill" id="Devise"></span>
-                </li>
-            </ul>
-            <button type="button" onclick="getLocation()">Geolocalisation</button>
-            <button type="button" id="CallApi">Call API</button>
-        </div>
-        <div class="col">
-            <div class="ratio" style="--bs-aspect-ratio: 50%;">
-            <iframe
-                id="frame"
-                width="600"
-                height="400"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                >
-            </iframe>
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Adresse IP
+                        <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Proxy
+                        <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Navigateur
+                        <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        OS
+                        <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Continent
+                        <span class="badge badge-primary badge-pill" id="Continent"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Pays
+                        <span class="badge badge-primary badge-pill" id="Pays"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Drapeau
+                        <span id="Drapeau"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Region
+                        <span class="badge badge-primary badge-pill" id="Region"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Ville
+                        <span class="badge badge-primary badge-pill" id="Ville"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Code Postal
+                        <span class="badge badge-primary badge-pill" id="CodePostal"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Devise
+                        <span class="badge badge-primary badge-pill" id="Devise"></span>
+                    </li>
+                </ul>
+                <button type="button" onclick="getLocation()">Geolocalisation</button>
+                <button type="button" id="CallApi">Call API</button>
             </div>
+            <div class="col">
+                <div class="ratio" style="--bs-aspect-ratio: 50%;">
+                    <iframe id="frame" width="600" height="400" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+        <!-- END Liste des informations -->
+        <!-- START Bootstrap-Cookie-Alert -->
+        <div class="alert text-center cookiealert" role="alert">
+            <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+            <button type="button" class="btn btn-primary btn-sm acceptcookies">
+                I agree
+            </button>
         </div>
 
-    </div>
-    <!-- END Liste des informations -->
-    <!-- START Bootstrap-Cookie-Alert -->
-    <div class="alert text-center cookiealert" role="alert">
-        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
-
-        <button type="button" class="btn btn-primary btn-sm acceptcookies">
-            I agree
-        </button>
-    </div>
-
-    <!-- END Bootstrap-Cookie-Alert -->
-    <script src="cookiealert.js"></script>
+        <!-- END Bootstrap-Cookie-Alert -->
+        <script src="cookiealert.js"></script>
 </body>
 
 </html>
