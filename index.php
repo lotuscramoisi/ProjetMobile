@@ -82,7 +82,7 @@
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
-                        location.reload();
+                        //location.reload();
                     })
                     .fail(function(error) {
                         alert("error détectée:" + error.responseText);
