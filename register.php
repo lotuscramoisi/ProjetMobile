@@ -14,7 +14,7 @@ try {
 
     //DEBUT RECHERCHE DE L'ADRESSEMAIL
     // Requête sql de recherche de l'adresse mail dans la DB
-    $sqlrechercheemail = "select * from USER where USERMAIL like binary :email";
+    $sqlrechercheemail = "select * from USER where USERMAIL like :email";
 
     // Préparation de la requête
     $stmtsearchmail = $conn->prepare($sqlrechercheemail);
@@ -28,7 +28,7 @@ try {
 
     //DEBUT RECHERCHE DE L'USERNAME
     // Requête sql de recherche de l'adresse mail dans la DB
-    $sqlrechercheusername = "select * from USER where USERNAME like binary :username";
+    $sqlrechercheusername = "select * from USER where USERNAME like :username";
 
     // Préparation de la requête
     $stmtsearchusername = $conn->prepare($sqlrechercheusername);
