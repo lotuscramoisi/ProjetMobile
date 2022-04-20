@@ -70,6 +70,10 @@
             $("#btnlogin").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#loginform").serialize();
+                //Récupération de tous les inputs du formulaire
+                var $inputs = $("#loginform").find("input, select, button, textarea");
+                //désactivation des inputs
+                $inputs.prop("disabled", true);
                 $.post(
                         'login.php', // Le fichier à appeler sur serveur.
                         serializedData, // Paramètre envoyé à la méthode post
