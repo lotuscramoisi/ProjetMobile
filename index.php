@@ -128,23 +128,44 @@
                     });
             });
 
-            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            // //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            // //Si l'utilisateur est connecté
+            // <?php
+            // if (isset($_SESSION['login'])) {
+                
+            //    echo "$.ajax({
+            //         url: \"saveinfo.php\", //the page containing php script
+            //         type: \"post\", //request type,
+            //         dataType: 'json',
+            //         data: {
+            //             username:  \"".$_SESSION['login'].
+            //         "\"},
+            //         success: function(result) {
+                        
+            //             }   
+            //         });";
+            
+            // }
+            // ?>
+            // //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+
+             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             <?php
             if (isset($_SESSION['login'])) {
-                
-               echo "$.ajax({
-                    url: \"saveinfo.php\", //the page containing php script
-                    type: \"post\", //request type,
+            ?>    
+               $.ajax({
+                    url: "saveinfo.php", //the page containing php script
+                    type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        username:  \"".$_SESSION['login'].
-                    "\"},
+                        username:  " <?php $_SESSION['login'] ?>"
+                    },
                     success: function(result) {
                         
                         }   
-                    });";
-            
+                    });
+            <?php
             }
             ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
