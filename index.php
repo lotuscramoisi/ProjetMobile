@@ -105,7 +105,7 @@
                     success: function(result) {
                         var ecrit = JSON.parse(result);
 						document.getElementById("Continent").innerHTML = ecrit.continent;
-                        document.getElementById("Pays").innerHTML = "<img src='ecrit.flag.png' width='400px' height='150px'>";
+                        document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
 						document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
