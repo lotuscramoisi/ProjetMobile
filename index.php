@@ -127,6 +127,24 @@
                         }   
                     });
             });
+
+            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            //Si l'utilisateur est connecté
+            if (isset($_SESSION['login'])) {
+               $.ajax({
+                    url: "saveinfo.php", //the page containing php script
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        username: $_SESSION['login']
+                    },
+                    success: function(result) {
+                        
+                        }   
+                    });
+            }
+            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            
         });
         //Fin du document ready
 

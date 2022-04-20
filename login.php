@@ -33,7 +33,7 @@ try {
         $stmt = $conn->prepare($sql);
 
         // Attribution des paramètres de la requête préparée
-        $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
+        $stmt->bindParam(':login', $login, PDO::PARAM_STR, 50);
         
         // Exécution de la requête
         $stmt->execute();
