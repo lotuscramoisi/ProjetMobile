@@ -45,7 +45,7 @@ try {
         //Si la requête renvois un résultat c'est que le login et mot de pass existe dans le bdd
         if(password_verify($pwd, $userinfos['USERPSW'])){
             
-            echo "console.log(".$pwd." et ".$userinfos['USERPSW'].");";
+            var_dump($pwd);
             // on démarre la session
             session_start();
             
