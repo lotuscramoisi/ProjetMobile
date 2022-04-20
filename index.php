@@ -130,40 +130,40 @@
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            <?php
-            if (isset($_SESSION['login'])) {
+            // <?php
+            // if (isset($_SESSION['login'])) {
 
-                echo "$.ajax({";
-                echo  "url: \"saveinfo.php\", //the page containing php script";
-                echo  "type: \"post\", //request type,";
-                echo  "dataType: 'json',";
-                echo  "data: {";
-                echo  "username:  \"" . $_SESSION['login'] ."\"";
-                echo  "},";
-                echo  "success: function(result) {}";
-                echo  "});";          
-            }
-            ?>
+            //     echo "$.ajax({";
+            //     echo  "url: \"saveinfo.php\", //the page containing php script";
+            //     echo  "type: \"post\", //request type,";
+            //     echo  "dataType: 'json',";
+            //     echo  "data: {";
+            //     echo  "username:  \"" . $_SESSION['login'] ."\"";
+            //     echo  "},";
+            //     echo  "success: function(result) {}";
+            //     echo  "});";          
+            // }
+            // ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            // <?php
-            // if (isset($_SESSION['login'])) {
+            <?php
+            if (isset($_SESSION['login'])) {
 
-            //     echo "$.ajax({
-            //         url: \"saveinfo.php\", //the page containing php script
-            //         type: \"post\", //request type,
-            //         dataType: 'json',
-            //         data: {
-            //             username:  \"" . $_SESSION['login'] .
-            //         "\"},
-            //         success: function(result) {
+                echo "$.ajax({
+                    url: \"saveinfo.php\", //the page containing php script
+                    type: \"post\", //request type,
+                    dataType: 'json',
+                    data: {
+                        username:  \"" . $_SESSION['login'] .
+                    "\"},
+                    success: function(result) {
                         
-            //             }   
-            //         });";
-            // }
-            // ?>
+                        }   
+                    });";
+            }
+            ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
 
         });
