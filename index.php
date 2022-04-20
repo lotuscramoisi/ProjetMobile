@@ -130,7 +130,9 @@
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
+            <?php
             if (isset($_SESSION['login'])) {
+                ?>
                $.ajax({
                     url: "saveinfo.php", //the page containing php script
                     type: "post", //request type,
@@ -142,7 +144,9 @@
                         
                         }   
                     });
+            <?php
             }
+            ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             
         });
