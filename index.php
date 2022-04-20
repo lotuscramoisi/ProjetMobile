@@ -108,7 +108,7 @@
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
-						document.getElementById("Devise").innerHTML = ecrit.currency;
+						document.getElementById("Devise").innerHTML = ecrit.currency.name;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                         }   
                     });
