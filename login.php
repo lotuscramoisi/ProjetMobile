@@ -50,6 +50,7 @@ try {
             $_SESSION['login'] = $userinfos['USERNAME'];
             $_SESSION['pwd'] = $pwdhash;
             echo "Connexion réussie";
+            header ("Location: $_SERVER[HTTP_REFERER]");
         }
         else{
             echo "Password incorrect";
