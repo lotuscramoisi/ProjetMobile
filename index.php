@@ -268,6 +268,14 @@
                 }
             });
         }
+
+        function handleChange(checkbox) {
+            if(checkbox.checked == true){
+                echo "oui";
+            }else{
+                echo "non";
+            }
+        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -444,10 +452,10 @@
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
                 </ul>
-                <button type="button" onclick="getLocation()">Geolocalisation</button>
+                <button type="button" onclick="getLocation()">Geolocation</button>
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="getLocation()">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                 </div>
                 
                 <button type="button" id="CallApi">Call API</button>
