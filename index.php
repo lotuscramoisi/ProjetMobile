@@ -452,7 +452,7 @@
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
                 </ul>
-                <div class="form-check form-switch">
+                <div class="form-check">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                     <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                 </div>
