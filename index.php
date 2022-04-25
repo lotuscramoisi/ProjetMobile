@@ -411,6 +411,33 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Autorisation -->
+    <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Autorisation</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
+                        </div>
+
+                        <!-- <div class="form-check form-switch">
+                            <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
+                            <label class="form-check-label" for="flexCheckDisabled">
+                            Call API
+                            </label>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
     <!-- Modal Event-->
     <div class="modal fade" id="event" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -478,18 +505,7 @@
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
-                </ul>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
-                </div>
-
-                <!-- <div class="form-check form-switch">
-                    <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
-                    <label class="form-check-label" for="flexCheckDisabled">
-                    Call API
-                    </label>
-                </div> -->
+                </ul>                
                                 
             </div>
             <div class="col">
