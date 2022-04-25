@@ -271,9 +271,9 @@
 
         function handleChange(checkbox) {
             if(checkbox.checked == true){
-                echo "oui";
+               console.log("oui");
             }else{
-                echo "non";
+                console.log("non");
             }
         }
     </script>
