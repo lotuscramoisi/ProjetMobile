@@ -456,7 +456,14 @@
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                     <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                 </div>
-                
+
+                <div class="form-check">
+                    <input class="form-check-input" type="button" value="" id="CallApi" disabled>
+                    <label class="form-check-label" for="flexCheckDisabled">
+                    Call API
+                    </label>
+                </div>
+                                
                 <button type="button" id="CallApi">Call API</button>
             </div>
             <div class="col">
