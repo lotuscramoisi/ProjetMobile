@@ -424,10 +424,13 @@
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                    <div class="form-group">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                             <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                         </div>
+                    </div>
+                        
 
                         <!-- <div class="form-check form-switch">
                             <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
