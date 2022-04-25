@@ -101,27 +101,6 @@
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
                     });
-
-                    $.ajax({
-                    url: "ajax.php", //the page containing php script
-                    type: "post", //request type,
-                    dataType: 'json',
-                    data: {
-                        registration: "success"
-                    },
-                    success: function(result) {
-                        var ecrit = JSON.parse(result);
-                        document.getElementById("Continent").innerHTML = ecrit.continent;
-                        document.getElementById("Pays").innerHTML = ecrit.country;
-                        var flag = ecrit.flag.png;
-                        document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-                        document.getElementById("Ville").innerHTML = ecrit.region;
-                        document.getElementById("Region").innerHTML = ecrit.city;
-                        document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-                        document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-                        showPositionLL(ecrit.latitude, ecrit.longitude)
-                    }
-                });
             });
             // FIN AJAX FORMULAIRE LOGIN
 
@@ -148,6 +127,27 @@
                     }
                 });
             });
+
+            $.ajax({
+                    url: "ajax.php", //the page containing php script
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        registration: "success"
+                    },
+                    success: function(result) {
+                        var ecrit = JSON.parse(result);
+                        document.getElementById("Continent").innerHTML = ecrit.continent;
+                        document.getElementById("Pays").innerHTML = ecrit.country;
+                        var flag = ecrit.flag.png;
+                        document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
+                        document.getElementById("Ville").innerHTML = ecrit.region;
+                        document.getElementById("Region").innerHTML = ecrit.city;
+                        document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                        document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+                        showPositionLL(ecrit.latitude, ecrit.longitude)
+                    }
+                });
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
