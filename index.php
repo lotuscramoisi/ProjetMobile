@@ -276,6 +276,12 @@
                 showPositionLL(48.417017, -41.418471);
             }
         }
+
+        function handleChangeAPI(checkbox) {
+            if(checkbox.checked == true){
+                document.getElementById(checkbok).disabled = true;
+            }
+        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -452,13 +458,13 @@
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
                 </ul>
-                <div class="form-check">
+                <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                     <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="button" value="" id="CallApi" disabled>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="button" value="" id="CallApi" onchange='handleChangeAPI(this);' disabled="false">
                     <label class="form-check-label" for="flexCheckDisabled">
                     Call API
                     </label>
