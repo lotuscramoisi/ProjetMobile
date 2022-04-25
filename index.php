@@ -271,9 +271,9 @@
 
         function handleChange(checkbox) {
             if(checkbox.checked == true){
-               console.log("oui");
+                getLocation();
             }else{
-                console.log("non");
+                showPositionLL(0, 0);
             }
         }
     </script>
