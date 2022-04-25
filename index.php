@@ -273,7 +273,7 @@
             if(checkbox.checked == true){
                 getLocation();
             }else{
-                showPositionLL(0, 0);
+                showPositionLL(48.417017, -41.418471);
             }
         }
     </script>
