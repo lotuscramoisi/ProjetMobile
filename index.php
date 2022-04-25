@@ -429,6 +429,14 @@
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                             <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                         </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="formSwitchChecked" checked>
+                            <label class="form-check-label" for="formSwitchChecked">Checked switch checkbox input</label>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="formSwitchChecked" checked>
+                        <label class="form-check-label" for="formSwitchChecked">Checked switch checkbox input</label>
                     </div>
                         
 
