@@ -464,7 +464,7 @@
                 </div>
 
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="button" value="" id="CallApi" onchange='handleChangeAPI(this);' disabled="false">
+                    <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);' disabled="false">
                     <label class="form-check-label" for="flexCheckDisabled">
                     Call API
                     </label>
