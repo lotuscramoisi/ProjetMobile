@@ -464,7 +464,6 @@
                     </label>
                 </div>
                                 
-                <button type="button" id="CallApi">Call API</button>
             </div>
             <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
