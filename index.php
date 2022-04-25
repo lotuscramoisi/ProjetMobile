@@ -445,6 +445,11 @@
                     </li>
                 </ul>
                 <button type="button" onclick="getLocation()">Geolocalisation</button>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="getLocation()">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                </div>
+                
                 <button type="button" id="CallApi">Call API</button>
             </div>
             <div class="col">
