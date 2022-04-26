@@ -106,7 +106,6 @@
 
             //Appelle l'API pour obtenir les informations à partir d'une IPV4
             // $('#CallApi').one('click', function(e) {
-<<<<<<< Updated upstream
             //     $.ajax({
             //         url: "ajax.php", //the page containing php script
             //         type: "post", //request type,
@@ -128,7 +127,7 @@
             //             showPositionLL(ecrit.latitude, ecrit.longitude)
             //         }
             //     });
-=======
+			
                 // $.ajax({
                     // url: "ajax.php", //the page containing php script
                     // type: "post", //request type,
@@ -149,7 +148,6 @@
                         // showPositionLL(ecrit.latitude, ecrit.longitude)
                     // }
                 // });
->>>>>>> Stashed changes
             // });
 
             $.ajax({
@@ -546,8 +544,6 @@
                         Type de connexion
                         <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
-<<<<<<< Updated upstream
-=======
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Fournisseur d'accès Internet
                         <span class="badge badge-primary badge-pill" id="FAI"></span>
@@ -556,7 +552,6 @@
                         Organisation du FAI
                         <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
                     </li>
->>>>>>> Stashed changes
                 </ul>                
                                 
             </div>
