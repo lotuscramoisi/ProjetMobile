@@ -463,7 +463,7 @@
     <!-- START Liste des informations -->
     <div class="container-fluid">
         <div class="row align-items-center">
-            <div class="col-12">
+            <div class="col-12" style="width: 100%">
                 <ul class="list-group-flush">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Adresse IP
