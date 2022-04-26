@@ -294,7 +294,7 @@
             if(checkbox.checked == true){
                 getLocation();
             }else{
-                showPositionLL(48.417017, -41.418471);
+                showPositionLL(-27.125657, -109.357357);
             }
         }
 
@@ -420,25 +420,15 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Autorisation</h5>
+                        <h5 class="modal-title ml-5">Autorisation</h5>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    
-                        <div class="form-check form-switch">
+
+                        <div class="form-check form-switch ml-5">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                             <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                         </div>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="formSwitchChecked" checked>
-                            <label class="form-check-label" for="formSwitchChecked">Checked switch checkbox input</label>
-                        </div>
-                    
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="formSwitchChecked" checked>
-                        <label class="form-check-label" for="formSwitchChecked">Checked switch checkbox input</label>
-                    </div>
-                        
 
                         <!-- <div class="form-check form-switch">
                             <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
