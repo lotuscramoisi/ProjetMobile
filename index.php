@@ -153,8 +153,13 @@
  
 
             if(navigator.geolocation){
+<<<<<<< HEAD
                 $("#flexSwitchCheckDefault").prop("checked",true);
                 console.log("changement");
+=======
+                document.getElementById("flexSwitchCheckDefault").prop("checked",true);
+                console.log("ici");
+>>>>>>> parent of 9826a7a (Update index.php)
             }
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
