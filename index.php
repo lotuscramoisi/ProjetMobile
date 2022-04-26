@@ -519,8 +519,6 @@
                         Type de connexion
                         <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
-<<<<<<< Updated upstream
-=======
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Fournisseur d'accès Internet
                         <span class="badge badge-primary badge-pill" id="FAI"></span>
@@ -529,7 +527,6 @@
                         Organisation du FAI
                         <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
                     </li>
->>>>>>> Stashed changes
                 </ul>                
                                 
             </div>
