@@ -142,8 +142,8 @@
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         var flag = ecrit.flag.png;
                         document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-                        document.getElementById("Ville").innerHTML = ecrit.region;
-                        document.getElementById("Region").innerHTML = ecrit.city;
+                        document.getElementById("Ville").innerHTML = ecrit.city;
+                        document.getElementById("Region").innerHTML = ecrit.region;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
 						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
