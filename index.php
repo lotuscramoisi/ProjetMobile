@@ -123,6 +123,7 @@
                         document.getElementById("Region").innerHTML = ecrit.city;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
