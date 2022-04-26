@@ -121,7 +121,7 @@
                         document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
-                        document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                       // document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
 						document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
