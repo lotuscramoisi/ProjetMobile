@@ -123,6 +123,7 @@
                         document.getElementById("Region").innerHTML = ecrit.city;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -513,6 +514,10 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Type de connexion
+                        <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
                 </ul>                
                                 
