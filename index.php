@@ -514,7 +514,7 @@
             </div>
             <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
-                    <iframe id="frame" width="600" height="800" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                    <iframe id="frame" width="600" height="1000" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
