@@ -123,6 +123,7 @@
                         document.getElementById("Region").innerHTML = ecrit.city;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -143,14 +144,18 @@
                         document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
                         document.getElementById("Ville").innerHTML = ecrit.region;
                         document.getElementById("Region").innerHTML = ecrit.city;
-                        document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                        //document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
  
 
-            if(navigator.geolocation)document.getElementById("flexSwitchCheckDefault") = checked;
+            if(navigator.geolocation){
+                $("#flexSwitchCheckDefault").prop("checked",true);
+                console.log("ici");
+            }
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             // <?php
@@ -511,9 +516,9 @@
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        ?
-                        <span class="badge badge-primary badge-pill" id="Devise"></span>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Type de connexion
+                        <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
                 </ul>                
                                 
