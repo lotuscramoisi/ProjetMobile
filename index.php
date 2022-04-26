@@ -123,31 +123,33 @@
                         document.getElementById("Region").innerHTML = ecrit.city;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
             });
 
-            // $.ajax({
-            //         url: "ajax.php", //the page containing php script
-            //         type: "post", //request type,
-            //         dataType: 'json',
-            //         data: {
-            //             registration: "success"
-            //         },
-            //         success: function(result) {
-            //             var ecrit = JSON.parse(result);
-            //             document.getElementById("Continent").innerHTML = ecrit.continent;
-            //             document.getElementById("Pays").innerHTML = ecrit.country;
-            //             var flag = ecrit.flag.png;
-            //             document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-            //             document.getElementById("Ville").innerHTML = ecrit.region;
-            //             document.getElementById("Region").innerHTML = ecrit.city;
-            //             document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-            //             document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-            //             showPositionLL(ecrit.latitude, ecrit.longitude)
-            //         }
-            //     });
+            $.ajax({
+                    url: "ajax.php", //the page containing php script
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        registration: "success"
+                    },
+                    success: function(result) {
+                        var ecrit = JSON.parse(result);
+                        document.getElementById("Continent").innerHTML = ecrit.continent;
+                        document.getElementById("Pays").innerHTML = ecrit.country;
+                        var flag = ecrit.flag.png;
+                        document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
+                        document.getElementById("Ville").innerHTML = ecrit.region;
+                        document.getElementById("Region").innerHTML = ecrit.city;
+                        //document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                        document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+						document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
+                        showPositionLL(ecrit.latitude, ecrit.longitude)
+                    }
+                });
  
 
             if(navigator.geolocation){
@@ -513,6 +515,10 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Type de connexion
+                        <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
                 </ul>                
                                 
