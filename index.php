@@ -149,6 +149,8 @@
                     }
                 });
  
+
+            if(navigator.geolocation)document.getElementById("flexSwitchCheckDefault") = checked;
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             // <?php
@@ -426,7 +428,7 @@
                     <div class="modal-body">
 
                         <div class="form-check form-switch ml-5">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
+                            <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                             <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                         </div>
 
