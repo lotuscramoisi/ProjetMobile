@@ -517,7 +517,7 @@
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Type de connexion
+                        Type de connexion test
                         <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
                 </ul>                
