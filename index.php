@@ -147,7 +147,7 @@
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
 						document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
-						document.getElementById("FAI").innerHTML = ecrit.currency.connection.isp_name;
+						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
