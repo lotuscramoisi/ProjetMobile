@@ -511,7 +511,7 @@
                         <span class="badge badge-primary badge-pill" id="CodePostal"></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Devise
+                        Devise test
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
                 </ul>                
