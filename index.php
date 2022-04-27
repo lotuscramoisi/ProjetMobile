@@ -500,7 +500,6 @@
         </div>
     </div>
     <!-- START Liste des informations -->
-                        any HTML can go within the <code>.accordion-body</code>, though the transition
     <div class="container-fluid">
         <div class="row h-100 align-items-center">
             <div class="col-12">
