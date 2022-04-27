@@ -558,7 +558,7 @@
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Nombre de points en Multi-touch
                                     <span class="badge badge-primary badge-pill"
-                                        id="NbCoeurs"><?php echo getMultiTouch() ?></span>
+                                        id="MultiTouch"><?php echo getMultiTouch() ?></span>
                                 </li>
                             </div>
                         </div>
