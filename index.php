@@ -510,21 +510,27 @@
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
-                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Adresse IP
+                                    <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+                                </li>
                             </div>
                         </div>
                         <div class="panel">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-2" data-parent="#myAccordion">Réseau</button>
                             <div id="collapsible-2" class="collapse">
-                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Navigateur
+                                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+                                </li>
                             </div>
                         </div>
                         <div class="panel">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-3" data-parent="#myAccordion">Autre</button>
                             <div id="collapsible-3" class="collapse">
-                               
+
                             </div>
                         </div>
                     </div>
