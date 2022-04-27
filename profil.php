@@ -55,6 +55,10 @@
                 $('<div class="accordion-item"</div>').html(
                     '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + datas.CONNEXIONTIME + '</button>' + 
                     '<div id="collapsible-' + index + '" class="collapse">' + 
+                    '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
+                    'Username' + 
+                    '<span class="badge badge-primary badge-pill">' + datas.USERNAME + '</span>'+
+                    '</li>'+
                     '</div>'
                 ).appendTo('#myAccordion');
             }
@@ -82,59 +86,6 @@
         </form>
     </nav>
     <div class="accordion" id="myAccordion">
-        <div class="accordion-item">
-            <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
-            <div id="collapsible-1" class="collapse">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Navigateur
-                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Fabricant du navigateur
-                    <span class="badge badge-primary badge-pill" id="Vendor"><?php echo getVendor() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Langue du navigateur
-                    <span class="badge badge-primary badge-pill"><?php echo getNavigatorLang() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    OS
-                    <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Fuseau horaire
-                    <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Heure de connexion
-                    <span class="badge badge-primary badge-pill" id="HeureConn"></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Résolution de l'écran
-                    <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getResol() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Profondeur de couleur d'écran
-                    <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Niveau de batterie
-                    <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Mémoire RAM disponible
-                    <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Nombre de coeurs logiques
-                    <span class="badge badge-primary badge-pill" id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Nombre de points en Multi-Touch
-                    <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
-                </li>
-            </div>
-        </div>
     </div>
 
     <!-- START Bootstrap-Cookie-Alert -->
