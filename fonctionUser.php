@@ -159,10 +159,10 @@
 	}
 	
 	function getVendor(){
-		$c = '<script type="text/javascript">
-				let c = navigator.vendor
-				document.getElementById("Vendor").innerHTML = c; 
+		$v = '<script type="text/javascript">
+				let v = navigator.vendor
+				document.getElementById("Vendor").innerHTML = v; 
 		</script>';
-		return $c;
+		return $v;
 	}
 ?>
