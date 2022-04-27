@@ -506,25 +506,25 @@
                 <ul class="list-group-flush mt-5">
 
                     <div class="accordion" id="myAccordion">
-                        <div class="panel">
+                        <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
-                                data-target="#collapsible-1" data-parent="#myAccordion">Question 1?</button>
+                                data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
-                                ..
+                                
                             </div>
                         </div>
                         <div class="panel">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
-                                data-target="#collapsible-2" data-parent="#myAccordion">Question 2?</button>
+                                data-target="#collapsible-2" data-parent="#myAccordion">Réseau</button>
                             <div id="collapsible-2" class="collapse">
-                                ..
+                                
                             </div>
                         </div>
                         <div class="panel">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
-                                data-target="#collapsible-3" data-parent="#myAccordion">Question 3?</button>
+                                data-target="#collapsible-3" data-parent="#myAccordion">Autre</button>
                             <div id="collapsible-3" class="collapse">
-                                ...
+                               
                             </div>
                         </div>
                     </div>
