@@ -105,31 +105,8 @@
             // FIN AJAX FORMULAIRE LOGIN
 
             //Appelle l'API pour obtenir les informations à partir d'une IPV4
-            // $('#CallApi').one('click', function(e) {
-            //     $.ajax({
-            //         url: "ajax.php", //the page containing php script
-            //         type: "post", //request type,
-            //         dataType: 'json',
-            //         data: {
-            //             registration: "success"
-            //         },
-            //         success: function(result) {
-            //             var ecrit = JSON.parse(result);
-            //             document.getElementById("Continent").innerHTML = ecrit.continent;
-            //             document.getElementById("Pays").innerHTML = ecrit.country;
-            //             var flag = ecrit.flag.png;
-            //             document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-            //             document.getElementById("Ville").innerHTML = ecrit.region;
-            //             document.getElementById("Region").innerHTML = ecrit.city;
-            //             document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-            //             document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-			// 			document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
-            //             showPositionLL(ecrit.latitude, ecrit.longitude)
-            //         }
-            //     });
-            // });
-
-            $.ajax({
+            $('#CallApi').one('click', function(e) {
+                $.ajax({
                     url: "ajax.php", //the page containing php script
                     type: "post", //request type,
                     dataType: 'json',
@@ -142,24 +119,15 @@
                         document.getElementById("Pays").innerHTML = ecrit.country;
                         var flag = ecrit.flag.png;
                         document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-                        document.getElementById("Ville").innerHTML = ecrit.city;
-                        document.getElementById("Region").innerHTML = ecrit.region;
+                        document.getElementById("Ville").innerHTML = ecrit.region;
+                        document.getElementById("Region").innerHTML = ecrit.city;
                         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-						document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
-						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
-						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
-						//document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
- 
+            });
 
-            if(navigator.geolocation){
-                $("#flexSwitchCheckDefault").prop("checked",true);
-                console.log("ici");
-            }
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             // <?php
@@ -300,20 +268,6 @@
                 }
             });
         }
-
-        function handleChange(checkbox) {
-            if(checkbox.checked == true){
-                getLocation();
-            }else{
-                showPositionLL(-27.125657, -109.357357);
-            }
-        }
-
-        function handleChangeAPI(checkbox) {
-            if(checkbox.checked == true){
-                document.getElementById(checkbok).disabled = true;
-            }
-        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -330,16 +284,10 @@
             <?php
             if (isset($_SESSION['login'])) {
                 echo '<font color = white>Utilisateur : ' . $_SESSION['login'] . '</font>';
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#autorisation">';
-                echo 'Autorisation';
-                echo '</button>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
             } else {
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#autorisation">';
-                echo 'Autorisation';
-                echo '</button>';
                 echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
                 echo 'Sign in';
                 echo '</button>';
@@ -350,135 +298,12 @@
             ?>
         </form>
     </nav>
-    <div id="infotest"></div>
-    <!-- Modal Sign In -->
-    <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Sign In</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form method="POST" onSubmit="return checkLoginForm(this)" id="loginform">
-                    <div class="modal-body">
 
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address/Username</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter email or username" name="login" maxlength="50">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" placeholder="Password" name="pwd" maxlength="25">
-                        </div>
-                        <small id="alertMessageLogin" class="form-text text-muted"></small>
-                    </div>
-                    <div class="modal-footer">
-                        <small id="emailHelp" class="form-text text-muted">
-                            Not registered yet ?
-                            <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#register" tabindex="-1">
-                                Register
-                            </button>
-                        </small>
-                        <button id="btnlogin" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Register -->
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Register</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form method="POST" onSubmit="return checkRegisterForm(this)" id="registerform">
-                    <div class="modal-body">
-
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" maxlength="50">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Username</label>
-                            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter username" name="username" maxlength="25">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" maxlength="25">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password confirmation</label>
-                            <input type="password" class="form-control" placeholder="Password confirmation" name="passwordverif" maxlength="25">
-                        </div>
-                        <small id="alertMessageRegister" class="form-text text-muted"></small>
-                    </div>
-                    <div class="modal-footer">
-                        <small id="emailHelp" class="form-text text-muted">
-                            Already registered ?
-                            <button type="button" class="btn btn-link btn-sm" data-toggle="modal" data-dismiss="modal" data-target="#signIn" tabindex="-1">
-                                Login
-                            </button>
-                        </small>
-                        <button id="btnregister" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Autorisation -->
-    <div class="modal fade" id="autorisation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Autorisation</h5>
-                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
-                        <div class="form-check form-switch ml-5">
-                            <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
-                        </div>
-
-                        <!-- <div class="form-check form-switch">
-                            <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
-                            <label class="form-check-label" for="flexCheckDisabled">
-                            Call API
-                            </label>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-    </div>
-
-
-    <!-- Modal Event-->
-    <div class="modal fade" id="event" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="eventtitle"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="eventbody">
-
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- START Liste des informations -->
     <div class="container-fluid">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <ul class="list-group-flush">
+        <div class="row align-items-center">
+            <div class="col">
+                <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Adresse IP
                         <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
@@ -523,32 +348,13 @@
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
                     </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Type de connexion
-                        <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
-                    </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Fournisseur d'accès Internet
-                        <span class="badge badge-primary badge-pill" id="FAI"></span>
-                    </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Organisation du FAI
-                        <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
-                    </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Nom du fuseau horaire
-                        <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
-                    </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Heure de connexion
-                        <span class="badge badge-primary badge-pill" id="HeureConn"><?php echo getCurrentTime() ?></span>
-                    </li>
-                </ul>                
-                                
+                </ul>
+                <button type="button" onclick="getLocation()">Geolocalisation</button>
+                <button type="button" id="CallApi">Call API</button>
             </div>
             <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
-                    <iframe id="frame" width="600" height="800" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                    <iframe id="frame" width="600" height="400" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
