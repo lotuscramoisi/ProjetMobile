@@ -215,11 +215,9 @@
                 m+=" en charge"
             }
             else{
-                m+="pas en charge"
+                m+=" pas en charge"
             }
-            document.getElementById("Batterie").innerHTML = m;
-            document.getElementById("Batterie").style.color = c;
-                
+            document.getElementById("Batterie").innerHTML = m;                
 			})
 		}
 
