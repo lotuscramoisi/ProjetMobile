@@ -573,7 +573,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie
-                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
+                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo batttick() ?></span>
                     </li>
                 </ul>                
                                 
