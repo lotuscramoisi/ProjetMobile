@@ -212,10 +212,10 @@
             m = battery.level * 100 + "%"
 
             if (battery.charging) {
-                m+=" en charge"
+                m+=" sur secteur"
             }
             else{
-                m+=" pas en charge"
+                m+=" sur batterie"
             }
             document.getElementById("Batterie").innerHTML = m;                
 			})
