@@ -150,7 +150,7 @@
 						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
-						//document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+						document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -330,9 +330,6 @@
             <?php
             if (isset($_SESSION['login'])) {
                 echo '<font color = white>Utilisateur : ' . $_SESSION['login'] . '</font>';
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#autorisation">';
-                echo 'Autorisation';
-                echo '</button>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
@@ -541,7 +538,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Heure de connexion
-                        <span class="badge badge-primary badge-pill" id="HeureConn"><?php echo getCurrentTime() ?></span>
+                        <span class="badge badge-primary badge-pill" id="HeureConn"></span>
                     </li>
                 </ul>                
                                 
