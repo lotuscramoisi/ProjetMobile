@@ -120,7 +120,7 @@
 				else{
 					m+=" sur batterie"
 				}
-				document.write(""+m+"");              
+				document.write(""+screen.colorDepth+"");              
 			})
 		}
 		</script>';
