@@ -336,7 +336,7 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Whatsmyinfo</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
@@ -344,7 +344,9 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<font color = white>Utilisateur : ' . $_SESSION['login'] . '</font>';
+                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
+                echo 'Profil';
+                echo '</button></a>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';

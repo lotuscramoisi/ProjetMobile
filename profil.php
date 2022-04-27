@@ -60,22 +60,14 @@
 <body>
     <!-- Nav Bar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Whatsmyinfo</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <form class="form-inline">
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<font color = white>Utilisateur : ' . $_SESSION['login'] . '</font>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
-            } else {
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#signIn">';
-                echo 'Sign in';
-                echo '</button>';
-                echo '<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">';
-                echo 'Register';
-                echo '</button>';
             }
             ?>
         </form>
