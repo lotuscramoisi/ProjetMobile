@@ -122,7 +122,6 @@
 				}
 				document.write(""+m+"");              
 			})
-		}
 		</script>';
 		return $m;
 	}
