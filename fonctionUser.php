@@ -146,7 +146,7 @@
 	
 	function getMultiTouch(){
 		$mt = '<script type="text/javascript">
-				let mt = navigator.hardwareConcurrency
+				let mt = navigator.maxTouchPoints
 				mt += " points simultanés"
 				document.getElementById("MultiTouch").innerHTML = mt; 
 		</script>';
