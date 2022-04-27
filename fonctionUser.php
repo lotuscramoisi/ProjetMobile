@@ -165,4 +165,12 @@
 		</script>';
 		return $v;
 	}
+
+	function getNetworkInformation(){
+		$network = '<script type="text/javascript">
+				let v = NetworkInformation.type
+				document.getElementById("NetworkInformation").innerHTML = v; 
+		</script>';
+		return $network;
+	}
 ?>

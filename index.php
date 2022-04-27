@@ -587,6 +587,10 @@
                                     Organisation du FAI
                                     <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
                                 </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Type de connexion
+                                    <span class="badge badge-primary badge-pill" id="NetworkInformation"></span>
+                                </li>
                             </div>
                         </div>
                         <div class="accordion-item">
