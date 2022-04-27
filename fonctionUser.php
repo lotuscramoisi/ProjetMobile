@@ -135,4 +135,13 @@
 		return $m;
 	}
 	
+	function getNbCoeurs() {
+		$c = '<script type="text/javascript">
+				let c = navigator.hardwareConcurrency
+				c += " coeurs logiques"
+				document.getElementById("NbCoeurs").innerHTML = c; 
+		</script>';
+		return $c;
+	}
+	
 ?>
