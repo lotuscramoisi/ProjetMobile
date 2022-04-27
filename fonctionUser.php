@@ -103,4 +103,8 @@
 				</script>';
 		return $bits;
 	}
+	
+	function getNavigatorLang(){
+		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+	}
 ?>
