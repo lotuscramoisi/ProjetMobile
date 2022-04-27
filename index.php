@@ -32,6 +32,7 @@
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 			function batttick() {
+                console.log("ici1");
 			  navigator.getBattery().then(battery => {
 				let m = ""
 				m = battery.level * 100 + "%"
@@ -40,7 +41,7 @@
 				  m += " ⚡";
 				}
 				document.getElementById("Batterie").innerHTML = m;
-                console.log("ici1");
+                
 			  })
 			}
 			
