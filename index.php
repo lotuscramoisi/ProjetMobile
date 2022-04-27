@@ -213,9 +213,10 @@
             m = battery.level * 100 + "%"
 
             if (battery.charging) {
-                m += " ⚡";
+                c = "green";
             }
             document.getElementById("Batterie").innerHTML = m;
+            document.getElementById("Batterie").style.color = c;
                 
 			})
 		}
@@ -571,7 +572,7 @@
                         <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Niveau de batterie test
+                        Niveau de batterie
                         <span class="badge badge-primary badge-pill" id="Batterie"></span>
                     </li>
                 </ul>                
