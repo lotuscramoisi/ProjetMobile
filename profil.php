@@ -42,7 +42,7 @@
                     i = 0;
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
-                        affichageLigne(i, r.CONNEXIONTIME);
+                        affichageLigne(i, r);
                         i++;
                     }
                 }
@@ -51,9 +51,11 @@
         //Fin du document ready
 
         //DEBUT : Fonction d'affichage d'une ligne de session
-            function affichageLigne(index, connexionTime){
+            function affichageLigne(index, datas){
                 $('<div class="accordion-item"</div>').html(
-                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + connexionTime + '</button>'
+                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + datas.CONNEXIONTIME + '</button>' + 
+                    '<div id="collapsible-' + index + '" class="collapse">' + 
+                    '</div>'
                 ).appendTo('#myAccordion');
             }
         //FIN : Fonction d'affichage d'une ligne de session
