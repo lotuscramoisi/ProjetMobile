@@ -147,7 +147,12 @@
 	function getMultiTouch(){
 		$mt = '<script type="text/javascript">
 				let mt = navigator.maxTouchPoints
-				mt += " points simultanés"
+				if(mt > 0) {
+					mt += " points simultanés"
+				}
+				else {
+					mt = "Pas de Multi-Touch"
+				}
 				document.getElementById("MultiTouch").innerHTML = mt; 
 		</script>';
 		return $mt;
