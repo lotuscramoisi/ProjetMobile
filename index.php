@@ -40,7 +40,7 @@
 				  m += " ⚡";
 				}
 				document.getElementById("Batterie").innerHTML = m;
-                console.log("ici");
+                console.log("ici1");
 			  })
 			}
 			
