@@ -11,11 +11,6 @@
     $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
-
-    require_once realpath(__DIR__ . '/vendor/autoload.php');
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-    $APIGOO = $_ENV['GOOGLE_KEY'];
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -31,7 +26,7 @@
     <script>
         $(document).ready(function() {
 
-            username = <?php $_SESSION["login"];?>;
+            username = "<?php echo $_SESSION['login'];?> ";
             document.getElementById("test").innerHTML = username;
 
         });
@@ -66,38 +61,19 @@
             ?>
         </form>
     </nav>
+    <div id="test"></div>
 
-    <!-- START Liste des informations -->
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col">
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center" id="test">
-                        Adresse IP
-                        <span class="badge badge-primary badge-pill"></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
-                <div class="ratio" style="--bs-aspect-ratio: 50%;">
-                    <iframe id="frame" width="600" height="400" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
 
-        </div>
-        <!-- END Liste des informations -->
-        <!-- START Bootstrap-Cookie-Alert -->
-        <div class="alert text-center cookiealert" role="alert">
-            <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            I agree
+        </button>
+    </div>
 
-            <button type="button" class="btn btn-primary btn-sm acceptcookies">
-                I agree
-            </button>
-        </div>
-
-        <!-- END Bootstrap-Cookie-Alert -->
-        <script src="cookiealert.js"></script>
+    <!-- END Bootstrap-Cookie-Alert -->
+    <script src="cookiealert.js"></script>
 </body>
 
 </html>
