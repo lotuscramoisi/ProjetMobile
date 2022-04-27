@@ -130,7 +130,6 @@
 		$m = '<script type="text/javascript">
 				let m = navigator.deviceMemory
 				document.getElementById("Memoire").innerHTML = m; 
-			})
 		</script>';
 		return $m;
 	}
