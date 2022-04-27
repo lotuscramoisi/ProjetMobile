@@ -99,7 +99,7 @@
 	
 	function getBitsScreen(){
 		$bits='<script type="text/javascript">
-						document.write(""+screen.colorDepth" bits");
+						document.write(""+screen.colorDepth+" bits");
 				</script>';
 		return $bits;
 	}
