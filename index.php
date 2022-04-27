@@ -610,6 +610,10 @@
                         <span class="badge badge-primary badge-pill"
                             id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
                     </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Nom de la machine
+                        <span class="badge badge-primary badge-pill" id="NomMach"><?php echo getNameComputer() ?></span>
+                    </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie
                         <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>

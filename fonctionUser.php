@@ -108,7 +108,7 @@
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
-	function getBattery() {
+	function getBattery(){
 		$b = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
 				let b = ""
@@ -126,7 +126,7 @@
 		return $b;
 	}
 	
-	function getMemory() {
+	function getMemory(){
 		$m = '<script type="text/javascript">
 				let m = navigator.deviceMemory
 				m += " Gio de RAM"
@@ -135,7 +135,7 @@
 		return $m;
 	}
 	
-	function getNbCoeurs() {
+	function getNbCoeurs(){
 		$c = '<script type="text/javascript">
 				let c = navigator.hardwareConcurrency
 				c += " coeurs logiques"
@@ -144,4 +144,7 @@
 		return $c;
 	}
 	
+	function getNameComputer(){
+		return $_SERVER['REMOTE_HOST'];
+	}
 ?>
