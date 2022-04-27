@@ -167,10 +167,10 @@
 	}
 
 	function getNetworkInformation(){
-		$networkInformation = '<script>
-			var networkState = navigator.connection.type;
-			document.getElementById("NetworkInformation").innerHTML = networkState; 
+		$network = '<script type="text/javascript">
+		let NetworkInformation = Navigator.connection.type;
+		document.getElementById("NetworkInformation").innerHTML = NetworkInformation; 
 		</script>';
-		return states;
+		return $network;
 	}
 ?>
