@@ -160,7 +160,7 @@
 	
 	function getVendor(){
 		$c = '<script type="text/javascript">
-				let c = navigator.maxTouchPoints
+				let c = navigator.vendor
 				document.getElementById("Vendor").innerHTML = c; 
 		</script>';
 		return $c;

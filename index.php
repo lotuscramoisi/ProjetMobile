@@ -524,7 +524,7 @@
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     test
-                                    <span class="badge badge-primary badge-pill" id="Vendor"><?php echo getVendor ?></span>
+                                    <span class="badge badge-primary badge-pill" id="Vendor"><?php echo getVendor() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Fuseau horaire
