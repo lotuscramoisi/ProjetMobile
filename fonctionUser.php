@@ -110,7 +110,9 @@
 	
 	function getBattery(){
 		$battery='<script type="text/javascript">
-						document.write(""+navigator.getBattery()+"");
+					var battery = navigator.getBattery();
+					document.write(""+battery.charging+"");
+						
 				</script>';
 		return $battery;
 	}
