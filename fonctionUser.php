@@ -118,7 +118,7 @@
 	}
 	
 	function batttick() {
-		'<script type="text/javascript">
+		$m = '<script type="text/javascript">
             navigator.getBattery().then(battery => {
             let m = ""
             m = battery.level * 100 + "%"
@@ -133,4 +133,5 @@
 			})
 		}
 		</script>';
+		return $m;
 ?>
