@@ -110,7 +110,7 @@
 	
 	function getBattery(){
 		$battery='<script type="text/javascript">
-						document.write(""+navigator.getBattery);
+						document.write(""+navigator.getBattery()+"");
 				</script>';
 		return $battery;
 	}

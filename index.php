@@ -152,7 +152,6 @@
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
 						document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
-						
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
