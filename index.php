@@ -150,7 +150,7 @@
 						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
-						document.getElementById("HeureConn").innerHTML = ecrit.current_time;
+						document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
