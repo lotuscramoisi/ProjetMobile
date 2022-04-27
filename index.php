@@ -506,7 +506,7 @@
                 <ul class="list-group-flush mt-5">
 
                     <div class="accordion" id="myAccordion">
-                        <div class="panel">
+                        <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
@@ -516,7 +516,7 @@
                                 </li>
                             </div>
                         </div>
-                        <div class="panel">
+                        <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-2" data-parent="#myAccordion">Réseau</button>
                             <div id="collapsible-2" class="collapse">
@@ -526,7 +526,7 @@
                                 </li>
                             </div>
                         </div>
-                        <div class="panel">
+                        <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-3" data-parent="#myAccordion">Autre</button>
                             <div id="collapsible-3" class="collapse">
