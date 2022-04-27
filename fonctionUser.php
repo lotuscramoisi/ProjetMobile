@@ -123,6 +123,6 @@
 				document.getElementById("Batterie").innerHTML = m; 
 			})
 		</script>';
-		return $m;
+		//return $m;
 	}
 ?>
