@@ -589,7 +589,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Type de connexion
-                                    <span class="badge badge-primary badge-pill" id="NetworkInformation"></span>
+                                    <span class="badge badge-primary badge-pill" id="NetworkInformation"><?php echo getNetworkInformation() ?></span>
                                 </li>
                             </div>
                         </div>
