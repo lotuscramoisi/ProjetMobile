@@ -480,7 +480,7 @@
     <div class="container-fluid">
         <div class="row h-100 align-items-center">
             <div class="col-12">
-                <ul class="list-group-flush">
+                <ul class="list-group-flush mt-5">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Adresse IP
                         <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
