@@ -157,4 +157,13 @@
 		</script>';
 		return $mt;
 	}
+	
+	function getVendor(){
+		$c = '<script type="text/javascript">
+				let c = navigator.vendor
+				c += " coeurs logiques"
+				document.getElementById("Vendor").innerHTML = c; 
+		</script>';
+		return $c;
+	}
 ?>
