@@ -523,7 +523,7 @@
                                     <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Nom du fuseau horaire
+                                    Fuseau horaire
                                     <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
