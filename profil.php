@@ -39,9 +39,11 @@
                     login: username
                 },
                 success: function(result) {
+                    i = 0;
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
-                        affichageLigne(r.CONNEXIONTIME);
+                        affichageLigne(i, r.CONNEXIONTIME);
+                        i++;
                     }
                 }
             });
@@ -49,9 +51,9 @@
         //Fin du document ready
 
         //DEBUT : Fonction d'affichage d'une ligne de session
-            function affichageLigne(connexionTime){
+            function affichageLigne(index, connexionTime){
                 $('<div class="accordion-item"</div>').html(
-                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">' + connexionTime + '</button>'
+                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + connexionTime + '</button>'
                 ).appendTo('#myAccordion');
             }
         //FIN : Fonction d'affichage d'une ligne de session
