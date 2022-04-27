@@ -151,6 +151,8 @@
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
 						document.getElementById("HeureConn").innerHTML = ecrit.current_time;
+						//var date = <?php echo getCurrentTime() ?>;
+						//document.getElementById("HeureConn").innerHTML = date;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
