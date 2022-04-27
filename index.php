@@ -536,28 +536,23 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Résolution de l'écran
-                                    <span class="badge badge-primary badge-pill"
-                                        id="RésolutionEcran"><?php echo getResol() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getResol() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Profondeur de couleur d'écran
-                                    <span class="badge badge-primary badge-pill"
-                                        id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Niveau de batterie
-                                    <span class="badge badge-primary badge-pill"
-                                        id="Batterie"><?php echo getBattery() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Mémoire RAM disponible
-                                    <span class="badge badge-primary badge-pill"
-                                        id="Memoire"><?php echo getMemory() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Nombre de coeurs logiques
-                                    <span class="badge badge-primary badge-pill"
-                                        id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Nombre de points en Multi-Touch
