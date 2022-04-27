@@ -325,9 +325,9 @@
 
 <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Whatsmyinfo</a>
-        <form class="form-inline">
+        <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
