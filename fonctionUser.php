@@ -89,10 +89,4 @@
         
         return $operating_system;
     }
-	
-	function getCurrentTime(String timeZone){
-		date_default_timezone_set(timeZone);
-		$date = date('d-m-y h:i:s');
-		return $date;
-	}
 ?>
