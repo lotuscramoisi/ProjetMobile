@@ -32,7 +32,7 @@
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
-            batttick();
+            //batttick();
 			
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire

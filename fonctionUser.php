@@ -108,28 +108,19 @@
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
-	function getBattery(){
-		$battery='<script type="text/javascript">
-					var battery = navigator.getBattery();
-					document.write(""+battery.level+"");
-						
-				</script>';
-		return $battery;
-	}
-	
 	function batttick() {
 		$m = '<script type="text/javascript">
             navigator.getBattery().then(battery => {
-            let m = ""
-            m = battery.level * 100 + "%"
+				let m = ""
+				m = battery.level * 100 + "%"
 
-            if (battery.charging) {
-                m+=" sur secteur"
-            }
-            else{
-                m+=" sur batterie"
-            }
-            return m;                
+				if (battery.charging) {
+					m+=" sur secteur"
+				}
+				else{
+					m+=" sur batterie"
+				}
+				document.write(""+m+"");              
 			})
 		}
 		</script>';
