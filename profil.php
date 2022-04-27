@@ -26,7 +26,7 @@
     <script>
         $(document).ready(function() {
 
-            username = "Toto";
+            username = "<?php echo $_SESSION['login'];?> ";
             document.getElementById("test").innerHTML = username;
 
         });
