@@ -66,13 +66,13 @@
             ?>
         </form>
     </nav>
-
+    <div id="test"></div>
     <!-- START Liste des informations -->
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col">
                 <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center" id="test">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
                         Adresse IP
                         <span class="badge badge-primary badge-pill"></span>
                     </li>
