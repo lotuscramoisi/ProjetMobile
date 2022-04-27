@@ -323,7 +323,7 @@
     <title>What's my info ?!</title>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Whatsmyinfo</a>
