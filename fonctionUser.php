@@ -168,9 +168,9 @@
 
 	function getNetworkInformation(){
 		$network = '<script type="text/javascript">
-				let v = Navigator.connection;
-				v+="ui";
-				document.getElementById("NetworkInformation").innerHTML = v; 
+				let NetworkInformation = Navigator.connection;
+				NetworkInformation+="ui";
+				document.getElementById("NetworkInformation").innerHTML = NetworkInformation; 
 		</script>';
 		return $network;
 	}
