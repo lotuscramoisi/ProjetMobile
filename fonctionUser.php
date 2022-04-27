@@ -116,4 +116,19 @@
 				</script>';
 		return $battery;
 	}
+	
+	function batttick() {
+            navigator.getBattery().then(battery => {
+            let m = ""
+            m = battery.level * 100 + "%"
+
+            if (battery.charging) {
+                m+=" sur secteur"
+            }
+            else{
+                m+=" sur batterie"
+            }
+            return m;                
+			})
+		}
 ?>
