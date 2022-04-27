@@ -552,6 +552,10 @@
                         Profondeur de couleur d'écran
                         <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
                     </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Niveau de batterie
+                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
+                    </li>
                 </ul>                
                                 
             </div>
