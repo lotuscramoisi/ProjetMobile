@@ -119,9 +119,9 @@
 				}
 				else{
 					m+=" sur batterie"
-				}             
+				} 
+				document.getElementById("Batterie").innerHTML = m; 
 			})
-			document.getElementById("Batterie").innerHTML = m; 
 		</script>';
 		return $m;
 	}
