@@ -504,16 +504,19 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <ul class="list-group-flush mt-5">
-                    <div class="accordion" id="accordionExample">
+
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
                                     Accordion Item #1
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body">
                                     <strong>This is the first item's accordion body.</strong> It is shown by default,
                                     until the collapse plugin adds the appropriate classes that we use to style each
@@ -525,14 +528,15 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
                                     Accordion Item #2
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body">
                                     <strong>This is the second item's accordion body.</strong> It is hidden by default,
                                     until the collapse plugin adds the appropriate classes that we use to style each
@@ -544,14 +548,15 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
                                     Accordion Item #3
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
                                 <div class="accordion-body">
                                     <strong>This is the third item's accordion body.</strong> It is hidden by default,
                                     until the collapse plugin adds the appropriate classes that we use to style each
@@ -651,7 +656,7 @@
                         Mémoire RAM disponible
                         <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
                     </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
                         Nombre de coeurs logiques
                         <span class="badge badge-primary badge-pill" id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
                     </li>
