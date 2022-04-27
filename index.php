@@ -212,7 +212,10 @@
             m = battery.level * 100 + "%"
 
             if (battery.charging) {
-                c = "green";
+                m+="en charge"
+            }
+            else{
+                m+="pas en charge"
             }
             document.getElementById("Batterie").innerHTML = m;
             document.getElementById("Batterie").style.color = c;
