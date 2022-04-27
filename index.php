@@ -39,7 +39,7 @@
 				if (battery.charging) {
 				  m += " ⚡";
 				}
-				document.getElementById("Battery").innerHTML = m;
+				document.getElementById("Batterie").innerHTML = m;
 			  })
 			}
 			
@@ -568,7 +568,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie test
-                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
+                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
                     </li>
                 </ul>                
                                 
