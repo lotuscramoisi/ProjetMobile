@@ -89,4 +89,13 @@
         
         return $operating_system;
     }
+	
+	function getResol()
+	{
+		$resol='<script type="text/javascript">
+						document.write(""+screen.width+"*"+screen.height+"");
+				</script>';
+		return $resol;
+	}
+
 ?>
