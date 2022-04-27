@@ -149,6 +149,8 @@
 						document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
 						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
+						document.getElementById("HeureConn").innerHTML = ecrit.current_time;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -529,6 +531,14 @@
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Organisation du FAI
                         <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Nom du fuseau horaire
+                        <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Heure de connexion
+                        <span class="badge badge-primary badge-pill" id="HeureConn"></span>
                     </li>
                 </ul>                
                                 
