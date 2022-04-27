@@ -109,20 +109,29 @@
 	}
 	
 	function getBattery() {
-		$m = '<script type="text/javascript">
+		$b = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
-				let m = ""
-				m = battery.level * 100 + "%"
+				let b = ""
+				b = battery.level * 100 + "%"
 
 				if (battery.charging) {
-					m+=" sur secteur"
+					b+=" sur secteur"
 				}
 				else{
-					m+=" sur batterie"
+					b+=" sur batterie"
 				} 
-				document.getElementById("Batterie").innerHTML = m; 
+				document.getElementById("Batterie").innerHTML = b; 
+			})
+		</script>';
+		return $b;
+	}
+	
+	function getMemory() {
+		$m = '<script type="text/javascript">
+				document.write(""+navigator.deviceMemory+" GiB de RAM"); 
 			})
 		</script>';
 		return $m;
 	}
+	
 ?>
