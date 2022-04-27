@@ -108,21 +108,21 @@
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
-	function batttick() {
-		$m = '<script type="text/javascript">
-            navigator.getBattery().then(battery => {
-				let m = ""
-				m = battery.level * 100 + "%"
+	// function batttick() {
+		// $m = '<script type="text/javascript">
+            // navigator.getBattery().then(battery => {
+				// let m = ""
+				// m = battery.level * 100 + "%"
 
-				if (battery.charging) {
-					m+=" sur secteur"
-				}
-				else{
-					m+=" sur batterie"
-				}
-				document.write(""+m+"");              
-			})
-		</script>';
-		return $m;
-	}
+				// if (battery.charging) {
+					// m+=" sur secteur"
+				// }
+				// else{
+					// m+=" sur batterie"
+				// }
+				// document.write(""+m+"");              
+			// })
+		// </script>';
+		// return $m;
+	// }
 ?>

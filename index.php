@@ -32,7 +32,7 @@
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
-            //batttick();
+            batttick();
 			
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
@@ -573,7 +573,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie
-                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo batttick() ?></span>
+                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
                     </li>
                 </ul>                
                                 
