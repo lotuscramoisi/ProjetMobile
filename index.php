@@ -69,6 +69,7 @@
                         $inputs.prop("disabled", false);
                     });
             });
+			$("#Batterie").innerHTML = Navigator.getBattery();
             // FIN AJAX FORMULAIRE REGISTER
             // DEBUT AJAX FORMULAIRE LOGIN
             $("#btnlogin").click(function(event) {
@@ -151,6 +152,7 @@
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
 						document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+						
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -551,6 +553,10 @@
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Profondeur de couleur d'écran
                         <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Niveau de batterie test
+                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
                     </li>
                 </ul>                
                                 
