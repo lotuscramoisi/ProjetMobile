@@ -42,7 +42,8 @@
                     i = 0;
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
-                        affichageLigne(i, r);
+                        affichageLigne(i, r.CONNEXIONTIME);
+                        affichageDonnee(i, r.USERNAME);
                         i++;
                     }
                 }
@@ -51,22 +52,20 @@
         //Fin du document ready
 
         //DEBUT : Fonction d'affichage d'une ligne de session
-            function affichageLigne(index, datas){
+            function affichageLigne(index, dateSession){
                 $('<div class="accordion-item"</div>').html(
-                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + 
-                    datas.CONNEXIONTIME + 
+                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion" id="session-'+ index +'">' + 
+                    dateSession + 
                     '</button>'
-                    // affichageDonnee(index, r.USERNAME)
-                    
                 ).appendTo('#myAccordion');
             }
             function affichageDonnee(index, data){
-                return '<div id="collapsible-' + index + '" class="collapse">' + 
+                $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
                     '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
                     'Username' + 
                     '<span class="badge badge-primary badge-pill">' + data + '</span>'+
-                    '</li>'+
-                    '</div>';
+                    '</li>'
+                ).appendTo('#session-' + index);
             }
         //FIN : Fonction d'affichage d'une ligne de session
     </script>
