@@ -503,7 +503,7 @@
     <div class="container-fluid">
         <div class="row h-100 align-items-center">
             <div class="col-12">
-                <ul class="list-group-flush mt-5">
+                <ul class="list-group-flush mt-2">
 
                     <div class="accordion" id="myAccordion">
                         <div class="accordion-item">
