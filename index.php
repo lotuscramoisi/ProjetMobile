@@ -511,8 +511,16 @@
                                 data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Adresse IP
-                                    <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+                                    Navigateur
+                                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Langue du navigateur
+                                    <span class="badge badge-primary badge-pill"><?php echo getNavigatorLang() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    OS
+                                    <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
                                 </li>
                             </div>
                         </div>
@@ -521,16 +529,48 @@
                                 data-target="#collapsible-2" data-parent="#myAccordion">Réseau</button>
                             <div id="collapsible-2" class="collapse">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Navigateur
-                                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+                                    Adresse IP
+                                    <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Proxy
+                                    <span
+                                        class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
                                 </li>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
-                                data-target="#collapsible-3" data-parent="#myAccordion">Autre</button>
+                                data-target="#collapsible-3" data-parent="#myAccordion">Localisation</button>
                             <div id="collapsible-3" class="collapse">
-
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Continent
+                                    <span class="badge badge-primary badge-pill" id="Continent"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Pays
+                                    <span class="badge badge-primary badge-pill" id="Pays"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Drapeau
+                                    <span id="Drapeau"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Region
+                                    <span class="badge badge-primary badge-pill" id="Region"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Ville
+                                    <span class="badge badge-primary badge-pill" id="Ville"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Code Postal
+                                    <span class="badge badge-primary badge-pill" id="CodePostal"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Devise
+                                    <span class="badge badge-primary badge-pill" id="Devise"></span>
+                                </li>
                             </div>
                         </div>
                     </div>
@@ -538,26 +578,26 @@
 
 
 
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Adresse IP
                         <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Proxy
                         <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    </li> -->
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Navigateur
                         <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    </li> -->
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Langue du navigateur
                         <span class="badge badge-primary badge-pill"><?php echo getNavigatorLang() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    </li> -->
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         OS
                         <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
-                    </li>
+                    </li> -->
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Continent
                         <span class="badge badge-primary badge-pill" id="Continent"></span>
