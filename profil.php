@@ -26,10 +26,28 @@
     <script>
         $(document).ready(function() {
 
-            username = "<?php echo $_SESSION['login'];?> ";
+            // Récupération du login 
+            username = "<?php echo $_SESSION['login']; ?> ";
             document.getElementById("test").innerHTML = username;
-            
 
+            // Récupération des sessions de l'utilisateur
+            $.ajax({
+                url: "getSession.php", //the page containing php script
+                type: "post", //request type,
+                dataType: 'json',
+                data: {
+                    login: username
+                },
+                success: function(result) {
+                    //Affichage de chaque ligne des sessions récupérées
+                    for (var r of result) {
+                        $('<tr></tr>').html(
+                            '<td>' + r.connexiontime + '</td>' +
+                            '<td>' + r.username + '</td>'
+                        ).appendTo('#bodyTable');
+                    }
+                }
+            });
         });
         //Fin du document ready
     </script>
@@ -62,7 +80,10 @@
             ?>
         </form>
     </nav>
-    <div id="test"></div>
+    <div id="test">
+        <table id="bodyTable">
+        </table>
+    </div>
 
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
