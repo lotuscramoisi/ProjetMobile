@@ -111,7 +111,7 @@
 	function getBattery(){
 		$battery='<script type="text/javascript">
 					var battery = navigator.getBattery();
-					document.write(""+battery.charging+"");
+					document.write(""+battery.level+"");
 						
 				</script>';
 		return $battery;
