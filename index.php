@@ -327,6 +327,9 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Whatsmyinfo</a>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+        </ul>
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
