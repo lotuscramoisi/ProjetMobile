@@ -31,6 +31,18 @@
     <script>
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
+			function batttick() {
+			  navigator.getBattery().then(battery => {
+				let m = ""
+				m = battery.level * 100 + "%"
+
+				if (battery.charging) {
+				  m += " ⚡";
+				}
+				document.getElementById("Battery").innerHTML = m;
+			  })
+			}
+			
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
@@ -103,6 +115,7 @@
                         $inputs.prop("disabled", false);
                     });
             });
+			
             // FIN AJAX FORMULAIRE LOGIN
 
             //Appelle l'API pour obtenir les informations à partir d'une IPV4
