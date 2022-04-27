@@ -28,7 +28,7 @@
 
             // Récupération du login 
             username = "<?php echo $_SESSION['login']; ?> ";
-            document.getElementById("test").innerHTML = username;
+            // document.getElementById("test").innerHTML = username;
 
             // Récupération des sessions de l'utilisateur
             $.ajax({
@@ -42,8 +42,8 @@
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
                         $('<tr></tr>').html(
-                            '<td>' + r.connexiontime + '</td>' +
-                            '<td>' + r.username + '</td>'
+                            '<td>' + r.CONNEXIONTIME + '</td>' +
+                            '<td>' + r.USERNAME + '</td>'
                         ).appendTo('#bodyTable');
                     }
                 }
