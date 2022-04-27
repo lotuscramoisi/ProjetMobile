@@ -151,8 +151,8 @@
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
 						//date_default_timezone_set(ecrit.timezone.name);
-						var date = date('d-m-y h:i:s');
-						document.getElementById("HeureConn").innerHTML = date;
+						//var date = date('d-m-y h:i:s');
+						document.getElementById("HeureConn").innerHTML = date('d-m-y h:i:s');
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
