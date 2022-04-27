@@ -129,6 +129,7 @@
 	function getMemory() {
 		$m = '<script type="text/javascript">
 				let m = navigator.deviceMemory
+				m += " Gio de RAM"
 				document.getElementById("Memoire").innerHTML = m; 
 		</script>';
 		return $m;

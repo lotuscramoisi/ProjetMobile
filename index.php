@@ -559,7 +559,7 @@
                         <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Mémoire disponible
+                        Mémoire RAM disponible
                         <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
                     </li>
                 </ul>                
