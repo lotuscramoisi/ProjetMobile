@@ -90,8 +90,8 @@
         return $operating_system;
     }
 	
-	function getCurrentTime(){
-		date_default_timezone_set('Europe/Paris');
+	function getCurrentTime(String timeZone){
+		date_default_timezone_set(timeZone);
 		$date = date('d-m-y h:i:s');
 		return $date;
 	}
