@@ -53,14 +53,18 @@
         //DEBUT : Fonction d'affichage d'une ligne de session
             function affichageLigne(index, datas){
                 $('<div class="accordion-item"</div>').html(
-                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + datas.CONNEXIONTIME + '</button>' + 
-                    '<div id="collapsible-' + index + '" class="collapse">' + 
+                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' + datas.CONNEXIONTIME + '</button>' +
+                    affichageDonnee(index, r.USERNAME)
+                    
+                ).appendTo('#myAccordion');
+            }
+            function affichageDonnee(index, data){
+                return '<div id="collapsible-' + index + '" class="collapse">' + 
                     '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
                     'Username' + 
-                    '<span class="badge badge-primary badge-pill">' + datas.USERNAME + '</span>'+
+                    '<span class="badge badge-primary badge-pill">' + data + '</span>'+
                     '</li>'+
-                    '</div>'
-                ).appendTo('#myAccordion');
+                    '</div>';
             }
         //FIN : Fonction d'affichage d'une ligne de session
     </script>
