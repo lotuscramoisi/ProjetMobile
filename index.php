@@ -522,6 +522,39 @@
                                     OS
                                     <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
                                 </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Nom du fuseau horaire
+                                    <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Heure de connexion
+                                    <span class="badge badge-primary badge-pill" id="HeureConn"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Résolution de l'écran
+                                    <span class="badge badge-primary badge-pill"
+                                        id="RésolutionEcran"><?php echo getResol() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Profondeur de couleur d'écran
+                                    <span class="badge badge-primary badge-pill"
+                                        id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Niveau de batterie
+                                    <span class="badge badge-primary badge-pill"
+                                        id="Batterie"><?php echo getBattery() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Mémoire RAM disponible
+                                    <span class="badge badge-primary badge-pill"
+                                        id="Memoire"><?php echo getMemory() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Nombre de coeurs logiques
+                                    <span class="badge badge-primary badge-pill"
+                                        id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
+                                </li>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -536,6 +569,18 @@
                                     Proxy
                                     <span
                                         class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Type de connexion
+                                    <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Fournisseur d'accès Internet
+                                    <span class="badge badge-primary badge-pill" id="FAI"></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Organisation du FAI
+                                    <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
                                 </li>
                             </div>
                         </div>
@@ -598,7 +643,7 @@
                         OS
                         <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
                     </li> -->
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Continent
                         <span class="badge badge-primary badge-pill" id="Continent"></span>
                     </li>
@@ -625,8 +670,8 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Devise
                         <span class="badge badge-primary badge-pill" id="Devise"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    </li> -->
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Type de connexion
                         <span class="badge badge-primary badge-pill" id="TypeConnexion"></span>
                     </li>
@@ -637,8 +682,8 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Organisation du FAI
                         <span class="badge badge-primary badge-pill" id="OrganisationFAI"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    </li> -->
+                    <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
                         Nom du fuseau horaire
                         <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
                     </li>
@@ -667,7 +712,7 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Nombre de coeurs logiques
                         <span class="badge badge-primary badge-pill" id="NbCoeurs"><?php echo getNbCoeurs() ?></span>
-                    </li>
+                    </li> -->
                 </ul>
 
             </div>
