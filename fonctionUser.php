@@ -143,8 +143,4 @@
 		</script>';
 		return $c;
 	}
-	
-	function getNameComputer(){
-		return $_SERVER['REMOTE_HOST'];
-	}
 ?>
