@@ -32,7 +32,7 @@
         $(document).ready(function() {
 
             username = <?php $_SESSION["login"];?>;
-            document.getElementById(body).innerHTML = username;
+            document.getElementById("test").innerHTML = username;
 
         });
         //Fin du document ready
@@ -72,53 +72,11 @@
         <div class="row align-items-center">
             <div class="col">
                 <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" id="test">
                         Adresse IP
-                        <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Proxy
-                        <span class="badge badge-primary badge-pill"><?php echo getUserIPFromInternet() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Navigateur
-                        <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        OS
-                        <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Continent
-                        <span class="badge badge-primary badge-pill" id="Continent"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Pays
-                        <span class="badge badge-primary badge-pill" id="Pays"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Drapeau
-                        <span id="Drapeau"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Region
-                        <span class="badge badge-primary badge-pill" id="Region"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Ville
-                        <span class="badge badge-primary badge-pill" id="Ville"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Code Postal
-                        <span class="badge badge-primary badge-pill" id="CodePostal"></span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Devise
-                        <span class="badge badge-primary badge-pill" id="Devise"></span>
+                        <span class="badge badge-primary badge-pill"></span>
                     </li>
                 </ul>
-                <button type="button" onclick="getLocation()">Geolocalisation</button>
-                <button type="button" id="CallApi">Call API</button>
             </div>
             <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
