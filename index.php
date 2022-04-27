@@ -31,6 +31,7 @@
     <script>
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
+			
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
@@ -103,6 +104,7 @@
                         $inputs.prop("disabled", false);
                     });
             });
+			
             // FIN AJAX FORMULAIRE LOGIN
 
             //Appelle l'API pour obtenir les informations à partir d'une IPV4
@@ -152,7 +154,6 @@
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
 						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
 						document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
-						
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
@@ -202,7 +203,6 @@
 
         });
         //Fin du document ready
-
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
@@ -555,8 +555,12 @@
                         <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Niveau de batterie test
+                        Niveau de batterie
                         <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
+                    </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Mémoire RAM disponible
+                        <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
                     </li>
                 </ul>                
                                 

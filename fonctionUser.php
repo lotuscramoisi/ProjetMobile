@@ -108,10 +108,31 @@
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
-	function getBattery(){
-		$battery='<script type="text/javascript">
-						document.write(""+navigator.getBattery);
-				</script>';
-		return $battery;
+	function getBattery() {
+		$b = '<script type="text/javascript">
+				navigator.getBattery().then(battery => {
+				let b = ""
+				b = battery.level * 100 + "%"
+
+				if (battery.charging) {
+					b+=" sur secteur"
+				}
+				else{
+					b+=" sur batterie"
+				} 
+				document.getElementById("Batterie").innerHTML = b; 
+			})
+		</script>';
+		return $b;
 	}
+	
+	function getMemory() {
+		$m = '<script type="text/javascript">
+				let m = navigator.deviceMemory
+				m += " Gio de RAM"
+				document.getElementById("Memoire").innerHTML = m; 
+		</script>';
+		return $m;
+	}
+	
 ?>
