@@ -507,21 +507,21 @@
 
                     <div class="accordion" id="myAccordion">
                         <div class="panel">
-                            <button type="button" class="btn btn-danger" data-toggle="collapse"
+                            <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-1" data-parent="#myAccordion">Question 1?</button>
                             <div id="collapsible-1" class="collapse">
                                 ..
                             </div>
                         </div>
                         <div class="panel">
-                            <button type="button" class="btn btn-danger" data-toggle="collapse"
+                            <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-2" data-parent="#myAccordion">Question 2?</button>
                             <div id="collapsible-2" class="collapse">
                                 ..
                             </div>
                         </div>
                         <div class="panel">
-                            <button type="button" class="btn btn-danger" data-toggle="collapse"
+                            <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-3" data-parent="#myAccordion">Question 3?</button>
                             <div id="collapsible-3" class="collapse">
                                 ...
