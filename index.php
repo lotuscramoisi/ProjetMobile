@@ -207,18 +207,18 @@
         //Fin du document ready
 
         function batttick() {
-                console.log("ici1");
-			  navigator.getBattery().then(battery => {
-				let m = ""
-				m = battery.level * 100 + "%"
+            console.log("ici1");
+            navigator.getBattery().then(battery => {
+            let m = ""
+            m = battery.level * 100 + "%"
 
-				if (battery.charging) {
-				  m += " ⚡";
-				}
-				document.getElementById("Batterie").innerHTML = m;
+            if (battery.charging) {
+                m += " ⚡";
+            }
+            document.getElementById("Batterie").innerHTML = m;
                 
-			  })
-			}
+			})
+		}
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
