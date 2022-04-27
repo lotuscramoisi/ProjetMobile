@@ -143,4 +143,13 @@
 		</script>';
 		return $c;
 	}
+	
+	function getMultiTouch(){
+		$mt = '<script type="text/javascript">
+				let mt = navigator.hardwareConcurrency
+				mt += " points simultanés"
+				document.getElementById("MultiTouch").innerHTML = mt; 
+		</script>';
+		return $mt;
+	}
 ?>
