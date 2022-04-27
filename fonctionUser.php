@@ -108,9 +108,9 @@
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
-	function batttick() {
+	function getBattery() {
 		$m = '<script type="text/javascript">
-            navigator.getBattery().then(battery => {
+				navigator.getBattery().then(battery => {
 				let m = ""
 				m = battery.level * 100 + "%"
 
@@ -123,6 +123,6 @@
 				document.getElementById("Batterie").innerHTML = m; 
 			})
 		</script>';
-		//return $m;
+		return $m;
 	}
 ?>

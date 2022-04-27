@@ -31,8 +31,6 @@
     <script>
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
-
-            //batttick();
 			
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
@@ -205,21 +203,6 @@
 
         });
         //Fin du document ready
-
-        function batttick() {
-            navigator.getBattery().then(battery => {
-            let m = ""
-            m = battery.level * 100 + "%"
-
-            if (battery.charging) {
-                m+=" sur secteur"
-            }
-            else{
-                m+=" sur batterie"
-            }
-            document.getElementById("Batterie").innerHTML = m;                
-			})
-		}
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
@@ -573,7 +556,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie
-                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo batttick() ?></span>
+                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                     </li>
                 </ul>                
                                 
