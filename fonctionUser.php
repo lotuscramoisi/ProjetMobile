@@ -89,4 +89,22 @@
         
         return $operating_system;
     }
+	
+	function getResol(){
+		$resol='<script type="text/javascript">
+						document.write(""+screen.width+"*"+screen.height+" pixels");
+				</script>';
+		return $resol;
+	}
+	
+	function getBitsScreen(){
+		$bits='<script type="text/javascript">
+						document.write(""+screen.colorDepth+" bits");
+				</script>';
+		return $bits;
+	}
+	
+	function getNavigatorLang(){
+		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
+	}
 ?>
