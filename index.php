@@ -212,7 +212,7 @@
             m = battery.level * 100 + "%"
 
             if (battery.charging) {
-                m+="en charge"
+                m+=" en charge"
             }
             else{
                 m+="pas en charge"
