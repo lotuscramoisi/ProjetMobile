@@ -149,6 +149,9 @@
 						document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
 						document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
 						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+						document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
+						//var date = <?php echo getCurrentTime() ?>;
+						//document.getElementById("HeureConn").innerHTML = date;
                         showPositionLL(ecrit.latitude, ecrit.longitude)
                     }
                 });
