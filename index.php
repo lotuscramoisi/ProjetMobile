@@ -506,7 +506,7 @@
                 <ul class="list-group-flush mt-5">
 
                     <div class="accordion" id="myAccordion">
-                        <div class="accordion-item">
+                        <div class="panel">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse"
                                 data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
@@ -609,10 +609,6 @@
                         Profondeur de couleur d'écran
                         <span class="badge badge-primary badge-pill"
                             id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
-                    </li>
-					<li class="list-group-item d-flex justify-content-between align-items-center">
-                        Nom de la machine
-                        <span class="badge badge-primary badge-pill" id="NomMach"><?php echo getNameComputer() ?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie
