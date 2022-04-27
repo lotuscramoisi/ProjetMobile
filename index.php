@@ -544,6 +544,10 @@
                         Résolution de l'écran
                         <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getResol() ?></span>
                     </li>
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+                        Nombre de bits
+                        <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getBitsScreen() ?></span>
+                    </li>
                 </ul>                
                                 
             </div>

@@ -90,12 +90,17 @@
         return $operating_system;
     }
 	
-	function getResol()
-	{
+	function getResol(){
 		$resol='<script type="text/javascript">
 						document.write(""+screen.width+"*"+screen.height+" pixels");
 				</script>';
 		return $resol;
 	}
-
+	
+	function getBitsScreen(){
+		$bits='<script type="text/javascript">
+						document.write(""+screen.colorDepth" bits");
+				</script>';
+		return $bits;
+	}
 ?>
