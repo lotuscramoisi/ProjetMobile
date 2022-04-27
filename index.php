@@ -69,7 +69,7 @@
                         $inputs.prop("disabled", false);
                     });
             });
-			$("#Batterie").innerHTML = Navigator.getBattery();
+			
             // FIN AJAX FORMULAIRE REGISTER
             // DEBUT AJAX FORMULAIRE LOGIN
             $("#btnlogin").click(function(event) {
@@ -556,7 +556,7 @@
                     </li>
 					<li class="list-group-item d-flex justify-content-between align-items-center">
                         Niveau de batterie test
-                        <span class="badge badge-primary badge-pill" id="Batterie"></span>
+                        <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                     </li>
                 </ul>                
                                 

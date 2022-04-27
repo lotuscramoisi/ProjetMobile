@@ -107,4 +107,11 @@
 	function getNavigatorLang(){
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
+	
+	function getBattery(){
+		$battery='<script type="text/javascript">
+						document.write(""+navigator.getBattery);
+				</script>';
+		return $battery;
+	}
 ?>
