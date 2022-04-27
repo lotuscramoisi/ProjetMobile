@@ -128,7 +128,8 @@
 	
 	function getMemory() {
 		$m = '<script type="text/javascript">
-				document.write(""+navigator.deviceMemory+" GiB de RAM"); 
+				let m = navigator.deviceMemory
+				document.getElementById("Memoire").innerHTML = m; 
 			})
 		</script>';
 		return $m;
