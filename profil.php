@@ -28,6 +28,7 @@
 
             username = "<?php echo $_SESSION['login'];?> ";
             document.getElementById("test").innerHTML = username;
+            
 
         });
         //Fin du document ready
