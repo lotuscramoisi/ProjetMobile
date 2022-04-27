@@ -160,7 +160,7 @@
             }
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            // <?php
+            
             // if (isset($_SESSION['login'])) {
 
             //     echo "$.ajax({";
@@ -173,7 +173,7 @@
             //     echo  "success: function(result) {}";
             //     echo  "});";          
             // }
-            // ?>
+            
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
