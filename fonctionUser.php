@@ -168,7 +168,8 @@
 
 	function getNetworkInformation(){
 		$network = '<script type="text/javascript">
-				let NetworkInformation = Navigator.connection.type;
+				let NetworkInformation = Navigator.connection;
+				NetworkInformation = NetworkInformation.type;
 				document.getElementById("NetworkInformation").innerHTML = NetworkInformation; 
 		</script>';
 		return $network;
