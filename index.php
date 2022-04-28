@@ -198,12 +198,11 @@
 
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
-                        document.getElementById("PermissionGranted").innerHTML = "Autorisé";
+                        document.getElementById("PermissionGranted").innerHTML = "Autorisation géolocalisation";
                     } else if (permissionStatus.state === 'prompt') {
-                        document.getElementById("PermissionGranted").innerHTML = "En cours d'inviation";
+                        console.log("Prompted ?");
                     }else{
                         $("#flexSwitchCheckDefault").prop("checked", false);
-                        document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                     }
 
                     permissionStatus.onchange = function() {
@@ -554,7 +553,7 @@
                                     <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Permission pour la géolocalisation
+                                    Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
                                 </li>
                             </div>
