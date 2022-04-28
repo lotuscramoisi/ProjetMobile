@@ -105,23 +105,10 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        
+                        savePersonalData()
                     });
             });
 
-            var login = "<?php echo $_SESSION['login'] ?>";
-            
-            if (login != "") {
-                $.ajax({
-                    url: "saveinfo.php",
-                    type: "post",
-                    dataType: 'json',
-                    data: {
-                        username: login
-                    },
-                    success: function(result) {}
-                });
-            }
 
 
             // FIN AJAX FORMULAIRE LOGIN
@@ -348,7 +335,7 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">WhatsmyinfoPOULOULOU</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
