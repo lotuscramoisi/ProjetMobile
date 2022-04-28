@@ -294,12 +294,7 @@
                     }else{
                         console.log("Pas de droit");
                         //Si non, on demande à l'utilisateur de nous donner les droits
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(showPosition);
-                        }
-                        else{
-                            
-                        }
+                        navigator.geolocation.getCurrentPosition(showPosition);
                     }
                 });
             }else{
