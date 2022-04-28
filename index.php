@@ -168,8 +168,7 @@
                 }
             });
 
-            //Regarde si les droits du navigateur permettent la géolocalisation
-            document.getElementById("PermissionGranted").innerHTML = permissionStatus.onchange ;
+            //Regarde si les droits du navigateur permettent la géolocalisation  
             checkLoginForm();
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
@@ -200,6 +199,7 @@
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkLoginForm(){
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
+                    document.getElementById("PermissionGranted").innerHTML = permissionStatus.onchange ;
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
                     }
