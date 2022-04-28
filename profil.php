@@ -43,7 +43,7 @@
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
                         affichageLigne(i, r.CONNEXIONTIME);
-                        affichageDonnee(i, r.USERNAME);
+                        affichageDonnee(i, "Username", r.USERNAME);
                         i++;
                     }
                 }
@@ -59,10 +59,10 @@
                     '</button>'
                 ).appendTo('#myAccordion');
             }
-            function affichageDonnee(index, data){
+            function affichageDonnee(index, name, data){
                 $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
                     '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
-                    'Username' + 
+                    name + 
                     '<span class="badge badge-primary badge-pill">' + data + '</span>'+
                     '</li>'
                 ).appendTo('#session-' + index);
