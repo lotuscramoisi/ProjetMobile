@@ -175,7 +175,12 @@
             navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
 
                     console.log('geolocation permission state is ', permissionStatus.state);
-
+                    if (result.state === 'granted') {
+                        console.log("Test Réussi1");
+                    } else if (result.state === 'prompt') {
+                        console.log("Test Réussi2");
+                    }
+                    console.log("Raté?");
                     permissionStatus.onchange = function() {
                         console.log('geolocation permission state has changed to ', this.state);
                     };
