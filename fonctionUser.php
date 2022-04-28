@@ -169,7 +169,7 @@
 	function getNetworkInformation(){
 		$network = '<script type="text/javascript">
 		let NetworkInformation = navigator.connection.type;
-		if(NetworkInformation == "undefined") {
+		if(NetworkInformation == null) {
 			NetworkInformation = "Pas sur mobile";
 		}
 		document.getElementById("NetworkInformation").innerHTML = NetworkInformation; 
