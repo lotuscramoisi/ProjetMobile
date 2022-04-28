@@ -176,10 +176,4 @@
 		</script>';
 		return $network;
 	}
-	
-	function getTimeLocal(){
-		date_default_timezone_set('Europe/Amsterdam');
-		$date = date('h:i:s',time());
-		return $date;
-	}
 ?>

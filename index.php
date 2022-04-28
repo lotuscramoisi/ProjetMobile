@@ -533,12 +533,8 @@
                                     <span class="badge badge-primary badge-pill" id="NomFuseau"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Heure de connexion du fuseau
+                                    Heure de connexion
                                     <span class="badge badge-primary badge-pill" id="HeureConn"></span>
-                                </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Heure de connexion locale
-                                    <span class="badge badge-primary badge-pill" id="HeureConnLoc"><?php echo getTimeLocal() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Résolution de l'écran
