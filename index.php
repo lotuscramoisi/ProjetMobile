@@ -173,15 +173,13 @@
         if (navigator.geolocation) {
             $("#flexSwitchCheckDefault").prop("checked", true);
         }
+        navigator.permissions.query({name:'geolocation'})
+        .then(function(permissionStatus) {
+        console.log('geolocation permission state is ', permissionStatus.state);
 
-        navigator.permissions.query({name:'geolocation'}).then(function(result) {
-        if (result.state === 'granted') {
-            document.getElementById("PermissionGranted").innerHTML = result + "cas 1";
-        } else if (result.state === 'prompt') {
-            document.getElementById("PermissionGranted").innerHTML = result +" cas 2 ";
-        }
-            document.getElementById("PermissionGranted").innerHTML = result +" cas 3 ";
-            //ne se passe rien si pas de permission
+        permissionStatus.onchange = function() {
+            console.log('geolocation permission state has changed to ', this.state);
+        };
         });
 
 
