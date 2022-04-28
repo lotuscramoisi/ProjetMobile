@@ -95,7 +95,7 @@
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
-                        savePersonalData()
+                        
                         location.reload();
                     })
                     .fail(function(error) {
@@ -105,6 +105,7 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
+                        savePersonalData()
                     });
             });
 
