@@ -171,7 +171,6 @@
 
         if (navigator.geolocation) {
             $("#flexSwitchCheckDefault").prop("checked", true);
-            console.log("ici");
         }
         //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         //Si l'utilisateur est connecté
