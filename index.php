@@ -188,21 +188,6 @@
                 //             }
                 // 
                 ?>
-            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-
-
-            permissionStatus.onchange = function() {
-                        if (permissionStatus.state === 'granted') {
-                            $("#flexSwitchCheckDefault").prop("checked", true);
-                        } else if (permissionStatus.state === 'prompt') {
-                            console.log("Prompted ?");
-                        }else{
-                            $("#flexSwitchCheckDefault").prop("checked", false);
-                        }
-                        console.log("Ca fonctionne ?");
-                    };
-           
-
         });
         //Fin du document ready
 
@@ -210,10 +195,30 @@
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkGeolocalisation(){
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
+
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
-                        document.getElementById("PermissionGranted").innerHTML = permissionStatus.state;
+                        document.getElementById("PermissionGranted").innerHTML = "Autorisé";
+                    } else if (permissionStatus.state === 'prompt') {
+                        document.getElementById("PermissionGranted").innerHTML = "En cours d'inviation";
+                        $("#flexSwitchCheckDefault").prop("checked", false);
+                    }else{
+                        $("#flexSwitchCheckDefault").prop("checked", false);
+                        document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                     }
+
+                    permissionStatus.onchange = function() {
+                        if (permissionStatus.state === 'granted') {
+                            $("#flexSwitchCheckDefault").prop("checked", true);
+                            document.getElementById("PermissionGranted").innerHTML = "Autorisé";
+                        } else if (permissionStatus.state === 'prompt') {
+                            document.getElementById("PermissionGranted").innerHTML = "En cours d'inviation";
+                            $("#flexSwitchCheckDefault").prop("checked", false);
+                        }else{
+                            $("#flexSwitchCheckDefault").prop("checked", false);
+                            document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
+                        }
+                    };
                 });
                 console.log("Appelé");
             }
@@ -553,7 +558,7 @@
                                     <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Permission
+                                    Permission pour la géolocalisation
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
                                 </li>
                             </div>
