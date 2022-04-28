@@ -106,8 +106,8 @@
 	
 	function getNavigatorLang(){
 		$lang = '<script type="text/javascript">
-		let NetworkInformation = navigator.language;
-		document.getElementById("lang").innerHTML = NetworkInformation; 
+		let lang = navigator.language;
+		document.getElementById("lang").innerHTML = lang; 
 		</script>';
 		return $lang;
 	}
