@@ -196,8 +196,20 @@
 
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkGeolocalisation(){
-                navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-                    
+            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
+                
+                if (permissionStatus.state === 'granted') {
+                    $("#flexSwitchCheckDefault").prop("checked", true);
+                    document.getElementById("PermissionGranted").innerHTML = "Autorisé";
+                }else if(permissionStatus.state === 'prompt') {
+                    $("#flexSwitchCheckDefault").prop("checked", false);
+                    document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
+                }else{
+                    $("#flexSwitchCheckDefault").prop("checked", false);
+                    document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
+                }
+
+                permissionStatus.onchange = function() {
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
                         document.getElementById("PermissionGranted").innerHTML = "Autorisé";
@@ -208,22 +220,10 @@
                         $("#flexSwitchCheckDefault").prop("checked", false);
                         document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                     }
-
-                    permissionStatus.onchange = function() {
-                        if (permissionStatus.state === 'granted') {
-                            $("#flexSwitchCheckDefault").prop("checked", true);
-                            document.getElementById("PermissionGranted").innerHTML = "Autorisé";
-                        }else if(permissionStatus.state === 'prompt') {
-                            $("#flexSwitchCheckDefault").prop("checked", false);
-                            document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
-                        }else{
-                            $("#flexSwitchCheckDefault").prop("checked", false);
-                            document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
-                        }
-                    };
-                });
-                console.log("Appelé");
-            }
+                };
+            });
+            console.log("Appelé");
+        }
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
@@ -283,11 +283,17 @@
 
         //géolocalisation
         function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                //problème de navigateur
-            }
+            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
+                //Si on a les droits affiche la maps
+                if (permissionStatus.state === 'granted') {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else{
+                    //demande à l'utilisateur si on a pas les droits
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    }
+                }
+            });
         }
 
         function showPosition(position) {
@@ -327,14 +333,6 @@
                 });
             }
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-        }
-
-        function handleChange(checkbox) {
-            if (checkbox.checked == true) {
-                getLocation();
-            } else {
-                showPositionLL(-27.125657, -109.357357);
-            }
         }
     </script>
     <meta charset="UTF-8">
@@ -464,7 +462,7 @@
                 <div class="modal-body">
 
                     <div class="form-check form-switch ml-5">
-                        <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
+                        <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='getLocation();'>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                     </div>
                 </div>
