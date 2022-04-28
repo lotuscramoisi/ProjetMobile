@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <?php
@@ -139,41 +139,43 @@
             // });
 
             //Call à l'API qui nous fournit les positions via l'adresse IP
-            // $.ajax({
-            //     url: "ajax.php",
-            //     type: "post",
-            //     dataType: 'json',
-            //     data: {
-            //         registration: "success"
-            //     },
-            //     success: function(result) {
-            //         var ecrit = JSON.parse(result);
-            //         document.getElementById("Continent").innerHTML = ecrit.continent;
-            //         document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
-            //         document.getElementById("Pays").innerHTML = ecrit.country;
-            //         document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
-            //         var flag = ecrit.flag.png;
-            //         document.getElementById("Drapeau").innerHTML =
-            //             "<img height='30px' width='40px' src=" + flag + ">";
-            //         document.getElementById("Ville").innerHTML = ecrit.city;
-            //         document.getElementById("Region").innerHTML = ecrit.region;
-            //         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-            //         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-            //         document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
-            //         document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-            //         document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
-            //         document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
-            //         document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
-            //         showPositionLL(ecrit.latitude, ecrit.longitude)
-            //     }
-            // });
+            $.ajax({
+                url: "ajax.php",
+                type: "post",
+                dataType: 'json',
+                data: {
+                    registration: "success"
+                },
+                success: function(result) {
+                    var ecrit = JSON.parse(result);
+                    document.getElementById("Continent").innerHTML = ecrit.continent;
+                    document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
+                    document.getElementById("Pays").innerHTML = ecrit.country;
+                    document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
+                    var flag = ecrit.flag.png;
+                    document.getElementById("Drapeau").innerHTML =
+                        "<img height='30px' width='40px' src=" + flag + ">";
+                    document.getElementById("Ville").innerHTML = ecrit.city;
+                    document.getElementById("Region").innerHTML = ecrit.region;
+                    document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+                    document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+                    document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
+                    document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
+                    document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+                    document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
+                    document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+                    showPositionLL(ecrit.latitude, ecrit.longitude)
+                }
+            });
 
             //Regarde si les droits à la navigation sont données
             if (navigator.geolocation) {
                 $("#flexSwitchCheckDefault").prop("checked", true);
             }
-            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-
+            navigator.permissions.query({
+                    name: 'geolocation'
+                })
+                .then(function(permissionStatus) {
                     console.log('geolocation permission state is ', permissionStatus.state);
 
                     permissionStatus.onchange = function() {
@@ -310,30 +312,30 @@
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
 
-        // function handleChange(checkbox) {
-        //     if (checkbox.checked == true) {
-        //         getLocation();
-        //     } else {
-        //         showPositionLL(-27.125657, -109.357357);
-        //     }
-        // }
+        function handleChange(checkbox) {
+            if (checkbox.checked == true) {
+                getLocation();
+            } else {
+                showPositionLL(-27.125657, -109.357357);
+            }
+        }
 
-        // function handleChangeAPI(checkbox) {
-        //     if (checkbox.checked == true) {
-        //         document.getElementById(checkbok).disabled = true;
-        //     }
-        // }
+        function handleChangeAPI(checkbox) {
+            if (checkbox.checked == true) {
+                document.getElementById(checkbok).disabled = true;
+            }
+        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's my info ?! wanna jump right now</title>
+    <title>What's my info ?!</title>
 </head>
 
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">WhatsmyinfoToast</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
@@ -450,10 +452,10 @@
                 </div>
                 <div class="modal-body">
 
-                    <!-- <div class="form-check form-switch ml-5">
+                    <div class="form-check form-switch ml-5">
                         <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
-                    </div> -->
+                    </div>
 
                     <!-- <div class="form-check form-switch">
                             <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
@@ -627,12 +629,12 @@
                 </ul>
 
             </div>
-            <!-- <div class="col">
+            <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
                     <iframe id="frame" width="600" height="800" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-            </div> -->
+            </div>
 
         </div>
         <!-- END Liste des informations -->
