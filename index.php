@@ -169,7 +169,7 @@
             });
 
             //Regarde si les droits du navigateur permettent la géolocalisation  
-            checkGeolocalisation();
+            //checkGeolocalisation();
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
