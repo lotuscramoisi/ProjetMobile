@@ -336,12 +336,6 @@
                 showPositionLL(-27.125657, -109.357357);
             }
         }
-
-        function handleChangeAPI(checkbox) {
-            if (checkbox.checked == true) {
-                document.getElementById(checkbok).disabled = true;
-            }
-        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
