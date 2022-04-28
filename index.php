@@ -150,6 +150,7 @@
                 var ecrit = JSON.parse(result);
                 document.getElementById("Continent").innerHTML = ecrit.continent;
                 document.getElementById("Pays").innerHTML = ecrit.country;
+				document.getElementById("Pays").innerHTML = ecrit.country_code;
                 var flag = ecrit.flag.png;
                 document.getElementById("Drapeau").innerHTML =
                     "<img height='30px' width='40px' src=" + flag + ">";
@@ -157,11 +158,9 @@
                 document.getElementById("Region").innerHTML = ecrit.region;
                 document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
                 document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-                document.getElementById("TypeConnexion").innerHTML = ecrit.connection
-                    .connection_type;
+                document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
                 document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-                document.getElementById("OrganisationFAI").innerHTML = ecrit.connection
-                    .organization_name;
+                document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
                 document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
                 document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                 showPositionLL(ecrit.latitude, ecrit.longitude)
@@ -608,6 +607,10 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Pays
                                     <span class="badge badge-primary badge-pill" id="Pays"></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Abréviation du pays
+                                    <span class="badge badge-primary badge-pill" id="AbrevPays"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Drapeau
