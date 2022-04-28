@@ -310,19 +310,19 @@
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
 
-        function handleChange(checkbox) {
-            if (checkbox.checked == true) {
-                getLocation();
-            } else {
-                showPositionLL(-27.125657, -109.357357);
-            }
-        }
+        // function handleChange(checkbox) {
+        //     if (checkbox.checked == true) {
+        //         getLocation();
+        //     } else {
+        //         showPositionLL(-27.125657, -109.357357);
+        //     }
+        // }
 
-        function handleChangeAPI(checkbox) {
-            if (checkbox.checked == true) {
-                document.getElementById(checkbok).disabled = true;
-            }
-        }
+        // function handleChangeAPI(checkbox) {
+        //     if (checkbox.checked == true) {
+        //         document.getElementById(checkbok).disabled = true;
+        //     }
+        // }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -450,10 +450,10 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="form-check form-switch ml-5">
+                    <!-- <div class="form-check form-switch ml-5">
                         <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="form-check form-switch">
                             <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
