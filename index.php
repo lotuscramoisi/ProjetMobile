@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="cookiealert.css">
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
@@ -325,7 +325,7 @@
                 document.getElementById(checkbok).disabled = true;
             }
         }
-    </script>
+    </script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
