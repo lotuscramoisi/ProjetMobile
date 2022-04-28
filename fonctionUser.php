@@ -178,7 +178,7 @@
 	}
 	
 	function getTimeLocal(){
-		$date = date('h:i:s');
+		$date = date('h:i:s',time());
 		return $date;
 	}
 ?>
