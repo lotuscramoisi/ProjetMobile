@@ -12,10 +12,7 @@
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
 
-    require_once realpath(__DIR__ . '/vendor/autoload.php');
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-    $APIGOO = $_ENV['GOOGLE_KEY'];
+
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
