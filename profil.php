@@ -44,11 +44,7 @@
                     for (var r of result) {
                         keys = Object.keys(r);
                         affichageLigne(i, r.CONNEXIONTIME);
-                        j = 0;
-                        for(var data of r){
-                            affichageDonnee(i, keys[j], data);
-                            j++;
-                        }
+                        affichageDonnee(i, keys[0], r.USERNAME);
                         i++;
                     }
                 }
@@ -65,9 +61,10 @@
                 ).appendTo('#myAccordion');
             }
             function affichageDonnee(index, name, data){
+                key = Object.keys(data);
                 $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
                     '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
-                    name + 
+                    key[0] + 
                     '<span class="badge badge-primary badge-pill">' + data + '</span>'+
                     '</li>'
                 ).appendTo('#session-' + index);
