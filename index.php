@@ -456,13 +456,6 @@
                         <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" onchange='handleChange(this);'>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation</label>
                     </div>
-
-                    <!-- <div class="form-check form-switch">
-                            <input class="form-check-input" type="button" role="switch" id="CallApi" onchange='handleChangeAPI(this);'>
-                            <label class="form-check-label" for="flexCheckDisabled">
-                            Call API
-                            </label>
-                        </div> -->
                 </div>
             </div>
         </div>
