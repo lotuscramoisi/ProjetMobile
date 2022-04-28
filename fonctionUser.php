@@ -147,7 +147,7 @@
 	function getMultiTouch(){
 		$mt = '<script type="text/javascript">
 				let mt = navigator.maxTouchPoints
-				if(mt > 0) {
+				if(mt > 0 && mt <= 10) {
 					mt += " points simultanés"
 				}
 				else {
