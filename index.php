@@ -105,7 +105,7 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        savePersonalData()
+                        // savePersonalData()
                     });
             });
 
