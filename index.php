@@ -222,8 +222,8 @@
 
             ?>
 
-            var isLogged = <?php echo ($_SESSION['login'] ? 'true' : 'false'); ?>;
-            if (isLogged) {
+            var isLogged = "<?php echo ($_SESSION['login'] ? 'true' : 'false'); ?>";
+            if (isLogged == "true") {
                 $.ajax({
                     url: "saveinfo.php",
                     type: "post",
