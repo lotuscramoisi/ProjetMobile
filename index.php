@@ -109,7 +109,19 @@
                     });
             });
 
-            savePersonalData()
+            var login = "<?php echo $_SESSION['login'] ?>";
+            
+            if (login != "") {
+                $.ajax({
+                    url: "saveinfo.php",
+                    type: "post",
+                    dataType: 'json',
+                    data: {
+                        username: login
+                    },
+                    success: function(result) {}
+                });
+            }
 
 
             // FIN AJAX FORMULAIRE LOGIN
