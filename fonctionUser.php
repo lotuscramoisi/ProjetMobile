@@ -176,4 +176,9 @@
 		</script>';
 		return $network;
 	}
+	
+	function getTimeLocal(){
+		$date = date('h:i:s');
+		return $date;
+	}
 ?>
