@@ -284,7 +284,7 @@
         //géolocalisation
         function getLocation() {
             //Si on nous donne l'autorisation explicite
-            if (checkbox.checked == true) {
+            if (document.getElementById("flexSwitchCheckDefault").checked == true) {
                 //On regarde les vrais droits de la page
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
                     //Si on a les vrai droits, on affiche la maps
