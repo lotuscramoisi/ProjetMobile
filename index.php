@@ -95,8 +95,8 @@
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
+                        savePersonalData()
                         location.reload();
-                        savePersonalData();
                     })
                     .fail(function(error) {
                         alert("error détectée:" + error.responseText);
@@ -202,40 +202,7 @@
                 ?>
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
 
-            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-            //Si l'utilisateur est connecté
-            <?php
-            // if (isset($_SESSION['login'])) {
-
-            //     echo "$.ajax({
-            //             url: \"saveinfo.php\", //the page containing php script
-            //             type: \"post\", //request type,
-            //             dataType: 'json',
-            //             data: {
-            //                 username:  \"" . $_SESSION['login'] .
-            //         "\"},
-            //             success: function(result) {
-
-            //                 }   
-            //             });";
-            // }
-
-            ?>
-
-            var login = "<?php echo $_SESSION['login'] ?>";
-            
-            if (login != "") {
-                $.ajax({
-                    url: "saveinfo.php",
-                    type: "post",
-                    dataType: 'json',
-                    data: {
-                        username: login
-                    },
-                    success: function(result) {}
-                });
-            }
-            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+           
 
         });
         //Fin du document ready
@@ -326,17 +293,22 @@
         }
 
         function savePersonalData() {
-            $.ajax({
-                url: "savephp.php", //the page containing php script
-                type: "post", //request type,
-                dataType: "json",
-                data: {
-                    username: "<?php $_SESSION["login"] ?>"
-                },
-                success: function(result) {
-                    console.log("ici");
-                }
-            });
+            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+            //Si l'utilisateur est connecté
+            var login = "<?php echo $_SESSION['login'] ?>";
+            
+            if (login != "") {
+                $.ajax({
+                    url: "saveinfo.php",
+                    type: "post",
+                    dataType: 'json',
+                    data: {
+                        username: login
+                    },
+                    success: function(result) {}
+                });
+            }
+            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
 
         function handleChange(checkbox) {
