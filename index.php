@@ -203,7 +203,7 @@
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            // <?php
+             <?php
                 if (isset($_SESSION['login'])) {
 
                     echo "$.ajax({
