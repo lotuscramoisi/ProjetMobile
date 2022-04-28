@@ -42,9 +42,9 @@
                     i = 0;
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
-                        keys = Object.keys(r);
+                        // keys = Object.keys(r);
                         affichageLigne(i, r.CONNEXIONTIME);
-                        affichageDonnee(i, keys[0], r.USERNAME);
+                        affichageDonnee(i, "Username", r.USERNAME);
                         i++;
                     }
                 }
@@ -61,10 +61,9 @@
                 ).appendTo('#myAccordion');
             }
             function affichageDonnee(index, name, data){
-                key = Object.keys(data);
                 $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
                     '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
-                    key[0] + 
+                    name + 
                     '<span class="badge badge-primary badge-pill">' + data + '</span>'+
                     '</li>'
                 ).appendTo('#session-' + index);
