@@ -112,7 +112,7 @@
 		$b = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
 				let b = ""
-				b = battery.level * 100 + "%"
+				b = Math.floor(battery.level * 100) + "%"
 
 				if (battery.charging) {
 					b+=" sur secteur"
