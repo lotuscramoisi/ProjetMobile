@@ -149,6 +149,7 @@
             success: function(result) {
                 var ecrit = JSON.parse(result);
                 document.getElementById("Continent").innerHTML = ecrit.continent;
+				document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
                 document.getElementById("Pays").innerHTML = ecrit.country;
 				document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
                 var flag = ecrit.flag.png;
@@ -603,6 +604,10 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Continent
                                     <span class="badge badge-primary badge-pill" id="Continent"></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Abréviation du continent
+                                    <span class="badge badge-primary badge-pill" id="AbrevContinent"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Pays
