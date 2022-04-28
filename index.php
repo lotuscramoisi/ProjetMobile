@@ -481,7 +481,7 @@
         </div>
     </div>
     <!-- START Liste des informations -->
-    <div class="container-fluid mt-2">
+    <!-- <div class="container-fluid mt-2">
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <ul class="list-group-flush">
@@ -642,7 +642,7 @@
         </div>
 
         <!-- END Bootstrap-Cookie-Alert -->
-        <script src="cookiealert.js"></script>
+        <script src="cookiealert.js"></script> -->
 </body>
 
 </html>
