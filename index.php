@@ -289,8 +289,10 @@
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
                     //Si on a les vrai droits, on affiche la maps
                     if (permissionStatus.state === 'granted') {
+                        console.log("Droit");
                         navigator.geolocation.getCurrentPosition(showPosition);
                     }else{
+                        console.log("Pas de droit");
                         //Si non, on demande à l'utilisateur de nous donner les droits
                         if (navigator.geolocation) {
                             navigator.geolocation.getCurrentPosition(showPosition);
