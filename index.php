@@ -139,34 +139,34 @@
             // });
 
             //Call à l'API qui nous fournit les positions via l'adresse IP
-            $.ajax({
-                url: "ajax.php",
-                type: "post",
-                dataType: 'json',
-                data: {
-                    registration: "success"
-                },
-                success: function(result) {
-                    var ecrit = JSON.parse(result);
-                    document.getElementById("Continent").innerHTML = ecrit.continent;
-                    document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
-                    document.getElementById("Pays").innerHTML = ecrit.country;
-                    document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
-                    var flag = ecrit.flag.png;
-                    document.getElementById("Drapeau").innerHTML =
-                        "<img height='30px' width='40px' src=" + flag + ">";
-                    document.getElementById("Ville").innerHTML = ecrit.city;
-                    document.getElementById("Region").innerHTML = ecrit.region;
-                    document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-                    document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-                    document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
-                    document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-                    document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
-                    document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
-                    document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
-                    showPositionLL(ecrit.latitude, ecrit.longitude)
-                }
-            });
+            // $.ajax({
+            //     url: "ajax.php",
+            //     type: "post",
+            //     dataType: 'json',
+            //     data: {
+            //         registration: "success"
+            //     },
+            //     success: function(result) {
+            //         var ecrit = JSON.parse(result);
+            //         document.getElementById("Continent").innerHTML = ecrit.continent;
+            //         document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
+            //         document.getElementById("Pays").innerHTML = ecrit.country;
+            //         document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
+            //         var flag = ecrit.flag.png;
+            //         document.getElementById("Drapeau").innerHTML =
+            //             "<img height='30px' width='40px' src=" + flag + ">";
+            //         document.getElementById("Ville").innerHTML = ecrit.city;
+            //         document.getElementById("Region").innerHTML = ecrit.region;
+            //         document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
+            //         document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
+            //         document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
+            //         document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
+            //         document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+            //         document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
+            //         document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+            //         showPositionLL(ecrit.latitude, ecrit.longitude)
+            //     }
+            // });
 
             //Regarde si les droits à la navigation sont données
             if (navigator.geolocation) {
@@ -627,12 +627,12 @@
                 </ul>
 
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <div class="ratio" style="--bs-aspect-ratio: 50%;">
                     <iframe id="frame" width="600" height="800" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <!-- END Liste des informations -->
