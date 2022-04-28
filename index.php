@@ -199,7 +199,7 @@
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkGeolocalisation(){
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-                    document.getElementById("PermissionGranted").innerHTML = permissionStatus.onchange ;
+                    document.getElementById(PermissionGranted).innerHTML = permissionStatus.onchange ;
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
                     }
