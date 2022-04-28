@@ -176,4 +176,16 @@
 		</script>';
 		return $network;
 	}
+	
+	function getTimeLocal(){
+		$timeLocal = '<script type="text/javascript">
+		var now = new Date();
+		var heure = ("0"+now.getHours()  ).slice(-2);
+		var minute = ("0"+now.getMinutes()).slice(-2);
+		var seconde = ("0"+now.getSeconds()).slice(-2);
+		let timeLocal = heure + ":" + minute + ":" + seconde;
+		document.getElementById("HeureConnLoc").innerHTML = timeLocal; 
+		</script>';
+		return $timeLocal;
+	}
 ?>
