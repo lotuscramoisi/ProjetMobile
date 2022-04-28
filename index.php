@@ -169,7 +169,7 @@
             });
 
             //Regarde si les droits du navigateur permettent la géolocalisation  
-            //checkGeolocalisation();
+            checkGeolocalisation();
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
@@ -188,6 +188,10 @@
                 //             }
                 // 
                 ?>
+            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
+
+           
+
         });
         //Fin du document ready
 
@@ -195,12 +199,10 @@
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkGeolocalisation(){
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-                    document.getElementById(PermissionGranted).innerHTML = permissionStatus.onchange ;
+                    document.getElementById(PermissionGranted).innerHTML = permissionStatus.state ;
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
-                        document.getElementById("PermissionGranted").innerHTML = permissionStatus.state;
                     }
-                    
 
                     permissionStatus.onchange = function() {
                         if (permissionStatus.state === 'granted') {
