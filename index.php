@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <?php
@@ -172,10 +172,8 @@
             if (navigator.geolocation) {
                 $("#flexSwitchCheckDefault").prop("checked", true);
             }
-            navigator.permissions.query({
-                    name: 'geolocation'
-                })
-                .then(function(permissionStatus) {
+            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
+
                     console.log('geolocation permission state is ', permissionStatus.state);
 
                     permissionStatus.onchange = function() {
