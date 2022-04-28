@@ -108,7 +108,7 @@
                     });
             });
             
-            if(<?php echo isset($_SESSION['login']); ?>){
+            if(<?php echo isset($_SESSION['login']); ?> == 1){
                 //Enregistrement des données de session
                 $.ajax({
                     url: "saveinfo.php",
