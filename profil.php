@@ -43,7 +43,7 @@
                     //Affichage de chaque ligne des sessions récupérées
                     for (var r of result) {
                         affichageLigne(i, r.CONNEXIONTIME);
-                        affichageDonnee(i, "Username", r.USERNAME);
+                        affichageDonnee(i, "UsernameTest", r.USERNAME);
                         i++;
                     }
                 }
