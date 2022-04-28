@@ -283,17 +283,26 @@
 
         //géolocalisation
         function getLocation() {
-            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
-                //Si on a les droits affiche la maps
-                if (permissionStatus.state === 'granted') {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }else{
-                    //demande à l'utilisateur si on a pas les droits
-                    if (navigator.geolocation) {
+            //Si on nous donne l'autorisation explicite
+            if (checkbox.checked == true) {
+                //On regarde les vrais droits de la page
+                navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
+                    //Si on a les vrai droits, on affiche la maps
+                    if (permissionStatus.state === 'granted') {
                         navigator.geolocation.getCurrentPosition(showPosition);
+                    }else{
+                        //Si non, on demande à l'utilisateur de nous donner les droits
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        }
+                        else{
+                            
+                        }
                     }
-                }
-            });
+                });
+            }else{
+                showPositionLL(-27.125657, -109.357357);
+            }
         }
 
         function showPosition(position) {
