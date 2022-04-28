@@ -522,7 +522,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Langue du navigateur
-                                    <span class="badge badge-primary badge-pill" id="lang"><?php echo getNavigatorLang() ?></span>
+                                    <span class="badge badge-primary badge-pill"><?php echo getNavigatorLang() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     OS
