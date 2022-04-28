@@ -194,24 +194,30 @@
 
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
         function checkGeolocalisation(){
-            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-                if (permissionStatus.state === 'granted') {
-                    $("#flexSwitchCheckDefault").prop("checked", true);
-                    document.getElementById("PermissionGranted").innerHTML = "Autorisé";
-                } else if (permissionStatus.state === 'prompt') {
-                    document.getElementById("PermissionGranted").innerHTML = "En cours d'inviation";
-                    $("#flexSwitchCheckDefault").prop("checked", false);
-                }else{
-                    $("#flexSwitchCheckDefault").prop("checked", false);
-                    document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
-                }
+                navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
 
-                permissionStatus.onchange = function() {
+                    if (permissionStatus.state === 'granted') {
+                        $("#flexSwitchCheckDefault").prop("checked", true);
+                        document.getElementById("PermissionGranted").innerHTML = "Autorisé";
+                    } else if (permissionStatus.state === 'prompt') {
+                        document.getElementById("PermissionGranted").innerHTML = "En cours d'inviation";
+                    }else{
+                        $("#flexSwitchCheckDefault").prop("checked", false);
+                        document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
+                    }
 
-                };
-            });
-            console.log("Appelé");
-        }
+                    permissionStatus.onchange = function() {
+                        if (permissionStatus.state === 'granted') {
+                            $("#flexSwitchCheckDefault").prop("checked", true);
+                        } else if (permissionStatus.state === 'prompt') {
+                            console.log("Prompted ?");
+                        }else{
+                            $("#flexSwitchCheckDefault").prop("checked", false);
+                        }
+                    };
+                });
+                console.log("Appelé");
+            }
 
         // Fonction pour vérifier les données du formulaire de login
         function checkLoginForm(form) {
