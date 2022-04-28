@@ -333,7 +333,7 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
+        <a class="navbar-brand" href="index.php">WhatsmyinfoToast</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
