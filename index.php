@@ -150,7 +150,7 @@
                 var ecrit = JSON.parse(result);
                 document.getElementById("Continent").innerHTML = ecrit.continent;
                 document.getElementById("Pays").innerHTML = ecrit.country;
-				document.getElementById("Pays").innerHTML = ecrit.country_code;
+				document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
                 var flag = ecrit.flag.png;
                 document.getElementById("Drapeau").innerHTML =
                     "<img height='30px' width='40px' src=" + flag + ">";
