@@ -169,7 +169,7 @@
             });
 
             //Regarde si les droits du navigateur permettent la géolocalisation  
-            checkLoginForm();
+            checkGeolocalisation();
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
@@ -197,7 +197,7 @@
 
 
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
-        function checkLoginForm(){
+        function checkGeolocalisation(){
                 navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
                     document.getElementById("PermissionGranted").innerHTML = permissionStatus.onchange ;
                     if (permissionStatus.state === 'granted') {
