@@ -105,10 +105,11 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        savePersonalData()
+                        
                     });
             });
 
+            savePersonalData()
 
 
             // FIN AJAX FORMULAIRE LOGIN
