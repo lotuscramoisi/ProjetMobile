@@ -168,21 +168,22 @@
                 }
             });
 
-            //Regarde si les droits à la navigation sont données
-            if (navigator.geolocation) {
-                $("#flexSwitchCheckDefault").prop("checked", true);
-            }
+            //Regarde si les droits du navigateur permette la géolocalisation
             navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
 
                     document.getElementById("PermissionGranted").innerHTML = permissionStatus.onchange ;
 
+                    if (permissionStatus.state === 'granted') {
+                        $("#flexSwitchCheckDefault").prop("checked", true);
+                    }
+
                     permissionStatus.onchange = function() {
                         if (permissionStatus.state === 'granted') {
-                            console.log("Test Réussi1");
+                            $("#flexSwitchCheckDefault").prop("checked", true);
                         } else if (permissionStatus.state === 'prompt') {
                             console.log("Prompted ?");
                         }else{
-                            
+                            $("#flexSwitchCheckDefault").prop("checked", false);
                         }
                     };
                 });
