@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu">
+<html lang="fr">
 
 <head>
     <?php
@@ -8,7 +8,7 @@
     include 'connexiondb.php';
     include 'fonctionUser.php';
     // Connexion à la BDD en tant qu'admin
-    //$conn = connectDBasAdmin();
+    $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
 
