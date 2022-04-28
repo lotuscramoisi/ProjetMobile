@@ -202,13 +202,14 @@
                     
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
-                        document.getElementById(PermissionGranted).innerHTML = permissionStatus.state;
+                        document.getElementById(PermissionGranted).innerHTML = "value";
+                        
                     }
 
                     permissionStatus.onchange = function() {
                         if (permissionStatus.state === 'granted') {
                             $("#flexSwitchCheckDefault").prop("checked", true);
-                            document.getElementById(PermissionGranted).innerHTML = permissionStatus.state ;
+                            document.getElementById(PermissionGranted).innerHTML = "value";
                         } else if (permissionStatus.state === 'prompt') {
                             console.log("Prompted ?");
                         }else{
