@@ -139,9 +139,10 @@
         //     });
         // });
 
+        //Call à l'API qui nous fournit les positions via l'adresse IP
         $.ajax({
-            url: "ajax.php", //the page containing php script
-            type: "post", //request type,
+            url: "ajax.php", 
+            type: "post", 
             dataType: 'json',
             data: {
                 registration: "success"
@@ -168,10 +169,22 @@
             }
         });
 
-
+        //Regarde si les droits à la navigation sont données
         if (navigator.geolocation) {
             $("#flexSwitchCheckDefault").prop("checked", true);
         }
+
+        navigator.permissions.query({name:'geolocation'}).then(function(result) {
+        if (result.state === 'granted') {
+            document.getElementById("PermissionGranted").innerHTML = result + "cas 1";
+        } else if (result.state === 'prompt') {
+            document.getElementById("PermissionGranted").innerHTML = result +" cas 2 ";
+        }
+            document.getElementById("PermissionGranted").innerHTML = result +" cas 3 ";
+            //ne se passe rien si pas de permission
+        });
+
+
         //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         //Si l'utilisateur est connecté
 
@@ -562,6 +575,10 @@
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Nombre de points en Multi-Touch
                                     <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Permission
+                                    <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
                                 </li>
                             </div>
                         </div>
