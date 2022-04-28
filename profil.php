@@ -44,7 +44,11 @@
                     for (var r of result) {
                         keys = Object.keys(r);
                         affichageLigne(i, r.CONNEXIONTIME);
-                        affichageDonnee(i, keys[0], r.USERNAME);
+                        j = 0;
+                        for(var data of r){
+                            affichageDonnee(i, keys[j], data);
+                            j++;
+                        }
                         i++;
                     }
                 }
