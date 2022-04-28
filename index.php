@@ -175,9 +175,9 @@
             navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
 
                     console.log('geolocation permission state is ', permissionStatus.state);
-                    if (result.state === 'granted') {
+                    if (permissionStatus.state === 'granted') {
                         console.log("Test Réussi1");
-                    } else if (result.state === 'prompt') {
+                    } else if (permissionStatus.state === 'prompt') {
                         console.log("Test Réussi2");
                     }
                     console.log("Raté?");
