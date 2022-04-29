@@ -224,4 +224,8 @@
 			return "Ordinateur";
 		}
 	}
+	
+	function getCacheSize(){
+		return var_dump(realpath_cache_size());
+	}
 ?>

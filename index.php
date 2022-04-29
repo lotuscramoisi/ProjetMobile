@@ -619,6 +619,10 @@
                                     Nombre de points en Multi-Touch
                                     <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Taille du cache utilisé
+                                    <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
