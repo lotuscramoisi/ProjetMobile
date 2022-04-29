@@ -188,4 +188,40 @@
 		</script>';
 		return $timeLocal;
 	}
+	
+	function getDevice(){
+		$device = $_SERVER['HTTP_USER_AGENT'];
+		if (preg_match('/iphone/i',$ua))
+		{
+			return "IPhone";
+		}
+		elseif(preg_match('/android/i',$ua))
+		{
+			return "Androïd";
+		}
+		elseif(preg_match('/blackberry/i',$ua))
+		{
+			return "BlackBerry";
+		}
+		elseif(preg_match('/blackberry/i',$ua))
+		{
+			return "Symbian";
+		}
+		elseif(preg_match('/ipad/i',$ua))
+		{
+			return "IPad";
+		}
+		elseif(preg_match('/ipad/i',$ua))
+		{
+			return "IPod";
+		}
+		elseif(preg_match('/phone/i',$ua))
+		{
+			return "Téléphone";
+		}
+		else
+		{
+			return "Ordinateur";
+		}
+	}
 ?>
