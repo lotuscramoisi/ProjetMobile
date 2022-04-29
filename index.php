@@ -148,7 +148,7 @@
                 },
                 success: function(result) {
                     var ecrit = JSON.parse(result);
-                    document.getElementById("Continent").innerHTML = ecrit.continent;
+                    document.getElementById("Continent").innerHTML = ecrit.continent + " (" + ecrit.continent_code + ")";
                     document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
                     document.getElementById("Pays").innerHTML = ecrit.country;
                     document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
