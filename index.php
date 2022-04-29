@@ -505,6 +505,10 @@
                         <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+									Type d'appareil
+                                    <span class="badge badge-primary badge-pill"><?php echo getDevice() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Navigateur
                                     <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
