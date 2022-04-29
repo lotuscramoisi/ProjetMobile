@@ -53,6 +53,7 @@
             //Suppression d'une session lors du click sur le bouton Delete
             $('.btn btn_danger').click(function(){
                 $(this).parent().remove();
+                $( "#myAccordion" ).accordion( "refresh" );
             })
         });
         //Fin du document ready
