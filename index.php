@@ -373,10 +373,6 @@
 
                 // get file contents
                 const fileData = await fileHandle.getFile();
-                document.getElementById("ca").checked = false;
-            }
-            else{
-
             }
         }
 
