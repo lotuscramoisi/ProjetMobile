@@ -175,9 +175,11 @@
             .then(result => {
             if (result.state === 'denied') {
                 console.log('Permission to use accelerometer sensor is denied.');
+            }else{
+                console.log('Permission');
+                // Use the sensor.
+                document.getElementById("acceleromtre").checked = true;
             }
-            console.log('Permissio.');
-            // Use the sensor.
             });
 
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
@@ -481,12 +483,12 @@
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation </label>
                     </div>
                     <div class="form-check form-switch ml-5">
-                        <input class="form-check-input genial" type="checkbox" role="switch" disabled>
+                        <input class="form-check-input genial" type="checkbox" role="switch" id="acceleromtre" disabled>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Accéléromètre </label>
                     </div>
                     <div class="form-check form-switch ml-5">
-                        <input class="form-check-input genial" type="checkbox" role="switch" disabled>
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux </label>
+                        <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux</label>
                     </div>
                 </div>
             </div>
