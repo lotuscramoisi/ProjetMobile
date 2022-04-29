@@ -61,8 +61,8 @@
             function affichageLigne(index, dateSession){
                 $('<div class="accordion-item" id="session-'+ index +'"></div>').html(
                     '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
-                    '<button type="button" class="btn btn-danger">Delete</button>' + 
                     dateSession + 
+                    '<button type="button" class="btn btn-danger">Delete</button>' +
                     '</button>'
                 ).appendTo('#myAccordion');
             }
