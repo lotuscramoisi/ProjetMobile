@@ -73,7 +73,7 @@
                 //         }
                 //     }
                 // });
-                alert($(this).parent().html());
+                alert($(this).siblings().html());
                 //Suppression côté client
                 $(this).parent().remove();
             });
