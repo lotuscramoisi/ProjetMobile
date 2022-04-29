@@ -52,30 +52,52 @@
             });
 
             //Suppression d'une session lors du click sur le bouton Delete
-            $(".btn-danger").click(function(event){
-                alert("Click !");
+            $(".btn-danger").click(function(event) {
+                //Suppression côté serveur
+                // $.ajax({
+                //     url: "removeSession.php", //the page containing php script
+                //     type: "post", //request type,
+                //     dataType: 'json',
+                //     data: {
+                //         login: username,
+                //         sessiontime : $(this).parent().remove()
+                //     },
+                //     success: function(result) {
+                //         i = 0;
+                //         //Affichage de chaque ligne des sessions récupérées
+                //         for (var r of result) {
+                //             // keys = Object.keys(r);
+                //             affichageLigne(i, r.CONNEXIONTIME);
+                //             affichageDonnee(i, "Username", r.USERNAME);
+                //             i++;
+                //         }
+                //     }
+                // });
+                alert($(this).parent().html());
+                //Suppression côté client
                 $(this).parent().remove();
             });
         });
         //Fin du document ready
 
         //DEBUT : Fonction d'affichage d'une ligne de session
-            function affichageLigne(index, dateSession){
-                $('<div class="accordion-item" id="session-'+ index +'"></div>').html(
-                    '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
-                    dateSession + 
-                    '</button>' +
-                    '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>'
-                ).appendTo('#myAccordion');
-            }
-            function affichageDonnee(index, name, data){
-                $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
-                    '<li class="list-group-item d-flex justify-content-between align-items-center">' + 
-                    name + 
-                    '<span class="badge badge-primary badge-pill">' + data + '</span>'+
-                    '</li>'
-                ).appendTo('#session-' + index);
-            }
+        function affichageLigne(index, dateSession) {
+            $('<div class="accordion-item" id="session-' + index + '"></div>').html(
+                '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
+                dateSession +
+                '</button>' +
+                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>'
+            ).appendTo('#myAccordion');
+        }
+
+        function affichageDonnee(index, name, data) {
+            $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
+                '<li class="list-group-item d-flex justify-content-between align-items-center">' +
+                name +
+                '<span class="badge badge-primary badge-pill">' + data + '</span>' +
+                '</li>'
+            ).appendTo('#session-' + index);
+        }
         //FIN : Fonction d'affichage d'une ligne de session
     </script>
     <meta charset="UTF-8">
