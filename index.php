@@ -705,7 +705,7 @@
                     </iframe>
                 </div>
             </div>
-            <button type="button" class="Photo" id="Photo" onclick='takePhoto'>Click Me!</button>
+            <button type="button" class="Photo" id="Photo" onclick='takePhoto();'>Click Me!</button>
 
         </div>
         <!-- END Liste des informations -->
