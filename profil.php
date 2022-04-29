@@ -33,6 +33,7 @@
             // Récupération des sessions de l'utilisateur
             $.ajax({
                 url: "getSession.php", //the page containing php script
+                async: false,
                 type: "post", //request type,
                 dataType: 'json',
                 data: {
