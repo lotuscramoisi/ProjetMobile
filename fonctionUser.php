@@ -219,10 +219,6 @@
 		{
 			return "Téléphone";
 		}
-		elseif(preg_match('/kindle/i',$device))
-		{
-			return "Kindle";
-		}
 		else
 		{
 			return "Ordinateur";
