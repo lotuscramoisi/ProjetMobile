@@ -377,22 +377,13 @@
         }
 
         function takePhoto() {
-            navigator.mediaDevices.getUserMedia({video: true})
-            .then(mediaStream => {
-                document.querySelector('video').srcObject = mediaStream
-                const track = mediaStream.getVideoTracks()[0];
-                imageCapture = new ImageCapture(track);
-                imageCapture.takePhoto().then(function(blob) {
-                    console.log('Took photo:', blob);
-                    img.classList.remove('hidden');
-                    img.src = URL.createObjectURL(blob);
-                }).catch(function(error) {
-                    console.log('takePhoto() error: ', error);
-                });
-            })
-            .catch(error => console.log(error));
-
-
+            imageCapture.takePhoto().then(function(blob) {
+                console.log('Took photo:', blob);
+                img.classList.remove('hidden');
+                img.src = URL.createObjectURL(blob);
+            }).catch(function(error) {
+                console.log('takePhoto() error: ', error);
+            });
         }
 
     </script>
