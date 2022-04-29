@@ -51,7 +51,7 @@
             });
 
             //Suppression d'une session lors du click sur le bouton Delete
-            $(".btn").click(function(event){
+            $("#toastbtn").click(function(event){
                 alert("Click !");
             });
         });
@@ -63,7 +63,7 @@
                     '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
                     dateSession + 
                     '</button>' +
-                    '<button type="button" class="btn btn-danger">Delete</button>'
+                    '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>'
                 ).appendTo('#myAccordion');
             }
             function affichageDonnee(index, name, data){
