@@ -191,31 +191,31 @@
 	
 	function getDevice(){
 		$device = $_SERVER['HTTP_USER_AGENT'];
-		if (preg_match('/iphone/i',$ua))
+		if (preg_match('/iphone/i',$device))
 		{
 			return "IPhone";
 		}
-		elseif(preg_match('/android/i',$ua))
+		elseif(preg_match('/android/i',$device))
 		{
 			return "Androïd";
 		}
-		elseif(preg_match('/blackberry/i',$ua))
+		elseif(preg_match('/blackberry/i',$device))
 		{
 			return "BlackBerry";
 		}
-		elseif(preg_match('/blackberry/i',$ua))
+		elseif(preg_match('/blackberry/i',$device))
 		{
 			return "Symbian";
 		}
-		elseif(preg_match('/ipad/i',$ua))
+		elseif(preg_match('/ipad/i',$device))
 		{
 			return "IPad";
 		}
-		elseif(preg_match('/ipad/i',$ua))
+		elseif(preg_match('/ipad/i',$device))
 		{
 			return "IPod";
 		}
-		elseif(preg_match('/phone/i',$ua))
+		elseif(preg_match('/phone/i',$device))
 		{
 			return "Téléphone";
 		}
