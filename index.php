@@ -171,6 +171,15 @@
             //Regarde si les droits du navigateur permettent la géolocalisation  
             checkGeolocalisation();
 
+            navigator.permissions.query({ name: 'accelerometer' })
+            .then(result => {
+            if (result.state === 'denied') {
+                console.log('Permission to use accelerometer sensor is denied.');
+            }
+            console.log('Permissio.');
+            // Use the sensor.
+            });
+
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             // <?php
@@ -470,6 +479,14 @@
                     <div class="form-check form-switch ml-5">
                         <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Geolocation </label>
+                    </div>
+                    <div class="form-check form-switch ml-5">
+                        <input class="form-check-input genial" type="checkbox" role="switch" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Accéléromètre </label>
+                    </div>
+                    <div class="form-check form-switch ml-5">
+                        <input class="form-check-input genial" type="checkbox" role="switch" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux </label>
                     </div>
                 </div>
             </div>
