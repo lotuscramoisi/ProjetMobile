@@ -175,8 +175,8 @@
             .then(result => {
             if (result.state === 'denied') {
                 console.log('Permission to use accelerometer sensor is denied.');
-                return;
             }
+            console.log('Permissio.');
             // Use the sensor.
             });
 
