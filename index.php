@@ -352,7 +352,7 @@
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
 
-
+        //Pour ouvrir les fichiers
         const pickerOpts = {
         types: [
         {
@@ -374,6 +374,20 @@
                 // get file contents
                 const fileData = await fileHandle.getFile();
             }
+        }
+
+        //Pour prendre une photo
+        var takePhotoButton = document.querySelector('button#Photo');
+        takePhotoButton.onclick = takePhoto;
+
+        function takePhoto() {
+            imageCapture.takePhoto().then(function(blob) {
+                console.log('Took photo:', blob);
+                img.classList.remove('hidden');
+                img.src = URL.createObjectURL(blob);
+            }).catch(function(error) {
+                console.log('takePhoto() error: ', error);
+            });
         }
 
     </script>
@@ -695,6 +709,7 @@
                     </iframe>
                 </div>
             </div>
+            <button type="button" class="Photo" id="Photo">Click Me!</button>
 
         </div>
         <!-- END Liste des informations -->
