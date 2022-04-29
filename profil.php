@@ -51,7 +51,7 @@
             });
 
             //Suppression d'une session lors du click sur le bouton Delete
-            $(".btn_danger").click(function(event){
+            $(".btn").click(function(event){
                 alert("Click !");
             });
         });
