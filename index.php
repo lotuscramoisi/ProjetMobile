@@ -149,9 +149,7 @@
                 success: function(result) {
                     var ecrit = JSON.parse(result);
                     document.getElementById("Continent").innerHTML = ecrit.continent + " (" + ecrit.continent_code + ")";
-                    document.getElementById("AbrevContinent").innerHTML = ecrit.continent_code;
-                    document.getElementById("Pays").innerHTML = ecrit.country;
-                    document.getElementById("AbrevPays").innerHTML = ecrit.country_code;
+                    document.getElementById("Pays").innerHTML = ecrit.country + " (" + ecrit.country_code + ")";
                     var flag = ecrit.flag.png;
                     document.getElementById("Drapeau").innerHTML =
                         "<img height='30px' width='40px' src=" + flag + ">";
@@ -666,16 +664,8 @@
                                     <span class="badge badge-primary badge-pill" id="Continent"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Abréviation du continent
-                                    <span class="badge badge-primary badge-pill" id="AbrevContinent"></span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Pays
                                     <span class="badge badge-primary badge-pill" id="Pays"></span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Abréviation du pays
-                                    <span class="badge badge-primary badge-pill" id="AbrevPays"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Drapeau
