@@ -368,14 +368,15 @@
 
         async function getTheFile() {
             if (document.getElementById("ca").checked == true) {
-                document.getElementById("ca").checked = false;
-            }
-            else{
                 // open file picker
                 [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
                 // get file contents
                 const fileData = await fileHandle.getFile();
+                document.getElementById("ca").checked = false;
+            }
+            else{
+
             }
         }
 
