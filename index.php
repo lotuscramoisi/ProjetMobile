@@ -377,7 +377,7 @@
         }
 
         //Pour prendre une photo
-        var takePhotoButton = document.querySelector('button#Photo');
+        var takePhotoButton = document.getElementById("Photo");
         takePhotoButton.onclick = takePhoto;
 
         function takePhoto() {
