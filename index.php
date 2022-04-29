@@ -351,6 +351,29 @@
             }
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
+
+
+        const pickerOpts = {
+        types: [
+        {
+            description: 'Images',
+            accept: {
+            'image/*': ['.png', '.gif', '.jpeg', '.jpg']
+            }
+        },
+        ],
+        excludeAcceptAllOption: true,
+        multiple: false
+        };
+
+        async function getTheFile() {
+        // open file picker
+        [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+
+        // get file contents
+        const fileData = await fileHandle.getFile();
+        }
+
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -488,6 +511,10 @@
                     </div>
                     <div class="form-check form-switch ml-5">
                         <input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux</label>
+                    </div>
+                    <div class="form-check form-switch ml-5">
+                        <input class="form-check-input genial" type="checkbox" role="switch" id="ca" onchange='getTheFile();'>
                         <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux</label>
                     </div>
                 </div>
