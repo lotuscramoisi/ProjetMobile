@@ -62,8 +62,8 @@
                 $('<div class="accordion-item" id="session-'+ index +'"></div>').html(
                     '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
                     dateSession + 
-                    '<button type="button" class="btn btn-danger">Delete</button>' +
-                    '</button>'
+                    '</button>' +
+                    '<button type="button" class="btn btn-danger">Delete</button>'
                 ).appendTo('#myAccordion');
             }
             function affichageDonnee(index, name, data){
