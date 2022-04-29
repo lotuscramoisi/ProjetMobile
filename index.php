@@ -171,6 +171,15 @@
             //Regarde si les droits du navigateur permettent la géolocalisation  
             checkGeolocalisation();
 
+            navigator.permissions.query({ name: 'accelerometer' })
+            .then(result => {
+            if (result.state === 'denied') {
+                console.log('Permission to use accelerometer sensor is denied.');
+                return;
+            }
+            // Use the sensor.
+            });
+
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             // <?php
