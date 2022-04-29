@@ -52,7 +52,7 @@
             });
 
             //Suppression d'une session lors du click sur le bouton Delete
-            $("#toastbtn").click(function(event){
+            $(".btn-danger").click(function(event){
                 alert("Click !");
                 $(this).parent().remove();
             });
