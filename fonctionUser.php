@@ -224,4 +224,14 @@
 			return "Ordinateur";
 		}
 	}
+	
+	function getNavigatorStorage(){
+		$navStor = '<script type="text/javascript">
+				navigator.storage.estimate().then(function(estimate) {
+				document.getElementById("navStor").innerHTML =
+				(estimate.usage / estimate.quota).toFixed(2);
+				}); 
+		</script>';
+		return $navStor;
+	}
 ?>
