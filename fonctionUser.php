@@ -197,7 +197,7 @@
 		}
 		elseif(preg_match('/android/i',$device))
 		{
-			return "Androïd";
+			return "Android";
 		}
 		elseif(preg_match('/blackberry/i',$device))
 		{
