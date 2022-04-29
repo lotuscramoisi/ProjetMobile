@@ -54,26 +54,17 @@
             //Suppression d'une session lors du click sur le bouton Delete
             $(".btn-danger").click(function(event) {
                 //Suppression côté serveur
-                // $.ajax({
-                //     url: "removeSession.php", //the page containing php script
-                //     type: "post", //request type,
-                //     dataType: 'json',
-                //     data: {
-                //         login: username,
-                //         sessiontime : $(this).parent().remove()
-                //     },
-                //     success: function(result) {
-                //         i = 0;
-                //         //Affichage de chaque ligne des sessions récupérées
-                //         for (var r of result) {
-                //             // keys = Object.keys(r);
-                //             affichageLigne(i, r.CONNEXIONTIME);
-                //             affichageDonnee(i, "Username", r.USERNAME);
-                //             i++;
-                //         }
-                //     }
-                // });
-                alert($(this).siblings().html());
+                $.ajax({
+                    url: "removeSession.php", //the page containing php script
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        login: username,
+                        sessiontime : $(this).siblings().html()
+                    },
+                    success: function(result) {}
+                });
+                // alert($(this).siblings().html());
                 //Suppression côté client
                 $(this).parent().remove();
             });
