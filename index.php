@@ -367,11 +367,16 @@
         };
 
         async function getTheFile() {
-        // open file picker
-        [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+            if (document.getElementById("ca").checked == true) {
+                document.getElementById("ca").checked = false;
+            }
+            else{
+                // open file picker
+                [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
-        // get file contents
-        const fileData = await fileHandle.getFile();
+                // get file contents
+                const fileData = await fileHandle.getFile();
+            }
         }
 
     </script>
@@ -515,7 +520,7 @@
                     </div>
                     <div class="form-check form-switch ml-5">
                         <input class="form-check-input genial" type="checkbox" role="switch" id="ca" onchange='getTheFile();'>
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Affichage lumineux</label>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Allow File usage</label>
                     </div>
                 </div>
             </div>
