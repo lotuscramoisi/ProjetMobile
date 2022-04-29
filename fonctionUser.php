@@ -92,7 +92,7 @@
 	
 	function getResol(){
 		$resol='<script type="text/javascript">
-						document.write(""+screen.width+"*"+screen.height+" pixels");
+						document.write(""+screen.width+" X "+screen.height+" pixels");
 				</script>';
 		return $resol;
 	}
