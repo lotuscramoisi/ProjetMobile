@@ -226,6 +226,6 @@
 	}
 	
 	function getCacheSize(){
-		return var_dump(realpath_cache_size());
+		return intval(var_dump(realpath_cache_size()));
 	}
 ?>
