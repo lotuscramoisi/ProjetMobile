@@ -51,11 +51,9 @@
             });
 
             //Suppression d'une session lors du click sur le bouton Delete
-            $('.btn_danger').click(function(event){
+            $(".btn_danger").click(function(event){
                 alert("Click !");
-                $(this).parent().remove();
-                $( "#myAccordion" ).accordion( "refresh" );
-            })
+            });
         });
         //Fin du document ready
 
