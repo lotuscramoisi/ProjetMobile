@@ -44,7 +44,9 @@
                                 '<td>' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
-                                '</div></td>'
+                                '</div>' +
+                                '<button type="button" class="btn btn-danger">Delete</button>' +
+                                '</td>'
                             ).appendTo('#usertable');
                         }
                         //Affichage d'un user non admin
@@ -55,7 +57,9 @@
                                 '<td>' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
-                                '</div></td>'
+                                '</div>'+
+                                '<button type="button" class="btn btn-danger">Delete</button>' +
+                                '</td>'
                             ).appendTo('#usertable');
                         }
                     }
@@ -73,8 +77,8 @@
                     type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        // username : $(this).parent().parent().siblings().html(),
-                        // permission : $(this).is(':checked')
+                        username : $(this).parent().parent().siblings().html(),
+                        permission : $(this).is(':checked')
                     },
                     success: function(result) {}
                 });
@@ -114,6 +118,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Sign Up Date</th>
                 <th scope="col">Admin Rights</th>
+                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody id="usertable">
