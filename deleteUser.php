@@ -8,7 +8,7 @@ try {
     $username=test_input($_POST["username"]);
 
 
-    //DEBUT DELETE USER
+    //DEBUT DELETE SESSIONS (Nécessaire de les supprimer en premier car clé liée à la table USER)
     // Requête sql de recherche des sessions liées à l'username dans la DB
     $sql = "delete from SESSIONUSER where USERNAME like :login";
 
@@ -20,11 +20,10 @@ try {
 
     // Exécution de la requête
     $stmt->execute();
-
-    //FIN DELETE USER
+    //FIN DELETE SESSIONS
 
     //DEBUT DELETE USER
-    // Requête sql de recherche des sessions liées à l'username dans la DB
+    // Requête sql de recherche de l'username dans la DB
     $sql = "delete from USER where USERNAME like :login";
 
     // Préparation de la requête
