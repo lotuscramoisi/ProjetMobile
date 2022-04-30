@@ -65,7 +65,7 @@
 
             //Changement du droit d'administrateur quand click sur le switch
             $("#flexSwitchCheckDefault").click(function(event) {
-                alert("Pouloulou");
+                alert($(this).siblings().html());
             });
         });
         //Fin du document ready
