@@ -322,13 +322,16 @@
             if (login != "") {
                 $.ajax({
                     url: "saveinfo.php",
+                    async: false,
                     type: "post",
                     dataType: 'json',
                     data: {
                         username: login,
                         connexionTime : $("#HeureConnLoc").html()
                     },
-                    success: function(result) {}
+                    success: function(result) {
+                        alert(connexionTime);
+                    }
                 });
             }
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
