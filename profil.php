@@ -80,17 +80,16 @@
                 '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
                 dateSession +
                 '</button>' +
-                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>'
+                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>' + 
+                '<div id="collapsible-' + index + '" class="collapse"></div>'
             ).appendTo('#myAccordion');
         }
 
         function affichageDonnee(index, name, data) {
-            $('<div id="collapsible-' + index + '" class="collapse"></div>').html(
-                '<li class="list-group-item d-flex justify-content-between align-items-center">' +
+            $("#collapsible-" + index).append('<li class="list-group-item d-flex justify-content-between align-items-center">' +
                 name +
                 '<span class="badge badge-primary badge-pill">' + data + '</span>' +
-                '</li>'
-            ).appendTo('#session-' + index);
+                '</li>');
         }
         //FIN : Fonction d'affichage d'une ligne de session
     </script>
