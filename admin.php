@@ -25,7 +25,21 @@
     <!-- FIN IMPORT -->
     <script>
         $(document).ready(function() {
+            // Récupération de la liste des utilisateurs
+            $.ajax({
+                url: "getUserList.php", //the page containing php script
+                async: false,
+                type: "post", //request type,
+                dataType: 'json',
+                data: {},
+                success: function(result) {
 
+                    //Affichage de chaque ligne des utilisateurs récupérés
+                    for (var r of result) {
+
+                    }
+                }
+            });
         });
         //Fin du document ready
     </script>
@@ -43,6 +57,9 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
+                echo 'Profil';
+                echo '</button></a>';
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
@@ -50,8 +67,21 @@
             ?>
         </form>
     </nav>
-    
-    Page ADMIN
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Admin Rights</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flagada</td>
+                <td>Checked</td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
