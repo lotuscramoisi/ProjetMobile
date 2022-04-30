@@ -46,8 +46,9 @@
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
                                 '</div></td>'
                             ).appendTo('#usertable');
+                        } 
                         //Affichage d'un user non admin
-                        } else {
+                        else {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
                                 '<td>' + r.USERMAIL + '</td>' +
@@ -63,7 +64,7 @@
 
 
             //Changement du droit d'administrateur quand click sur le switch
-            $(".form-check-input genial").click(function(event) {
+            $("#flexSwitchCheckDefault").click(function(event) {
                 alert("Pouloulou");
             });
         });
