@@ -40,7 +40,7 @@
                             '<td>' + r.USERNAME + '</td>' +
                             '<td>' + r.USERMAIL + '</td>' +
                             '<td>' + r.SIGNUPDATE + '</td>' +
-                            '<td>' + r.ISADMIN + '</td>' 
+                            '<td><input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled></td>' 
                         ).appendTo('#usertable');
                     }
                 }
