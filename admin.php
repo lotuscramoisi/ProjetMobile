@@ -64,7 +64,7 @@
 
 
             //Changement du droit d'administrateur quand click sur le switch
-            $("#flexSwitchCheckDefault").click(function(event) {
+            $(".form-check-input").click(function(event) {
                 alert($(this).parent().parent().siblings().html());
                 $.ajax({
                     url: "setAdmin.php", //the page containing php script
