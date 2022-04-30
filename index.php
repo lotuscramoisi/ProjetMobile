@@ -108,9 +108,6 @@
                         
                     });
             });
-            savePersonalData()
-
-
             // FIN AJAX FORMULAIRE LOGIN
 
             //Appelle l'API pour obtenir les informations à partir d'une IPV4
@@ -182,7 +179,8 @@
             $("#Toast").click(function(event){
                 alert($("#HeureConnLoc").html());
             });
-            
+
+            savePersonalData();
         });
         //Fin du document ready
 
