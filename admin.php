@@ -47,7 +47,7 @@
                                 '</div></td>'
                             ).appendTo('#usertable');
                             if(r.ISADMIN == 1){
-                                $('#toggle-state-switch').bootstrapSwitch('state', true);
+                                $('#flexSwitchCheckDefault').bootstrapSwitch('state', true);
                             }
                         // //Affichage d'un user non admin
                         // } else {
