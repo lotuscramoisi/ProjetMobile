@@ -43,9 +43,12 @@
                                 '<td>' + r.USERMAIL + '</td>' +
                                 '<td>' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
-                                '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
+                                '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
                                 '</div></td>'
                             ).appendTo('#usertable');
+                            if(r.ISADMIN == 1){
+                                $('#toggle-state-switch').bootstrapSwitch('state', true);
+                            }
                         // //Affichage d'un user non admin
                         // } else {
                         //     $('<tr></tr>').html(
