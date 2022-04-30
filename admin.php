@@ -65,7 +65,7 @@
 
             //Changement du droit d'administrateur quand click sur le switch
             $("#flexSwitchCheckDefault").click(function(event) {
-                alert($(this).siblings().html());
+                alert($(this).parent().parent().siblings().html());
             });
         });
         //Fin du document ready
