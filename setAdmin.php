@@ -9,14 +9,14 @@ try {
     $permission = test_input($_POST["permission"]);
     //DEBUT UPDATE ADMIN
     // Requête sql de recherche des sessions liées à l'username dans la DB
-    $sql = "update USER set ISADMIN = 1 where USERNAME like :username";
+    $sql = "update USER set ISADMIN = :permission where USERNAME like :username";
 
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
 
     // Attribution des paramètres de la requête préparée
     $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
-    // $stmt->bindParam(':permission', 1, PDO::PARAM_INT);
+    $stmt->bindParam(':permission', true, PDO::PARAM_BOOL);
     // if($permission == "false"){
     //     $stmt->bindParam(':permission', 0, PDO::PARAM_INT);
     // }
