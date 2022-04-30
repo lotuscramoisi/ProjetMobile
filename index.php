@@ -179,26 +179,7 @@
                 document.getElementById("acceleromtre").checked = true;
             }
             });
-
-            //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-            //Si l'utilisateur est connecté
-            // <?php
-                //             if (isset($_SESSION['login'])) {
-
-                //                 echo "$.ajax({";
-                //                 echo  "url: \"saveinfo.php\", //the page containing php script";
-                //                 echo  "type: \"post\", //request type,";
-                //                 echo  "dataType: 'json',";
-                //                 echo  "data: {";
-                //                 echo  "username:  \"" . $_SESSION['login'] ."\"";
-                //                 echo  "},";
-                //                 echo  "success: function(result) {}";
-                //                 echo  "});";          
-                //             }
-                // 
-                ?>
-            //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
-
+            alert(document.getElementById("HeureConnLoc").html());
         });
         //Fin du document ready
 
