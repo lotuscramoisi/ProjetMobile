@@ -69,8 +69,6 @@
 
             //Changement du droit d'administrateur quand click sur le switch
             $(".form-check-input").click(function(event) {
-                alert($(this).parent().parent().siblings().html());
-                alert($(this).is(':checked'));
                 $.ajax({
                     url: "setAdmin.php", //the page containing php script
                     async: false,
@@ -86,7 +84,6 @@
 
             //Suppression d'un utilisateur
             $(".btn-danger").click(function(event) {
-                alert($(this).parent().siblings().html());
                 $.ajax({
                     url: "deleteUser.php", //the page containing php script
                     async: false,
