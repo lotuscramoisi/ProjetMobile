@@ -5,7 +5,7 @@ $conn = connectDBasAdmin();
 
 try {
     // Récupération des informations du formulaire + vérification de leur intégrité via test_input
-    $username=test_input($_POST["username"]);
+    $username=$_POST["username"];
 
     
     //DEBUT DELETE SESSION
