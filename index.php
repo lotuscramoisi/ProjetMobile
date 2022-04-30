@@ -327,11 +327,10 @@
                     dataType: 'json',
                     data: {
                         username: login,
-                        connexionTime : $("#HeureConn").html()
+                        connexionTime : $("#HeureConn").html(),
+                        deviceType : $("#deviceType").html()
                     },
-                    success: function(result) {
-                        alert(connexionTime);
-                    }
+                    success: function(result) {}
                 });
             }
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
