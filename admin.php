@@ -36,7 +36,12 @@
 
                     //Affichage de chaque ligne des utilisateurs récupérés
                     for (var r of result) {
-
+                        $('<tr></tr>').html(
+                            '<td>' + r.USERNAME + '</td>' +
+                            '<td>' + r.USERMAIL + '</td>' +
+                            '<td>' + r.SIGNUPDATE + '</td>' +
+                            '<td>' + r.ISADMIN + '</td>' 
+                        ).appendTo('#usertable');
                     }
                 }
             });
@@ -72,14 +77,12 @@
         <thead>
             <tr>
                 <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Sign Up Date</th>
                 <th scope="col">Admin Rights</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Flagada</td>
-                <td>Checked</td>
-            </tr>
+        <tbody id="usertable">
         </tbody>
     </table>
 
