@@ -64,7 +64,7 @@
 
             //Changement du droit d'administrateur quand click sur le switch
             $(".form-check-input genial").click(function(event) {
-                alert($(this).siblings().html());
+                alert("Pouloulou");
             });
         });
         //Fin du document ready
