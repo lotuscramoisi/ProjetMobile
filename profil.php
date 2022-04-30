@@ -49,6 +49,7 @@
                         affichageDonnee(i, "Type d'appareil", r.DEVICE);
                         affichageDonnee(i, "Navigateur", r.USERNAV);
                         affichageDonnee(i, "OS", r.USEROS);
+                        affichageDonnee(i, "Adresse IP", r.IPAdress);
                         i++;
                     }
                 }

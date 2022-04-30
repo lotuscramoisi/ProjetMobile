@@ -330,7 +330,8 @@
                         connexionTime : $("#HeureConn").html(),
                         deviceType : $("#deviceType").html(),
                         browserName : $('#browserName').html(),
-                        operatingSystem : $("#operatingSystemName").html()
+                        operatingSystem : $("#operatingSystemName").html(),
+                        IPAdress : $("#IPAdress").html()
                     },
                     success: function(result) {}
                 });
