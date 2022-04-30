@@ -40,7 +40,10 @@
                             '<td>' + r.USERNAME + '</td>' +
                             '<td>' + r.USERMAIL + '</td>' +
                             '<td>' + r.SIGNUPDATE + '</td>' +
-                            '<td><input type="checkbox" class="custom-control-input" id="customSwitches"></td>' 
+                            '<td> <div class="form-check form-switch ml-5">' +
+                            '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled>' +
+                            '<label class="form-check-label" for="flexSwitchCheckDefault">Geolocation </label>' +
+                            '</div></td>'
                         ).appendTo('#usertable');
                     }
                 }
