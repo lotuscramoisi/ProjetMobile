@@ -73,8 +73,8 @@
                     type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        username : $(this).parent().parent().siblings().html(),
-                        permission : $(this).is(':checked')
+                        // username : $(this).parent().parent().siblings().html(),
+                        // permission : $(this).is(':checked')
                     },
                     success: function(result) {}
                 });
