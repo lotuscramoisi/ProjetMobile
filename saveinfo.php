@@ -7,7 +7,7 @@ try {
     // Récupération des informations AJAX
     $username = $_POST["username"];
     $connexionTime = $_POST["connexionTime"];
-    $deviceType = $_POST["deviceType"];
+    $deviceType = $_POST["type"];
 
     //DEBUT AJOUT DONNEES SESSION
     // Requête sql d'ajout des données de session
