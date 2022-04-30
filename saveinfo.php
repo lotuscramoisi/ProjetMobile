@@ -18,7 +18,7 @@ try {
 
     // Attribution des paramètres de la requête préparée
     $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
-    $stmt->bindParam(':connexionTime', $connexionTime, PDO::PARAM_STR, 50);
+    //$stmt->bindParam(':connexionTime', $connexionTime, PDO::PARAM_STR, 50);
 
     // Exécution de la requête
     $stmt->execute();
