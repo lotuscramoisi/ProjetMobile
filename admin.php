@@ -37,7 +37,17 @@
                     //Affichage de chaque ligne des utilisateurs récupérés
                     for (var r of result) {
                         //Affichage d'un user admin
-                        // if (r.ISADMIN == 1) {
+                        if (r.ISADMIN == 1) {
+                            $('<tr></tr>').html(
+                                '<td>' + r.USERNAME + '</td>' +
+                                '<td>' + r.USERMAIL + '</td>' +
+                                '<td>' + r.SIGNUPDATE + '</td>' +
+                                '<td> <div class="form-check form-switch ml-5">' +
+                                '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
+                                '</div></td>'
+                            ).appendTo('#usertable');
+                        //Affichage d'un user non admin
+                        } else {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
                                 '<td>' + r.USERMAIL + '</td>' +
@@ -46,20 +56,7 @@
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
                                 '</div></td>'
                             ).appendTo('#usertable');
-                            if(r.ISADMIN == 1){
-                                $('#flexSwitchCheckDefault').bootstrapSwitch('state', true);
-                            }
-                        // //Affichage d'un user non admin
-                        // } else {
-                        //     $('<tr></tr>').html(
-                        //         '<td>' + r.USERNAME + '</td>' +
-                        //         '<td>' + r.USERMAIL + '</td>' +
-                        //         '<td>' + r.SIGNUPDATE + '</td>' +
-                        //         '<td> <div class="form-check form-switch ml-5">' +
-                        //         '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
-                        //         '</div></td>'
-                        //     ).appendTo('#usertable');
-                        // }
+                        }
                     }
                 }
             });
