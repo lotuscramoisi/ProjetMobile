@@ -46,7 +46,7 @@
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
                                 '</div></td>'
                             ).appendTo('#usertable');
-                        } 
+                        }
                         //Affichage d'un user non admin
                         else {
                             $('<tr></tr>').html(
@@ -66,6 +66,16 @@
             //Changement du droit d'administrateur quand click sur le switch
             $("#flexSwitchCheckDefault").click(function(event) {
                 alert($(this).parent().parent().siblings().html());
+                $.ajax({
+                    url: "setAdmin.php", //the page containing php script
+                    async: false,
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        username : $(this).parent().parent().siblings().html()
+                    },
+                    success: function(result) {}
+                });
             });
         });
         //Fin du document ready
