@@ -25,7 +25,7 @@
     <!-- FIN IMPORT -->
     <script>
         $(document).ready(function() {
-            // Récupération de la liste des utilisateurs
+            // Récupération de la liste des utilisateurs + affichage de celle ci
             $.ajax({
                 url: "getUserList.php", //the page containing php script
                 async: false,
@@ -36,6 +36,7 @@
 
                     //Affichage de chaque ligne des utilisateurs récupérés
                     for (var r of result) {
+                        //Affichage d'un user admin
                         if (r.ISADMIN == 1) {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
@@ -45,6 +46,7 @@
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
                                 '</div></td>'
                             ).appendTo('#usertable');
+                        //Affichage d'un user non admin
                         } else {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
@@ -57,6 +59,12 @@
                         }
                     }
                 }
+            });
+
+
+            //Changement du droit d'administrateur quand click sur le switch
+            $(".form-check-input genial").click(function(event) {
+                alert($(this).siblings().html());
             });
         });
         //Fin du document ready
