@@ -138,6 +138,7 @@
             //Call à l'API qui nous fournit les positions via l'adresse IP
             $.ajax({
                 url: "ajax.php",
+                async: false,
                 type: "post",
                 dataType: 'json',
                 data: {
