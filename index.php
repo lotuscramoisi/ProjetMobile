@@ -95,7 +95,7 @@
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
-                        
+
                         location.reload();
                     })
                     .fail(function(error) {
@@ -105,7 +105,7 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        
+
                     });
             });
             // FIN AJAX FORMULAIRE LOGIN
@@ -167,17 +167,19 @@
             //Regarde si les droits du navigateur permettent la géolocalisation  
             checkGeolocalisation();
 
-            navigator.permissions.query({ name: 'accelerometer' })
-            .then(result => {
-            if (result.state === 'denied') {
-                console.log('Permission to use accelerometer sensor is denied.');
-            }else{
-                console.log('Permission');
-                // Use the sensor.
-                document.getElementById("acceleromtre").checked = true;
-            }
-            });
-            $("#Toast").click(function(event){
+            navigator.permissions.query({
+                    name: 'accelerometer'
+                })
+                .then(result => {
+                    if (result.state === 'denied') {
+                        console.log('Permission to use accelerometer sensor is denied.');
+                    } else {
+                        console.log('Permission');
+                        // Use the sensor.
+                        document.getElementById("acceleromtre").checked = true;
+                    }
+                });
+            $("#Toast").click(function(event) {
                 alert($("#IPAdress").html());
             });
 
@@ -187,16 +189,18 @@
 
 
         //Fonction qui regarde si les droits du navigateur permettent la géolocalisation
-        function checkGeolocalisation(){
-            navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {
-                
+        function checkGeolocalisation() {
+            navigator.permissions.query({
+                name: 'geolocation'
+            }).then(function(permissionStatus) {
+
                 if (permissionStatus.state === 'granted') {
                     $("#flexSwitchCheckDefault").prop("checked", true);
                     document.getElementById("PermissionGranted").innerHTML = "Autorisé";
-                }else if(permissionStatus.state === 'prompt') {
+                } else if (permissionStatus.state === 'prompt') {
                     $("#flexSwitchCheckDefault").prop("checked", false);
                     document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
-                }else{
+                } else {
                     $("#flexSwitchCheckDefault").prop("checked", false);
                     document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                 }
@@ -205,10 +209,10 @@
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
                         document.getElementById("PermissionGranted").innerHTML = "Autorisé";
-                    }else if(permissionStatus.state === 'prompt') {
+                    } else if (permissionStatus.state === 'prompt') {
                         $("#flexSwitchCheckDefault").prop("checked", false);
                         document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
-                    }else{
+                    } else {
                         $("#flexSwitchCheckDefault").prop("checked", false);
                         document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                     }
@@ -278,18 +282,20 @@
             //Si on nous donne l'autorisation explicite
             if (document.getElementById("flexSwitchCheckDefault").checked == true) {
                 //On regarde les vrais droits de la page
-                navigator.permissions.query({name: 'geolocation'}).then(function(permissionStatus) {     
+                navigator.permissions.query({
+                    name: 'geolocation'
+                }).then(function(permissionStatus) {
                     //Si on a les vrai droits, on affiche la maps
                     if (permissionStatus.state === 'granted') {
                         console.log("Droit");
                         navigator.geolocation.getCurrentPosition(showPosition);
-                    }else{
+                    } else {
                         console.log("Pas de droit");
                         //Si non, on demande à l'utilisateur de nous donner les droits
                         navigator.geolocation.getCurrentPosition(showPosition);
                     }
                 });
-            }else{
+            } else {
                 showPositionLL(-27.125657, -109.357357);
             }
         }
@@ -318,7 +324,7 @@
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             var login = "<?php echo $_SESSION['login'] ?>";
-            
+
             if (login != "") {
                 $.ajax({
                     url: "saveinfo.php",
@@ -327,11 +333,11 @@
                     dataType: 'json',
                     data: {
                         username: login,
-                        connexionTime : $("#HeureConn").html(),
-                        deviceType : $("#deviceType").html(),
-                        browserName : $('#browserName').html(),
-                        operatingSystem : $("#operatingSystemName").html(),
-                        IPAdress : $("#IPAdress").html()
+                        connexionTime: $("#HeureConn").html(),
+                        deviceType: $("#deviceType").html(),
+                        browserName: $('#browserName').html(),
+                        operatingSystem: $("#operatingSystemName").html(),
+                        IPAdress: $("#IPAdress").html()
                     },
                     success: function(result) {}
                 });
@@ -341,16 +347,14 @@
 
         //Pour ouvrir les fichiers
         const pickerOpts = {
-        types: [
-        {
-            description: 'Images',
-            accept: {
-            'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-            }
-        },
-        ],
-        excludeAcceptAllOption: true,
-        multiple: false
+            types: [{
+                description: 'Images',
+                accept: {
+                    'image/*': ['.png', '.gif', '.jpeg', '.jpg']
+                }
+            }, ],
+            excludeAcceptAllOption: true,
+            multiple: false
         };
 
         async function getTheFile() {
@@ -372,7 +376,6 @@
                 console.log('takePhoto() error: ', error);
             });
         }
-
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -391,6 +394,11 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                if (isset($_SESSION['admin'])) {
+                    echo '<a href=""><button type="button" class="btn btn-outline-success">';
+                    echo 'Admin';
+                    echo '</button></a>';
+                }
                 echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Profil';
                 echo '</button></a>';
@@ -550,8 +558,8 @@
                         <div class="accordion-item">
                             <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion">Système</button>
                             <div id="collapsible-1" class="collapse">
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-									Type d'appareil
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Type d'appareil
                                     <span class="badge badge-primary badge-pill" id="deviceType"><?php echo getDevice() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -606,7 +614,7 @@
                                     Nombre de points en Multi-Touch
                                     <span class="badge badge-primary badge-pill" id="MultiTouch"><?php echo getMultiTouch() ?></span>
                                 </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Taille du cache utilisée
                                     <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
                                 </li>

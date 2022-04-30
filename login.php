@@ -49,6 +49,9 @@ try {
             // on enregistre les paramètres de notre visiteur comme variables de session
             $_SESSION['login'] = $userinfos['USERNAME'];
             $_SESSION['pwd'] = $pwdhash;
+            if($userinfos['ISADMIN'] == 1){
+                $_SESSION['admin'] = 1;
+            }
             //header ("Location: $_SERVER[HTTP_REFERER]");
             echo "Connexion réussie PHP";
         }
