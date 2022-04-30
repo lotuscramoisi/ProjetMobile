@@ -178,10 +178,10 @@
             }
             });
             $("#Toast").click(function(event){
-                alert($("#HeureConn").html());
+                alert($("#deviceType").html());
             });
 
-            savePersonalData($("#HeureConn").html());
+            savePersonalData();
         });
         //Fin du document ready
 
@@ -314,7 +314,7 @@
             x.src = str;
         }
 
-        function savePersonalData(heureConn) {
+        function savePersonalData() {
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             var login = "<?php echo $_SESSION['login'] ?>";
@@ -327,7 +327,8 @@
                     dataType: 'json',
                     data: {
                         username: login,
-                        connexionTime : heureConn
+                        connexionTime : $("#HeureConn").html(),
+                        type : $("#deviceType").html()
                     },
                     success: function(result) {
                         alert("success");
@@ -550,7 +551,7 @@
                             <div id="collapsible-1" class="collapse">
 								<li class="list-group-item d-flex justify-content-between align-items-center">
 									Type d'appareil
-                                    <span class="badge badge-primary badge-pill"><?php echo getDevice() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="deviceType"><?php echo getDevice() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Navigateur
