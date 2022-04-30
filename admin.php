@@ -67,16 +67,17 @@
             $(".form-check-input").click(function(event) {
                 alert($(this).parent().parent().siblings().html());
                 alert($(this).is(':checked'));
-                // $.ajax({
-                //     url: "setAdmin.php", //the page containing php script
-                //     async: false,
-                //     type: "post", //request type,
-                //     dataType: 'json',
-                //     data: {
-                //         username : $(this).parent().parent().siblings().html()
-                //     },
-                //     success: function(result) {}
-                // });
+                $.ajax({
+                    url: "setAdmin.php", //the page containing php script
+                    async: false,
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        username : $(this).parent().parent().siblings().html(),
+                        permission : $(this).is(':checked')
+                    },
+                    success: function(result) {}
+                });
             });
         });
         //Fin du document ready
