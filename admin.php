@@ -86,7 +86,7 @@
 
             //Suppression d'un utilisateur
             $(".btn-danger").click(function(event) {
-                alert($(this).parent().parent().siblings().html());
+                alert($(this).parent().siblings().html());
                 // $.ajax({
                 //     url: "setAdmin.php", //the page containing php script
                 //     async: false,
