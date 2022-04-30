@@ -178,7 +178,7 @@
             }
             });
             $("#Toast").click(function(event){
-                alert($("#HeureConn").html());
+                alert($("#ScreenResolution").html());
             });
 
             savePersonalData();
