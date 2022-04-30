@@ -179,7 +179,10 @@
                 document.getElementById("acceleromtre").checked = true;
             }
             });
-            alert(document.getElementById("HeureConnLoc").html());
+            $("#Toast").click(function(event){
+                alert(document.getElementById("HeureConnLoc").html());
+            });
+            
         });
         //Fin du document ready
 
@@ -681,6 +684,7 @@
                 </div>
             </div>
             <button type="button" class="Photo" id="Photo" onclick='takePhoto();'>Click Me!</button>
+            <button type="button" class="Photo" id="Toast">Click Me Bis!</button>
 
         </div>
         <!-- END Liste des informations -->
