@@ -108,6 +108,11 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                if (isset($_SESSION['admin'])) {
+                    echo '<a href=""><button type="button" class="btn btn-outline-success">';
+                    echo 'Admin';
+                    echo '</button></a>';
+                }
                 echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Logout';
                 echo '</button></a>';
