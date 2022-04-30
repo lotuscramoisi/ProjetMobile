@@ -180,7 +180,7 @@
             }
             });
             $("#Toast").click(function(event){
-                alert("toast");
+                alert($("#HeureConnLoc").html());
             });
             
         });
