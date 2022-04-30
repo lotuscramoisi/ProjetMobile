@@ -16,12 +16,13 @@ try {
 
     // Attribution des paramètres de la requête préparée
     $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
-    if($permission == "false"){
-        $stmt->bindParam(':permission', 0, PDO::PARAM_INT);
-    }
-    else{
-        $stmt->bindParam(':permission', 1, PDO::PARAM_INT);
-    }
+    $stmt->bindParam(':permission', 1, PDO::PARAM_INT);
+    // if($permission == "false"){
+    //     $stmt->bindParam(':permission', 0, PDO::PARAM_INT);
+    // }
+    // else{
+    //     $stmt->bindParam(':permission', 1, PDO::PARAM_INT);
+    // }
 
     // Exécution de la requête
     $stmt->execute();
