@@ -103,7 +103,7 @@
 <body>
     <!-- Nav Bar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
+        <a class="navbar-brand" href="index.php">WhatsmyinfoOPS</a>
         <form class="form-inline">
             <!-- Button trigger modal -->
             <?php
