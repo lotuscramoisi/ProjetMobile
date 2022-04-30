@@ -83,6 +83,22 @@
                     success: function(result) {}
                 });
             });
+
+            //Suppression d'un utilisateur
+            $(".btn-danger").click(function(event) {
+                alert($(this).parent().parent().siblings().html());
+                // $.ajax({
+                //     url: "setAdmin.php", //the page containing php script
+                //     async: false,
+                //     type: "post", //request type,
+                //     dataType: 'json',
+                //     data: {
+                //         username : $(this).parent().parent().siblings().html(),
+                //         permission : $(this).is(':checked')
+                //     },
+                //     success: function(result) {}
+                // });
+            });
         });
         //Fin du document ready
     </script>
@@ -118,7 +134,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Sign Up Date</th>
                 <th scope="col">Admin Rights</th>
-                <th scope="col">Delete</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody id="usertable">
