@@ -87,17 +87,17 @@
             //Suppression d'un utilisateur
             $(".btn-danger").click(function(event) {
                 alert($(this).parent().siblings().html());
-                // $.ajax({
-                //     url: "setAdmin.php", //the page containing php script
-                //     async: false,
-                //     type: "post", //request type,
-                //     dataType: 'json',
-                //     data: {
-                //         username : $(this).parent().parent().siblings().html(),
-                //         permission : $(this).is(':checked')
-                //     },
-                //     success: function(result) {}
-                // });
+                $.ajax({
+                    url: "deleteUser.php", //the page containing php script
+                    async: false,
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {
+                        username : $(this).parent().siblings().html()
+                    },
+                    success: function(result) {}
+                });
+                $(this).parent().parent().remove();
             });
         });
         //Fin du document ready
