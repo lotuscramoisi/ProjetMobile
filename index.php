@@ -327,8 +327,7 @@
                     dataType: 'json',
                     data: {
                         username: login,
-                        connexionTime : $("#HeureConn").html(),
-                        type : $("#deviceType").html()
+                        connexionTime : $("#HeureConn").html()
                     },
                     success: function(result) {
                         alert("success");
