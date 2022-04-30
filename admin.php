@@ -41,7 +41,7 @@
                             '<td>' + r.USERMAIL + '</td>' +
                             '<td>' + r.SIGNUPDATE + '</td>' +
                             '<td> <div class="form-check form-switch ml-5">' +
-                            '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">'+
+                            '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>'+
                             '</div></td>'
                         ).appendTo('#usertable');
                     }
