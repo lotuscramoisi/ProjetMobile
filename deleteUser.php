@@ -10,13 +10,13 @@ try {
     
     //DEBUT DELETE SESSION
     // Requête sql de recherche des sessions liées à l'username dans la DB
-    $sql = "delete from USER where USERNAME like :username";
+    $sql = "delete from USER where USERNAME like :login";
 
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
 
     // Attribution des paramètres de la requête préparée
-    $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
+    $stmt->bindParam(':login', $username, PDO::PARAM_STR, 25);
 
     // Exécution de la requête
     $stmt->execute();
