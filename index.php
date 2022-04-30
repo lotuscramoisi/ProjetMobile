@@ -329,7 +329,9 @@
                         username: login,
                         connexionTime : $("#HeureConn").html(),
                         deviceType : $("#deviceType").html(),
-                        browserName : $('#browserName').html()
+                        browserName : $('#browserName').html(),
+                        operatingSystem : $("#operatingSystemName").html(),
+                        screenResolution : $("#ScreenResolution").html()
                     },
                     success: function(result) {}
                 });
@@ -566,7 +568,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     OS
-                                    <span class="badge badge-primary badge-pill"><?php echo getOS() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="operatingSystemName"><?php echo getOS() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Fuseau horaire
@@ -582,7 +584,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Résolution de l'écran
-                                    <span class="badge badge-primary badge-pill" id="RésolutionEcran"><?php echo getResol() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="ScreenResolution"><?php echo getResol() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Profondeur de couleur d'écran
