@@ -11,12 +11,11 @@ try {
     $deviceType = $_POST["deviceType"];
     $browserName = $_POST["browserName"];
     $operatingSystem = $_POST["operatingSystem"];
-    $screenResolution = $_POST["screenResolution"];
     //FIN    Récupération des informations AJAX
 
     //DEBUT AJOUT DONNEES SESSION
     // Requête sql d'ajout des données de session
-    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME, DEVICE, USERNAV, USEROS, SCREENRES) VALUES (:username, :connexionTime, :deviceType, :browserName, :operatingSystem, :screenResolution)";
+    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME, DEVICE, USERNAV, USEROS) VALUES (:username, :connexionTime, :deviceType, :browserName, :operatingSystem)";
 
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
@@ -27,7 +26,6 @@ try {
     $stmt->bindParam(':deviceType', $deviceType, PDO::PARAM_STR, 15);
     $stmt->bindParam(':browserName', $browserName, PDO::PARAM_STR, 50);
     $stmt->bindParam(':operatingSystem', $operatingSystem, PDO::PARAM_STR, 50);
-    $stmt->bindParam(':screenResolution', $screenResolution, PDO::PARAM_STR, 25);
     // Exécution de la requête
     $stmt->execute();
     //FIN AJOUT DONNEES SESSION
