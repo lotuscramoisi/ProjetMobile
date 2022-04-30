@@ -326,7 +326,8 @@
                     type: "post",
                     dataType: 'json',
                     data: {
-                        username: login
+                        username: login,
+                        connexionTime : $("#HeureConnLoc").html()
                     },
                     success: function(result) {}
                 });

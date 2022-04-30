@@ -6,16 +6,18 @@ $conn = connectDBasAdmin();
 try {
     // Récupération des informations AJAX
     $username = $_POST["username"];
+    $connexionTime = $_POST["connexionTime"];
 
     //DEBUT AJOUT DONNEES SESSION
     // Requête sql d'ajout des données de session
-    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME) VALUES (:username, now())";
+    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME) VALUES (:username, :connexionTime)";
 
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
 
     // Attribution des paramètres de la requête préparée
     $stmt->bindParam(':username', $username, PDO::PARAM_STR, 25);
+    $stmt->bindParam(':connexionTime', $connexionTime, PDO::PARAM_STR, 50);
 
     // Exécution de la requête
     $stmt->execute();
