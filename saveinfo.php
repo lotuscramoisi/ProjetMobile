@@ -6,7 +6,7 @@ $conn = connectDBasAdmin();
 try {
     // Récupération des informations AJAX
     $username = $_POST["username"];
-    $connexionTime = $_POST["connexionTime"];
+    $connexionTime = date("Y-m-d ") . $_POST["connexionTime"];
     $deviceType = $_POST["deviceType"];
 
     //DEBUT AJOUT DONNEES SESSION
