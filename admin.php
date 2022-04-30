@@ -66,16 +66,17 @@
             //Changement du droit d'administrateur quand click sur le switch
             $(".form-check-input").click(function(event) {
                 alert($(this).parent().parent().siblings().html());
-                $.ajax({
-                    url: "setAdmin.php", //the page containing php script
-                    async: false,
-                    type: "post", //request type,
-                    dataType: 'json',
-                    data: {
-                        username : $(this).parent().parent().siblings().html()
-                    },
-                    success: function(result) {}
-                });
+                alert($(this).is(':checked'));
+                // $.ajax({
+                //     url: "setAdmin.php", //the page containing php script
+                //     async: false,
+                //     type: "post", //request type,
+                //     dataType: 'json',
+                //     data: {
+                //         username : $(this).parent().parent().siblings().html()
+                //     },
+                //     success: function(result) {}
+                // });
             });
         });
         //Fin du document ready
