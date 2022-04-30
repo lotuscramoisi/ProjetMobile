@@ -80,8 +80,8 @@
             $('<div class="accordion-item" id="session-' + index + '"></div>').html(
                 '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
                 dateSession +
-                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>' + 
                 '</button>' +
+                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>' + 
                 '<div id="collapsible-' + index + '" class="collapse"></div>'
             ).appendTo('#myAccordion');
         }
@@ -103,7 +103,7 @@
 <body>
     <!-- Nav Bar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">WhatsmyinfoOPS</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <form class="form-inline">
             <!-- Button trigger modal -->
             <?php
