@@ -181,7 +181,7 @@
                 alert($("#HeureConn").html());
             });
 
-            savePersonalData();
+            savePersonalData($("#HeureConn").html());
         });
         //Fin du document ready
 
@@ -314,7 +314,7 @@
             x.src = str;
         }
 
-        function savePersonalData() {
+        function savePersonalData(heureConn) {
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             var login = "<?php echo $_SESSION['login'] ?>";
@@ -327,7 +327,7 @@
                     dataType: 'json',
                     data: {
                         username: login,
-                        connexionTime : $("#HeureConn").html()
+                        connexionTime : heureConn
                     },
                     success: function(result) {
                         alert("success");
