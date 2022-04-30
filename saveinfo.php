@@ -11,7 +11,7 @@ try {
 
     //DEBUT AJOUT DONNEES SESSION
     // Requête sql d'ajout des données de session
-    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME, DEVICE) VALUES (:username, :connexionTime, :deviceType)";
+    $sql = "INSERT INTO SESSIONUSER(USERNAME, CONNEXIONTIME, DEVICE) VALUES (:username, now(), :deviceType)";
 
     // Préparation de la requête
     $stmt = $conn->prepare($sql);
