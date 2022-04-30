@@ -178,7 +178,7 @@
             }
             });
             $("#Toast").click(function(event){
-                alert($("#ScreenResolution").html());
+                alert($("#IPAdress").html());
             });
 
             savePersonalData();
@@ -620,7 +620,7 @@
                             <div id="collapsible-2" class="collapse">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Adresse IP
-                                    <span class="badge badge-primary badge-pill"><?php echo getUserIP() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="IPAdress"><?php echo getUserIP() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Proxy
