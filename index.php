@@ -328,7 +328,8 @@
                     data: {
                         username: login,
                         connexionTime : $("#HeureConn").html(),
-                        deviceType : $("#deviceType").html()
+                        deviceType : $("#deviceType").html(),
+                        browserName : $('#browserName').html()
                     },
                     success: function(result) {}
                 });
@@ -553,7 +554,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Navigateur
-                                    <span class="badge badge-primary badge-pill"><?php echo getBrowser() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="browserName"><?php echo getBrowser() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Fabricant du navigateur
