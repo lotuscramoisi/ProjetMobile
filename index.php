@@ -330,7 +330,7 @@
                         connexionTime : $("#HeureConnLoc").html()
                     },
                     success: function(result) {
-                        alert(connexionTime);
+                        alert("success");
                     }
                 });
             }
