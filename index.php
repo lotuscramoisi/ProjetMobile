@@ -397,8 +397,17 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
@@ -426,9 +435,7 @@
                 echo '</button>';
             }
             ?>
-            </li>
         </form>
-        </ul>
     <div>
     </nav>
     <!-- Modal Sign In -->
