@@ -254,14 +254,13 @@
 	}
 	
 	function getPub(){
-		$pub = '<script type="text/javascript">
-				if (window.isAdblock()) {
-					document.getElementById("Pub").innerHTML = "Activé";
+		$pub = '<script>var isAdBlockActive=true;</script>
+				<script src="ads.js"></script>
+				<script>
+				if (isAdBlockActive) {
+				  console.log("The visitor is blocking ads");
 				}
-				else {
-					document.getElementById("Pub").innerHTML = "Désactivé";
-				}
-		</script>';
+				</script>';
 		return $pub;
 	}
 ?>
