@@ -183,7 +183,10 @@
                 alert($("#IPAdress").html());
             });
 
-            savePersonalData();
+            $("#btnlogin").click(function(event) {
+                savePersonalData();
+            });
+            
         });
         //Fin du document ready
 
@@ -325,23 +328,23 @@
             //Si l'utilisateur est connecté
             var login = "<?php echo $_SESSION['login'] ?>";
 
-            if (login != "") {
-                $.ajax({
-                    url: "saveinfo.php",
-                    async: false,
-                    type: "post",
-                    dataType: 'json',
-                    data: {
-                        username: login,
-                        connexionTime: $("#HeureConn").html(),
-                        deviceType: $("#deviceType").html(),
-                        browserName: $('#browserName').html(),
-                        operatingSystem: $("#operatingSystemName").html(),
-                        IPAdress: $("#IPAdress").html()
-                    },
-                    success: function(result) {}
-                });
-            }
+
+            $.ajax({
+                url: "saveinfo.php",
+                async: false,
+                type: "post",
+                dataType: 'json',
+                data: {
+                    username: login,
+                    connexionTime: $("#HeureConn").html(),
+                    deviceType: $("#deviceType").html(),
+                    browserName: $('#browserName').html(),
+                    operatingSystem: $("#operatingSystemName").html(),
+                    IPAdress: $("#IPAdress").html()
+                },
+                success: function(result) {}
+            });
+
             //FIN   : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
         }
 
@@ -386,45 +389,45 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBareExpendId" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBareExpendId" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    
-    <div class="collapse navbar-collapse" id="navBareExpendId">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>                        
+
+        <div class="collapse navbar-collapse" id="navBareExpendId">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                if (isset($_SESSION['admin'])) {?>
+                if (isset($_SESSION['admin'])) { ?>
                     <a href="admin.php"><button type="button" class="btn btn-outline-success">
-                    Admin
-                    </button></a>
-               <?php }?>
+                            Admin
+                        </button></a>
+                <?php } ?>
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
-                Autorisation
+                    Autorisation
                 </button>
                 <a href="profil.php"><button type="button" class="btn btn-outline-success">
-                Profil
-                </button></a>
+                        Profil
+                    </button></a>
                 <a href="logout.php"><button type="button" class="btn btn-outline-success">
-                Logout
-                </button></a>
-           <?php } else {?>
+                        Logout
+                    </button></a>
+            <?php } else { ?>
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
-                Autorisation
+                    Autorisation
                 </button>
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#signIn">
-                Sign in
+                    Sign in
                 </button>
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#register">
-                Register
+                    Register
                 </button>
-           <?php }
+            <?php }
             ?>
-    <div>
+            <div>
     </nav>
     <!-- Modal Sign In -->
     <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -624,15 +627,15 @@
                                     Taille du cache utilisée
                                     <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
                                 </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Bloqueur de publicités
                                     <span class="badge badge-primary badge-pill" id="Pub"><?php echo getPub() ?></span>
                                 </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Bloqueur de cookies
                                     <span class="badge badge-primary badge-pill" id="Cookies"><?php echo getCookies() ?></span>
                                 </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Visualiseur PDF du navigateur
                                     <span class="badge badge-primary badge-pill" id="PdfViewer"><?php echo getPdfViewer() ?></span>
                                 </li>
