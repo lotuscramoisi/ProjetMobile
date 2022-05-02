@@ -394,9 +394,7 @@
     </button>
 
     <div class="navbar-collapse collapse" id="navbarScroll" style>    
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
-        </ul>
+     
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
