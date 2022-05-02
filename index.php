@@ -95,7 +95,7 @@
                         $('<font color="red"></font>').html(
                             data
                         ).appendTo('#alertMessageLogin');
-
+                        savePersonalData();
                         location.reload();
                     })
                     .fail(function(error) {
@@ -105,7 +105,6 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        
                     });
             });
             // FIN AJAX FORMULAIRE LOGIN
@@ -182,7 +181,7 @@
             $("#Toast").click(function(event) {
                 alert($("#IPAdress").html());
             });
-            savePersonalData();
+            
         });
         //Fin du document ready
 
