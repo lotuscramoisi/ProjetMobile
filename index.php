@@ -386,10 +386,15 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-        </ul>
+    <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarScroll" style>    
+     
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
@@ -418,6 +423,7 @@
             }
             ?>
         </form>
+    <div>
     </nav>
     <!-- Modal Sign In -->
     <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -600,10 +606,6 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Niveau de batterie
                                     <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
-                                </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Temps restant de batterie
-                                    <span class="badge badge-primary badge-pill" id="TempsBatterieRest"><?php echo getTimeBattery() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Mémoire RAM disponible
