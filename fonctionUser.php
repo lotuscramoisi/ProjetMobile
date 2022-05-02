@@ -254,7 +254,7 @@
 	
 	function getPub(){
 		$pub = '
-				<script src="./ads.js"></script>
+				<script src="ads.js"></script>
 				<script>
 					if(window.canRunAds === undefined)
 					{
