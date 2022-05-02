@@ -93,10 +93,10 @@
                     .done(function(data) {
                         $('#signIn').modal('show');
                         $('#alertMessageLogin').empty();
-                        $('<font color="red"></font>').html(
-                            data
-                        ).appendTo('#alertMessageLogin');
-                        savePersonalData();
+                        // $('<font color="red"></font>').html(
+                        //     data
+                        // ).appendTo('#alertMessageLogin');
+                        savePersonalData(data);
                         location.reload();
                     })
                     .fail(function(error) {
@@ -319,10 +319,10 @@
             x.src = str;
         }
 
-        function savePersonalData() {
+        function savePersonalData(login) {
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
-            var login = "<?php echo $_SESSION['login'] ?>";
+            
 
 
             $.ajax({
