@@ -237,7 +237,7 @@
 					document.getElementById("TempsBatterieRest").innerHTML = "En charge";
 				}
 				else {
-					document.getElementById("TempsBatterieRest").innerHTML = time; 
+					document.getElementById("TempsBatterieRest").innerHTML = battery.dischargingTime; 
 				}
 			})
 		</script>';
