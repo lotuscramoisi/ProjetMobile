@@ -11,8 +11,8 @@
     $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
-    
-    header ('location: index.php');
+    if(!isset($_SESSION['admin']))
+        header ('location: index.php');
     
     ?>
     <!-- DEBUT IMPORT -->
