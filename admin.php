@@ -12,7 +12,7 @@
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
     
-    header('HTTP/1.0 403 Forbidden');
+    header ('location: index.php');
     
     ?>
     <!-- DEBUT IMPORT -->
