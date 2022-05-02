@@ -105,7 +105,7 @@
                     .always(function() {
                         // Reenable the inputs
                         $inputs.prop("disabled", false);
-                        savePersonalData();
+                        
                     });
             });
             // FIN AJAX FORMULAIRE LOGIN
@@ -182,7 +182,7 @@
             $("#Toast").click(function(event) {
                 alert($("#IPAdress").html());
             });
-            
+            savePersonalData();
         });
         //Fin du document ready
 
