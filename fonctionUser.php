@@ -255,8 +255,7 @@
 	function getPub(){
 		$pub = '<script>
 					let fakeAd = document.createElement("div");
-					fakeAd.className = 
-					"textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox"
+					fakeAd.className = "textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox"
 						  
 					fakeAd.style.height = "1px"
 						
@@ -264,13 +263,12 @@
 						
 					let x_width = fakeAd.offsetHeight;
 					let msg = document.getElementById("msg")
-						
-						  
+							  
 					if(x_width){
-						console.log("No AdBlocker Detected")
+						document.getElementById("Pub").innerHTML = "Désactivé";
 					}
 					else{
-						console.log("AdBlocker detected")
+						document.getElementById("Pub").innerHTML = "Activé";
 					}
 				</script>';
 		return $pub;
