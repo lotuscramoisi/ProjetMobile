@@ -627,6 +627,10 @@
                                     Bloqueur de cookies
                                     <span class="badge badge-primary badge-pill" id="Cookies"><?php echo getCookies() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Visualiseur PDF du navigateur
+                                    <span class="badge badge-primary badge-pill" id="VisuPDF"><?php echo getVisuPDF() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>

@@ -240,4 +240,28 @@
 		</script>';
 		return $cook;
 	}
+	
+	function getCookies(){
+		$cook = '<script type="text/javascript">
+				if (!navigator.cookieEnabled) {
+					document.getElementById("Cookies").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("Cookies").innerHTML = "Désactivé";
+				}
+		</script>';
+		return $cook;
+	}
+	
+	function getVisuPDF(){
+		$pdf = '<script type="text/javascript">
+				if (!navigator.pdfViewerEnabled) {
+					document.getElementById("VisuPDF").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("VisuPDF").innerHTML = "Désactivé";
+				}
+		</script>';
+		return $pdf;
+	}
 ?>
