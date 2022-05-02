@@ -398,31 +398,31 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                if (isset($_SESSION['admin'])) {
-                    echo '<a href="admin.php"><button type="button" class="btn btn-outline-success">';
-                    echo 'Admin';
-                    echo '</button></a>';
-                }
-                echo '<button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">';
-                echo 'Autorisation';
-                echo '</button>';
-                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
-                echo 'Profil';
-                echo '</button></a>';
-                echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
-                echo 'Logout';
-                echo '</button></a>';
-            } else {
-                echo '<button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">';
-                echo 'Autorisation';
-                echo '</button>';
-                echo '<button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#signIn">';
-                echo 'Sign in';
-                echo '</button>';
-                echo '<button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#register">';
-                echo 'Register';
-                echo '</button>';
-            }
+                if (isset($_SESSION['admin'])) {?>
+                    <a href="admin.php"><button type="button" class="btn btn-outline-success">
+                    Admin
+                    </button></a>
+               <?php }?>
+                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
+                Autorisation
+                </button>
+                <a href="profil.php"><button type="button" class="btn btn-outline-success">
+                Profil
+                </button></a>
+                <a href="logout.php"><button type="button" class="btn btn-outline-success">
+                Logout
+                </button></a>
+           <?php } else {?>
+                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
+                Autorisation
+                </button>
+                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#signIn">
+                Sign in
+                </button>
+                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#register">
+                Register
+                </button>
+           <?php }
             ?>
     <div>
     </nav>
