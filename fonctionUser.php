@@ -254,15 +254,15 @@
 	}
 	
 	function getPub(){
-		$pub = '<script>var isAdBlockActive=true;</script>
-				<script src="ads.js"></script>
-				<script>
-				if (isAdBlockActive) {
-					document.getElementById("Pub").innerHTML = "Activé";
-				}
-				else {
-					document.getElementById("Pub").innerHTML = "Désactivé";
-				}
+		$pub = '<script>
+					if( window.canRunAds === undefined )
+					{
+						document.getElementById("Pub").innerHTML = "Activé";
+					}
+					else
+					{
+						document.getElementById("Pub").innerHTML = "Désactivé";
+					}
 				</script>';
 		return $pub;
 	}
