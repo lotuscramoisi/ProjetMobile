@@ -228,4 +228,16 @@
 	function getCacheSize(){
 		return round(realpath_cache_size() / 100) . " Kb";
 	}
+	
+	function getCookies(){
+		$cook = '<script type="text/javascript">
+				if (!navigator.cookieEnabled) {
+					document.getElementById("Cookies").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("Cookies").innerHTML = "Désactivé";
+				}
+		</script>';
+		return $cook;
+	}
 ?>
