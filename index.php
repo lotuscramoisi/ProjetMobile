@@ -403,6 +403,9 @@
                     echo 'Admin';
                     echo '</button></a>';
                 }
+                echo '<button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">';
+                echo 'Autorisation';
+                echo '</button>';
                 echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
                 echo 'Profil';
                 echo '</button></a>';
