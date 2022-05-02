@@ -244,10 +244,10 @@
 	function getPdfViewer(){
 		$pdf = '<script type="text/javascript">
 				if (!navigator.pdfViewerEnabled) {
-					document.getElementById("PdfViewer").innerHTML = "Activé";
+					document.getElementById("PdfViewer").innerHTML = "Désactivé";
 				}
 				else {
-					document.getElementById("PdfViewer").innerHTML = "Désactivé";
+					document.getElementById("PdfViewer").innerHTML = "Activé";
 				}
 		</script>';
 		return $pdf;
