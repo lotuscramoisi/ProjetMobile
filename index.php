@@ -386,10 +386,10 @@
 <body class="d-flex flex-column h-100">
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#targetId" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="targetId">
+    <div class="navbar-collapse collapse" id="navbarScroll" style>
         <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
