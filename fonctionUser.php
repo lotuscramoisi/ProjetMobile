@@ -240,4 +240,16 @@
 		</script>';
 		return $cook;
 	}
+	
+	function getPdfViewer(){
+		$pdf = '<script type="text/javascript">
+				if (!navigator.pdfViewerEnabled) {
+					document.getElementById("PdfViewer").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("PdfViewer").innerHTML = "Désactivé";
+				}
+		</script>';
+		return $pdf;
+	}
 ?>
