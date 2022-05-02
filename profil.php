@@ -78,10 +78,10 @@
         //DEBUT : Fonction d'affichage d'une ligne de session
         function affichageLigne(index, dateSession) {
             $('<div class="accordion-item" id="session-' + index + '"></div>').html(
-                '<button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
+                '<div><button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapsible-' + index + '" data-parent="#myAccordion">' +
                 dateSession +
                 '</button>' +
-                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button>' + 
+                '<button type="button" class="btn btn-danger" id="toastbtn">Delete</button></div>' + 
                 '<div id="collapsible-' + index + '" class="collapse"></div>'
             ).appendTo('#myAccordion');
         }
