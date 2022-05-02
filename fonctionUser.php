@@ -232,7 +232,7 @@
 	function getTimeBattery(){
 		$timeB = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
-				consol.log(battery.chargingTime);
+				console.log(battery.chargingTime);
 			})
 		</script>';
 		return $timeB;
