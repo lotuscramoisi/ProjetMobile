@@ -397,6 +397,8 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
@@ -424,7 +426,9 @@
                 echo '</button>';
             }
             ?>
+            </li>
         </form>
+        </ul>
     <div>
     </nav>
     <!-- Modal Sign In -->
