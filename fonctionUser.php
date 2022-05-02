@@ -228,4 +228,19 @@
 	function getCacheSize(){
 		return round(realpath_cache_size() / 100) . " Kb";
 	}
+	
+	function getTimeBattery(){
+		$timeB = '<script type="text/javascript">
+				navigator.getBattery().then(battery => {
+				const time = battery.dischargingTime;
+				if(time == "Infinity") {
+					document.getElementById("TempsBatterieRest").innerHTML = "En charge";
+				}
+				else {
+					document.getElementById("TempsBatterieRest").innerHTML = battery.dischargingTime; 
+				}
+			})
+		</script>';
+		return $timeB;
+	}
 ?>
