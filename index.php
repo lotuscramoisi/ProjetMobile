@@ -393,8 +393,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse" id="navbarScroll" style>    
-     
+    <div class="navbar-collapse collapse" id="navbarScroll">    
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+        </ul>
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
@@ -622,6 +624,10 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Taille du cache utilisée
                                     <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Bloqueur de cookies
+                                    <span class="badge badge-primary badge-pill" id="Cookies"><?php echo getCookies() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
