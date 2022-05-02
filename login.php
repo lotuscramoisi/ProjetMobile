@@ -53,7 +53,7 @@ try {
                 $_SESSION['admin'] = 1;
             }
             //header ("Location: $_SERVER[HTTP_REFERER]");
-            echo "Connexion réussie PHP";
+            echo $userinfos['USERNAME'];
         }
         else{
             echo "Password incorrect PHP";
