@@ -623,6 +623,10 @@
                                     <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Bloqueur de publicitées
+                                    <span class="badge badge-primary badge-pill" id="Pub"><?php echo getPub() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Bloqueur de cookies
                                     <span class="badge badge-primary badge-pill" id="Cookies"><?php echo getCookies() ?></span>
                                 </li>

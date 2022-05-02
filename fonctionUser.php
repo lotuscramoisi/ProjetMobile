@@ -252,4 +252,16 @@
 		</script>';
 		return $pdf;
 	}
+	
+	function getPub(){
+		$pub = '<script type="text/javascript">
+				if (isAdblock()) {
+					document.getElementById("Pub").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("Pub").innerHTML = "Désactivé";
+				}
+		</script>';
+		return $pub;
+	}
 ?>
