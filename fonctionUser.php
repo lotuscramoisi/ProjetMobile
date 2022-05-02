@@ -232,10 +232,10 @@
 	function getCookies(){
 		$cook = '<script type="text/javascript">
 				if (!navigator.cookieEnabled) {
-					document.getElementById("Vendor").innerHTML = "Activé";
+					document.getElementById("Cookies").innerHTML = "Activé";
 				}
 				else {
-					document.getElementById("Vendor").innerHTML = "Désactivé";
+					document.getElementById("Cookies").innerHTML = "Désactivé";
 				}
 		</script>';
 		return $cook;
