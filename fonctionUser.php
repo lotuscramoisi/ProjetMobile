@@ -255,7 +255,8 @@
 	
 	function getPub(){
 		$pub = '<script>
-					if( window.canRunAds === undefined )
+				<script src="./ads.js"></script>
+					if(window.canRunAds === undefined)
 					{
 						document.getElementById("Pub").innerHTML = "Activé";
 					}
