@@ -255,7 +255,7 @@
 	
 	function getPub(){
 		$pub = '<script type="text/javascript">
-				if (isAdblock()) {
+				if (window.isAdblock()) {
 					document.getElementById("Pub").innerHTML = "Activé";
 				}
 				else {
