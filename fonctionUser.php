@@ -258,7 +258,10 @@
 				<script src="ads.js"></script>
 				<script>
 				if (isAdBlockActive) {
-				  console.log("The visitor is blocking ads");
+					document.getElementById("Pub").innerHTML = "Activé";
+				}
+				else {
+					document.getElementById("Pub").innerHTML = "Désactivé";
 				}
 				</script>';
 		return $pub;
