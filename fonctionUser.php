@@ -1,5 +1,4 @@
 <?php
-
     function getUserIP(){
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //IP from internet
@@ -254,8 +253,10 @@
 	}
 	
 	function getPub(){
-		$pub = '<script>
-					if( window.canRunAds === undefined )
+		$pub = '
+				<script src="./ads.js"></script>
+				<script>
+					if(window.canRunAds === undefined)
 					{
 						document.getElementById("Pub").innerHTML = "Activé";
 					}
