@@ -394,8 +394,10 @@
 
     
     <div class="collapse navbar-collapse" id="navBareExpendId">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>  
-        <form class="form-inline d-flex">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul> 
+        <ul class="navbar-nav"> 
+            <li class="nav-item">
+                       
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
@@ -422,7 +424,8 @@
                 echo '</button>';
             }
             ?>
-        </form>
+        </li>
+        </ul>
     <div>
     </nav>
     <!-- Modal Sign In -->
