@@ -393,8 +393,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse" id="navbarScroll" style>    
-     
+    <div class="navbar-collapse collapse" id="navbarScroll">    
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+        </ul>
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
