@@ -230,24 +230,24 @@
 	
 	function getCookies(){
 		$cook = '<script type="text/javascript">
-				if (!navigator.cookieEnabled) {
-					document.getElementById("Cookies").innerHTML = "Activé";
-				}
-				else {
-					document.getElementById("Cookies").innerHTML = "Désactivé";
-				}
+					if (!navigator.cookieEnabled) {
+						document.getElementById("Cookies").innerHTML = "Activé";
+					}
+					else {
+						document.getElementById("Cookies").innerHTML = "Désactivé";
+					}
 		</script>';
 		return $cook;
 	}
 	
 	function getPdfViewer(){
 		$pdf = '<script type="text/javascript">
-				if (!navigator.pdfViewerEnabled) {
-					document.getElementById("PdfViewer").innerHTML = "Désactivé";
-				}
-				else {
-					document.getElementById("PdfViewer").innerHTML = "Activé";
-				}
+					if (!navigator.pdfViewerEnabled) {
+						document.getElementById("PdfViewer").innerHTML = "Désactivé";
+					}
+					else {
+						document.getElementById("PdfViewer").innerHTML = "Activé";
+					}
 		</script>';
 		return $pdf;
 	}
