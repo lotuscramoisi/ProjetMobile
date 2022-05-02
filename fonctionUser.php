@@ -232,7 +232,7 @@
 	function getTimeBattery(){
 		$timeB = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
-				let time = battery.dischargingTime;
+				const time = battery.dischargingTime;
 				if(time == "Infinity") {
 					document.getElementById("TempsBatterieRest").innerHTML = "En charge";
 				}
