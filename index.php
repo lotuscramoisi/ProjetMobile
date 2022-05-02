@@ -389,10 +389,11 @@
 
     <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
 
-    <div>    
+     
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
         </ul>
+    <div>   
         <form class="form-inline d-flex">
             <!-- Button trigger modal -->
             <?php
