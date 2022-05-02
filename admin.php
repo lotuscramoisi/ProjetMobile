@@ -11,7 +11,7 @@
     $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
-    if(!isset($_SESSION['admin'])){
+    if($_SESSION['admin'] == 1){
         header('HTTP/1.0 403 Forbidden');
     }
     ?>
