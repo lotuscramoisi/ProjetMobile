@@ -606,10 +606,6 @@
                                     Niveau de batterie
                                     <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                                 </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Temps restant de batterie
-                                    <span class="badge badge-primary badge-pill" id="TempsBatterieRest"><?php echo getTimeBattery() ?></span>
-                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Mémoire RAM disponible
                                     <span class="badge badge-primary badge-pill" id="Memoire"><?php echo getMemory() ?></span>
