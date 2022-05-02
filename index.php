@@ -394,10 +394,7 @@
 
     
     <div class="collapse navbar-collapse" id="navBareExpendId">
-    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul> 
-        <ul class="navbar-nav"> 
-            <li class="nav-item">
-                       
+    <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>                        
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
@@ -424,8 +421,6 @@
                 echo '</button>';
             }
             ?>
-        </li>
-        </ul>
     <div>
     </nav>
     <!-- Modal Sign In -->
