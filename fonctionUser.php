@@ -233,7 +233,12 @@
 		$timeB = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
 				let time = battery.dischargingTime;
-				document.getElementById("TempsBatterieRest").innerHTML = time; 
+				if(time == "Infinity") {
+					document.getElementById("TempsBatterieRest").innerHTML = "En charge";
+				}
+				else {
+					document.getElementById("TempsBatterieRest").innerHTML = time; 
+				}
 			})
 		</script>';
 		return $timeB;
