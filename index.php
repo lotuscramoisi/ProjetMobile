@@ -621,6 +621,10 @@
                                     Taille du cache utilisée
                                     <span class="badge badge-primary badge-pill" id="TailleCache"><?php echo getCacheSize() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Bloqueur de cookies
+                                    <span class="badge badge-primary badge-pill"><?php echo getCookies() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
