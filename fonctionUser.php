@@ -285,6 +285,7 @@
 					}
 					document.getElementById("Orient").innerHTML = orient;
 					screen.orientation.onchange = function(e) {
+						orient = screen.orientation.type;
 						if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 						}
