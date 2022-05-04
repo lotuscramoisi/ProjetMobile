@@ -309,7 +309,7 @@
 					  document.getElementById("Gyro").innerHTML = alpha + " " + beta + " " + gamma; 
 					}
 					if(window.DeviceOrientationEvent) {
-					  window.addEventListener("deviceorientation", process, false);
+					  window.addEventListener("deviceorientation", process);
 					}
 				</script>';
 		return $gyro;
