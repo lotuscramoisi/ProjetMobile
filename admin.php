@@ -99,8 +99,22 @@
                 });
                 $(this).parent().parent().remove();
             });
+            //Debut récupération des stats
+            $.ajax({
+                    url: "getStats.php", //the page containing php script
+                    async: false,
+                    type: "post", //request type,
+                    dataType: 'json',
+                    data: {},
+                    success: function(result) {
+                        var donnees = JSON.parse(result);
+                        firstData = result.Total;
+                    }
+                });
+            //Fin récupération des stats
         });
         //Fin du document ready
+
 
         //DEBUT FONCTION POUR LES GRAPHIQUES PIECHART
         window.onload = function() {
@@ -108,7 +122,7 @@
             var chart = new CanvasJS.Chart("chartContainer", {
                 animationEnabled: true,
                 title: {
-                    text: "Desktop Search Engine Market Share - 2016"
+                    text: "OS utilisation by users"
                 },
                 data: [{
                     type: "pie",
@@ -116,8 +130,8 @@
                     yValueFormatString: "##0.00\"%\"",
                     indexLabel: "{label} {y}",
                     dataPoints: [{
-                            y: 79.45,
-                            label: "Google"
+                            y: firstData,
+                            label: "Windows"
                         },
                         {
                             y: 7.31,
@@ -193,8 +207,6 @@
             I agree
         </button>
     </div>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
