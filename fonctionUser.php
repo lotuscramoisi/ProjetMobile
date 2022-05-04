@@ -300,26 +300,6 @@
 		return $orient;
 	}
 	
-	function getGyro(){
-		$gyro = '<script>
-					function process(event) {
-					  var alpha = event.alpha;
-					  var beta = event.beta;
-					  var gamma = event.gamma;
-					  if(alpha != null && beta != null && gamma != null) {
-						document.getElementById("Gyro").innerHTML = "Z : " + alpha.toFixed(2) + " X : " + beta.toFixed(2) + " Y : " + gamma.toFixed(2); 
-					  }
-					  else {
-						document.getElementById("Gyro").innerHTML = "Technologie non disponible";
-					  }
-					}
-					if(window.DeviceOrientationEvent) {
-					  window.addEventListener("deviceorientation", process);
-					}
-				</script>';
-		return $gyro;
-	}
-	
 	function getGyroX(){
 		$gyroX = '<script>
 					function process(event) {
