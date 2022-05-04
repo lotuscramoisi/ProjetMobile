@@ -274,10 +274,10 @@
 		return $pub;
 	}
 	
-	function getGyroscope(){
-		$gyro = '<script>
-					document.getElementById("Gyro").innerHTML = screen.orientation.type;
+	function getOrient(){
+		$orient = '<script>
+					document.getElementById("Orient").innerHTML = screen.orientation.type;
 				</script>';
-		return $gyro;
+		return $orient;
 	}
 ?>

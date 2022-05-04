@@ -634,6 +634,10 @@
                                     Visualiseur PDF du navigateur
                                     <span class="badge badge-primary badge-pill" id="PdfViewer"><?php echo getPdfViewer() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Orientation de l'écran
+                                    <span class="badge badge-primary badge-pill" id="Orient"><?php echo getOrient() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
