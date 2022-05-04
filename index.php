@@ -33,6 +33,11 @@
     <!-- FIN IMPORT -->
     <script>
         var connexionTime;
+        var deviceType; 
+        var browserName;
+        var operatingSystemName;
+        var ipAdress;
+
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
@@ -109,33 +114,7 @@
                     });
             });
             // FIN AJAX FORMULAIRE LOGIN
-
-            //Appelle l'API pour obtenir les informations à partir d'une IPV4
-            // $('#CallApi').one('click', function(e) {
-            //     $.ajax({
-            //         url: "ajax.php", //the page containing php script
-            //         type: "post", //request type,
-            //         dataType: 'json',
-            //         data: {
-            //             registration: "success"
-            //         },
-            //         success: function(result) {
-            //             var ecrit = JSON.parse(result);
-            //             document.getElementById("Continent").innerHTML = ecrit.continent;
-            //             document.getElementById("Pays").innerHTML = ecrit.country;
-            //             var flag = ecrit.flag.png;
-            //             document.getElementById("Drapeau").innerHTML = "<img height='30px' width='40px' src=" + flag + ">";
-            //             document.getElementById("Ville").innerHTML = ecrit.region;
-            //             document.getElementById("Region").innerHTML = ecrit.city;
-            //             document.getElementById("CodePostal").innerHTML = ecrit.postal_code;
-            //             document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
-            // 			document.getElementById("TypeConnexion").innerHTML = ecrit.postal_code;
-            //             showPositionLL(ecrit.latitude, ecrit.longitude)
-            //         }
-            //     });
-            // });
-
-            //Call à l'API qui nous fournit les positions via l'adresse IP
+            
             $.ajax({
                 url: "ajax.php",
                 async: false,
@@ -250,6 +229,8 @@
             password1 = form.password.value;
             password2 = form.passwordverif.value;
 
+
+            var re = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/");
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
@@ -257,7 +238,7 @@
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
             }
-            else if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+            if(re.test(email)){
                 $("#alertMessageRegister").append("Invalide email");
             }
             // If username not entered
