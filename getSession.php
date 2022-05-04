@@ -1,35 +1,36 @@
 <?php
 include 'functions.php';
-include 'connexiondb.php'; 
+include 'connexiondb.php';
 $conn = connectDBasAdmin();
-// On définit un login et un mot de passe de base pour tester notre exemple. Cependant, vous pouvez très bien interroger votre base de données afin de savoir si le visiteur qui se connecte est bien membre de votre site
-try {
-    // Récupération des informations du formulaire + vérification de leur intégrité via test_input
-    $login=test_input($_POST["login"]);
+// Démarrage de la session pour créer les variables $_SESSION
+session_start();
+if (isset($_SESSION["login"])) {
+    // On définit un login et un mot de passe de base pour tester notre exemple. Cependant, vous pouvez très bien interroger votre base de données afin de savoir si le visiteur qui se connecte est bien membre de votre site
+    try {
+        // Récupération des informations du formulaire + vérification de leur intégrité via test_input
+        $login = test_input($_POST["login"]);
 
-    
-    //DEBUT RECHERCHE DES SESSIONS
-    // Requête sql de recherche des sessions liées à l'username dans la DB
-    $sql = "select * from SESSIONUSER where USERNAME like :login";
 
-    // Préparation de la requête
-    $stmt = $conn->prepare($sql);
+        //DEBUT RECHERCHE DES SESSIONS
+        // Requête sql de recherche des sessions liées à l'username dans la DB
+        $sql = "select * from SESSIONUSER where USERNAME like :login";
 
-    // Attribution des paramètres de la requête préparée
-    $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
+        // Préparation de la requête
+        $stmt = $conn->prepare($sql);
 
-    // Exécution de la requête
-    $stmt->execute();
+        // Attribution des paramètres de la requête préparée
+        $stmt->bindParam(':login', $login, PDO::PARAM_STR, 25);
 
-    $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Exécution de la requête
+        $stmt->execute();
 
-    echo utf8_encode(json_encode($rs));
+        $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    //FIN RECHERCHE DES SESSIONS
-    
+        echo utf8_encode(json_encode($rs));
+
+        //FIN RECHERCHE DES SESSIONS
+
+    } catch (PDOException $e) {
+        echo "Connection failed PHP";
+    }
 }
-    
-catch(PDOException $e) {
-   echo "Connection failed PHP";
-}
-?>
