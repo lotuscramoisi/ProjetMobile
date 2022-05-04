@@ -119,8 +119,7 @@
 				else{
 					b+=" sur batterie"
 				} 
-				
-				document.write(""+b);
+				document.getElementById("Batterie").innerHTML = b;
 			})
 		</script>';
 		return $b;
