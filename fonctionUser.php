@@ -302,14 +302,14 @@
 	
 	function getGyro(){
 		$gyro = '<script>
-					if(window.DeviceOrientationEvent) {
-					  window.addEventListener("deviceorientation", process, false);
-					}
 					function process(event) {
 					  var alpha = event.alpha;
 					  var beta = event.beta;
 					  var gamma = event.gamma;
 					  document.getElementById("Gyro").innerHTML = alpha + " " + beta + " " + gamma; 
+					}
+					if(window.DeviceOrientationEvent) {
+					  window.addEventListener("deviceorientation", process, false);
 					}
 				</script>';
 		return $gyro;
