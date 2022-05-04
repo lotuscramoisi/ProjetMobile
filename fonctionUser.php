@@ -306,7 +306,12 @@
 					  var alpha = event.alpha;
 					  var beta = event.beta;
 					  var gamma = event.gamma;
-					  document.getElementById("Gyro").innerHTML = alpha.toFixed(2) + " " + beta.toFixed(2) + " " + gamma.toFixed(2); 
+					  if(alpha != null && beta != null && gamma != null) {
+						document.getElementById("Gyro").innerHTML = alpha.toFixed(2) + " " + beta.toFixed(2) + " " + gamma.toFixed(2); 
+					  }
+					  else {
+						document.getElementById("Gyro").innerHTML = "Technologie non disponible";
+					  }
 					}
 					if(window.DeviceOrientationEvent) {
 					  window.addEventListener("deviceorientation", process);
