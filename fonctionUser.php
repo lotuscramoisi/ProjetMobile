@@ -276,7 +276,7 @@
 	
 	function getGyroscope(){
 		$gyro = '<script>
-					document.getElementById("Gyro").innerHTML = ScreenOrientation.type;
+					document.getElementById("Gyro").innerHTML = screen.orientation.type;
 				</script>';
 		return $gyro;
 	}
