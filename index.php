@@ -40,7 +40,7 @@
 
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
-
+            <?php echo getBattery() ?>
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
@@ -574,7 +574,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Niveau de batterie
-                                    <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="Batterie"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Mémoire RAM disponible
