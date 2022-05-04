@@ -277,22 +277,24 @@
 	function getOrient(){
 		$orient = '<script>
 					var orient = screen.orientation.type;
+					var orientDeg = screen.orientation.angle + "°";
 					if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 					}
 					else {
 						orient = "Portrait";
 					}
-					document.getElementById("Orient").innerHTML = orient;
+					document.getElementById("Orient").innerHTML = orient + "(" + orientDeg + ")";
 					screen.orientation.onchange = function(e) {
 						orient = screen.orientation.type;
+						orientDeg = screen.orientation.angle + "°";
 						if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 						}
 						else {
 							orient = "Portrait";
 						}
-						document.getElementById("Orient").innerHTML = orient;
+						document.getElementById("Orient").innerHTML = orient + "(" + orientDeg + ")";
 					}
 				</script>';
 		return $orient;
