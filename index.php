@@ -331,7 +331,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: <?php echo getTimeLocal(); ?>,
+                    connexionTime: $("#HeureConn").html(),
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
