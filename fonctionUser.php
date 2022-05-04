@@ -302,6 +302,7 @@
 	
 	function getGyro(){
 		$gyro = '<script>
+					var deviceMotionEvent = new DeviceMotionEvent(devicemotion);
 					var rates = instanceOfDeviceMotionEvent.rotationRate;
 					document.getElementById("Gyro").innerHTML = rates.beta;
 				</script>';
