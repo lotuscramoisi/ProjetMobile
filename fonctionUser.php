@@ -276,7 +276,9 @@
 	
 	function getOrient(){
 		$orient = '<script>
-					document.getElementById("Orient").innerHTML = screen.orientation.type;
+					screen.orientation.onchange = function(e) {
+						document.getElementById("Orient").innerHTML = screen.orientation.type;
+					}
 				</script>';
 		return $orient;
 	}
