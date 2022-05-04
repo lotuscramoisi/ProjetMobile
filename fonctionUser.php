@@ -278,15 +278,13 @@
 		$orient = '<script>
 					var orient = screen.orientation.type;
 					var orientDeg = screen.orientation.angle + "°";
-					console.log(orientDeg);
 					if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 					}
 					else {
 						orient = "Portrait";
 					}
-					document.getElementById("Orient").innerHTML = orient;
-					document.getElementById("DegOrient").innerHTML = orientDeg;
+					document.getElementById("Orient").innerHTML = orient + "(" + orientDeg + ")";
 					screen.orientation.onchange = function(e) {
 						orient = screen.orientation.type;
 						orientDeg = screen.orientation.angle + "°";
@@ -296,22 +294,9 @@
 						else {
 							orient = "Portrait";
 						}
-						document.getElementById("Orient").innerHTML = orient;
-						document.getElementById("DegOrient").innerHTML = orientDeg;
+						document.getElementById("Orient").innerHTML = orient + " (" + orientDeg + ")";
 					}
 				</script>';
 		return $orient;
-	}
-	
-	function getDegOrient(){
-		$orientDeg = '<script>
-					var orientDeg = screen.orientation.angle + "°";
-					document.getElementById("DegOrient").innerHTML = orientDeg;
-					screen.orientation.onchange = function(e) {
-						orientDeg = screen.orientation.angle + "°";
-						document.getElementById("DegOrient").innerHTML = orientDeg;
-					}
-				</script>';
-		return $orientDeg;
 	}
 ?>

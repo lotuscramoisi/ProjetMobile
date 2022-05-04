@@ -40,7 +40,7 @@
 
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
-            <?php echo getBattery() ?>
+
             $("#btnregister").click(function(event) {
                 // Serialisation des données du formulaire
                 var serializedData = $("#registerform").serialize();
@@ -574,7 +574,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Niveau de batterie
-                                    <span class="badge badge-primary badge-pill" id="Batterie"></span>
+                                    <span class="badge badge-primary badge-pill" id="Batterie"><?php echo getBattery() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Mémoire RAM disponible
@@ -607,10 +607,6 @@
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Orientation de l'écran
                                     <span class="badge badge-primary badge-pill" id="Orient"><?php echo getOrient() ?></span>
-                                </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Degrés d'orientation de l'écran
-                                    <span class="badge badge-primary badge-pill" id="DegOrient"><?php echo getOrient() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
