@@ -8,7 +8,7 @@ if (isset($_SESSION["login"])) {
     // On définit un login et un mot de passe de base pour tester notre exemple. Cependant, vous pouvez très bien interroger votre base de données afin de savoir si le visiteur qui se connecte est bien membre de votre site
     try {
         // Récupération des informations du formulaire + vérification de leur intégrité via test_input
-        $login = test_input($_POST["login"]);
+        $login = test_input($_SESSION["login"]);
 
 
         //DEBUT RECHERCHE DES SESSIONS
