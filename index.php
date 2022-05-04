@@ -259,7 +259,7 @@
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
             }
-            else if(re.test(email)){
+            if(re.test(email)){
                 $("#alertMessageRegister").append("Invalide email");
             }
             // If username not entered
