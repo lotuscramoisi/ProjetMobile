@@ -624,7 +624,7 @@
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Degrés d'orientation de l'écran
-                                    <span class="badge badge-primary badge-pill" id="DegOrient"></span>
+                                    <span class="badge badge-primary badge-pill" id="DegOrient"><?php echo getOrient() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
