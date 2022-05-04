@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
+        var connexionTime;
         $(document).ready(function() {
-            var connexionTime;
             // DEBUT AJAX FORMULAIRE REGISTER
 
             $("#btnregister").click(function(event) {
@@ -331,7 +331,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: connexionTime.html(),
+                    connexionTime: connexionTime,
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
