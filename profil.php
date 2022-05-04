@@ -38,9 +38,7 @@
                 async: false,
                 type: "post", //request type,
                 dataType: 'json',
-                data: {
-                    login: username
-                },
+                data: {},
                 success: function(result) {
                     i = 0;
                     //Affichage de chaque ligne des sessions récupérées
