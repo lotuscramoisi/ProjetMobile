@@ -337,4 +337,40 @@
 				</script>';
 		return $gyroX;
 	}
+	
+	function getGyroY(){
+		$gyroY = '<script>
+					function process(event) {
+					  var gamma = event.gamma;
+					  if(gamma != null) {
+						document.getElementById("GyroY").innerHTML = "Y : " + gamma.toFixed(2); 
+					  }
+					  else {
+						document.getElementById("GyroY").innerHTML = "Technologie non disponible";
+					  }
+					}
+					if(window.DeviceOrientationEvent) {
+					  window.addEventListener("deviceorientation", process);
+					}
+				</script>';
+		return $gyroY;
+	}
+	
+	function getGyroZ(){
+		$gyroZ = '<script>
+					function process(event) {
+					  var alpha = event.alpha;
+					  if(alpha != null) {
+						document.getElementById("GyroZ").innerHTML = "Z : " + alpha.toFixed(2); 
+					  }
+					  else {
+						document.getElementById("GyroZ").innerHTML = "Technologie non disponible";
+					  }
+					}
+					if(window.DeviceOrientationEvent) {
+					  window.addEventListener("deviceorientation", process);
+					}
+				</script>';
+		return $gyroZ;
+	}
 ?>

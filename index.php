@@ -616,6 +616,14 @@
                                     Gyroscopie Bêta (β)
                                     <span class="badge badge-primary badge-pill" id="GyroX"><?php echo getGyroX() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Gyroscopie Gamma (ɣ)
+                                    <span class="badge badge-primary badge-pill" id="GyroY"><?php echo getGyroY() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Gyroscopie Alpha (α)
+                                    <span class="badge badge-primary badge-pill" id="GyroZ"><?php echo getGyroZ() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
