@@ -276,9 +276,7 @@
 	
 	function getGyroscope(){
 		$gyro = '<script>
-					let gyroscope = new Gyroscope({frequency: 60});
-					document.getElementById("Gyro").innerHTML = gyroscope.x;
-					gyroscope.start();
+					document.getElementById("Gyro").innerHTML = ScreenOrientation.type;
 				</script>';
 		return $gyro;
 	}
