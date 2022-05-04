@@ -278,6 +278,7 @@
 		$orient = '<script>
 					var orient = screen.orientation.type;
 					var orientDeg = screen.orientation.angle + "°";
+					console.log(orientDeg);
 					if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 					}
