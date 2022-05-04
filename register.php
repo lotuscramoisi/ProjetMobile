@@ -45,6 +45,10 @@ try {
     if ($stmtsearchmail->fetchColumn()) {
         echo 'Mail already registered';
     }
+    //Si l'adresse mail n'est pas du bon format
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo 'Invalid email';
+    }
     //Si l'adresse mail existe dans la DB
     elseif ($stmtsearchusername->fetchColumn()) {
         echo 'Username already registered';
