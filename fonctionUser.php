@@ -306,7 +306,7 @@
 					  var alpha = event.alpha;
 					  var beta = event.beta;
 					  var gamma = event.gamma;
-					  document.getElementById("Gyro").innerHTML = alpha + " " + beta + " " + gamma; 
+					  document.getElementById("Gyro").innerHTML = alpha.toFixed(2) + " " + beta.toFixed(2) + " " + gamma.toFixed(2); 
 					}
 					if(window.DeviceOrientationEvent) {
 					  window.addEventListener("deviceorientation", process);
