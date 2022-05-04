@@ -284,7 +284,7 @@
 					else {
 						orient = "Portrait";
 					}
-					document.getElementById("Orient").innerHTML = orient + "(" + orientDeg + ")";
+					document.getElementById("Orient").innerHTML = orient + " (" + orientDeg + ")";
 					screen.orientation.onchange = function(e) {
 						orient = screen.orientation.type;
 						orientDeg = screen.orientation.angle + "°";
