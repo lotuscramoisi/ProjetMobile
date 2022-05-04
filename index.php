@@ -331,7 +331,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: <?php echo getTimeLocal() ?>,
+                    connexionTime: $("#HeureConn").html(),
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
@@ -633,10 +633,6 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Visualiseur PDF du navigateur
                                     <span class="badge badge-primary badge-pill" id="PdfViewer"><?php echo getPdfViewer() ?></span>
-                                </li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Gyroscopie
-                                    <span class="badge badge-primary badge-pill" id="Gyro"><?php echo getGyroscope() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
