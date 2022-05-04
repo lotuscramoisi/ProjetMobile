@@ -229,12 +229,17 @@
             password1 = form.password.value;
             password2 = form.passwordverif.value;
 
+
+            var re = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/");
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
             // If email not entered
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
+            }
+            else if(re.test(email)){
+                $("#alertMessageRegister").append("Invalide email");
             }
             // If username not entered
             if (username == '') {
