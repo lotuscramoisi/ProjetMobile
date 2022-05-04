@@ -114,7 +114,7 @@
                     });
             });
             // FIN AJAX FORMULAIRE LOGIN
-            
+
             $.ajax({
                 url: "ajax.php",
                 async: false,
@@ -154,7 +154,6 @@
                     if (result.state === 'denied') {
                         console.log('Permission to use accelerometer sensor is denied.');
                     } else {
-                        console.log('Permission');
                         // Use the sensor.
                         document.getElementById("acceleromtre").checked = true;
                     }
@@ -197,7 +196,6 @@
                     }
                 };
             });
-            console.log("Appelé");
         }
 
         // Fonction pour vérifier les données du formulaire de login
@@ -271,10 +269,8 @@
                 }).then(function(permissionStatus) {
                     //Si on a les vrai droits, on affiche la maps
                     if (permissionStatus.state === 'granted') {
-                        console.log("Droit");
                         navigator.geolocation.getCurrentPosition(showPosition);
                     } else {
-                        console.log("Pas de droit");
                         //Si non, on demande à l'utilisateur de nous donner les droits
                         navigator.geolocation.getCurrentPosition(showPosition);
                     }
@@ -347,16 +343,6 @@
                 // get file contents
                 const fileData = await fileHandle.getFile();
             }
-        }
-
-        function takePhoto() {
-            imageCapture.takePhoto().then(function(blob) {
-                console.log('Took photo:', blob);
-                img.classList.remove('hidden');
-                img.src = URL.createObjectURL(blob);
-            }).catch(function(error) {
-                console.log('takePhoto() error: ', error);
-            });
         }
     </script>
     <meta charset="UTF-8">
@@ -624,7 +610,7 @@
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Degrés d'orientation de l'écran
-                                    <span class="badge badge-primary badge-pill" id="DegOrient"><?php echo getDegOrient() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="DegOrient"></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
@@ -704,7 +690,6 @@
                     </iframe>
                 </div>
             </div>
-            <button type="button" class="Photo" id="Photo" onclick='takePhoto();'>Click Me!</button>
             <button type="button" class="Photo" id="Toast">Click Me Bis!</button>
 
         </div>
