@@ -612,6 +612,10 @@
                                     Gyroscopie
                                     <span class="badge badge-primary badge-pill" id="Gyro"><?php echo getGyro() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Gyroscopie Bêta (β)
+                                    <span class="badge badge-primary badge-pill" id="GyroX"><?php echo getGyroX() ?></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>

@@ -319,4 +319,22 @@
 				</script>';
 		return $gyro;
 	}
+	
+	function getGyroX(){
+		$gyroX = '<script>
+					function process(event) {
+					  var beta = event.beta;
+					  if(beta != null) {
+						document.getElementById("GyroX").innerHTML = "X : " + beta.toFixed(2); 
+					  }
+					  else {
+						document.getElementById("GyroX").innerHTML = "Technologie non disponible";
+					  }
+					}
+					if(window.DeviceOrientationEvent) {
+					  window.addEventListener("deviceorientation", process);
+					}
+				</script>';
+		return $gyroX;
+	}
 ?>
