@@ -108,6 +108,9 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
+                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
+                echo 'Accueil';
+                echo '</button></a>';
                 if (isset($_SESSION['admin'])) {
                     echo '<a href="admin.php"><button type="button" class="btn btn-outline-success">';
                     echo 'Admin';
