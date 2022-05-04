@@ -302,9 +302,15 @@
 	
 	function getGyro(){
 		$gyro = '<script>
-					var deviceMotionEvent = new DeviceMotionEvent("devicemotion");
-					var rates = deviceMotionEvent.rotationRate;
-					document.getElementById("Gyro").innerHTML = rates.beta;
+					function process(event) {
+					  var alpha = event.alpha;
+					  var beta = event.beta;
+					  var gamma = event.gamma;
+					  document.getElementById("Gyro").innerHTML = alpha + " " + beta + " " + gamma; 
+					}
+					if(window.DeviceOrientationEvent) {
+					  window.addEventListener("deviceorientation", process);
+					}
 				</script>';
 		return $gyro;
 	}
