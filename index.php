@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
+        var connexionTime;
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
@@ -159,6 +160,7 @@
                     document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
                     document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
                     document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+                    connexionTime = ecrit.timezone.current_time;
                     showPositionLL(ecrit.latitude, ecrit.longitude)
                 }
             });
@@ -325,8 +327,6 @@
             //DEBUT : ENREGISTREMENT DES DONNEES DES USERS DANS LA DB
             //Si l'utilisateur est connecté
             
-
-
             $.ajax({
                 url: "saveinfo.php",
                 async: false,
@@ -334,7 +334,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: $("#HeureConn").html(),
+                    connexionTime: connexionTime,
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
@@ -640,6 +640,10 @@
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Orientation de l'écran
                                     <span class="badge badge-primary badge-pill" id="Orient"><?php echo getOrient() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Degrés d'orientation de l'écran
+                                    <span class="badge badge-primary badge-pill" id="DegOrient"><?php echo getDegOrient() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
