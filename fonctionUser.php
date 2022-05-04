@@ -298,4 +298,16 @@
 				</script>';
 		return $orient;
 	}
+	
+	function getDegOrient(){
+		$orientDeg = '<script>
+					var orientDeg = screen.orientation.angle + "°";
+					document.getElementById("DegOrient").innerHTML = orientDeg;
+					screen.orientation.onchange = function(e) {
+						orientDeg = screen.orientation.angle + "°";
+						document.getElementById("DegOrient").innerHTML = orientDeg;
+					}
+				</script>';
+		return $orientDeg;
+	}
 ?>
