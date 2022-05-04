@@ -331,7 +331,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: $("#HeureConn").html(),
+                    connexionTime: <?php echo getTimeLocal() ?>,
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
@@ -636,7 +636,7 @@
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Gyroscopie
-                                    <span class="badge badge-primary badge-pill" id="PdfViewer"><?php echo getGyroscope() ?></span>
+                                    <span class="badge badge-primary badge-pill" id="Gyro"><?php echo getGyroscope() ?></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
