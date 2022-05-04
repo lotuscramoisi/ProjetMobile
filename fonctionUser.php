@@ -302,15 +302,8 @@
 	
 	function getGyro(){
 		$gyro = '<script>
-					function process(event) {
-					  var alpha = event.alpha;
-					  var beta = event.beta;
-					  var gamma = event.gamma;
-					  document.getElementById("Gyro").innerHTML = alpha + " " + beta + " " + gamma; 
-					}
-					if(window.DeviceOrientationEvent) {
-					  window.addEventListener("deviceorientation", process);
-					}
+					var rates = instanceOfDeviceMotionEvent.rotationRate;
+					document.getElementById("Gyro").innerHTML = rates.beta;
 				</script>';
 		return $gyro;
 	}
