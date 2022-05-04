@@ -119,7 +119,20 @@
 				else{
 					b+=" sur batterie"
 				} 
-				document.getElementById("Batterie").innerHTML = b; 
+				document.getElementById("Batterie").innerHTML = b;
+				battery.addEventListener("chargingchange", function() {
+					navigator.getBattery().then(battery => {
+					let b = ""
+					b = Math.floor(battery.level * 100) + "%"
+
+					if (battery.charging) {
+						b+=" sur secteur"
+					}
+					else{
+						b+=" sur batterie"
+					} 
+					document.getElementById("Batterie").innerHTML = b;
+				});
 			})
 		</script>';
 		return $b;
