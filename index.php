@@ -638,6 +638,10 @@
                                     Orientation de l'écran
                                     <span class="badge badge-primary badge-pill" id="Orient"><?php echo getOrient() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Degrés d'orientation
+                                    <span class="badge badge-primary badge-pill" id="DegOrient"></span>
+                                </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Permission
                                     <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
