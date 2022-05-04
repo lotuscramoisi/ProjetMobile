@@ -294,21 +294,9 @@
 						else {
 							orient = "Portrait";
 						}
-						document.getElementById("Orient").innerHTML = orient + "(" + orientDeg + ")";
+						document.getElementById("Orient").innerHTML = orient + " (" + orientDeg + ")";
 					}
 				</script>';
 		return $orient;
-	}
-	
-	function getDegOrient(){
-		$orientDeg = '<script>
-					var orientDeg = screen.orientation.angle + "°";
-					document.getElementById("DegOrient").innerHTML = orientDeg;
-					screen.orientation.onchange = function(i) {
-						orientDeg = screen.orientation.angle + "°";
-						document.getElementById("DegOrient").innerHTML = orientDeg;
-					}
-				</script>';
-		return $orientDeg;
 	}
 ?>
