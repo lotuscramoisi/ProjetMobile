@@ -250,6 +250,8 @@
             password1 = form.password.value;
             password2 = form.passwordverif.value;
 
+
+            var re = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/");
             //On vide les messages d'alerte 
             $("#alertMessageRegister").empty()
 
@@ -257,7 +259,7 @@
             if (email == '') {
                 $("#alertMessageRegister").append("Please enter email");
             }
-            else if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+            else if(re.test(email)){
                 $("#alertMessageRegister").append("Invalide email");
             }
             // If username not entered
