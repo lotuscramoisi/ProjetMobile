@@ -119,7 +119,7 @@
 				else{
 					b+=" sur batterie"
 				} 
-				document.getElementById("Batterie").innerHTML = b; 
+				document.getElementById("Batterie").innerHTML = b;
 			})
 		</script>';
 		return $b;
@@ -277,6 +277,7 @@
 	function getOrient(){
 		$orient = '<script>
 					var orient = screen.orientation.type;
+					var orientDeg = screen.orientation.angle;
 					if(orient == "landscape-primary" || orient == "landscape-secondary") {
 						orient = "Paysage";
 					}
@@ -285,7 +286,14 @@
 					}
 					document.getElementById("Orient").innerHTML = orient;
 					screen.orientation.onchange = function(e) {
-						document.getElementById("Orient").innerHTML = screen.orientation.type;
+						orient = screen.orientation.type;
+						if(orient == "landscape-primary" || orient == "landscape-secondary") {
+						orient = "Paysage";
+						}
+						else {
+							orient = "Portrait";
+						}
+						document.getElementById("Orient").innerHTML = orient;
 					}
 				</script>';
 		return $orient;
