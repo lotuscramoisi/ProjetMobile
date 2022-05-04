@@ -302,7 +302,7 @@
 		$orientDeg = '<script>
 					var orientDeg = screen.orientation.angle + "°";
 					document.getElementById("DegOrient").innerHTML = orientDeg;
-					screen.orientation.onchange = function(e) {
+					screen.orientation.onchange = function(i) {
 						orientDeg = screen.orientation.angle + "°";
 						document.getElementById("DegOrient").innerHTML = orientDeg;
 					}
