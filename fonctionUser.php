@@ -307,7 +307,7 @@
 					  var beta = event.beta;
 					  var gamma = event.gamma;
 					  if(alpha != null && beta != null && gamma != null) {
-						document.getElementById("Gyro").innerHTML = alpha.toFixed(2) + " " + beta.toFixed(2) + " " + gamma.toFixed(2); 
+						document.getElementById("Gyro").innerHTML = "Z : " + alpha.toFixed(2) + " X : " + beta.toFixed(2) + " Y : " + gamma.toFixed(2); 
 					  }
 					  else {
 						document.getElementById("Gyro").innerHTML = "Technologie non disponible";
