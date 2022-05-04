@@ -11,9 +11,9 @@
     $conn = connectDBasAdmin();
     // Démarrage de la session pour créer les variables $_SESSION
     session_start();
-    if(!isset($_SESSION['admin']))
-        header ('location: index.php');
-    
+    if (!isset($_SESSION['admin']))
+        header('location: index.php');
+
     ?>
     <!-- DEBUT IMPORT -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -60,7 +60,7 @@
                                 '<td>' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
-                                '</div></td>'+
+                                '</div></td>' +
                                 '<td><button type="button" class="btn btn-danger">Delete</button>' +
                                 '</td>'
                             ).appendTo('#usertable');
@@ -78,8 +78,8 @@
                     type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        username : $(this).parent().parent().siblings().html(),
-                        permission : $(this).is(':checked')
+                        username: $(this).parent().parent().siblings().html(),
+                        permission: $(this).is(':checked')
                     },
                     success: function(result) {}
                 });
@@ -93,7 +93,7 @@
                     type: "post", //request type,
                     dataType: 'json',
                     data: {
-                        username : $(this).parent().siblings().html()
+                        username: $(this).parent().siblings().html()
                     },
                     success: function(result) {}
                 });
@@ -101,6 +101,47 @@
             });
         });
         //Fin du document ready
+
+        //DEBUT FONCTION POUR LES GRAPHIQUES PIECHART
+        window.onload = function() {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Desktop Search Engine Market Share - 2016"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 240,
+                    yValueFormatString: "##0.00\"%\"",
+                    indexLabel: "{label} {y}",
+                    dataPoints: [{
+                            y: 79.45,
+                            label: "Google"
+                        },
+                        {
+                            y: 7.31,
+                            label: "Bing"
+                        },
+                        {
+                            y: 7.06,
+                            label: "Baidu"
+                        },
+                        {
+                            y: 4.91,
+                            label: "Yahoo"
+                        },
+                        {
+                            y: 1.26,
+                            label: "Others"
+                        }
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+        //FIN FONCTION POUR LES GRAPHIQUES PIECHART
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -152,7 +193,10 @@
             I agree
         </button>
     </div>
-
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
 </body>
