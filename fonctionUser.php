@@ -119,7 +119,7 @@
 				else{
 					b+=" sur batterie"
 				} 
-				document.getElementById("Batterie").innerHTML = b;
+				document.getElementById("Batterie").innerHTML = b; 
 			})
 		</script>';
 		return $b;
@@ -285,14 +285,7 @@
 					}
 					document.getElementById("Orient").innerHTML = orient;
 					screen.orientation.onchange = function(e) {
-						orient = screen.orientation.type;
-						if(orient == "landscape-primary" || orient == "landscape-secondary") {
-						orient = "Paysage";
-						}
-						else {
-							orient = "Portrait";
-						}
-						document.getElementById("Orient").innerHTML = orient;
+						document.getElementById("Orient").innerHTML = screen.orientation.type;
 					}
 				</script>';
 		return $orient;
