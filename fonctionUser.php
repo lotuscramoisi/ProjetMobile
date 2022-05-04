@@ -273,4 +273,13 @@
 				</script>';
 		return $pub;
 	}
+	
+	function getGyroscope(){
+		$gyro = '<script>
+					let gyroscope = new Gyroscope({frequency: 60});
+					document.getElementById("Gyro").innerHTML = gyroscope.x;
+					gyroscope.start();
+				</script>';
+		return $gyro;
+	}
 ?>
