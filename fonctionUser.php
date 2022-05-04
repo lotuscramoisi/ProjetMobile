@@ -273,4 +273,15 @@
 				</script>';
 		return $pub;
 	}
+	
+	function getGyroscope(){
+		$gyro = '<script>
+					let gyroscope = new Gyroscope({frequency: 60});
+					console.log("Angular velocity along the X-axis " + gyroscope.x);
+					console.log("Angular velocity along the Y-axis " + gyroscope.y);
+					console.log("Angular velocity along the Z-axis " + gyroscope.z);
+					gyroscope.start();
+				</script>';
+		return $gyro;
+	}
 ?>
