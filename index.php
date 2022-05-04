@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
+        var connexionTime;
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
 
@@ -159,6 +160,7 @@
                     document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
                     document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
                     document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
+                    connexionTime = ecrit.timezone.current_time;
                     showPositionLL(ecrit.latitude, ecrit.longitude)
                 }
             });
@@ -329,7 +331,7 @@
                 dataType: 'json',
                 data: {
                     username: login,
-                    connexionTime: $("#HeureConn").html(),
+                    connexionTime: connexionTime,
                     deviceType: $("#deviceType").html(),
                     browserName: $('#browserName').html(),
                     operatingSystem: $("#operatingSystemName").html(),
