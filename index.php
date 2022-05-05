@@ -353,7 +353,7 @@
             <?php
             if (isset($_SESSION['login'])) {
                 if (isset($_SESSION['admin'])) { ?>
-                    <a href="admin.php"><button type="button" class="btn btn-outline-success">
+                    <a href="admin.php"><button type="button" class="btn btn-outline-success mb-2 me-1">
                             Admin
                         </button></a>
                 <?php } ?>
