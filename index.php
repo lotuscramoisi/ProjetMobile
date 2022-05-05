@@ -353,47 +353,29 @@
             <?php
             if (isset($_SESSION['login'])) {
                 if (isset($_SESSION['admin'])) { ?>
-                <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
                     <a href="admin.php"><button type="button" class="btn btn-outline-success">
                             Admin
                         </button></a>
-                        </li>
                 <?php } ?>
-                <li class="nav-item">
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
                     Autorisation
                 </button>
-                </li>
-
-                <li class="nav-item">
                 <a href="profil.php"><button type="button" class="btn btn-outline-success">
                         Profil
                     </button></a>
-                </li>
-
-                <li class="nav-item">
                 <a href="logout.php"><button type="button" class="btn btn-outline-success">
                         Logout
                     </button></a>
-                    </li>
             <?php } else { ?>
-                <li class="nav-item">
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
                     Autorisation
                 </button>
-                </li>
-                <li class="nav-item">
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#signIn">
                     Sign in
                 </button>
-                </li>
-                <li class="nav-item">
                 <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#register">
                     Register
                 </button>
-                </li>
-                </ul>
             <?php }
             ?>
             <div>
