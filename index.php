@@ -353,6 +353,7 @@
             <?php
             if (isset($_SESSION['login'])) {
                 if (isset($_SESSION['admin'])) { ?>
+                <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a href="admin.php"><button type="button" class="btn btn-outline-success">
                             Admin
@@ -392,6 +393,7 @@
                     Register
                 </button>
                 </li>
+                </ul>
             <?php }
             ?>
             <div>
