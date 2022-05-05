@@ -357,23 +357,23 @@
                             Admin
                         </button></a>
                 <?php } ?>
-                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
+                <button type="button" class="btn btn-outline-success mb-2 me-1" data-toggle="modal" data-target="#autorisation">
                     Autorisation
                 </button>
-                <a href="profil.php"><button type="button" class="btn btn-outline-success">
+                <a href="profil.php"><button type="button" class="btn btn-outline-success mb-2 me-1">
                         Profil
                     </button></a>
-                <a href="logout.php"><button type="button" class="btn btn-outline-success">
+                <a href="logout.php"><button type="button" class="btn btn-outline-success mb-2 me-1">
                         Logout
                     </button></a>
             <?php } else { ?>
-                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#autorisation">
+                <button type="button" class="btn btn-outline-success mb-2 me-1" data-toggle="modal" data-target="#autorisation">
                     Autorisation
                 </button>
-                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#signIn">
+                <button type="button" class="btn btn-outline-success mb-2 me-1" data-toggle="modal" data-target="#signIn">
                     Sign in
                 </button>
-                <button type="button" class="btn btn-outline-success me-1" data-toggle="modal" data-target="#register">
+                <button type="button" class="btn btn-outline-success mb-2 me-1" data-toggle="modal" data-target="#register">
                     Register
                 </button>
             <?php }

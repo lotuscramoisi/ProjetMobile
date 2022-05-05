@@ -189,13 +189,13 @@
             <!-- Button trigger modal -->
             <?php
             if (isset($_SESSION['login'])) {
-                echo '<a href="index.php"><button type="button" class="btn btn-outline-success">';
+                echo '<a href="index.php"><button type="button" class="btn btn-outline-success mb-2 me-1">';
                 echo 'Accueil';
                 echo '</button></a>';
-                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success">';
+                echo '<a href="profil.php"><button type="button" class="btn btn-outline-success mb-2 me-1">';
                 echo 'Profil';
                 echo '</button></a>';
-                echo '<a href="logout.php"><button type="button" class="btn btn-outline-success">';
+                echo '<a href="logout.php"><button type="button" class="btn btn-outline-success mb-2 me-1">';
                 echo 'Logout';
                 echo '</button></a>';
             }
