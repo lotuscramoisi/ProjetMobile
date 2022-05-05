@@ -153,11 +153,7 @@
                         // Use the sensor.
                         document.getElementById("acceleromtre").checked = true;
                     }
-                });
-            $("#Toast").click(function(event) {
-                alert($("#IPAdress").html());
-            });
-            
+                });            
         });
         //Fin du document ready
 
@@ -170,25 +166,19 @@
 
                 if (permissionStatus.state === 'granted') {
                     $("#flexSwitchCheckDefault").prop("checked", true);
-                    document.getElementById("PermissionGranted").innerHTML = "Autorisé";
                 } else if (permissionStatus.state === 'prompt') {
                     $("#flexSwitchCheckDefault").prop("checked", false);
-                    document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
                 } else {
                     $("#flexSwitchCheckDefault").prop("checked", false);
-                    document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                 }
 
                 permissionStatus.onchange = function() {
                     if (permissionStatus.state === 'granted') {
                         $("#flexSwitchCheckDefault").prop("checked", true);
-                        document.getElementById("PermissionGranted").innerHTML = "Autorisé";
                     } else if (permissionStatus.state === 'prompt') {
                         $("#flexSwitchCheckDefault").prop("checked", false);
-                        document.getElementById("PermissionGranted").innerHTML = "En cours de demande";
                     } else {
                         $("#flexSwitchCheckDefault").prop("checked", false);
-                        document.getElementById("PermissionGranted").innerHTML = "Non autorisé";
                     }
                 };
             });
@@ -616,10 +606,6 @@
                                     Gyroscopie Alpha (α)
                                     <span class="badge badge-primary badge-pill" id="GyroZ"><?php echo getGyroZ() ?></span>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Permission
-                                    <span class="badge badge-primary badge-pill" id="PermissionGranted"></span>
-                                </li>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -694,7 +680,6 @@
                     </iframe>
                 </div>
             </div>
-            <button type="button" class="Photo" id="Toast">Click Me Bis!</button>
 
         </div>
         <!-- END Liste des informations -->
