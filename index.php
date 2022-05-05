@@ -33,10 +33,6 @@
     <!-- FIN IMPORT -->
     <script>
         var connexionTime;
-        var deviceType; 
-        var browserName;
-        var operatingSystemName;
-        var ipAdress;
 
         $(document).ready(function() {
             // DEBUT AJAX FORMULAIRE REGISTER
