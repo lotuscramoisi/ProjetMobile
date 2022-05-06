@@ -175,6 +175,7 @@
 
 <body>
     <!-- Nav Bar -->
+    <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
 
@@ -230,6 +231,7 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
+    </div>
 </body>
 
 </html>
