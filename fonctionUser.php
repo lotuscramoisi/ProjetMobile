@@ -357,10 +357,10 @@
 	function getAccel(){
 		$accel = '<script>
 					function motion(event){
-						var acceX = event.accelerationIncludingGravity.x;
-						var acceY = event.accelerationIncludingGravity.y;
-						var acceZ = event.accelerationIncludingGravity.z;
-						console.log(acceX + " " + acceY + " " + acceZ);
+						var accelX = event.accelerationIncludingGravity.x;
+						var accelY = event.accelerationIncludingGravity.y;
+						var accelZ = event.accelerationIncludingGravity.z;
+						document.getElementById("Accel").innerHTML = accelX + " " + accelY + " " + accelZ;
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
