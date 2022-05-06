@@ -379,7 +379,12 @@
 		$accelY = '<script>
 					function motion(event){
 						var accelY = event.accelerationIncludingGravity.y;
-						document.getElementById("AccelY").innerHTML = "Y : " + accelY.toFixed(2) + " m/s²";
+						if(accelY != null) {
+							document.getElementById("AccelY").innerHTML = "Y : " + accelY.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelY").innerHTML = "Technologie non diponible";
+						}
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
@@ -392,7 +397,12 @@
 		$accelZ = '<script>
 					function motion(event){
 						var accelZ = event.accelerationIncludingGravity.z;
-						document.getElementById("AccelZ").innerHTML = "Z : " + accelZ.toFixed(2) + " m/s²";
+						if(accelZ != null) {
+							document.getElementById("AccelZ").innerHTML = "Z : " + accelZ.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelZ").innerHTML  = "Technologie non disponible";
+						}
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
