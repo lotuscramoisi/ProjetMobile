@@ -353,4 +353,19 @@
 				</script>';
 		return $gyroZ;
 	}
+	
+	function getAccel(){
+		$accel = '<script>
+					function motion(event){
+						var acceX = event.accelerationIncludingGravity.x;
+						var acceY = event.accelerationIncludingGravity.y;
+						var acceZ = event.accelerationIncludingGravity.z;
+						console.log(acceX + " " + acceY + " " + acceZ);
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accel;
+	}
 ?>

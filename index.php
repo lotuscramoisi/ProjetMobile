@@ -606,6 +606,10 @@
                                     Gyroscopie Alpha (α)
                                     <span class="badge badge-primary badge-pill" id="GyroZ"><?php echo getGyroZ() ?></span>
                                 </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre
+                                    <span class="badge badge-primary badge-pill" id="Accel"><?php echo getAccel() ?></span>
+                                </li>
                             </div>
                         </div>
                         <div class="accordion-item">
