@@ -607,8 +607,16 @@
                                     <span class="badge badge-primary badge-pill" id="GyroZ"><?php echo getGyroZ() ?></span>
                                 </li>
 								<li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Accéléromètre
-                                    <span class="badge badge-primary badge-pill" id="Accel"><?php echo getAccel() ?></span>
+                                    Accéléromètre Bêta (β)
+                                    <span class="badge badge-primary badge-pill" id="AccelX"><?php echo getAccelX() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre Gamma (ɣ)
+                                    <span class="badge badge-primary badge-pill" id="AccelY"><?php echo getAccelY() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre Alpha (α)
+                                    <span class="badge badge-primary badge-pill" id="AccelZ"><?php echo getAccelZ() ?></span>
                                 </li>
                             </div>
                         </div>

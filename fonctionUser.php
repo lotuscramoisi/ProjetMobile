@@ -357,18 +357,42 @@
 		return $gyroZ;
 	}
 	
-	function getAccel(){
-		$accel = '<script>
+	function getAccelX(){
+		$accelX = '<script>
 					function motion(event){
 						var accelX = event.accelerationIncludingGravity.x;
-						var accelY = event.accelerationIncludingGravity.y;
-						var accelZ = event.accelerationIncludingGravity.z;
-						document.getElementById("Accel").innerHTML = accelX.toFixed(2) + " " + accelY.toFixed(2) + " " + accelZ.toFixed(2);
+						document.getElementById("AccelX").innerHTML = "X : " + accelX.toFixed(2) + " m/s²";
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
 					}
 				</script>';
-		return $accel;
+		return $accelX;
+	}
+	
+	function getAccelY(){
+		$accelY = '<script>
+					function motion(event){
+						var accelY = event.accelerationIncludingGravity.y;
+						document.getElementById("AccelY").innerHTML = "Y : " + accelY.toFixed(2) + " m/s²";
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accelY;
+	}
+	
+	function getAccelZ(){
+		$accelZ = '<script>
+					function motion(event){
+						var accelZ = event.accelerationIncludingGravity.z;
+						document.getElementById("AccelZ").innerHTML = "Z : " + accelZ.toFixed(2) + " m/s²";
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accelZ;
 	}
 ?>
