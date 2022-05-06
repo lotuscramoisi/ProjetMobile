@@ -308,7 +308,7 @@
 					function process(event) {
 					  var beta = event.beta;
 					  if(beta != null) {
-						document.getElementById("GyroX").innerHTML = "X : " + beta.toFixed(2); 
+						document.getElementById("GyroX").innerHTML = "X : " + beta.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroX").innerHTML = "Technologie non disponible";
@@ -326,7 +326,7 @@
 					function process(event) {
 					  var gamma = event.gamma;
 					  if(gamma != null) {
-						document.getElementById("GyroY").innerHTML = "Y : " + gamma.toFixed(2); 
+						document.getElementById("GyroY").innerHTML = "Y : " + gamma.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroY").innerHTML = "Technologie non disponible";
@@ -344,7 +344,7 @@
 					function process(event) {
 					  var alpha = event.alpha;
 					  if(alpha != null) {
-						document.getElementById("GyroZ").innerHTML = "Z : " + alpha.toFixed(2); 
+						document.getElementById("GyroZ").innerHTML = "Z : " + alpha.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroZ").innerHTML = "Technologie non disponible";
