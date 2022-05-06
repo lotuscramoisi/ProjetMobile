@@ -23,7 +23,6 @@
 	}
 
 	function getUserIPFromInternet(){
-		$address = "";
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //IP from internet
             $address=$_SERVER['HTTP_CLIENT_IP'];
