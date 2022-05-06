@@ -361,7 +361,12 @@
 		$accelX = '<script>
 					function motion(event){
 						var accelX = event.accelerationIncludingGravity.x;
-						document.getElementById("AccelX").innerHTML = "X : " + accelX.toFixed(2) + " m/s²";
+						if(accelX != null) {
+							document.getElementById("AccelX").innerHTML = "X : " + accelX.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelX").innerHTML = "Technologie non disponible";
+						}
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
