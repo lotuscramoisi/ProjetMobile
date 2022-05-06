@@ -202,7 +202,7 @@
             ?>
             <div>
     </nav>
-    <div class="container-fluid">
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -216,7 +216,7 @@
         <tbody id="usertable">
         </tbody>
     </table>
-    </div>
+
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a
