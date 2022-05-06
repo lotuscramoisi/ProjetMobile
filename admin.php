@@ -175,7 +175,6 @@
 
 <body>
     <!-- Nav Bar -->
-    <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
 
@@ -203,7 +202,7 @@
             ?>
             <div>
     </nav>
-
+    <div class="container-fluid">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -217,7 +216,7 @@
         <tbody id="usertable">
         </tbody>
     </table>
-
+    </div>
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
         <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a
@@ -231,7 +230,6 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
-    </div>
 </body>
 
 </html>
