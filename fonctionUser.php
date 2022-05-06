@@ -19,6 +19,9 @@
 			//IP from proxy
 			$address=$_SERVER['HTTP_X_FORWARDED_FOR'];
         }
+		else{
+			$address="Non disponible";
+		}
 		return strval($address);
 	}
 
