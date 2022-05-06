@@ -18,6 +18,7 @@
 		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
 			//IP from proxy
 			$address=$_SERVER['HTTP_X_FORWARDED_FOR'];
+			console.log("test");
         }
 		
 		if($address == ""){
