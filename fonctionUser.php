@@ -18,20 +18,19 @@
 		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
 			//IP from proxy
 			$address=$_SERVER['HTTP_X_FORWARDED_FOR'];
-			console.log("test");
         }
-		
-		if($address == ""){
-			$address = "Non disponible";
-		}
 		return strval($address);
 	}
 
 	function getUserIPFromInternet(){
+		$address = "";
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //IP from internet
             $address=$_SERVER['HTTP_CLIENT_IP'];
         }
+		if($address == ""){
+			$address = "Non disponible";
+		}
 		return strval($address);
 	}
 
