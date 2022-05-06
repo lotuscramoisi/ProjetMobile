@@ -363,7 +363,7 @@
 						var accelX = event.accelerationIncludingGravity.x;
 						var accelY = event.accelerationIncludingGravity.y;
 						var accelZ = event.accelerationIncludingGravity.z;
-						document.getElementById("Accel").innerHTML = accelX + " " + accelY + " " + accelZ;
+						document.getElementById("Accel").innerHTML = accelX.toFixed(2) + " " + accelY.toFixed(2) + " " + accelZ.toFixed(2);
 					}
 					if(window.DeviceMotionEvent) {
 					  window.addEventListener("devicemotion", motion);
