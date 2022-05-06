@@ -213,8 +213,21 @@
                 <th scope="col"></th>
             </tr>
         </thead>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.php">Whatsmyinfo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBareExpendIdAdmin"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navBareExpendIdAdmin">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
         <tbody id="usertable">
         </tbody>
+        </div>
+        </nav>
     </table>
 
     <!-- START Bootstrap-Cookie-Alert -->
