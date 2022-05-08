@@ -132,7 +132,12 @@
                     document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
                     document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
                     document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-                    document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+					if(ecrit.connection.organization_name != null){
+						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+					}
+					else{
+						document.getElementById("OrganisationFAI").innerHTML = "Non disponible";
+					}
                     document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
                     document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                     connexionTime = ecrit.timezone.current_time;
