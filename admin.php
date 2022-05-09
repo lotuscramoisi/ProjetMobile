@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
-        var firstData;
+        var dataChart;
         $(document).ready(function() {
             // Récupération de la liste des utilisateurs + affichage de celle ci
             $.ajax({
@@ -115,8 +115,9 @@
                 data: {},
                 success: function(result) {
                     console.log(result);
+                    dataChart = result;
                     for(var l of result){
-                        document.getElementById("affiche").innerHTML = l.Total;
+                        document.getElementById("affiche").innerHTML = l.y;
                     }
                     
                 }
@@ -136,11 +137,7 @@
                         startAngle: 240,
                         yValueFormatString: "##0.00\"%\"",
                         indexLabel: "{label} {y}",
-                        dataPoints: [{
-                                y: 75,
-                                label: "Windows"
-                            }
-                        ]
+                        dataPoints: dataChart
                     }]
                 });
                 chart.render();
