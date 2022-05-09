@@ -137,6 +137,21 @@
                 });
                 chart.render();
 
+                var chart2 = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    title: {
+                        text: "OS utilisation by users"
+                    },
+                    data: [{
+                        type: "pie",
+                        startAngle: 240,
+                        yValueFormatString: "##0.00\"%\"",
+                        indexLabel: "{label} {y}",
+                        dataPoints: dataChart
+                    }]
+                });
+                chart2.render();
+
             }
             //FIN FONCTION POUR LES GRAPHIQUES PIECHART
         });
