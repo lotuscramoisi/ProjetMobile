@@ -119,6 +119,7 @@
                 }
             });
             //Fin récupération des stats
+            document.getElementById("affiche").innerHTML = firstData;
             //DEBUT FONCTION POUR LES GRAPHIQUES PIECHART
             window.onload = function() {
 
@@ -196,7 +197,7 @@
             ?>
             <div>
     </nav>
-
+    <div id="affiche"></div>
     <table class="table table-striped">
         <thead>
             <tr>
