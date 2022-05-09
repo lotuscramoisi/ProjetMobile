@@ -132,7 +132,12 @@
                     document.getElementById("Devise").innerHTML = ecrit.currency.currency_name;
                     document.getElementById("TypeConnexion").innerHTML = ecrit.connection.connection_type;
                     document.getElementById("FAI").innerHTML = ecrit.connection.isp_name;
-                    document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+					if(ecrit.connection.organization_name != null){
+						document.getElementById("OrganisationFAI").innerHTML = ecrit.connection.organization_name;
+					}
+					else{
+						document.getElementById("OrganisationFAI").innerHTML = "Non disponible";
+					}
                     document.getElementById("NomFuseau").innerHTML = ecrit.timezone.name;
                     document.getElementById("HeureConn").innerHTML = ecrit.timezone.current_time;
                     connexionTime = ecrit.timezone.current_time;
@@ -605,6 +610,18 @@
 								<li class="list-group-item d-flex justify-content-between align-items-center">
                                     Gyroscopie Alpha (α)
                                     <span class="badge badge-primary badge-pill" id="GyroZ"><?php echo getGyroZ() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre X
+                                    <span class="badge badge-primary badge-pill" id="AccelX"><?php echo getAccelX() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre Y
+                                    <span class="badge badge-primary badge-pill" id="AccelY"><?php echo getAccelY() ?></span>
+                                </li>
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Accéléromètre Z
+                                    <span class="badge badge-primary badge-pill" id="AccelZ"><?php echo getAccelZ() ?></span>
                                 </li>
                             </div>
                         </div>

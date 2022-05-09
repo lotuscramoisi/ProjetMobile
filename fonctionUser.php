@@ -1,4 +1,6 @@
 <?php
+
+	// Fonction de récupération de l'IP
     function getUserIP(){
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //IP from internet
@@ -14,6 +16,7 @@
         return strval($address);
     }
 	
+	// Fonction de récupération du proxy
 	function getUserIPFromProxy(){
 		if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
 			//IP from proxy
@@ -22,22 +25,29 @@
 		return strval($address);
 	}
 
+	// Fonction de récupération du proxy
 	function getUserIPFromInternet(){
         if(!empty($_SERVER['HTTP_CLIENT_IP'])){
             //IP from internet
             $address=$_SERVER['HTTP_CLIENT_IP'];
         }
+		if($address == ""){
+			$address = "Non disponible";
+		}
 		return strval($address);
 	}
 
+	// Fonction de récupération du port
     function getUserPort(){
         return $_SERVER['REMOTE_PORT'];
     }
 
+	// Fonction de renvoi de toutes les informations server
     function all(){
         return strval($_SERVER);
     }
 
+	// Fonction de renvoi du navigateur utilisé
     function getBrowser(){
         $user_agent = $_SERVER['HTTP_USER_AGENT'];
         $browser = "N/A";
@@ -59,6 +69,7 @@
         return $browser;
     }
 
+	// Fonction de renvoi du système d'exploitation utilisé
     function getOS(){
         $u_agent = $_SERVER['HTTP_USER_AGENT'];
         $operating_system = 'Unknown Operating System';
@@ -89,6 +100,7 @@
         return $operating_system;
     }
 	
+	// Fonction de renvoi de la résolution de l'écran
 	function getResol(){
 		$resol='<script type="text/javascript">
 						document.write(""+screen.width+" X "+screen.height+" pixels");
@@ -96,6 +108,7 @@
 		return $resol;
 	}
 	
+	// Fonction de renvoi de la profondeur de couleur d'écran
 	function getBitsScreen(){
 		$bits='<script type="text/javascript">
 						document.write(""+screen.colorDepth+" bits");
@@ -103,10 +116,12 @@
 		return $bits;
 	}
 	
+	// Fonction de renvoi de la langue du navigateur
 	function getNavigatorLang(){
 		echo substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 5);
 	}
 	
+	// Fonction de renvoi du niveau de batterie sur batterie ou secteur
 	function getBattery(){
 		$b = '<script type="text/javascript">
 				navigator.getBattery().then(battery => {
@@ -125,6 +140,7 @@
 		return $b;
 	}
 	
+	// Fonction de renvoi de la Gio de RAM de l'appareil
 	function getMemory(){
 		$m = '<script type="text/javascript">
 				let m = navigator.deviceMemory
@@ -134,6 +150,7 @@
 		return $m;
 	}
 	
+	// Fonction de renvoi du nombre de coeurs logiques de l'appareil
 	function getNbCoeurs(){
 		$c = '<script type="text/javascript">
 				let c = navigator.hardwareConcurrency
@@ -143,6 +160,7 @@
 		return $c;
 	}
 	
+	// Fonction de renvoi du nombre de points simultanés
 	function getMultiTouch(){
 		$mt = '<script type="text/javascript">
 				let mt = navigator.maxTouchPoints
@@ -157,6 +175,7 @@
 		return $mt;
 	}
 	
+	// Fonction de renvoi du nom du fabricant du navigateur
 	function getVendor(){
 		$v = '<script type="text/javascript">
 				let v = navigator.vendor
@@ -165,6 +184,7 @@
 		return $v;
 	}
 
+	// Fonction de renvoi du type de connexion mobile
 	function getNetworkInformation(){
 		$network = '<script type="text/javascript">
 		let NetworkInformation = navigator.connection.type;
@@ -176,6 +196,7 @@
 		return $network;
 	}
 	
+	// Fonction de renvoi de l'heure locale
 	function getTimeLocal(){
 		$timeLocal = '<script type="text/javascript">
 		var now = new Date();
@@ -188,6 +209,7 @@
 		return $timeLocal;
 	}
 	
+	// Fonction de renvoi du type d'appareil utilisé
 	function getDevice(){
 		$device = $_SERVER['HTTP_USER_AGENT'];
 		if (preg_match('/iphone/i',$device))
@@ -224,6 +246,7 @@
 		}
 	}
 	
+	// Fonction de renvoi de la taille de la mémoire cache
 	function getCacheSize(){
 		return round(realpath_cache_size() / 100) . " Kb";
 	}
@@ -240,6 +263,7 @@
 		return $cook;
 	}
 	
+	// Fonctionde renvoi de la présence d'un visualiseur de pdf dans le navigateur
 	function getPdfViewer(){
 		$pdf = '<script type="text/javascript">
 					if (!navigator.pdfViewerEnabled) {
@@ -252,6 +276,7 @@
 		return $pdf;
 	}
 	
+	// Fonction de renvoi de la présence d'un bloqueur de pub avec simulation d'une pub 
 	function getPub(){
 		$pub = '<script>
 					let fakeAd = document.createElement("div");
@@ -274,6 +299,7 @@
 		return $pub;
 	}
 	
+	// Fonction de renvoi de l'orientation de l'écran
 	function getOrient(){
 		$orient = '<script>
 					var orient = screen.orientation.type;
@@ -300,12 +326,13 @@
 		return $orient;
 	}
 	
+	// Fonction de renvoi de la gyroscopie en X
 	function getGyroX(){
 		$gyroX = '<script>
 					function process(event) {
 					  var beta = event.beta;
 					  if(beta != null) {
-						document.getElementById("GyroX").innerHTML = "X : " + beta.toFixed(2); 
+						document.getElementById("GyroX").innerHTML = "X : " + beta.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroX").innerHTML = "Technologie non disponible";
@@ -318,12 +345,13 @@
 		return $gyroX;
 	}
 	
+	// Fonction de renvoi de la gyroscopie en Y
 	function getGyroY(){
 		$gyroY = '<script>
 					function process(event) {
 					  var gamma = event.gamma;
 					  if(gamma != null) {
-						document.getElementById("GyroY").innerHTML = "Y : " + gamma.toFixed(2); 
+						document.getElementById("GyroY").innerHTML = "Y : " + gamma.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroY").innerHTML = "Technologie non disponible";
@@ -336,12 +364,13 @@
 		return $gyroY;
 	}
 	
+	// Fonction de renvoi de la gyroscopie en Z
 	function getGyroZ(){
 		$gyroZ = '<script>
 					function process(event) {
 					  var alpha = event.alpha;
 					  if(alpha != null) {
-						document.getElementById("GyroZ").innerHTML = "Z : " + alpha.toFixed(2); 
+						document.getElementById("GyroZ").innerHTML = "Z : " + alpha.toFixed(2) + "°"; 
 					  }
 					  else {
 						document.getElementById("GyroZ").innerHTML = "Technologie non disponible";
@@ -352,5 +381,62 @@
 					}
 				</script>';
 		return $gyroZ;
+	}
+	
+	// Fonction de renvoi de la valeur de l'accéléromètre en X
+	function getAccelX(){
+		$accelX = '<script>
+					function motion(event){
+						var accelX = event.accelerationIncludingGravity.x;
+						if(accelX != null) {
+							document.getElementById("AccelX").innerHTML = "X : " + accelX.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelX").innerHTML = "Technologie non disponible";
+						}
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accelX;
+	}
+	
+	// Fonction de renvoi de la valeur de l'accéléromètre en Y
+	function getAccelY(){
+		$accelY = '<script>
+					function motion(event){
+						var accelY = event.accelerationIncludingGravity.y;
+						if(accelY != null) {
+							document.getElementById("AccelY").innerHTML = "Y : " + accelY.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelY").innerHTML = "Technologie non diponible";
+						}
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accelY;
+	}
+	
+	// Fonction de renvoi de la valeur de l'accéléromètre en Z
+	function getAccelZ(){
+		$accelZ = '<script>
+					function motion(event){
+						var accelZ = event.accelerationIncludingGravity.z;
+						if(accelZ != null) {
+							document.getElementById("AccelZ").innerHTML = "Z : " + accelZ.toFixed(2) + " m/s²";
+						}
+						else {
+							document.getElementById("AccelZ").innerHTML  = "Technologie non disponible";
+						}
+					}
+					if(window.DeviceMotionEvent) {
+					  window.addEventListener("devicemotion", motion);
+					}
+				</script>';
+		return $accelZ;
 	}
 ?>
