@@ -137,10 +137,10 @@
                 });
                 chart.render();
 
-                var chart2 = new CanvasJS.Chart("chartContainer2", {
+                var chart = new CanvasJS.Chart("chartContainer2", {
                     animationEnabled: true,
                     title: {
-                        text: "OS utilisation by users"
+                        text: "OS utilisation by users Bis"
                     },
                     data: [{
                         type: "pie",
@@ -150,7 +150,7 @@
                         dataPoints: dataChart
                     }]
                 });
-                chart2.render();
+                chart.render();
 
             }
             //FIN FONCTION POUR LES GRAPHIQUES PIECHART
@@ -213,8 +213,8 @@
             I agree
         </button>
     </div>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-    <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 370px; width: 50%;"></div>
+    <div id="chartContainer2" style="height: 370px; width: 50%;"></div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
