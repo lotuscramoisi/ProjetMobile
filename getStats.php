@@ -10,7 +10,7 @@ if (isset($_SESSION["admin"])) {
 
         //DEBUT RECHERCHE DES SESSIONS
         // Requête sql de recherche des sessions liées à l'username dans la DB
-        $sql = "select count(*) as y, USEROS as label from SESSIONUSER group by USEROS";
+        $sql = "select count(*)/(select count(*) from SESSIONUSER)*100 as y, USEROS as label from SESSIONUSER group by USEROS";
 
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
