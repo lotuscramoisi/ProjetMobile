@@ -114,12 +114,7 @@
                 dataType: 'json',
                 data: {},
                 success: function(result) {
-                    console.log(result);
                     dataChart = result;
-                    for(var l of result){
-                        document.getElementById("affiche").innerHTML = l.y;
-                    }
-                    
                 }
             });
             //Fin récupération des stats
@@ -181,7 +176,6 @@
             ?>
             <div>
     </nav>
-    <div id="affiche"></div>
     <table class="table table-striped">
         <thead>
             <tr>
