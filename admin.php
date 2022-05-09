@@ -115,7 +115,10 @@
                 data: {},
                 success: function(result) {
                     console.log(result);
-                    document.getElementById("affiche").innerHTML = result.Total;
+                    for(var l in result){
+                        document.getElementById("affiche").innerHTML = l.Total;
+                    }
+                    
                 }
             });
             //Fin récupération des stats
