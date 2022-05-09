@@ -114,7 +114,7 @@
                 dataType: 'json',
                 data: {},
                 success: function(result) {
-                    // var donnees = JSON.parse(result);
+                    var donnees = JSON.parse(result);
                     document.getElementById("affiche").innerHTML = result.Total;
                 }
             });
