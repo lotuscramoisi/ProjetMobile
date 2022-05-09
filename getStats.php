@@ -10,13 +10,13 @@ if (isset($_SESSION["admin"])) {
 
         //DEBUT RECHERCHE DES SESSIONS
         // Requête sql de recherche des sessions liées à l'username dans la DB
-        $sql = "select count(*) as Total from SESSIONUSER where USEROS like :osuser";
+        $sql = "select count(*) as Total from SESSIONUSER where USEROS like 'Windows'";
 
         // Préparation de la requête
         $stmt = $conn->prepare($sql);
 
         // Attribution des paramètres de la requête préparée
-        $stmt->bindValue(':osuser', "Windows", PDO::PARAM_STR, 25);
+        //$stmt->bindValue(':osuser', "Windows", PDO::PARAM_STR, 50);
 
         // Exécution de la requête
         $stmt->execute();
