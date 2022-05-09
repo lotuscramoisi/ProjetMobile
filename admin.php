@@ -59,8 +59,8 @@
                         if (r.ISADMIN == 1) {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
-                                '<td class=toHide">' + r.USERMAIL + '</td>' +
-                                '<td class=toHide">' + r.SIGNUPDATE + '</td>' +
+                                '<td class="toHide">' + r.USERMAIL + '</td>' +
+                                '<td class="toHide">' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
                                 '</div></td>' +
@@ -72,8 +72,8 @@
                         else {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
-                                '<td class=toHide">' + r.USERMAIL + '</td>' +
-                                '<td class=toHide">' + r.SIGNUPDATE + '</td>' +
+                                '<td class="toHide">' + r.USERMAIL + '</td>' +
+                                '<td class="toHide">' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
                                 '</div></td>' +
