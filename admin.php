@@ -33,7 +33,7 @@
     <!-- FIN IMPORT -->
     <!-- DEBUT CSS  -->
     <style>
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 400px) {
             .toHide{
                 display:none;
             }
