@@ -31,6 +31,15 @@
     <link rel="stylesheet" href="cookiealert.css">
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
+    <!-- DEBUT CSS  -->
+    <style>
+        @media only screen and (max-width: 375px) {
+            .toHide{
+                display:none;
+            }
+        }
+    </style>
+    <!-- FIN   CSS  -->
     <script>
         var dataChartOS;
         var dataChartDevice;
@@ -50,8 +59,8 @@
                         if (r.ISADMIN == 1) {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
-                                '<td>' + r.USERMAIL + '</td>' +
-                                '<td>' + r.SIGNUPDATE + '</td>' +
+                                '<td class=toHide">' + r.USERMAIL + '</td>' +
+                                '<td class=toHide">' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>' +
                                 '</div></td>' +
@@ -63,8 +72,8 @@
                         else {
                             $('<tr></tr>').html(
                                 '<td>' + r.USERNAME + '</td>' +
-                                '<td>' + r.USERMAIL + '</td>' +
-                                '<td>' + r.SIGNUPDATE + '</td>' +
+                                '<td class=toHide">' + r.USERMAIL + '</td>' +
+                                '<td class=toHide">' + r.SIGNUPDATE + '</td>' +
                                 '<td> <div class="form-check form-switch ml-5">' +
                                 '<input class="form-check-input genial" type="checkbox" role="switch" id="flexSwitchCheckDefault">' +
                                 '</div></td>' +
