@@ -139,22 +139,6 @@
                         dataPoints: [{
                                 y: 75,
                                 label: "Windows"
-                            },
-                            {
-                                y: 7,
-                                label: "Bing"
-                            },
-                            {
-                                y: 7,
-                                label: "Baidu"
-                            },
-                            {
-                                y: 7,
-                                label: "Yahoo"
-                            },
-                            {
-                                y: 4,
-                                label: "Others"
                             }
                         ]
                     }]
