@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
+    var firstData;
     $(document).ready(function() {
         // Récupération de la liste des utilisateurs + affichage de celle ci
         $.ajax({
@@ -109,6 +110,7 @@
             });
             $(this).parent().parent().remove();
         });
+        
         //Debut récupération des stats
         $.ajax({
             url: "getStats.php", //the page containing php script
