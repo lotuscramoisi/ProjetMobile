@@ -23,7 +23,7 @@ if (isset($_SESSION["admin"])) {
 
         $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        echo utf8_encode(json_encode($rs));
+        echo json_encode($rs);
 
         //FIN RECHERCHE DES SESSIONS
 
