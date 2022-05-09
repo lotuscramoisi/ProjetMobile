@@ -115,7 +115,7 @@
                 data: {},
                 success: function(result) {
                     var donnees = JSON.parse(result);
-                    firstData = donnees;
+                    firstData = result;
                 }
             });
             //Fin récupération des stats
