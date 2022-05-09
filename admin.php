@@ -137,7 +137,7 @@
                 });
                 chart.render();
 
-                var chart2 = new CanvasJS.Chart("chartContainer", {
+                var chart2 = new CanvasJS.Chart("chartContainer2", {
                     animationEnabled: true,
                     title: {
                         text: "OS utilisation by users"
@@ -214,6 +214,7 @@
         </button>
     </div>
     <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
