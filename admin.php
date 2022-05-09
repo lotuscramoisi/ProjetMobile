@@ -115,11 +115,11 @@
                 data: {},
                 success: function(result) {
                     var donnees = JSON.parse(result);
-                    firstData = result.Total;
+                    firstData = donnees;
                 }
             });
             //Fin récupération des stats
-            document.getElementById("affiche").innerHTML = firstData;
+            document.getElementById("affiche").innerHTML = donnees;
             //DEBUT FONCTION POUR LES GRAPHIQUES PIECHART
             window.onload = function() {
 
