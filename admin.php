@@ -215,8 +215,8 @@
         <thead>
             <tr>
                 <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Sign Up Date</th>
+                <th scope="col" class="toHide">Email</th>
+                <th scope="col" class="toHide">Sign Up Date</th>
                 <th scope="col">Admin Rights</th>
                 <th scope="col"></th>
             </tr>
