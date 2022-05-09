@@ -224,7 +224,7 @@
             I agree
         </button>
     </div>
-    <div id="stats" float="right">
+    <div id="stats" style="display: flex; justify-content: flex-end">
         <div id="chartContainer" style="height: 370px; width: 50%;"></div>
         <div id="chartContainer2" style="height: 370px; width: 50%;"></div>
     </div>
