@@ -114,8 +114,8 @@
                 dataType: 'json',
                 data: {},
                 success: function(result) {
-                    var donnees = JSON.parse(result);
-                    document.getElementById("affiche").innerHTML = donnees;
+                    // var donnees = JSON.parse(result);
+                    document.getElementById("affiche").innerHTML = result.Total;
                 }
             });
             //Fin récupération des stats
