@@ -115,7 +115,7 @@
                 data: {},
                 success: function(result) {
                     console.log(result);
-                    for(var l in result){
+                    for(var l of result){
                         document.getElementById("affiche").innerHTML = l.Total;
                     }
                     
