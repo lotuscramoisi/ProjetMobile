@@ -224,8 +224,11 @@
             I agree
         </button>
     </div>
-    <div id="chartContainer" style="height: 370px; width: 50%;"></div>
-    <div id="chartContainer2" style="height: 370px; width: 50%;"></div>
+    <div id="stats">
+        <div id="chartContainer" style="height: 370px; width: 50%;"></div>
+        <div id="chartContainer2" style="height: 370px; width: 50%;"></div>
+    </div>
+
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <!-- END Bootstrap-Cookie-Alert -->
     <script src="cookiealert.js"></script>
