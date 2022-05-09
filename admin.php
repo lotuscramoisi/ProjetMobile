@@ -142,23 +142,23 @@
                 yValueFormatString: "##0.00\"%\"",
                 indexLabel: "{label} {y}",
                 dataPoints: [{
-                        y: firstData,
+                        y: 75,
                         label: "Windows"
                     },
                     {
-                        y: 7.31,
+                        y: 7,
                         label: "Bing"
                     },
                     {
-                        y: 7.06,
+                        y: 7,
                         label: "Baidu"
                     },
                     {
-                        y: 4.91,
+                        y: 7,
                         label: "Yahoo"
                     },
                     {
-                        y: 1.26,
+                        y: 4,
                         label: "Others"
                     }
                 ]
