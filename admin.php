@@ -115,7 +115,7 @@
                 data: {},
                 success: function(result) {
                     var donnees = JSON.parse(result);
-                    document.getElementById("affiche").innerHTML = donnees.Total;
+                    document.getElementById("affiche").innerHTML = donnees;
                 }
             });
             //Fin récupération des stats
