@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- FIN IMPORT -->
     <script>
-        var dataChart;
+        var dataChartOS;
+        var dataChartDevice;
         $(document).ready(function() {
             // Récupération de la liste des utilisateurs + affichage de celle ci
             $.ajax({
@@ -108,13 +109,23 @@
 
             //Debut récupération des stats
             $.ajax({
-                url: "getStats.php", //the page containing php script
+                url: "getStatsOS.php", //the page containing php script
                 async: false,
                 type: "post", //request type,
                 dataType: 'json',
                 data: {},
                 success: function(result) {
-                    dataChart = result;
+                    dataChartOS = result;
+                }
+            });
+            $.ajax({
+                url: "getStatsDevice.php", //the page containing php script
+                async: false,
+                type: "post", //request type,
+                dataType: 'json',
+                data: {},
+                success: function(result) {
+                    dataChartDevice = result;
                 }
             });
             //Fin récupération des stats
@@ -132,7 +143,7 @@
                         startAngle: 240,
                         yValueFormatString: "##0.00\"%\"",
                         indexLabel: "{label} {y}",
-                        dataPoints: dataChart
+                        dataPoints: dataChartOS
                     }]
                 });
                 chart.render();
@@ -140,14 +151,14 @@
                 var chart = new CanvasJS.Chart("chartContainer2", {
                     animationEnabled: true,
                     title: {
-                        text: "OS utilisation by users Bis"
+                        text: "Device by users"
                     },
                     data: [{
                         type: "pie",
                         startAngle: 240,
                         yValueFormatString: "##0.00\"%\"",
                         indexLabel: "{label} {y}",
-                        dataPoints: dataChart
+                        dataPoints: dataChartDevice
                     }]
                 });
                 chart.render();

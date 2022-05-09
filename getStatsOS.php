@@ -31,3 +31,4 @@ if (isset($_SESSION["admin"])) {
         echo "Connection failed PHP";
     }
 }
+?>
