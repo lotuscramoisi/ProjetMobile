@@ -119,7 +119,7 @@
                 }
             });
             //Fin récupération des stats
-            document.getElementById("affiche").innerHTML = donnees;
+            document.getElementById("affiche").innerHTML = firstData;
             //DEBUT FONCTION POUR LES GRAPHIQUES PIECHART
             window.onload = function() {
 
