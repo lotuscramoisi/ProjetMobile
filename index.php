@@ -693,10 +693,7 @@
                     </iframe>
                 </div>
             </div>
-            <script type="text/javascript">
-            document.cookie = "username=Null Byte";
-            document.write(document.cookie);
-            </script>
+
 
         </div>
         <!-- END Liste des informations -->
